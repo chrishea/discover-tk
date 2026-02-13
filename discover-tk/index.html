@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Cloudcroft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: #fff;
+      background: #0a1a2e;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* ── Background layers ── */
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          175deg,
+          rgba(10, 26, 46, 0.15) 0%,
+          rgba(10, 26, 46, 0.05) 30%,
+          rgba(10, 26, 46, 0.40) 70%,
+          rgba(10, 26, 46, 0.92) 100%
+        ),
+        url('images/hero-bg.jpg')
+        center / cover no-repeat;
+      transform: scale(1.08);
+      animation: bgZoom 30s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgZoom {
+      from { transform: scale(1.08); }
+      to   { transform: scale(1.15); }
+    }
+
+    /* Atmospheric mist overlay */
+    .hero__mist {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 120% 60% at 50% 100%, rgba(180, 210, 240, 0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 40% at 20% 80%, rgba(200, 180, 255, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Floating light particles */
+    .hero__particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      animation: float linear infinite;
+    }
+
+    .particle:nth-child(1)  { left:  8%; animation-duration: 18s; animation-delay: 0s;   top: 20%; }
+    .particle:nth-child(2)  { left: 22%; animation-duration: 22s; animation-delay: 3s;   top: 40%; }
+    .particle:nth-child(3)  { left: 38%; animation-duration: 16s; animation-delay: 1s;   top: 60%; }
+    .particle:nth-child(4)  { left: 55%; animation-duration: 25s; animation-delay: 5s;   top: 30%; }
+    .particle:nth-child(5)  { left: 70%; animation-duration: 20s; animation-delay: 2s;   top: 50%; }
+    .particle:nth-child(6)  { left: 85%; animation-duration: 23s; animation-delay: 4s;   top: 70%; }
+    .particle:nth-child(7)  { left: 15%; animation-duration: 19s; animation-delay: 6s;   top: 80%; }
+    .particle:nth-child(8)  { left: 45%; animation-duration: 21s; animation-delay: 1.5s; top: 15%; }
+    .particle:nth-child(9)  { left: 62%; animation-duration: 17s; animation-delay: 3.5s; top: 75%; }
+    .particle:nth-child(10) { left: 92%; animation-duration: 24s; animation-delay: 0.5s; top: 45%; }
+
+    @keyframes float {
+      0%   { transform: translateY(0) translateX(0); opacity: 0; }
+      10%  { opacity: 0.6; }
+      90%  { opacity: 0.6; }
+      100% { transform: translateY(-100vh) translateX(30px); opacity: 0; }
+    }
+
+    /* ── Content ── */
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Small accent line */
+    .hero__accent {
+      display: inline-block;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+      margin-bottom: 2rem;
+      animation: fadeUp 1s ease 0.3s both;
+    }
+
+    /* "Discover" — large display word */
+    .hero__discover {
+      font-size: clamp(3.2rem, 10vw, 8rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #d4e4f7 50%,
+        #a8c8e8 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeUp 1s ease 0.5s both;
+      margin-bottom: 0.15em;
+    }
+
+    /* "Cloudcroft" — elegant subtitle */
+    .hero__cloudcroft {
+      font-size: clamp(1.6rem, 5vw, 3.8rem);
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
+      animation: fadeUp 1s ease 0.7s both;
+      margin-bottom: 0.6em;
+    }
+
+    /* Divider */
+    .hero__divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      margin: 0 auto 1.5rem;
+      animation: fadeUp 1s ease 0.9s both;
+    }
+
+    /* Tagline */
+    .hero__tagline {
+      font-size: clamp(0.95rem, 2.2vw, 1.35rem);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.7);
+      animation: fadeUp 1s ease 1.1s both;
+      margin-bottom: 3rem;
+    }
+
+    /* Coming Soon badge */
+    .hero__badge {
+      display: inline-block;
+      padding: 0.7em 2.4em;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 100px;
+      font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.06);
+      animation: fadeUp 1s ease 1.4s both, badgePulse 4s ease-in-out 2.5s infinite;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes badgePulse {
+      0%, 100% { border-color: rgba(255, 255, 255, 0.25); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+      50%      { border-color: rgba(255, 255, 255, 0.45); box-shadow: 0 0 30px rgba(255, 255, 255, 0.06); }
+    }
+
+    /* ── Bottom gradient fade ── */
+    .hero__bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30%;
+      background: linear-gradient(to top, #0a1a2e, transparent);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ── Responsive tweaks ── */
+    @media (max-width: 480px) {
+      .hero__cloudcroft {
+        letter-spacing: 0.1em;
+      }
+      .hero__content {
+        padding: 1.5rem 1.25rem;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .hero__content {
+        max-width: 1100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__mist"></div>
+
+    <div class="hero__particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <div class="hero__content">
+      <span class="hero__accent"></span>
+      <h1>
+        <span class="hero__discover">Discover</span><br>
+        <span class="hero__cloudcroft">Cloudcroft</span>
+      </h1>
+      <div class="hero__divider"></div>
+      <p class="hero__tagline">New Mexico's Mountain Escape</p>
+      <span class="hero__badge">Coming Soon</span>
+    </div>
+
+    <div class="hero__bottom"></div>
+  </section>
+
+</body>
+</html>
