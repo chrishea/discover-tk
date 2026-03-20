@@ -1,0 +1,2458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Discover Cloudcroft | New Mexico's Mountain Escape</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Escape to Cloudcroft, New Mexico - a charming mountain village at 8,676 feet in the Sacramento Mountains. Discover hiking trails, local dining, cozy lodging, and year-round events in Lincoln National Forest.">
+    <meta name="keywords" content="Cloudcroft, New Mexico, mountain retreat, Sacramento Mountains, Lincoln National Forest, hiking, lodging, dining, events, skiing, vacation">
+    <meta name="author" content="Discover Cloudcroft">
+
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Discover Cloudcroft | New Mexico's Mountain Escape">
+    <meta property="og:description" content="Escape to Cloudcroft, New Mexico - a charming mountain village at 8,676 feet. Cool pine forests, endless trails, and small-town charm await.">
+    <meta property="og:image" content="media/placeholder-hero-main.jpg">
+    <meta property="og:url" content="https://discovercloudcroft.com">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discover Cloudcroft | New Mexico's Mountain Escape">
+    <meta name="twitter:description" content="Escape to Cloudcroft, New Mexico - a charming mountain village at 8,676 feet in the Sacramento Mountains.">
+    <meta name="twitter:image" content="media/placeholder-hero-main.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://discovercloudcroft.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #0D1B2A;
+            --sunset-warm: #162638;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #BF0A30;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+            --zia-red: #BF0A30;
+            --zia-gold: #FCD116;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #0D1B2A;
+            color: white;
+            padding: 8px 16px;
+            z-index: 10000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Social Follow Bar */
+        .social-follow-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            background: #BF0A30;
+            text-align: center;
+            padding: 0.5rem 1rem;
+        }
+
+        .social-follow-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-follow-bar a:hover {
+            opacity: 0.85;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 36px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        header.scrolled {
+            background: #091422;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #5BA4C9;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            background: #D4223F !important;
+        }
+
+        .weather-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(91, 164, 201, 0.2);
+            border-radius: 20px;
+        }
+
+        .weather-temp {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('media/placeholder-hero-main.jpg') no-repeat center center;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        /* Animated pine trees silhouette - hidden for daytime hero image */
+        .hero-trees {
+            display: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero-elevation {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-elevation span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .elevation-number {
+            font-family: 'Alegreya', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #FCD116;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.6em, 3.3vw, 1.8rem);
+            color: #FCD116;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 1s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #BF0A30;
+            color: var(--snow-white);
+        }
+
+        .btn-primary:hover {
+            background: #D4223F;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(191, 10, 48, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffffff;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #FFFFFF;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.8;
+            animation: bounce 2s ease infinite;
+        }
+
+        .hero-scroll span {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* Quick Links Section */
+        .quick-links {
+            background: #1565C0;
+            padding: 1.5rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-links-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link:hover {
+            color: #FCD116;
+        }
+
+        .quick-link-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #1565C0;
+            margin-bottom: 1rem;
+            padding: 0.4rem 1rem;
+            background: rgba(21, 101, 192, 0.1);
+            border-radius: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--pine-deep);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* In Village / In the Mountains Navigation */
+        .explore-section {
+            background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%);
+        }
+
+        .explore-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .explore-tab {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            background: transparent;
+            border: 2px solid var(--pine-light);
+            color: var(--pine-medium);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .explore-tab.active {
+            background: var(--pine-deep);
+            border-color: var(--pine-deep);
+            color: var(--snow-white);
+        }
+
+        .explore-tab:hover:not(.active) {
+            background: var(--pine-light);
+            color: var(--snow-white);
+        }
+
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .explore-card {
+            background: var(--snow-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .explore-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .explore-card-image {
+            aspect-ratio: 4 / 3;
+            background: linear-gradient(135deg, var(--pine-medium) 0%, var(--pine-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .explore-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .explore-card:hover .explore-card-image img {
+            transform: scale(1.1);
+        }
+
+        .explore-card-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .explore-card-content {
+            padding: 1.5rem;
+        }
+
+        .explore-card h3 {
+            font-size: 1.4rem;
+            color: var(--pine-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .explore-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .explore-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            color: var(--pine-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Activities Section */
+        .activities-section {
+            background: var(--snow-white);
+        }
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+        }
+
+        .activity-card {
+            position: relative;
+            height: 380px;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .activity-card-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.6s ease;
+        }
+
+        .activity-card:hover .activity-card-bg {
+            transform: scale(1.1);
+        }
+
+        .activity-card-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+            color: var(--snow-white);
+        }
+
+        .activity-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .activity-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .activity-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .activity-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #FCD116;
+            letter-spacing: 0.03em;
+        }
+
+        @media (max-width: 1024px) {
+            .activities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activity-card {
+                height: 300px;
+            }
+        }
+
+        /* Seasons Section */
+        .seasons-section {
+            background: var(--snow-white);
+        }
+
+        .seasons-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .season-card {
+            position: relative;
+            height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .season-card-bg {
+            position: absolute;
+            inset: 0;
+            transition: transform 0.6s ease;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-card:hover .season-card-bg {
+            transform: scale(1.1);
+        }
+
+        .season-spring .season-card-bg {
+            background: linear-gradient(180deg, rgba(124, 176, 122, 0.85) 0%, rgba(90, 144, 102, 0.9) 50%, rgba(61, 107, 74, 0.95) 100%),
+                        url('media/placeholder-season-spring.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-summer .season-card-bg {
+            background: linear-gradient(180deg, rgba(252, 209, 22, 0.8) 0%, rgba(230, 188, 0, 0.85) 50%, rgba(201, 164, 0, 0.9) 100%),
+                        url('media/placeholder-season-summer.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-fall .season-card-bg {
+            background: linear-gradient(180deg, rgba(196, 30, 58, 0.75) 0%, rgba(163, 22, 33, 0.8) 50%, rgba(139, 0, 0, 0.85) 100%),
+                        url('media/placeholder-season-fall.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-winter .season-card-bg {
+            background: linear-gradient(180deg, rgba(168, 212, 230, 0.8) 0%, rgba(123, 184, 208, 0.85) 50%, rgba(90, 156, 184, 0.9) 100%),
+                        url('media/placeholder-season-winter.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-card-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+            color: var(--snow-white);
+        }
+
+        .season-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .season-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .season-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Events Section */
+        .events-section {
+            background: #0D1B2A;
+            color: #ffffff;
+        }
+
+        .events-section .section-label {
+            background: rgba(252, 209, 22, 0.2);
+            color: #FCD116;
+        }
+
+        .events-section h2 {
+            color: #ffffff;
+        }
+
+        .events-section .section-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .event-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .event-card:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-4px);
+        }
+
+        .event-card-image {
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .event-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .event-card:hover .event-card-image img {
+            transform: scale(1.05);
+        }
+
+        .event-card-content {
+            padding: 1.5rem;
+        }
+
+        .event-date {
+            display: inline-block;
+            background: #BF0A30;
+            color: var(--snow-white);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .event-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #FFFFFF;
+        }
+
+        .event-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Lodging & Dining Section */
+        .stay-section {
+            background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%);
+        }
+
+        .stay-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .stay-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--snow-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .stay-card-image {
+            min-height: 300px;
+            background: linear-gradient(135deg, var(--pine-medium) 0%, var(--bark-brown) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            overflow: hidden;
+        }
+
+        .stay-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .stay-card:hover .stay-card-image img {
+            transform: scale(1.05);
+        }
+
+        .stay-card-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .stay-card h3 {
+            font-size: 1.8rem;
+            color: var(--pine-deep);
+            margin-bottom: 1rem;
+        }
+
+        .stay-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .stay-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stay-feature {
+            font-size: 0.8rem;
+            padding: 0.4rem 0.8rem;
+            background: var(--sky-pale);
+            color: var(--pine-medium);
+            border-radius: 20px;
+        }
+
+        /* Plan Your Trip Section */
+        .plan-section {
+            background: var(--cloud-white);
+        }
+
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .plan-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--snow-white);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .plan-card:hover {
+            border-color: #5BA4C9;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--pine-light) 0%, var(--pine-medium) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .plan-card h3 {
+            font-size: 1.4rem;
+            color: var(--pine-deep);
+            margin-bottom: 0.75rem;
+        }
+
+        .plan-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+            padding: 5rem 2rem;
+        }
+
+        .newsletter-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-container h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-container p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: #BF0A30;
+            color: var(--snow-white);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #D4223F;
+        }
+
+        .newsletter-subscribe-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #0D1B2A;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .newsletter-subscribe-btn:hover {
+            background: #e8e8e8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Reels Section */
+        .reels-section {
+            background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%);
+        }
+
+        .reels-scroll-wrapper {
+            position: relative;
+        }
+
+        .reels-scroll {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 1rem;
+        }
+
+        .reels-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .reel-card {
+            flex: 0 0 calc((100% - 3rem) / 3);
+            scroll-snap-align: start;
+            background: var(--snow-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .reel-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .reel-card-thumbnail {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .reel-card-thumbnail::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 40%);
+        }
+
+        .reel-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 56px;
+            height: 56px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .reel-card:hover .reel-play-icon {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #ffffff;
+        }
+
+        .reel-card-content {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .reel-card-content h3 {
+            font-size: 1.2rem;
+            color: var(--pine-deep);
+            margin-bottom: 0.4rem;
+        }
+
+        .reel-card-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .reels-scroll-btn {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            z-index: 5;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: none;
+            background: var(--snow-white);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .reels-scroll-btn:hover {
+            background: var(--pine-deep);
+            color: var(--snow-white);
+        }
+
+        .reels-scroll-btn.prev {
+            left: -22px;
+        }
+
+        .reels-scroll-btn.next {
+            right: -22px;
+        }
+
+        @media (max-width: 1024px) {
+            .reel-card {
+                flex: 0 0 calc((100% - 1.5rem) / 2);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .reel-card {
+                flex: 0 0 85%;
+            }
+
+            .reels-scroll-btn {
+                display: none;
+            }
+        }
+
+        /* AI Assistant Section */
+        .ai-assistant-section {
+            background: linear-gradient(135deg, #0D1B2A 0%, #162638 100%);
+            color: var(--snow-white);
+            padding: 5rem 2rem;
+        }
+
+        .ai-assistant-section .section-header h2 {
+            color: var(--snow-white);
+        }
+
+        .ai-assistant-section .section-label {
+            background: rgba(252, 209, 22, 0.2);
+            color: #FCD116;
+        }
+
+        .ai-assistant-section .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .ai-embed-container {
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 400px;
+            background: var(--snow-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .ai-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+        }
+
+        .ai-placeholder-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .ai-placeholder p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-placeholder-note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            opacity: 0.7;
+        }
+
+        /* Do Cloudcroft Right Section */
+        .stewardship-section {
+            background: #091422;
+            color: var(--snow-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stewardship-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(91, 164, 201, 0.15) 0%, transparent 70%);
+        }
+
+        .stewardship-content {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .stewardship-text h2 {
+            font-size: 2.5rem;
+            color: var(--snow-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .stewardship-text p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .stewardship-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .stewardship-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .stewardship-list li::before {
+            content: '✓';
+            color: #FCD116;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #091422;
+            color: var(--snow-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Alegreya', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #5BA4C9;
+            color: #111111;
+        }
+
+        .footer-column h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: #5BA4C9;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-partners {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-partners span {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 3;
+            }
+
+            .seasons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stay-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .plan-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stewardship-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #0D1B2A;
+            z-index: 999;
+            padding: 5rem 2rem 2rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu .nav-cta {
+            background: #BF0A30;
+            margin-top: 1rem;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .social-follow-bar {
+                padding: 0.4rem 0.75rem;
+            }
+
+            .social-follow-bar a {
+                font-size: 0.8rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .weather-badge {
+                display: none;
+            }
+
+            .seasons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .season-card {
+                height: 300px;
+            }
+
+            .stay-card {
+                grid-template-columns: 1fr;
+            }
+
+            .stay-card-image {
+                min-height: 200px;
+            }
+
+            .plan-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .local-news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .explore-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .quick-links-container {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Discover Cloudcroft",
+          "url": "https://discovercloudcroft.com",
+          "description": "Official tourism guide for Cloudcroft, New Mexico — a mountain village at 8,676 feet in the Sacramento Mountains."
+        },
+        {
+          "@type": "WebSite",
+          "name": "Discover Cloudcroft",
+          "url": "https://discovercloudcroft.com"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Social Follow Bar -->
+    <div class="social-follow-bar">
+        <a href="https://www.facebook.com/DiscoverCloudcroft" target="_blank" rel="noopener noreferrer">Follow us on Facebook and Instagram</a>
+    </div>
+
+    <!-- Header -->
+    <header id="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" role="menubar">
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="#seasons">Seasons</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#stay">Stay & Dine</a></li>
+                    <li><a href="#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <div class="weather-badge">
+                <span>☀️</span>
+                <span class="weather-temp">54°F</span>
+                <span style="color: #5BA4C9;">Clear</span>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <button class="mobile-menu-close" aria-label="Close menu">×</button>
+        <a href="#explore">Explore</a>
+        <a href="#seasons">Seasons</a>
+        <a href="#events">Events</a>
+        <a href="#stay">Stay & Dine</a>
+        <a href="#plan">Plan Your Trip</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="dining.html">Dining</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="#" class="nav-cta">Request Guide</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+    <section class="hero" >
+        <div class="hero-trees"></div>
+        <div class="hero-content" >
+            <div class="hero-elevation">
+                <span>Elevation</span>
+                <span class="elevation-number">8,676 ft</span>
+                <span>•</span>
+                <span>Lincoln National Forest</span>
+            </div>
+            <h1>Cloudcroft</h1>
+            <p class="hero-subtitle">New Mexico's Mountain Retreat</p>
+            <p class="hero-description">
+                Escape to the Sacramento Mountains where cool pine forests meet blue sky.  A village wrapped in clouds, surrounded by the Lincoln National Forest,  and alive with adventure.
+            </p>
+            <div class="hero-ctas">
+                <a href="#explore" class="btn btn-primary">Start Exploring</a>
+                <a href="#plan" class="btn btn-secondary">Plan Your Visit</a>
+            </div>
+        </div>
+        <a href="#quick-links" class="hero-scroll">
+            <span>Scroll to discover</span>
+            <span>↓</span>
+        </a>
+    </section>
+
+    <!-- Quick Links -->
+    <div class="quick-links" id="quick-links">
+        <div class="quick-links-container">
+            <a href="hiking-trails.html" class="quick-link">
+                <div class="quick-link-icon">🥾</div>
+                <span>Hiking Trails</span>
+            </a>
+            <a href="lodging.html" class="quick-link">
+                <div class="quick-link-icon">🏨</div>
+                <span>Lodging</span>
+            </a>
+            <a href="dining.html" class="quick-link">
+                <div class="quick-link-icon">🍽️</div>
+                <span>Dining</span>
+            </a>
+            <a href="#events" class="quick-link">
+                <div class="quick-link-icon">📅</div>
+                <span>Events</span>
+            </a>
+            <a href="#plan" class="quick-link">
+                <div class="quick-link-icon">📍</div>
+                <span>Getting Here</span>
+            </a>
+            <a href="#plan" class="quick-link">
+                <div class="quick-link-icon">📷</div>
+                <span>Webcams</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Explore Section -->
+    <section class="explore-section" id="explore">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Things To Do</span>
+                <h2>Explore Cloudcroft</h2>
+                <p class="section-description">
+                    From the charming boardwalks of Burro Avenue to the towering pines of Lincoln National Forest, 
+                    adventure awaits at every turn.
+                </p>
+            </div>
+
+            <div class="explore-tabs">
+                <button class="explore-tab active">In the Village</button>
+                <button class="explore-tab">In the Mountains</button>
+                <button class="explore-tab">Day Trips</button>
+            </div>
+
+            <div class="explore-grid" id="explore-grid">
+                <a href="attractions.html" class="explore-card" data-category="village">
+                    <div class="explore-card-image">
+                        <img src="media/placeholder-explore-burro-avenue.jpg" alt="Artisan shop in Cloudcroft">
+                    </div>
+                    <div class="explore-card-content">
+                        <h3>Burro Avenue Shopping</h3>
+                        <p>Stroll the historic boardwalk lined with unique boutiques, artisan galleries, and the famous Burro Street Exchange.</p>
+                        <span class="explore-card-link">Explore shops →</span>
+                    </div>
+                </a>
+
+                <a href="attractions.html" class="explore-card" data-category="village">
+                    <div class="explore-card-image">
+                        <img src="media/placeholder-explore-museum.jpg" alt="Historic Mexican Canyon railroad trestle" loading="lazy">
+                    </div>
+                    <div class="explore-card-content">
+                        <h3>Sacramento Mountains Museum</h3>
+                        <p>Discover the rich history of the Cloud Climbing Railroad, pioneer settlers, and the Mescalero Apache people.</p>
+                        <span class="explore-card-link">Plan your visit →</span>
+                    </div>
+                </a>
+
+                <a href="attractions.html" class="explore-card" data-category="village">
+                    <div class="explore-card-image">
+                        <img src="media/placeholder-explore-winery.jpg" alt="Blue burro statue in Cloudcroft" loading="lazy">
+                    </div>
+                    <div class="explore-card-content">
+                        <h3>Noisy Water Winery</h3>
+                        <p>Sample award-winning New Mexico wines including the famous green chile wine in a cozy mountain tasting room.</p>
+                        <span class="explore-card-link">View tastings →</span>
+                    </div>
+                </a>
+
+                <a href="cloudcroft-brewery.html" class="explore-card" data-category="village">
+                    <div class="explore-card-image">
+                        <img src="media/placeholder-explore-brewery.jpg" alt="Bartender crafting cocktails in Cloudcroft" loading="lazy">
+                    </div>
+                    <div class="explore-card-content">
+                        <h3>Cloudcroft Brewery</h3>
+                        <p>Enjoy craft beers and brick-oven pizza in a relaxed mountain atmosphere with an outdoor beer garden.</p>
+                        <span class="explore-card-link">See menu →</span>
+                    </div>
+                </a>
+
+                <a href="attractions.html" class="explore-card" data-category="mountains">
+                    <div class="explore-card-image">
+                        <img src="media/placeholder-explore-golf.jpg" alt="Elk grazing on The Lodge Golf Course" loading="lazy">
+                    </div>
+                    <div class="explore-card-content">
+                        <h3>The Lodge Golf Course</h3>
+                        <p>Play one of North America's highest courses at 9,000 feet. Est. 1899, governed by Scottish tradition.</p>
+                        <span class="explore-card-link">Book tee time →</span>
+                    </div>
+                </a>
+
+                <a href="attractions.html" class="explore-card" data-category="village">
+                    <div class="explore-card-image">
+                        <img src="media/placeholder-explore-skating.jpg" alt="Ice skating pavilion in Cloudcroft" loading="lazy">
+                    </div>
+                    <div class="explore-card-content">
+                        <h3>Ice Skating Rink</h3>
+                        <p>The Southwest's only natural outdoor ice rink. Hot chocolate, cozy fireplace, and mountain views.</p>
+                        <span class="explore-card-link">Check hours →</span>
+                    </div>
+                </a>
+
+                <a href="https://www.nps.gov/whsa/" target="_blank" class="explore-card" data-category="daytrips">
+                    <div class="explore-card-image">
+                        <img src="media/placeholder-explore-whitesands.jpg" alt="Historic trestle in the mountains" loading="lazy">
+                    </div>
+                    <div class="explore-card-content">
+                        <h3>White Sands National Park</h3>
+                        <p>Just an hour away, explore the world's largest gypsum dune field. Surreal white landscapes perfect for sunrise or sunset.</p>
+                        <span class="explore-card-link">Plan day trip →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities-section" id="activities">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Get Outside</span>
+                <h2>Outdoor Activities</h2>
+                <p class="section-description">
+                    Miles of trails, forest roads, and mountain terrain — Cloudcroft is a basecamp for every kind of outdoor adventure.
+                </p>
+            </div>
+
+            <div class="activities-grid">
+                <a href="hiking-trails.html" class="activity-card">
+                    <div class="activity-card-bg" style="background-image: url('media/placeholder-activity-hiking.jpg'); background-color: #1565C0;"></div>
+                    <div class="activity-card-content">
+                        <div class="activity-icon">🥾</div>
+                        <h3>Hiking</h3>
+                        <p>Over 30 trails through Lincoln National Forest — from easy loops to challenging summit climbs at 9,000 feet.</p>
+                        <span class="activity-card-link">Explore trails →</span>
+                    </div>
+                </a>
+
+                <a href="biking.html" class="activity-card">
+                    <div class="activity-card-bg" style="background-image: url('media/placeholder-activity-biking.jpg'); background-color: #1A1A1A;"></div>
+                    <div class="activity-card-content">
+                        <div class="activity-icon">🚴</div>
+                        <h3>Biking</h3>
+                        <p>Road cycling along the Sunspot Highway and mountain biking on singletrack through the pines. High altitude, big rewards.</p>
+                        <span class="activity-card-link">View routes →</span>
+                    </div>
+                </a>
+
+                <a href="activities.html" class="activity-card">
+                    <div class="activity-card-bg" style="background-image: url('media/placeholder-activity-ohv.jpg'); background-color: #1E88E5;"></div>
+                    <div class="activity-card-content">
+                        <div class="activity-icon">🏍️</div>
+                        <h3>OHV Trails</h3>
+                        <p>Hundreds of miles of forest roads and OHV trails wind through the Sacramento Mountains. Dirt bikes, ATVs, and side-by-sides welcome.</p>
+                        <span class="activity-card-link">Find OHV trails →</span>
+                    </div>
+                </a>
+
+                <a href="hiking-trails.html" class="activity-card">
+                    <div class="activity-card-bg" style="background-image: url('media/placeholder-activity-walks.jpg'); background-color: #64B5F6;"></div>
+                    <div class="activity-card-content">
+                        <div class="activity-icon">🌲</div>
+                        <h3>Walks & Strolls</h3>
+                        <p>Easy nature walks through wildflower meadows, the Trestle Recreation Area, and gentle forest paths perfect for all ages.</p>
+                        <span class="activity-card-link">See easy walks →</span>
+                    </div>
+                </a>
+
+                <a href="pickleball.html" class="activity-card">
+                    <div class="activity-card-bg" style="background-color: #1565C0;"></div>
+                    <div class="activity-card-content">
+                        <div class="activity-icon">🏓</div>
+                        <h3>Pickleball</h3>
+                        <p>Free courts at Zenith Park, open 24/7. Join the Pickleball Addicts of Cloudcroft for open play in cool mountain air.</p>
+                        <span class="activity-card-link">Find the courts →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasons Section -->
+    <section class="seasons-section" id="seasons">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Four Season Destination</span>
+                <h2>Every Season Tells a Story</h2>
+                <p class="section-description">
+                    From wildflower meadows to snow-dusted pines, Cloudcroft transforms with the seasons—each one offering its own magic.
+                </p>
+            </div>
+
+            <div class="seasons-grid">
+                <a href="spring.html" class="season-card season-spring">
+                    <div class="season-card-bg"></div>
+                    <div class="season-card-content">
+                        <div class="season-icon">🌸</div>
+                        <h3>Spring</h3>
+                        <p>Wildflowers bloom as the forest awakens. Perfect hiking weather and fewer crowds.</p>
+                    </div>
+                </a>
+
+                <a href="summer.html" class="season-card season-summer">
+                    <div class="season-card-bg"></div>
+                    <div class="season-card-content">
+                        <div class="season-icon">☀️</div>
+                        <h3>Summer</h3>
+                        <p>Escape the desert heat. Cool mountain air, endless trails, and starry nights.</p>
+                    </div>
+                </a>
+
+                <a href="fall.html" class="season-card season-fall">
+                    <div class="season-card-bg"></div>
+                    <div class="season-card-content">
+                        <div class="season-icon">🍂</div>
+                        <h3>Fall</h3>
+                        <p>Golden aspens paint the mountains. Harvest festivals and crisp mountain mornings.</p>
+                    </div>
+                </a>
+
+                <a href="winter.html" class="season-card season-winter">
+                    <div class="season-card-bg"></div>
+                    <div class="season-card-content">
+                        <div class="season-icon">❄️</div>
+                        <h3>Winter</h3>
+                        <p>The southernmost ski area in the US. Tubing, snowmobiling, and cozy cabin nights.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section" id="events">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Annual Events</span>
+                <h2>Celebrate in the Clouds</h2>
+                <p class="section-description">
+                    From harvest festivals to holiday markets, Cloudcroft knows how to celebrate every season.
+                </p>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-card-image">
+                        <img src="media/placeholder-event-mayfair.jpg" alt="Local artist painting mural at Mayfair" loading="lazy">
+                    </div>
+                    <div class="event-card-content">
+                        <span class="event-date">May</span>
+                        <h3>Mayfair</h3>
+                        <p>Kick off the summer season with arts, crafts, live music, and local vendors lining Burro Avenue.</p>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-card-image">
+                        <img src="media/placeholder-event-july4th.jpg" alt="Independence Day celebration" loading="lazy">
+                    </div>
+                    <div class="event-card-content">
+                        <span class="event-date">July 4th</span>
+                        <h3>Independence Day Celebration</h3>
+                        <p>Small-town Americana at its finest with parade, fireworks, and community festivities.</p>
+                    </div>
+                </div>
+
+                <a href="high-altitude-bike-classic.html" class="event-card" style="text-decoration: none; color: inherit;">
+                    <div class="event-card-image">
+                        <img src="media/placeholder-event-bikeclassic.jpg" alt="Cyclists riding through the Sacramento Mountains" loading="lazy">
+                    </div>
+                    <div class="event-card-content">
+                        <span class="event-date">August</span>
+                        <h3>High Altitude Bike Classic</h3>
+                        <p>Road and mountain bike rides through Lincoln National Forest at 9,000 feet. Routes for all levels from fun rides to century challenges.</p>
+                    </div>
+                </a>
+
+                <div class="event-card">
+                    <div class="event-card-image">
+                        <img src="media/placeholder-event-harvestfest.jpg" alt="Harvest Fest costume parade" loading="lazy">
+                    </div>
+                    <div class="event-card-content">
+                        <span class="event-date">October</span>
+                        <h3>Harvest Festival</h3>
+                        <p>Celebrate autumn with costume parades, pumpkin patches, and fall festivities in the mountains.</p>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-card-image">
+                        <img src="media/placeholder-event-lumberjack.jpg" alt="Lumberjack competition" loading="lazy">
+                    </div>
+                    <div class="event-card-content">
+                        <span class="event-date">September</span>
+                        <h3>Lumberjack Day</h3>
+                        <p>Log cutting races, axe-throwing contest, and much more lumber sports at this popular annual event, this year hosted at Ski Cloudcroft</p>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-card-image">
+                        <img src="media/placeholder-event-christmas.jpg" alt="Snowy plaza with festive lights" loading="lazy">
+                    </div>
+                    <div class="event-card-content">
+                        <span class="event-date">December</span>
+                        <h3>Christmas in the Clouds</h3>
+                        <p>Holiday market, tree lighting, caroling, and visits with Santa in a winter wonderland setting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="attractions.html#events" class="btn btn-primary">View Full Events Calendar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay & Dine Section -->
+    <section class="stay-section" id="stay">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Where to Stay & Dine</span>
+                <h2>Rest & Refuel</h2>
+                <p class="section-description">
+                    From the historic elegance of The Lodge to cozy mountain cabins, find your perfect mountain retreat.
+                </p>
+            </div>
+
+            <div class="stay-grid">
+                <div class="stay-card">
+                    <div class="stay-card-image">
+                        <img src="media/placeholder-stay-lodging.jpg" alt="The Lodge Resort in winter" loading="lazy">
+                    </div>
+                    <div class="stay-card-content">
+                        <h3>Where to Stay</h3>
+                        <p>Historic hotels, cozy cabins, vacation rentals, and RV parks nestled in the pines. Wake up to mountain air and stunning views.</p>
+                        <div class="stay-features">
+                            <span class="stay-feature">Historic Lodge</span>
+                            <span class="stay-feature">Cabins</span>
+                            <span class="stay-feature">Vacation Rentals</span>
+                            <span class="stay-feature">RV Parks</span>
+                        </div>
+                        <a href="lodging.html" class="btn btn-primary">Find Lodging</a>
+                    </div>
+                </div>
+
+                <div class="stay-card">
+                    <div class="stay-card-image">
+                        <img src="media/placeholder-stay-dining.jpg" alt="Mad Jack's Barbecue truck" loading="lazy">
+                    </div>
+                    <div class="stay-card-content">
+                        <h3>Where to Eat</h3>
+                        <p>From legendary BBQ at Mad Jack's to fine dining at Rebecca's, Cloudcroft serves up memorable mountain meals.</p>
+                        <div class="stay-features">
+                            <a href="mad-jacks-bbq.html" class="stay-feature" style="text-decoration: none;">Mad Jack's BBQ</a>
+                            <span class="stay-feature">Rebecca's</span>
+                            <a href="western-bar.html" class="stay-feature" style="text-decoration: none;">Western Bar & Cafe</a>
+                            <a href="big-daddys.html" class="stay-feature" style="text-decoration: none;">Big Daddy's</a>
+                            <a href="cloudcroft-brewery.html" class="stay-feature" style="text-decoration: none;">Cloudcroft Brewery</a>
+                            <a href="high-rollin.html" class="stay-feature" style="text-decoration: none;">High Rollin' Coffee</a>
+                        </div>
+                        <a href="dining.html" class="btn btn-primary">View Restaurants</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reels Section -->
+    <section class="reels-section" id="reels">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Watch & Explore</span>
+                <h2>Reels</h2>
+                <p class="section-description">
+                    Quick glimpses of life in Cloudcroft — trails, events, local flavor, and mountain magic.
+                </p>
+            </div>
+
+            <div class="reels-scroll-wrapper">
+                <button class="reels-scroll-btn prev" aria-label="Scroll left">&#8249;</button>
+                <div class="reels-scroll" id="reels-scroll">
+                    <a href="#" class="reel-card">
+                        <div class="reel-card-thumbnail" style="background-image: url('media/Index-2.jpg');">
+                            <div class="reel-play-icon">&#9654;</div>
+                        </div>
+                        <div class="reel-card-content">
+                            <h3>Sunrise Over the Sacramentos</h3>
+                            <p>Watch golden light spill over the mountain ridges at 8,676 feet.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="reel-card">
+                        <div class="reel-card-thumbnail" style="background-image: url('media/Index-3.jpg');">
+                            <div class="reel-play-icon">&#9654;</div>
+                        </div>
+                        <div class="reel-card-content">
+                            <h3>Downtown Cloudcroft Walk</h3>
+                            <p>Stroll through the charming shops, galleries, and eateries of Burro Avenue.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="reel-card">
+                        <div class="reel-card-thumbnail" style="background-image: url('media/Index-4.jpg');">
+                            <div class="reel-play-icon">&#9654;</div>
+                        </div>
+                        <div class="reel-card-content">
+                            <h3>Trails of Lincoln National Forest</h3>
+                            <p>Explore miles of pine-shaded trails perfect for hiking and mountain biking.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="reel-card">
+                        <div class="reel-card-thumbnail" style="background-image: url('media/Index-5.jpg');">
+                            <div class="reel-play-icon">&#9654;</div>
+                        </div>
+                        <div class="reel-card-content">
+                            <h3>Fall Colors in Cloudcroft</h3>
+                            <p>The aspens turn gold and the air turns crisp in the Sacramento Mountains.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="reel-card">
+                        <div class="reel-card-thumbnail" style="background-image: url('media/Index-6.jpg');">
+                            <div class="reel-play-icon">&#9654;</div>
+                        </div>
+                        <div class="reel-card-content">
+                            <h3>Winter Wonderland</h3>
+                            <p>Snow blankets the village — skiing, sledding, and cozy cabin vibes await.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="reel-card">
+                        <div class="reel-card-thumbnail" style="background-image: url('media/Index-7.jpg');">
+                            <div class="reel-play-icon">&#9654;</div>
+                        </div>
+                        <div class="reel-card-content">
+                            <h3>Local Eats & Mountain Treats</h3>
+                            <p>From BBQ to craft brews, taste the best of Cloudcroft's food scene.</p>
+                        </div>
+                    </a>
+                </div>
+                <button class="reels-scroll-btn next" aria-label="Scroll right">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visitor Information Section -->
+    <section class="ai-assistant-section" id="info">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Visitor Information</span>
+                <h2>Questions About Cloudcroft?</h2>
+                <p class="section-description">
+                    Get answers about things to do, places to stay, dining options, and more.
+                </p>
+            </div>
+            <div class="ai-embed-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; background: transparent; box-shadow: none; padding: 0;">
+                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📞</div>
+                    <h3 style="color: var(--pine-deep); margin-bottom: 0.5rem; font-family: 'Alegreya', serif;">Chamber of Commerce</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Your resource for local business info and visitor services.</p>
+                    <a href="tel:+15756822733" style="color: var(--pine-medium); text-decoration: none; font-weight: 600;">(575) 682-2733</a>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📰</div>
+                    <h3 style="color: var(--pine-deep); margin-bottom: 0.5rem; font-family: 'Alegreya', serif;">Local News</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Stay updated with The Cloudcroft Reader and regional media.</p>
+                    <a href="local-media.html" style="color: var(--pine-medium); text-decoration: none; font-weight: 600;">View Local Media →</a>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏛️</div>
+                    <h3 style="color: var(--pine-deep); margin-bottom: 0.5rem; font-family: 'Alegreya', serif;">Village of Cloudcroft</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Official village government, permits, and local services.</p>
+                    <a href="https://villageofcloudcroft.com" target="_blank" style="color: var(--pine-medium); text-decoration: none; font-weight: 600;">Visit Website →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Do Cloudcroft Right Section -->
+    <section class="stewardship-section">
+        <div class="section-container">
+            <div class="stewardship-content">
+                <div class="stewardship-text">
+                    <h2>Experience Cloudcroft Right</h2>
+                    <p>
+                        Our mountain village has welcomed visitors for over 125 years. Help us preserve this special place 
+                        for generations to come by exploring responsibly and respecting our community.
+                    </p>
+                    <ul class="stewardship-list">
+                        <li>Stay on marked trails and pack out what you pack in</li>
+                        <li>Respect wildlife and keep a safe distance</li>
+                        <li>Support local businesses and artisans</li>
+                        <li>Observe fire restrictions—our forest is precious</li>
+                        <li>Drive carefully—wildlife crosses our roads</li>
+                    </ul>
+                    <a href="attractions.html#stewardship" class="btn btn-primary">Learn More About Stewardship</a>
+                </div>
+                <div class="stewardship-image" style="border-radius: 12px; height: 400px; overflow: hidden;">
+                    <img src="media/placeholder-stewardship-wildlife.jpg" alt="Deer in Cloudcroft" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Your Trip Section -->
+    <section class="plan-section" id="plan">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Trip Planning</span>
+                <h2>Plan Your Mountain Escape</h2>
+                <p class="section-description">
+                    Everything you need to plan the perfect Cloudcroft getaway.
+                </p>
+            </div>
+
+            <div class="plan-grid">
+                <div class="plan-card">
+                    <div class="plan-icon">📍</div>
+                    <h3>Getting Here</h3>
+                    <p>Just 1.5 hours from Las Cruces, 3.5 hours from Albuquerque, and 2 hours from El Paso.</p>
+                    <a href="https://www.google.com/maps/place/Cloudcroft,+NM+88317" target="_blank" class="btn btn-secondary" style="border-color: var(--pine-light); color: var(--pine-medium);">Directions & Maps</a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-icon">🌤️</div>
+                    <h3>Weather</h3>
+                    <p>15-20° cooler than the desert below. Check conditions before you head up the mountain.</p>
+                    <a href="https://weather.com/weather/today/l/c0f026b898993ad958988d683cf56bc338b3c688765af81dca58753d88c9bdcd" target="_blank" class="btn btn-secondary" style="border-color: var(--pine-light); color: var(--pine-medium);">Check Weather</a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-icon">📖</div>
+                    <h3>Visitor Guide</h3>
+                    <p>Download or request our free guide packed with insider tips and local recommendations.</p>
+                    <a href="#" class="btn btn-secondary" style="border-color: var(--pine-light); color: var(--pine-medium);">Get Your Guide</a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-icon">📷</div>
+                    <h3>Webcams</h3>
+                    <p>See real-time views of Cloudcroft and check conditions before your visit.</p>
+                    <a href="#" class="btn btn-secondary" style="border-color: var(--pine-light); color: var(--pine-medium);">View Webcams</a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-icon">🗺️</div>
+                    <h3>Trail Maps</h3>
+                    <p>Download trail maps for hiking, biking, and exploring Lincoln National Forest.</p>
+                    <a href="#" class="btn btn-secondary" style="border-color: var(--pine-light); color: var(--pine-medium);">Download Maps</a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-icon">❓</div>
+                    <h3>FAQs</h3>
+                    <p>Find answers to common questions about visiting Cloudcroft.</p>
+                    <a href="faq.html" class="btn btn-secondary" style="border-color: var(--pine-light); color: var(--pine-medium);">Read FAQs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2>The Cloudcroft Reader</h2>
+            <p>Your source for local news, events, and stories from the Sacramento Mountains. Stay connected with what's happening in Cloudcroft.</p>
+            <a href="https://www.cloudcroftreader.com" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Visit the Cloudcroft Reader</a>
+            <a href="mailto:cloudcrofttourism@gmail.com?subject=Newsletter%20Subscription&body=I%20would%20like%20to%20subscribe%20to%20the%20monthly%20email%20newsletter." class="btn newsletter-subscribe-btn" style="margin-top: 1rem;">Subscribe to our monthly email newsletter, giving you up-to-date information on the current going on and specials occurring monthly in Cloudcroft.</a>
+        </div>
+    </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Discover Cloudcroft</h3>
+                    <p>
+                        Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors 
+                        seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#explore">In the Village</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="biking.html">Biking</a></li>
+                        <li><a href="activities.html">Golf & Recreation</a></li>
+                        <li><a href="sunspot-observatory.html">Sunspot Observatory</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li><a href="lodging.html">Where to Stay</a></li>
+                        <li><a href="lodging.html#rentals">Vacation Rentals</a></li>
+                        <li><a href="dining.html">Where to Eat</a></li>
+                        <li><a href="attractions.html">Art Galleries</a></li>
+                        <li><a href="attractions.html">Shopping</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Plan</h4>
+                    <ul>
+                        <li><a href="#plan">Getting Here</a></li>
+                        <li><a href="groceries.html">Groceries & Supplies</a></li>
+                        <li><a href="emergency-services.html">Emergency Services</a></li>
+                        <li><a href="hiking-trails.html">Trail Maps</a></li>
+                        <li><a href="#plan">Visitor Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Chamber of Commerce</a></li>
+                        <li><a href="#">Village of Cloudcroft</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 New Mexico's Mountain Retreat. All rights reserved.</p>
+                <div class="footer-partners">
+                    <span>Proud partner of</span>
+                    <a href="#">New Mexico True</a>
+                </div>
+                <div>
+                    <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Explore tabs functionality with filtering
+        const exploreTabs = document.querySelectorAll('.explore-tab');
+        const exploreCards = document.querySelectorAll('.explore-card');
+        const categoryMap = {
+            'In the Village': 'village',
+            'In the Mountains': 'mountains',
+            'Day Trips': 'daytrips'
+        };
+
+        exploreTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                exploreTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const category = categoryMap[tab.textContent];
+                exploreCards.forEach(card => {
+                    if (category && card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else if (!category || tab.textContent === 'In the Village') {
+                        // Show all for first tab or default
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+
+        // Reels horizontal scroll buttons
+        const reelsScroll = document.getElementById('reels-scroll');
+        const reelPrev = document.querySelector('.reels-scroll-btn.prev');
+        const reelNext = document.querySelector('.reels-scroll-btn.next');
+
+        if (reelsScroll && reelPrev && reelNext) {
+            const getScrollAmount = () => reelsScroll.querySelector('.reel-card').offsetWidth + 24;
+            reelPrev.addEventListener('click', () => {
+                reelsScroll.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+            });
+            reelNext.addEventListener('click', () => {
+                reelsScroll.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for entrance animations
+        document.querySelectorAll('.explore-card, .activity-card, .season-card, .event-card, .plan-card, .reel-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Emergency Services | Discover Cloudcroft</title>
+    <meta name="description" content="Emergency services in Cloudcroft, NM. Find hospitals, fire departments, police, and urgent care contacts for the Sacramento Mountains area.">
+    <meta property="og:title" content="Emergency Services | Discover Cloudcroft">
+    <meta property="og:description" content="Emergency services in Cloudcroft, NM. Find hospitals, fire departments, police, and urgent care contacts for the Sacramento Mountains area.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/emergency-services.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Emergency Services | Discover Cloudcroft">
+    <meta name="twitter:description" content="Emergency services in Cloudcroft, NM. Find hospitals, fire departments, police, and urgent care contacts for the Sacramento Mountains area.">
+    <link rel="canonical" href="https://discovercloudcroft.com/emergency-services.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pine-deep: #1565C0; --pine-medium: #1E88E5; --pine-light: #64B5F6; --sky-pale: #E3F2FD; --cloud-white: #FAFCFE; --snow-white: #ffffff; --text-dark: #1A1A1A; --text-light: #6B6B6B; --emergency-red: #C62828; --emergency-dark: #B71C1C; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        .emergency-banner { background: var(--emergency-red); color: white; padding: 2rem; text-align: center; margin-top: 60px; }
+        .emergency-banner h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .emergency-number { font-size: 3rem; font-weight: 700; letter-spacing: 0.1em; }
+
+        section { padding: 4rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 2.5rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--emergency-red); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(198, 40, 40, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(1.8rem, 5vw, 2.5rem); color: var(--pine-deep); margin-bottom: 0.75rem; }
+        .section-description { font-size: 1.05rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        .services-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--snow-white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(198, 40, 40, 0.08); border-top: 4px solid var(--emergency-red); }
+        .service-header { background: var(--emergency-red); color: white; padding: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+        .service-icon { font-size: 2.5rem; }
+        .service-header h3 { font-size: 1.4rem; }
+        .service-content { padding: 1.5rem; }
+        .service-content p { color: var(--text-light); margin-bottom: 1rem; line-height: 1.7; }
+        .service-detail { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .service-detail:last-child { border-bottom: none; }
+        .detail-icon { font-size: 1.2rem; width: 30px; }
+        .detail-text { flex: 1; }
+        .detail-text strong { color: var(--text-dark); display: block; }
+        .detail-text span { color: var(--text-light); font-size: 0.9rem; }
+
+        .hospitals-section { background: var(--snow-white); }
+        .hospital-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .hospital-card { background: var(--cloud-white); border-radius: 12px; padding: 2rem; border: 1px solid rgba(198, 40, 40, 0.15); }
+        .hospital-card h3 { font-size: 1.4rem; color: var(--emergency-red); margin-bottom: 0.5rem; }
+        .hospital-distance { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem; font-weight: 500; }
+        .hospital-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem; }
+        .hospital-info { display: flex; flex-direction: column; gap: 0.5rem; }
+        .hospital-info-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-dark); }
+
+        .info-section { background: #FFF3E0; padding: 3rem 2rem; }
+        .info-container { max-width: 1000px; margin: 0 auto; }
+        .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .info-card { background: white; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #FF9800; }
+        .info-card h3 { font-size: 1.2rem; color: #E65100; margin-bottom: 0.5rem; }
+        .info-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.6; }
+
+        .primary-care-section { background: var(--sky-pale); }
+        .care-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .care-card { background: var(--snow-white); border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .care-card h4 { font-size: 1.2rem; color: var(--pine-deep); margin-bottom: 0.5rem; }
+        .care-card p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.75rem; }
+        .care-tag { display: inline-block; font-size: 0.75rem; padding: 0.25rem 0.6rem; background: rgba(30, 136, 229, 0.1); color: #388E3C; border-radius: 12px; }
+
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+            .hospital-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hospital-grid, .info-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+            .service-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav><ul class="nav-links"><li><a href="index.html#explore">Explore</a></li><li><a href="index.html#seasons">Seasons</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#stay">Stay & Dine</a></li><li><a href="index.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <div class="emergency-banner">
+        <h2>In Case of Emergency</h2>
+        <div class="emergency-number">Call 911</div>
+    </div>
+
+    <section class="services-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Local Response</span>
+                <h2>Emergency Services in Cloudcroft</h2>
+                <p class="section-description">Know your resources before you need them. Local volunteer teams and regional services ensure help is available in the Sacramento Mountains.</p>
+            </div>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon">🚑</span>
+                        <h3>Emergency Medical Services</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Multiple ambulance services respond to the Cloudcroft area. For life-threatening emergencies, patients are transported to the nearest appropriate hospital.</p>
+                        <div class="service-detail">
+                            <span class="detail-icon">🏥</span>
+                            <div class="detail-text">
+                                <strong>AMR (American Medical Response)</strong>
+                                <span>Paid staff covering all of Otero County</span>
+                            </div>
+                        </div>
+                        <div class="service-detail">
+                            <span class="detail-icon">🚒</span>
+                            <div class="detail-text">
+                                <strong>Volunteer Fire Dept EMS</strong>
+                                <span>Local volunteers providing vital life-saving care</span>
+                            </div>
+                        </div>
+                        <div class="service-detail">
+                            <span class="detail-icon">⏱️</span>
+                            <div class="detail-text">
+                                <strong>Response Time</strong>
+                                <span>Varies by location; remote areas may take longer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon">🚒</span>
+                        <h3>Fire Department</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>The Cloudcroft Volunteer Fire Department provides fire suppression, rescue, and emergency medical response throughout the village and surrounding areas.</p>
+                        <div class="service-detail">
+                            <span class="detail-icon">📍</span>
+                            <div class="detail-text">
+                                <strong>Cloudcroft VFD</strong>
+                                <span>Volunteer firefighters serving the community</span>
+                            </div>
+                        </div>
+                        <div class="service-detail">
+                            <span class="detail-icon">🌲</span>
+                            <div class="detail-text">
+                                <strong>Wildfire Response</strong>
+                                <span>Coordination with US Forest Service for forest fires</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon">👮</span>
+                        <h3>Law Enforcement</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Law enforcement services are provided by multiple agencies depending on jurisdiction and nature of the incident.</p>
+                        <div class="service-detail">
+                            <span class="detail-icon">🏛️</span>
+                            <div class="detail-text">
+                                <strong>Otero County Sheriff</strong>
+                                <span>Primary law enforcement for unincorporated areas</span>
+                            </div>
+                        </div>
+                        <div class="service-detail">
+                            <span class="detail-icon">🛡️</span>
+                            <div class="detail-text">
+                                <strong>NM State Police</strong>
+                                <span>Highway patrol and state jurisdiction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hospitals-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Nearest Hospitals</span>
+                <h2>Emergency Rooms</h2>
+                <p class="section-description">The nearest emergency room is in Alamogordo, approximately 27 minutes from Cloudcroft. For life-threatening emergencies, call 911.</p>
+            </div>
+
+            <div class="hospital-grid">
+                <div class="hospital-card">
+                    <h3>CHRISTUS Health - Alamogordo</h3>
+                    <div class="hospital-distance">📍 ~27 minutes from Cloudcroft</div>
+                    <p>99-bed Level III Trauma Center providing 24-hour emergency care. The largest healthcare facility in Otero County, serving the community since 1949.</p>
+                    <div class="hospital-info">
+                        <div class="hospital-info-item">📍 2669 N. Scenic Dr., Alamogordo, NM 88310</div>
+                        <div class="hospital-info-item">📞 (575) 439-6100</div>
+                        <div class="hospital-info-item">🏥 24/7 Emergency Room</div>
+                    </div>
+                </div>
+
+                <div class="hospital-card">
+                    <h3>Lincoln County Medical Center</h3>
+                    <div class="hospital-distance">📍 Ruidoso (~45 minutes)</div>
+                    <p>Community hospital in Ruidoso providing emergency services, surgery, and inpatient care for the Lincoln County region.</p>
+                    <div class="hospital-info">
+                        <div class="hospital-info-item">📍 211 Sudderth Dr., Ruidoso, NM</div>
+                        <div class="hospital-info-item">🏥 Emergency Department</div>
+                    </div>
+                </div>
+
+                <div class="hospital-card">
+                    <h3>Artesia General Hospital</h3>
+                    <div class="hospital-distance">📍 Artesia (~1+ hour)</div>
+                    <p>An alternative for non-life-threatening emergencies, depending on location and circumstances.</p>
+                    <div class="hospital-info">
+                        <div class="hospital-info-item">📍 Artesia, NM</div>
+                        <div class="hospital-info-item">🏥 Emergency Services</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-container">
+            <div class="section-header">
+                <h2 style="color: #E65100;">Important Information</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📱 Cell Service is Limited</h3>
+                    <p>Cell coverage is spotty throughout the Sacramento Mountains. If you can't get a signal, try moving to higher ground or driving toward the village center. Know your location before you need help.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🏔️ Remote Area Response</h3>
+                    <p>Communities like Timberon are over an hour from the nearest ER. Consider your distance from emergency services when planning remote activities.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🚑 Transport Decisions</h3>
+                    <p>For life-threatening emergencies, ambulances transport to the nearest hospital. For non-life-threatening situations, you may be taken to your hospital of choice.</p>
+                </div>
+                <div class="info-card">
+                    <h3>👥 Volunteer Responders</h3>
+                    <p>Many mountain area EMS responders are volunteers. Your patience is appreciated as these dedicated community members provide critical services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="primary-care-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Non-Emergency Care</span>
+                <h2>Medical Clinics & Primary Care</h2>
+                <p class="section-description">For non-emergency medical needs, several clinics serve the Cloudcroft and Alamogordo areas.</p>
+            </div>
+
+            <div class="care-grid">
+                <div class="care-card">
+                    <h4>Trestle Medical Services</h4>
+                    <p>New medical practice located on James Canyon Highway in Cloudcroft, next to the fire station. Offering primary care services to mountain residents and visitors.</p>
+                    <span class="care-tag">Cloudcroft</span>
+                </div>
+                <div class="care-card">
+                    <h4>Sacramento Mountain Medical</h4>
+                    <p>Local medical provider serving the Cloudcroft community with primary care and general medical services.</p>
+                    <span class="care-tag">Cloudcroft</span>
+                </div>
+                <div class="care-card">
+                    <h4>Presbyterian Medical Services</h4>
+                    <p>Healthcare services available in Alamogordo for a range of medical needs.</p>
+                    <span class="care-tag">Alamogordo</span>
+                </div>
+                <div class="care-card">
+                    <h4>Ben Archer Health Center</h4>
+                    <p>Comprehensive services including medical, dental, and behavioral health. No patient is denied services due to inability to pay.</p>
+                    <span class="care-tag">Sliding Scale</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors seeking mountain refuge since 1899.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a><a href="#">▶</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="index.html#explore">In the Village</a></li><li><a href="hiking-trails.html">Hiking Trails</a></li><li><a href="biking.html">Biking</a></li><li><a href="camping.html">Camping</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="grand-cloudcroft-hotel.html">Where to Stay</a></li><li><a href="index.html#stay">Where to Eat</a></li><li><a href="instant-karma.html">Shopping</a></li><li><a href="index.html#events">Events</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="index.html#plan">Getting Here</a></li><li><a href="groceries.html">Groceries</a></li><li><a href="#">Emergency Services</a></li><li><a href="hiking-trails.html">Trail Maps</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Chamber of Commerce</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.service-card, .hospital-card, .care-card').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

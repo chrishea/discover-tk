@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>The Cabins at Cloudcroft | Discover Cloudcroft</title>
+    <meta name="description" content="Stay at The Cabins at Cloudcroft, offering cozy mountain cabin rentals surrounded by pine forests in the Sacramento Mountains of New Mexico.">
+    <meta property="og:title" content="The Cabins at Cloudcroft | Discover Cloudcroft">
+    <meta property="og:description" content="Stay at The Cabins at Cloudcroft, offering cozy mountain cabin rentals surrounded by pine forests in the Sacramento Mountains of New Mexico.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/cabins-at-cloudcroft.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Cabins at Cloudcroft | Discover Cloudcroft">
+    <meta name="twitter:description" content="Stay at The Cabins at Cloudcroft, offering cozy mountain cabin rentals surrounded by pine forests in the Sacramento Mountains of New Mexico.">
+    <link rel="canonical" href="https://discovercloudcroft.com/cabins-at-cloudcroft.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #fff8dc;
+            --sunset-gold: #BF0A30;
+            --sunset-warm: #a31621;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #8B4513;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+            --cabin-brown: #5d4037;
+            --cabin-accent: #795548;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            background: #a31621 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--cabin-brown) 0%, #3e2723 50%, #1b0f0a 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(93, 64, 55, 0.5) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-badge span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            color: #64B5F6;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 1s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--cabin-accent);
+            color: var(--snow-white);
+        }
+
+        .btn-primary:hover {
+            background: #8d6e63;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(121, 85, 72, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffffff;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Quick Info Bar */
+        .quick-info {
+            background: #1565C0;
+            padding: 1.5rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .quick-info-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--cabin-accent);
+            margin-bottom: 1rem;
+            padding: 0.4rem 1rem;
+            background: rgba(121, 85, 72, 0.1);
+            border-radius: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--cabin-brown);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-section {
+            background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--cabin-brown);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-highlight {
+            background: var(--snow-white);
+            border-left: 4px solid var(--pine-light);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .about-highlight p {
+            font-style: italic;
+            color: var(--cabin-brown);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .about-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            background: var(--snow-white);
+            color: var(--cabin-accent);
+            border-radius: 25px;
+            border: 1px solid rgba(121, 85, 72, 0.3);
+        }
+
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(13, 27, 42, 0.15);
+            background: linear-gradient(135deg, var(--cabin-brown) 0%, var(--cabin-accent) 100%);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image-placeholder {
+            text-align: center;
+            color: white;
+        }
+
+        .about-image-placeholder .icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Cabins Section */
+        .cabins-section {
+            background: var(--snow-white);
+        }
+
+        .cabins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .cabin-card {
+            background: var(--cloud-white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(121, 85, 72, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .cabin-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(13, 27, 42, 0.1);
+            border-color: var(--cabin-accent);
+        }
+
+        .cabin-image {
+            height: 180px;
+            background: linear-gradient(135deg, var(--cabin-brown) 0%, var(--cabin-accent) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .cabin-content {
+            padding: 1.5rem;
+        }
+
+        .cabin-card h3 {
+            font-size: 1.5rem;
+            color: var(--cabin-brown);
+            margin-bottom: 0.75rem;
+        }
+
+        .cabin-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .cabin-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .cabin-features li {
+            padding: 0.4rem 0;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cabin-features li::before {
+            content: '✓';
+            color: var(--cabin-accent);
+            font-weight: bold;
+        }
+
+        .cabin-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--cabin-brown);
+        }
+
+        /* Amenities Section */
+        .amenities-section {
+            background: var(--cabin-brown);
+            color: var(--snow-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .amenities-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(100, 181, 246, 0.1) 0%, transparent 70%);
+        }
+
+        .amenities-section .section-header h2 {
+            color: var(--snow-white);
+        }
+
+        .amenities-section .section-label {
+            background: rgba(255, 255, 255, 0.15);
+            color: #64B5F6;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .amenity-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .amenity-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .amenity-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .amenity-card h3 {
+            font-size: 1.3rem;
+            color: #64B5F6;
+            margin-bottom: 0.75rem;
+        }
+
+        .amenity-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Experience Section */
+        .experience-section {
+            background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%);
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .experience-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--snow-white);
+            border-radius: 12px;
+            border: 1px solid rgba(121, 85, 72, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            border-color: var(--cabin-accent);
+            box-shadow: 0 10px 30px rgba(13, 27, 42, 0.08);
+        }
+
+        .experience-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-card h3 {
+            font-size: 1.3rem;
+            color: var(--cabin-brown);
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Location Section */
+        .location-section {
+            background: var(--snow-white);
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .location-info h2 {
+            font-size: 2.5rem;
+            color: var(--cabin-brown);
+            margin-bottom: 1.5rem;
+        }
+
+        .location-details {
+            margin-bottom: 2rem;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(121, 85, 72, 0.2);
+        }
+
+        .location-item:last-child {
+            border-bottom: none;
+        }
+
+        .location-item-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--cabin-accent) 0%, var(--cabin-brown) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .location-item-content h4 {
+            font-size: 1.1rem;
+            color: var(--cabin-brown);
+            margin-bottom: 0.25rem;
+        }
+
+        .location-item-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .location-map {
+            background: var(--cloud-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(13, 27, 42, 0.1);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(121, 85, 72, 0.2);
+        }
+
+        .map-placeholder {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .map-placeholder-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .map-placeholder h3 {
+            color: var(--cabin-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .map-placeholder p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--snow-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08);
+        }
+
+        .review-stars {
+            color: #64B5F6;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-card p {
+            color: var(--text-light);
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .review-author {
+            font-weight: 600;
+            color: var(--cabin-brown);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+            padding: 5rem 2rem;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-container h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .cta-container p {
+            color: #ffffff;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: #3e2723;
+            color: var(--snow-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Alegreya', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #64B5F6;
+            color: var(--cabin-brown);
+        }
+
+        .footer-column h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: #64B5F6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--snow-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 3;
+            }
+
+            .about-content,
+            .location-content {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                height: 60vh;
+                min-height: 400px;
+            }
+
+            .quick-info-container {
+                gap: 1.5rem;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Cabins at Cloudcroft",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cloudcroft",
+        "addressRegion": "NM",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#seasons">Seasons</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#stay">Stay & Dine</a></li>
+                    <li><a href="index.html#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>Cloudcroft Lodging</span>
+            </div>
+            <h1>The Cabins at Cloudcroft</h1>
+            <p class="hero-subtitle">Rustic Charm Meets Mountain Comfort Since 1965</p>
+            <p class="hero-description">
+                Nestled in the tall pines and aspens at 9,000 feet, our charming vintage cabins offer
+                cozy fireplaces, full kitchens, and an authentic mountain getaway experience.
+            </p>
+            <div class="hero-ctas">
+                <a href="https://www.cabinsatcloudcroft.com/" target="_blank" class="btn btn-primary">Book Now</a>
+                <a href="#location" class="btn btn-secondary">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <div class="quick-info">
+        <div class="quick-info-container">
+            <div class="quick-info-item">
+                <div class="quick-info-icon">📍</div>
+                <span>1006 Coyote Avenue</span>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">🏠</div>
+                <span>16 Vintage Cabins</span>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">💰</div>
+                <span>From $113/night</span>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">🦌</div>
+                <span>Wildlife Viewing</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>A Mountain Treasure Since 1965</h2>
+                    <p>
+                        The Cabins at Cloudcroft is a beloved retreat nestled in the Sacramento Mountains
+                        within Lincoln National Forest. Built in 1965, our cabins maintain their nostalgic
+                        charm with knotty pine walls and ceilings, original metal cabinet kitchens, and
+                        that authentic 1950s mountain lodge feel.
+                    </p>
+                    <div class="about-highlight">
+                        <p>"A treasure! Everything you would expect from a mountain cabin—cozy fireplace,
+                        retro-lodge nostalgic decor, SUPER CLEAN."</p>
+                    </div>
+                    <p>
+                        Owners Karl and Laura go out of their way to make every stay delightful. Within
+                        walking distance to Burro Street's shops and restaurants, and close to hiking
+                        trails and Ski Cloudcroft, the cabins provide an ideal home base for your
+                        mountain adventure.
+                    </p>
+                    <div class="about-features">
+                        <span class="about-feature">🔥 Wood-Burning Fireplaces</span>
+                        <span class="about-feature">🍳 Full Kitchens</span>
+                        <span class="about-feature">📺 Cable TV</span>
+                        <span class="about-feature">📶 Free WiFi</span>
+                        <span class="about-feature">🪵 Firewood Provided</span>
+                        <span class="about-feature">🧹 Exceptionally Clean</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <div class="icon">🏕️</div>
+                        <p>The Cabins at Cloudcroft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cabins Section -->
+    <section class="cabins-section" id="cabins">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Our Cabins</span>
+                <h2>Choose Your Mountain Retreat</h2>
+                <p class="section-description">
+                    From cozy one-bedroom getaways to spacious family cabins, find your perfect mountain escape.
+                </p>
+            </div>
+
+            <div class="cabins-grid">
+                <div class="cabin-card">
+                    <div class="cabin-image">🛏️</div>
+                    <div class="cabin-content">
+                        <h3>One Bedroom Cabin</h3>
+                        <p>Perfect for couples seeking a romantic mountain retreat with all the comforts of home.</p>
+                        <ul class="cabin-features">
+                            <li>King bed</li>
+                            <li>Full kitchen</li>
+                            <li>Fireplace or wood-burning stove</li>
+                            <li>Living room with sofa</li>
+                            <li>Full bathroom with tub/shower</li>
+                            <li>Outdoor seating</li>
+                        </ul>
+                        <span class="cabin-price">From $113/night</span>
+                    </div>
+                </div>
+
+                <div class="cabin-card">
+                    <div class="cabin-image">🏡</div>
+                    <div class="cabin-content">
+                        <h3>Two Bedroom Cabin</h3>
+                        <p>Ideal for families or friends with extra space and sleeping arrangements.</p>
+                        <ul class="cabin-features">
+                            <li>King bed + Two doubles</li>
+                            <li>Full kitchen with all essentials</li>
+                            <li>Fireplace with firewood</li>
+                            <li>Futon or love seat</li>
+                            <li>Recliner and/or rocker</li>
+                            <li>Cable TV</li>
+                        </ul>
+                        <span class="cabin-price">Contact for rates</span>
+                    </div>
+                </div>
+
+                <div class="cabin-card">
+                    <div class="cabin-image">🏘️</div>
+                    <div class="cabin-content">
+                        <h3>Four Bedroom Cabin</h3>
+                        <p>Our largest cabin—perfect for family reunions or group getaways.</p>
+                        <ul class="cabin-features">
+                            <li>4 bedrooms, 2 bathrooms</li>
+                            <li>Full kitchen</li>
+                            <li>Multiple TVs (up to 3)</li>
+                            <li>Spacious living areas</li>
+                            <li>Wood-burning fireplace</li>
+                            <li>Non-smoking</li>
+                        </ul>
+                        <span class="cabin-price">Contact for rates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">What's Included</span>
+                <h2>Cabin Amenities</h2>
+            </div>
+
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <div class="amenity-icon">🔥</div>
+                    <h3>Cozy Fireplaces</h3>
+                    <p>Every cabin features a fireplace or glass-front wood-burning stove. Firewood is provided for your stay.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🍳</div>
+                    <h3>Full Kitchens</h3>
+                    <p>Complete kitchens with stove, refrigerator, microwave, and all the cookware and utensils you need.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🏕️</div>
+                    <h3>Outdoor Pavilion</h3>
+                    <p>Gather with loved ones in our outdoor pavilion. BBQ facilities available for cooking under the stars.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🎤</div>
+                    <h3>Karaoke System</h3>
+                    <p>Looking for entertainment? Our karaoke system is available for guests to enjoy during their stay.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🅿️</div>
+                    <h3>Free Parking</h3>
+                    <p>Complimentary on-site private parking for all guests. Easy access to your cabin.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">📶</div>
+                    <h3>Free WiFi</h3>
+                    <p>Stay connected with complimentary WiFi throughout the property.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">The Experience</span>
+                <h2>What Makes Us Special</h2>
+            </div>
+
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-icon">🦌</div>
+                    <h3>Wildlife Watching</h3>
+                    <p>Deer and elk wander through the property in the evenings. Grab a seat on your porch and enjoy the show!</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon">🪵</div>
+                    <h3>Vintage Character</h3>
+                    <p>Original knotty pine walls, retro metal kitchens, and 1950s charm transport you to a simpler time.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon">✨</div>
+                    <h3>Impeccably Clean</h3>
+                    <p>Guests consistently rave about our cleanliness—some of the cleanest cabins they've ever stayed in.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Guest Reviews</span>
+                <h2>What Our Guests Say</h2>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"These cabins are a great place to stay! They are cozy and all needs are provided,
+                    and it is such a beautiful environment. Deer and elk wander through the property
+                    in the evenings and are fun to watch."</p>
+                    <span class="review-author">— Recent Guest</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Karl and Laura go out of their way to make sure your stay is delightful and these
+                    cabins are some of the cleanest I've ever stayed in. A true treasure!"</p>
+                    <span class="review-author">— Returning Visitor</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Super clean and very old fashioned 1950's style. Exactly what you'd expect from
+                    a cabin in the woods from that time period. Loved the fireplace and location!"</p>
+                    <span class="review-author">— Happy Camper</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" id="location">
+        <div class="section-container">
+            <div class="location-content">
+                <div class="location-info">
+                    <h2>Plan Your Stay</h2>
+                    <div class="location-details">
+                        <div class="location-item">
+                            <div class="location-item-icon">📍</div>
+                            <div class="location-item-content">
+                                <h4>Location</h4>
+                                <p>1006 Coyote Avenue<br>Cloudcroft, NM 88317</p>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-item-icon">🚶</div>
+                            <div class="location-item-content">
+                                <h4>Walking Distance</h4>
+                                <p>Burro Street shops & restaurants<br>Hiking trails • Ski Cloudcroft</p>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-item-icon">🚗</div>
+                            <div class="location-item-content">
+                                <h4>Getting Here</h4>
+                                <p>90 miles north of El Paso, TX<br>In the Sacramento Mountains</p>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-item-icon">⛰️</div>
+                            <div class="location-item-content">
+                                <h4>Elevation</h4>
+                                <p>9,000 feet above sea level<br>Lincoln National Forest</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=1006+Coyote+Avenue+Cloudcroft+NM" target="_blank" class="btn btn-primary">Get Directions</a>
+                </div>
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <div class="map-placeholder-icon">🗺️</div>
+                        <h3>Find Us on Coyote Avenue</h3>
+                        <p>Walking distance to downtown Cloudcroft</p>
+                        <a href="https://maps.google.com/?q=1006+Coyote+Avenue+Cloudcroft+NM" target="_blank" class="btn btn-primary">Open in Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready for Your Mountain Getaway?</h2>
+            <p>Book your cabin today and experience the rustic charm and warm hospitality of The Cabins at Cloudcroft.</p>
+            <div class="cta-buttons">
+                <a href="https://www.cabinsatcloudcroft.com/" target="_blank" class="btn btn-primary">Book Your Cabin</a>
+                <a href="index.html#stay" class="btn" style="background: #0D47A1; color: white;">Explore More Lodging</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Discover Cloudcroft</h3>
+                    <p>
+                        Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors
+                        seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">In the Village</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="biking.html">Biking</a></li>
+                        <li><a href="activities.html">Golf & Recreation</a></li>
+                        <li><a href="sunspot-observatory.html">Sunspot Observatory</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li><a href="grand-cloudcroft-hotel.html">Where to Stay</a></li>
+                        <li><a href="index.html#stay">Where to Eat</a></li>
+                        <li><a href="instant-karma.html">Shopping</a></li>
+                        <li><a href="index.html#events">Events Calendar</a></li>
+                        <li><a href="art-galleries.html">Art Galleries</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Plan</h4>
+                    <ul>
+                        <li><a href="index.html#plan">Getting Here</a></li>
+                        <li><a href="groceries.html">Groceries & Supplies</a></li>
+                        <li><a href="emergency-services.html">Emergency Services</a></li>
+                        <li><a href="hiking-trails.html">Trail Maps</a></li>
+                        <li><a href="index.html#plan">Visitor Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Chamber of Commerce</a></li>
+                        <li><a href="#">Village of Cloudcroft</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p>
+                <div>
+                    <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for entrance animations
+        document.querySelectorAll('.cabin-card, .amenity-card, .experience-card, .review-card, .location-item').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

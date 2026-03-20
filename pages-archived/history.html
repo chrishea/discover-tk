@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>History of Cloudcroft | Discover Cloudcroft</title>
+    <meta name="description" content="Discover the rich history of Cloudcroft, NM. From railroad origins to mountain resort town, explore the heritage of this Sacramento Mountains village.">
+    <meta property="og:title" content="History of Cloudcroft | Discover Cloudcroft">
+    <meta property="og:description" content="Discover the rich history of Cloudcroft, NM. From railroad origins to mountain resort town, explore the heritage of this Sacramento Mountains village.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/history.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="History of Cloudcroft | Discover Cloudcroft">
+    <meta name="twitter:description" content="Discover the rich history of Cloudcroft, NM. From railroad origins to mountain resort town, explore the heritage of this Sacramento Mountains village.">
+    <link rel="canonical" href="https://discovercloudcroft.com/history.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #FCD116;
+            --sunset-warm: #FCD116;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #3e2723;
+            --snow-white: #ffffff;
+            --text-dark: #3e2723;
+            --text-light: #5d4037;
+            --sepia-light: #d7ccc8;
+            --sepia-medium: #bcaaa4;
+            --rail-rust: #8d6e63;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0D47A1 0%, #1565C0 50%, #1E88E5 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(21, 101, 192, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(30, 136, 229, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(100, 181, 246, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Vintage photo frame decorations */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 70%;
+            border: 2px solid rgba(215, 204, 200, 0.2);
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+        /* Railroad track pattern */
+        .railroad-pattern {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 30px,
+                rgba(13, 71, 161, 0.4) 30px,
+                rgba(13, 71, 161, 0.4) 35px
+            );
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(21, 101, 192, 0.3);
+            color: var(--sepia-light);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(215, 204, 200, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--snow-white);
+            margin-bottom: 1rem;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            color: var(--sepia-light);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        /* Timeline Navigation */
+        .timeline-nav {
+            background: var(--bark-brown);
+            padding: 1rem 0;
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+
+        .timeline-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .timeline-link {
+            color: var(--sepia-light);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .timeline-link:hover {
+            background: rgba(215, 204, 200, 0.2);
+            color: var(--snow-white);
+        }
+
+        /* Content Sections */
+        .history-section {
+            padding: 5rem 2rem;
+        }
+
+        .history-section:nth-child(odd) {
+            background: var(--sky-pale);
+        }
+
+        .history-section:nth-child(even) {
+            background: var(--cloud-white);
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .era-badge {
+            display: inline-block;
+            background: var(--pine-deep);
+            color: var(--snow-white);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--bark-brown);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-intro {
+            font-family: 'Alegreya', serif;
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-style: italic;
+            line-height: 1.8;
+            border-left: 3px solid var(--pine-medium);
+            padding-left: 1.5rem;
+        }
+
+        .history-content {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .history-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+        }
+
+        .history-content p:first-of-type::first-letter {
+            font-family: 'Alegreya', serif;
+            font-size: 3.5rem;
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+            color: var(--pine-deep);
+        }
+
+        /* Feature Box */
+        .feature-box {
+            background: var(--snow-white);
+            border: 1px solid var(--sepia-light);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .history-section:nth-child(odd) .feature-box {
+            background: var(--cloud-white);
+        }
+
+        .feature-box h4 {
+            font-size: 1.4rem;
+            color: var(--bark-brown);
+            margin-bottom: 1rem;
+        }
+
+        .feature-box ul {
+            list-style: none;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .feature-box li {
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .feature-box li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 8px;
+            height: 8px;
+            background: var(--sunset-gold);
+            border-radius: 50%;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, var(--pine-deep), var(--pine-medium));
+            color: var(--snow-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: 'Alegreya', serif;
+            font-size: 6rem;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        .quote-text {
+            font-family: 'Alegreya', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .quote-attribution {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Timeline Events */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--pine-deep), var(--pine-light));
+            border-radius: 3px;
+        }
+
+        .timeline-event {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--sepia-light);
+        }
+
+        .timeline-event:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 0.3rem;
+            width: 15px;
+            height: 15px;
+            background: var(--sunset-gold);
+            border-radius: 50%;
+            border: 3px solid var(--snow-white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transform: translateX(-6px);
+        }
+
+        .timeline-year {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--sunset-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-event h4 {
+            font-size: 1.3rem;
+            color: var(--bark-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-event p {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Photo Gallery Style */
+        .history-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            background: var(--snow-white);
+            border: 1px solid var(--sepia-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .gallery-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--pine-light), var(--pine-medium));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+
+        .gallery-item h4 {
+            font-size: 1.2rem;
+            color: var(--bark-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Statistics Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--snow-white);
+            border-radius: 8px;
+            border: 1px solid var(--sepia-light);
+        }
+
+        .history-section:nth-child(odd) .stat-item {
+            background: var(--cloud-white);
+        }
+
+        .stat-number {
+            font-family: 'Alegreya', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--sunset-gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Legacy Section */
+        .legacy-section {
+            background: linear-gradient(135deg, var(--bark-brown) 0%, var(--pine-deep) 100%);
+            color: var(--snow-white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .legacy-section h2 {
+            color: var(--snow-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .legacy-section p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.15rem;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .legacy-cta {
+            display: inline-block;
+            background: var(--sunset-gold);
+            color: var(--snow-white);
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .legacy-cta:hover {
+            background: var(--sunset-warm);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: #b8c9b8;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Alegreya', serif;
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-section a {
+            color: #b8c9b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #64B5F6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 60vh;
+                min-height: 400px;
+            }
+
+            .timeline-nav-inner {
+                gap: 0.25rem;
+            }
+
+            .timeline-link {
+                padding: 0.4rem 0.75rem;
+                font-size: 0.75rem;
+            }
+
+            .history-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-intro {
+                font-size: 1.15rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-event::before {
+                left: -2rem;
+                transform: translateX(-6px);
+            }
+
+            .quote-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .quote-text {
+                font-size: 1.2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#plan" class="nav-cta">Plan Your Visit</a></li>
+            </ul>
+            <button class="mobile-menu-btn">&#9776;</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="railroad-pattern"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Est. 1899</span>
+            <h1>History of Cloudcroft</h1>
+            <p class="hero-subtitle">From ancient Apache trails to railroad boom town, discover the rich heritage of New Mexico's beloved mountain retreat</p>
+        </div>
+    </section>
+
+    <!-- Timeline Navigation -->
+    <nav class="timeline-nav">
+        <div class="timeline-nav-inner">
+            <a href="#apache" class="timeline-link">Ancient Origins</a>
+            <a href="#railroad" class="timeline-link">Railroad Era</a>
+            <a href="#lodge" class="timeline-link">The Lodge</a>
+            <a href="#lumber" class="timeline-link">Lumber Industry</a>
+            <a href="#tourism" class="timeline-link">Tourism Grows</a>
+            <a href="#modern" class="timeline-link">Modern Era</a>
+        </div>
+    </nav>
+
+    <!-- Apache Heritage Section -->
+    <section id="apache" class="history-section">
+        <div class="section-container fade-in">
+            <span class="era-badge">Ancient Times</span>
+            <h2 class="section-title">The First People</h2>
+            <p class="section-intro">Long before European settlers arrived, the Sacramento Mountains were home to the Mescalero Apache, who called themselves "Shis-Inday" - People of the Mountain Forest.</p>
+
+            <div class="history-content">
+                <p>For centuries, the Mescalero Apache roamed the high country of the Sacramento Mountains, living in harmony with the land that would one day become Cloudcroft. They hunted deer and elk among the towering pines, gathered wild plants for food and medicine, and found spiritual connection in the misty peaks that seemed to touch the sky.</p>
+
+                <p>The name "Mescalero" comes from the agave plant, called mescal, which was a staple food source. The Apache would roast the hearts of these plants in underground pits, creating a nutritious food that could sustain them through harsh mountain winters. Evidence of these roasting pits can still be found throughout the Sacramento range.</p>
+
+                <div class="feature-box">
+                    <h4>Mescalero Apache Heritage</h4>
+                    <ul>
+                        <li>The Mescalero called themselves "Shis-Inday" meaning People of the Mountain Forest</li>
+                        <li>They were skilled hunters, tracking deer, elk, and bighorn sheep through the mountain terrain</li>
+                        <li>Sacred sites throughout the Sacramentos held deep spiritual significance</li>
+                        <li>Today, the Mescalero Apache Reservation lies just south of Cloudcroft</li>
+                        <li>The Inn of the Mountain Gods continues their hospitality tradition</li>
+                    </ul>
+                </div>
+
+                <p>The arrival of Spanish explorers in the 16th century began a period of conflict that would last for centuries. Yet the Apache people endured, and today the Mescalero Apache Reservation, established in 1873, preserves their culture and heritage just south of Cloudcroft. The Inn of the Mountain Gods resort, owned and operated by the Mescalero Apache Tribe, continues their tradition of mountain hospitality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Railroad Era Section -->
+    <section id="railroad" class="history-section">
+        <div class="section-container fade-in">
+            <span class="era-badge">1898-1899</span>
+            <h2 class="section-title">The Railroad Creates a Town</h2>
+            <p class="section-intro">"On this cloudy croft we will build a town" - so declared the railroad surveyors who gave Cloudcroft its poetic name.</p>
+
+            <div class="history-content">
+                <p>Cloudcroft owes its very existence to visionary railroad entrepreneurs Charles B. Eddy and his brother John A. Eddy. In 1897, their El Paso and Northeastern Railroad reached the newly founded town of Alamogordo in the Tularosa Basin below. But the real prize lay high in the Sacramento Mountains - vast forests of virgin timber that could fuel the growing Southwest.</p>
+
+                <p>To harvest this timber, the Eddy brothers needed a railroad that could climb nearly 5,000 feet in just 32 miles. Engineers declared it impossible. The Eddys built it anyway. Construction of the Alamogordo and Sacramento Mountain Railway began in 1898, and workers laid track at a breathtaking pace, climbing the steep mountain grades through some of the most challenging terrain in America.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">8,663</div>
+                        <div class="stat-label">Feet Elevation</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">32</div>
+                        <div class="stat-label">Miles of Track</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">58</div>
+                        <div class="stat-label">Timber Trestles</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1899</div>
+                        <div class="stat-label">Year Completed</div>
+                    </div>
+                </div>
+
+                <p>The railroad required 58 timber trestles to span the rugged canyons, including the magnificent Mexican Canyon Trestle - 323 feet long and 52 feet high, a marvel of engineering that still stands today. The route climbed so steeply that it became known as the "Cloud Climbing Railroad," carrying passengers from the desert floor to the cool mountain heights in just a few hours.</p>
+
+                <div class="quote-box">
+                    <p class="quote-text">When the railway was completed in 1899, it reached the highest standard-gauge elevation in the world at 8,700 feet. Passengers marveled at the journey from scorching desert to cool pine forests in a single afternoon.</p>
+                    <p class="quote-attribution">- Historical accounts of the Cloud Climbing Railroad</p>
+                </div>
+
+                <p>On June 19, 1899, the first train pulled into what would become Cloudcroft. Legend holds that surveyors, standing in the clouds at this high meadow, declared "On this cloudy croft we will build a town." The poetic name stuck, and a new chapter in mountain history began.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Lodge Section -->
+    <section id="lodge" class="history-section">
+        <div class="section-container fade-in">
+            <span class="era-badge">1899-1911</span>
+            <h2 class="section-title">The Lodge: A Mountain Icon</h2>
+            <p class="section-intro">From a simple wooden pavilion to one of the Southwest's most elegant resorts, The Lodge has been the heart of Cloudcroft for over a century.</p>
+
+            <div class="history-content">
+                <p>Almost immediately after the railroad arrived, the Eddy brothers recognized that Cloudcroft offered something more valuable than timber - escape. In the days before air conditioning, El Paso and the desert Southwest sweltered in brutal summer heat. The cool mountain air of Cloudcroft, often 30 degrees cooler than the basin below, was a precious commodity.</p>
+
+                <p>In 1899, the same year the railroad was completed, a simple wooden pavilion was built as a summer retreat for railroad workers and their families. It proved so popular that the railroad company quickly expanded, building the first Lodge - an elegant Victorian structure that became the social center of the new mountain resort community.</p>
+
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <span class="timeline-year">1899</span>
+                        <h4>The Pavilion Opens</h4>
+                        <p>A simple wooden structure welcomes the first summer visitors seeking escape from the desert heat below.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="timeline-year">1899</span>
+                        <h4>First Lodge Built</h4>
+                        <p>The original Lodge is constructed, featuring elegant Victorian architecture and sweeping mountain views.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="timeline-year">1909</span>
+                        <h4>Fire Destroys the Lodge</h4>
+                        <p>A devastating fire reduces the original Lodge to ashes, but plans for rebuilding begin immediately.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="timeline-year">1911</span>
+                        <h4>The Lodge Reborn</h4>
+                        <p>A grand new Lodge opens, featuring the distinctive four-story tower that still defines the Cloudcroft skyline today.</p>
+                    </div>
+                </div>
+
+                <p>Tragedy struck in 1909 when fire swept through the original Lodge, destroying the beloved landmark. But the spirit of Cloudcroft would not be deterred. By 1911, a magnificent new Lodge rose from the ashes - the same building that graces the Cloudcroft skyline today. Its distinctive four-story copper-domed tower became an instant landmark, visible for miles and symbolizing the resort's resilience and elegance.</p>
+
+                <div class="feature-box">
+                    <h4>The Legend of Rebecca</h4>
+                    <ul>
+                        <li>In the 1930s, a beautiful young chambermaid named Rebecca worked at The Lodge</li>
+                        <li>She fell in love with a lumberjack who frequented the lodge's Red Dog Saloon</li>
+                        <li>When she discovered his infidelity, tragedy followed</li>
+                        <li>Guests and staff report seeing her ghostly figure in the tower and hallways</li>
+                        <li>Rebecca is considered one of the most documented ghosts in the Southwest</li>
+                        <li>The Lodge embraces her legend with Rebecca's Restaurant and ghost tours</li>
+                    </ul>
+                </div>
+
+                <p>Today, The Lodge Resort remains the crown jewel of Cloudcroft, offering historic elegance alongside modern amenities. Its golf course, added in 1909, is the oldest in the Southwest, and guests still gather on the sunset deck to watch the alpenglow paint the mountains gold - just as visitors have done for over a century.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lumber Industry Section -->
+    <section id="lumber" class="history-section">
+        <div class="section-container fade-in">
+            <span class="era-badge">1899-1947</span>
+            <h2 class="section-title">The Lumber Era</h2>
+            <p class="section-intro">For nearly half a century, the sounds of sawmills and logging trains echoed through the Sacramento Mountains as Cloudcroft fed the growing Southwest's hunger for timber.</p>
+
+            <div class="history-content">
+                <p>While tourists discovered Cloudcroft's cool summers and scenic beauty, the railroad's original purpose - harvesting timber - drove the regional economy for decades. The Sacramento Mountains held vast stands of ponderosa pine, Douglas fir, and Engelmann spruce, trees that had grown undisturbed for centuries in the high mountain valleys.</p>
+
+                <p>The Alamogordo Lumber Company established operations almost immediately after the railroad arrived. Logging camps sprang up throughout the mountains, small communities of hardy workers and their families who lived in the forest and sent trainloads of lumber down to Alamogordo. The camp at Marcia, named for the daughter of railroad executive H.J. Simmons, became one of the largest.</p>
+
+                <div class="history-gallery">
+                    <div class="gallery-item">
+                        <div class="gallery-icon">🌲</div>
+                        <h4>Virgin Timber</h4>
+                        <p>Massive ponderosa pines, some over 200 years old, covered the mountain slopes.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-icon">🚂</div>
+                        <h4>Logging Trains</h4>
+                        <p>Narrow-gauge railways carried logs to mills throughout the region.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-icon">🪵</div>
+                        <h4>160 Million Board Feet</h4>
+                        <p>Total lumber harvested from the Sacramento Mountains during the industry's peak.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-icon">👷</div>
+                        <h4>Logging Camps</h4>
+                        <p>Communities like Marcia, Russia, and Cox Canyon housed hundreds of workers.</p>
+                    </div>
+                </div>
+
+                <p>In 1921, the Cloudcroft Lumber and Land Company took over operations, continuing the harvest that would eventually total over 160 million board feet. But the virgin forests that had seemed inexhaustible were finally depleted. By the 1940s, the great logging era was drawing to a close, and Cloudcroft would need to reinvent itself.</p>
+
+                <div class="quote-box">
+                    <p class="quote-text">The Mexican Canyon Trestle, built in 1899 to carry loaded logging trains across the steep canyon, stands as an enduring monument to the engineering prowess of the lumber era. Listed on the National Register of Historic Places in 1979, it remains one of the most photographed landmarks in southern New Mexico.</p>
+                    <p class="quote-attribution">- National Register of Historic Places citation</p>
+                </div>
+
+                <p>Passenger service on the Cloud Climbing Railroad ended in 1938, and the last freight train - loaded with timber - made its final descent in 1947. The rails were pulled up, the locomotives sold, and an era ended. But the trestles remained, silent sentinels of a vanished age, including the magnificent Mexican Canyon Trestle that still draws visitors today.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourism Development Section -->
+    <section id="tourism" class="history-section">
+        <div class="section-container fade-in">
+            <span class="era-badge">1940s-1960s</span>
+            <h2 class="section-title">Tourism Takes Root</h2>
+            <p class="section-intro">As the lumber industry faded, a new highway brought a new era - and Cloudcroft discovered its true calling as a year-round mountain resort.</p>
+
+            <div class="history-content">
+                <p>The end of the railroad era might have meant the end of Cloudcroft. But even as the logging trains made their final runs, a new pathway to the mountains was being carved. Highway 82, winding up from Alamogordo through the spectacular canyons, opened in the mid-1940s and brought automobiles - and tourists - streaming into Cloudcroft.</p>
+
+                <p>The highway transformed Cloudcroft from a seasonal railroad resort to an accessible mountain getaway. Families could now drive up for a weekend, escaping the desert heat just as railroad passengers had a generation before. Cabins, lodges, and vacation homes multiplied, and the population that had declined with the lumber industry began to grow once more.</p>
+
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <span class="timeline-year">1909</span>
+                        <h4>Golf Comes to the Mountains</h4>
+                        <p>The Lodge's nine-hole golf course opens, becoming the oldest course in the Southwest and attracting sportsmen from across the region.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="timeline-year">1940s</span>
+                        <h4>Highway 82 Opens</h4>
+                        <p>The new mountain highway makes Cloudcroft accessible by automobile, opening a new chapter in tourism development.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="timeline-year">1963</span>
+                        <h4>Ski Cloudcroft Founded</h4>
+                        <p>Visionary Buddy Ritter establishes Ski Cloudcroft, creating winter recreation and making Cloudcroft a true four-season destination.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="timeline-year">1979</span>
+                        <h4>Mexican Canyon Trestle Listed</h4>
+                        <p>The historic railroad trestle is added to the National Register of Historic Places, preserving Cloudcroft's railroad heritage.</p>
+                    </div>
+                </div>
+
+                <p>The true transformation came in 1963 when visionary entrepreneur Buddy Ritter founded Ski Cloudcroft. The modest ski area, with its rope tows and pine-lined runs, gave Cloudcroft something no desert city could offer - winter sports just an hour from El Paso. Suddenly, Cloudcroft wasn't just a summer escape; it was a year-round destination.</p>
+
+                <div class="feature-box">
+                    <h4>Historic Firsts</h4>
+                    <ul>
+                        <li>The Lodge golf course (1909) is the oldest in the Southwest</li>
+                        <li>At 9,000 feet, Ski Cloudcroft is the southernmost ski area in North America</li>
+                        <li>Cloudcroft was one of the first planned resort communities in New Mexico</li>
+                        <li>The Mexican Canyon Trestle is one of the best-preserved railroad trestles in the country</li>
+                    </ul>
+                </div>
+
+                <p>By the 1970s, Cloudcroft had fully embraced its identity as a mountain resort community. Artists and craftspeople discovered the inspiring mountain light. Retirees found the perfect blend of small-town charm and natural beauty. And generations of families from Texas and New Mexico made Cloudcroft their summer tradition, just as their grandparents had done in the railroad days.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Era Section -->
+    <section id="modern" class="history-section">
+        <div class="section-container fade-in">
+            <span class="era-badge">Present Day</span>
+            <h2 class="section-title">Cloudcroft Today</h2>
+            <p class="section-intro">More than a century after the first train arrived, Cloudcroft remains what it has always been - a cool mountain refuge with a warm heart.</p>
+
+            <div class="history-content">
+                <p>Walk down Burro Avenue today and you'll pass buildings that have stood since the railroad days, now housing galleries, restaurants, and shops. The Lodge still presides over the village, its copper tower catching the mountain light. And each summer, when temperatures soar in the desert below, visitors still make the climb to Cloudcroft - now by car instead of train, but seeking the same cool escape.</p>
+
+                <p>The community that numbers about 700 year-round residents swells to several thousand on summer weekends. Hikers explore the Lincoln National Forest on trails that wind through the same forests the Mescalero Apache once roamed. Golfers play the historic course at The Lodge. And newcomers discover what generations have known - that there's something special about this small village in the clouds.</p>
+
+                <div class="history-gallery">
+                    <div class="gallery-item">
+                        <div class="gallery-icon">🎭</div>
+                        <h4>Arts Community</h4>
+                        <p>Galleries and studios showcase the work of mountain artists inspired by the spectacular landscape.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-icon">🔭</div>
+                        <h4>Dark Sky Haven</h4>
+                        <p>The clear mountain skies attract astronomers, with Sunspot Solar Observatory nearby.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-icon">🥾</div>
+                        <h4>Outdoor Paradise</h4>
+                        <p>Miles of hiking and biking trails wind through the Lincoln National Forest.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-icon">🏔️</div>
+                        <h4">Year-Round Destination</h4>
+                        <p>From summer festivals to winter skiing, every season brings its own magic.</p>
+                    </div>
+                </div>
+
+                <p>To the east, toward Mayhill, a community of amateur and professional astronomers has grown, drawn by some of the darkest skies in America. The National Solar Observatory at Sunspot, perched on the mountain rim overlooking White Sands, conducts world-class solar research. Cloudcroft has become not just a retreat from the heat, but a gateway to the stars.</p>
+
+                <div class="quote-box">
+                    <p class="quote-text">Cloudcroft's history is written in its railroad trestles and vintage buildings, in the stories passed down through generations of mountain families. But its future is being written every day by the visitors who discover, and rediscover, the magic of New Mexico's mountain retreat.</p>
+                    <p class="quote-attribution">- Discover Cloudcroft</p>
+                </div>
+
+                <p>The challenges have changed - wildfire management, sustainable growth, preserving small-town character amid increasing popularity. But the spirit remains: a community that values its heritage while welcoming newcomers, that treasures its natural setting while sharing it with visitors, that looks back at its remarkable history while looking forward to its future in the clouds.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy CTA Section -->
+    <section class="legacy-section">
+        <div class="section-container">
+            <h2>Experience Living History</h2>
+            <p>From the ghost of Rebecca at The Lodge to the soaring Mexican Canyon Trestle, Cloudcroft's history isn't locked away in museums - it's alive in every building, trail, and sunset. Come discover the stories that make this mountain village unique.</p>
+            <a href="index.html#plan" class="legacy-cta">Plan Your Visit</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Discover Cloudcroft</h3>
+                <p>Your guide to New Mexico's premier mountain retreat, where history, nature, and community come together at 8,663 feet.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <a href="lodging.html">Lodging</a>
+                <a href="dining.html">Dining</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="history.html">History</a>
+            </div>
+            <div class="footer-section">
+                <h3>Plan Your Trip</h3>
+                <a href="hiking-trails.html">Hiking Trails</a>
+                <a href="nearby-destinations.html">Nearby Destinations</a>
+                <a href="vacation-rentals.html">Vacation Rentals</a>
+                <a href="groceries.html">Groceries & Supplies</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="emergency-services.html">Emergency Services</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Discover Cloudcroft. Made with love for New Mexico's mountain paradise.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+
+        // Smooth scroll for timeline navigation
+        document.querySelectorAll('.timeline-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    const headerOffset = 140;
+                    const elementPosition = targetSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

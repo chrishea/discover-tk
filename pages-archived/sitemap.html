@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Site Map | Discover Cloudcroft</title>
+    <meta name="description" content="Browse the complete site map for Discover Cloudcroft. Find all pages covering attractions, dining, lodging, activities, and visitor information.">
+    <meta property="og:title" content="Site Map | Discover Cloudcroft">
+    <meta property="og:description" content="Browse the complete site map for Discover Cloudcroft. Find all pages covering attractions, dining, lodging, activities, and visitor information.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/sitemap.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Site Map | Discover Cloudcroft">
+    <meta name="twitter:description" content="Browse the complete site map for Discover Cloudcroft. Find all pages covering attractions, dining, lodging, activities, and visitor information.">
+    <link rel="canonical" href="https://discovercloudcroft.com/sitemap.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #BF0A30;
+            --sunset-warm: #a31621;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #8B4513;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 40vh;
+            min-height: 300px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 50%, rgba(21, 101, 192, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #64B5F6;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* Main Content */
+        .content-section {
+            padding: 4rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .sitemap-category {
+            background: var(--snow-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08);
+            border-top: 4px solid var(--pine-deep);
+        }
+
+        .sitemap-category h2 {
+            font-size: 1.4rem;
+            color: var(--pine-deep);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(21, 101, 192, 0.2);
+        }
+
+        .sitemap-category ul {
+            list-style: none;
+        }
+
+        .sitemap-category li {
+            margin-bottom: 0.75rem;
+        }
+
+        .sitemap-category a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sitemap-category a:hover {
+            color: var(--sunset-gold);
+            padding-left: 0.5rem;
+        }
+
+        .sitemap-category a::before {
+            content: '→';
+            color: var(--pine-medium);
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: var(--snow-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Alegreya', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #64B5F6;
+            color: #0D1B2A;
+        }
+
+        .footer-column h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: #64B5F6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p, .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--snow-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { height: 35vh; min-height: 250px; }
+            .sitemap-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">9,000 Feet Above Stress Level</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#seasons">Seasons</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#stay">Stay & Dine</a></li>
+                    <li><a href="index.html#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Site Map</h1>
+            <p class="hero-subtitle">Find your way around Discover Cloudcroft</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="sitemap-grid">
+                <!-- Main Pages -->
+                <div class="sitemap-category">
+                    <h2>Main Pages</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="history.html">History of Cloudcroft</a></li>
+                    </ul>
+                </div>
+
+                <!-- Things to Do -->
+                <div class="sitemap-category">
+                    <h2>Things to Do</h2>
+                    <ul>
+                        <li><a href="activities.html">Activities Overview</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="biking.html">Biking</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                        <li><a href="pickleball.html">Pickleball</a></li>
+                        <li><a href="dark-skies.html">Dark Skies & Stargazing</a></li>
+                        <li><a href="art-galleries.html">Art Galleries</a></li>
+                        <li><a href="shopping.html">Shopping</a></li>
+                    </ul>
+                </div>
+
+                <!-- Seasons -->
+                <div class="sitemap-category">
+                    <h2>Seasons</h2>
+                    <ul>
+                        <li><a href="spring.html">Spring in Cloudcroft</a></li>
+                        <li><a href="summer.html">Summer in Cloudcroft</a></li>
+                        <li><a href="fall.html">Fall in Cloudcroft</a></li>
+                        <li><a href="winter.html">Winter in Cloudcroft</a></li>
+                    </ul>
+                </div>
+
+                <!-- Events -->
+                <div class="sitemap-category">
+                    <h2>Events</h2>
+                    <ul>
+                        <li><a href="lumberjack-day.html">Lumberjack Day (September)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Dining -->
+                <div class="sitemap-category">
+                    <h2>Dining</h2>
+                    <ul>
+                        <li><a href="mad-jacks-bbq.html">Mad Jack's Mountaintop BBQ</a></li>
+                        <li><a href="brother-n-law-bbq.html">Brother-N-Law BBQ</a></li>
+                        <li><a href="big-daddys.html">Big Daddy's Diner</a></li>
+                        <li><a href="cloudcroft-brewery.html">Cloudcroft Brewing Company</a></li>
+                        <li><a href="western-bar.html">Western Bar & Cafe</a></li>
+                        <li><a href="high-rollin.html">High Rollin' Cajun</a></li>
+                        <li><a href="instant-karma.html">Instant Karma Coffee</a></li>
+                    </ul>
+                </div>
+
+                <!-- Accommodations -->
+                <div class="sitemap-category">
+                    <h2>Accommodations</h2>
+                    <ul>
+                        <li><a href="cabins-at-cloudcroft.html">Cabins at Cloudcroft</a></li>
+                        <li><a href="summit-inn.html">Summit Inn</a></li>
+                        <li><a href="grand-cloudcroft-hotel.html">Grand Cloudcroft Hotel</a></li>
+                        <li><a href="vacation-rentals.html">Vacation Rentals</a></li>
+                    </ul>
+                </div>
+
+                <!-- Nearby Attractions -->
+                <div class="sitemap-category">
+                    <h2>Nearby Attractions</h2>
+                    <ul>
+                        <li><a href="sunspot-observatory.html">Sunspot Solar Observatory</a></li>
+                        <li><a href="nearby-destinations.html">Nearby Destinations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services & Resources -->
+                <div class="sitemap-category">
+                    <h2>Services & Resources</h2>
+                    <ul>
+                        <li><a href="groceries.html">Groceries</a></li>
+                        <li><a href="real-estate.html">Real Estate</a></li>
+                        <li><a href="emergency-services.html">Emergency Services</a></li>
+                        <li><a href="cannabis.html">Cannabis</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="sitemap-category">
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="sitemap.html">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Discover Cloudcroft</h3>
+                    <p>
+                        Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors
+                        seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">In the Village</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="history.html">Historic Sites</a></li>
+                        <li><a href="#">Golf Course</a></li>
+                        <li><a href="#">Ski Cloudcroft</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li><a href="#">Where to Stay</a></li>
+                        <li><a href="index.html#stay">Where to Eat</a></li>
+                        <li><a href="shopping.html">Shopping</a></li>
+                        <li><a href="index.html#events">Events Calendar</a></li>
+                        <li><a href="#">Webcams</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Plan</h4>
+                    <ul>
+                        <li><a href="#">Getting Here</a></li>
+                        <li><a href="#">Weather</a></li>
+                        <li><a href="#">Visitor Guide</a></li>
+                        <li><a href="#">Trail Maps</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Chamber of Commerce</a></li>
+                        <li><a href="#">Village of Cloudcroft</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cloudcroft Tourism Alliance. All rights reserved.</p>
+                <div>
+                    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="sitemap.html">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 100);
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

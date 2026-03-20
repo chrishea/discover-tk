@@ -1,0 +1,1411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Cloudcroft | New Mexico's Mountain Escape</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #BF0A30;
+            --sunset-warm: #a31621;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #8B4513;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        header.scrolled {
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            background: #a31621 !important;
+        }
+
+        .weather-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(13, 27, 42, 0.1);
+            border-radius: 20px;
+        }
+
+        .weather-temp {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('media/art-open/DC-Opener.jpg') no-repeat center center;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animated pine trees silhouette - hidden for daytime hero image */
+        .hero-trees {
+            display: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero-elevation {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-elevation span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .elevation-number {
+            font-family: 'Alegreya', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #64B5F6;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: #64B5F6;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 1s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #BF0A30;
+            color: var(--snow-white);
+        }
+
+        .btn-primary:hover {
+            background: #a31621;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffffff;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #4a3d00;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.8;
+            animation: bounce 2s ease infinite;
+        }
+
+        .hero-scroll span {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* Quick Links Section */
+        .quick-links {
+            background: #1565C0;
+            padding: 1.5rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-links-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link:hover {
+            color: #BF0A30;
+        }
+
+        .quick-link-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(13, 27, 42, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--pine-light);
+            margin-bottom: 1rem;
+            padding: 0.4rem 1rem;
+            background: rgba(74, 124, 98, 0.1);
+            border-radius: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--pine-deep);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* In Village / In the Mountains Navigation */
+        .explore-section {
+            background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%);
+        }
+
+        .explore-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .explore-tab {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            background: transparent;
+            border: 2px solid var(--pine-light);
+            color: var(--pine-medium);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .explore-tab.active {
+            background: var(--pine-deep);
+            border-color: var(--pine-deep);
+            color: var(--snow-white);
+        }
+
+        .explore-tab:hover:not(.active) {
+            background: var(--pine-light);
+            color: var(--snow-white);
+        }
+
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .explore-card {
+            background: var(--snow-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08);
+            transition: all 0.4s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .explore-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(13, 27, 42, 0.15);
+        }
+
+        .explore-card-image {
+            aspect-ratio: 4 / 3;
+            background: linear-gradient(135deg, var(--pine-medium) 0%, var(--pine-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .explore-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .explore-card:hover .explore-card-image img {
+            transform: scale(1.1);
+        }
+
+        .explore-card-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13, 27, 42, 0.4) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .explore-card-content {
+            padding: 1.5rem;
+        }
+
+        .explore-card h3 {
+            font-size: 1.4rem;
+            color: var(--pine-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .explore-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .explore-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            color: var(--pine-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Seasons Section */
+        .seasons-section {
+            background: var(--snow-white);
+        }
+
+        .seasons-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .season-card {
+            position: relative;
+            height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .season-card-bg {
+            position: absolute;
+            inset: 0;
+            transition: transform 0.6s ease;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-card:hover .season-card-bg {
+            transform: scale(1.1);
+        }
+
+        .season-spring .season-card-bg {
+            background: linear-gradient(180deg, rgba(124, 176, 122, 0.85) 0%, rgba(90, 144, 102, 0.9) 50%, rgba(61, 107, 74, 0.95) 100%),
+                        url('media/art-open/DC-Pix-Snaps-01001.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-summer .season-card-bg {
+            background: linear-gradient(180deg, rgba(21, 101, 192, 0.8) 0%, rgba(13, 71, 161, 0.85) 50%, rgba(10, 55, 130, 0.9) 100%),
+                        url('media/art-open/DC-Pix-Snaps-01006.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-fall .season-card-bg {
+            background: linear-gradient(180deg, rgba(196, 30, 58, 0.75) 0%, rgba(163, 22, 33, 0.8) 50%, rgba(139, 0, 0, 0.85) 100%),
+                        url('media/art-open/CC-pix-deer-profile.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-winter .season-card-bg {
+            background: linear-gradient(180deg, rgba(168, 212, 230, 0.8) 0%, rgba(123, 184, 208, 0.85) 50%, rgba(90, 156, 184, 0.9) 100%),
+                        url('media/art-open/IMG_3725.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .season-card-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(13, 27, 42, 0.8) 0%, transparent 60%);
+            color: var(--snow-white);
+        }
+
+        .season-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .season-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .season-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Events Section */
+        .events-section {
+            background: #1565C0;
+            color: #ffffff;
+        }
+
+        .events-section .section-label {
+            background: rgba(139, 0, 0, 0.15);
+            color: #BF0A30;
+        }
+
+        .events-section h2 {
+            color: #ffffff;
+        }
+
+        .events-section .section-description {
+            color: rgba(13, 27, 42, 0.8);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .event-card {
+            background: rgba(255,255,255,0.3);
+            border: 1px solid rgba(13, 27, 42, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .event-card:hover {
+            background: rgba(255,255,255,0.5);
+            transform: translateY(-4px);
+        }
+
+        .event-card-image {
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .event-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .event-card:hover .event-card-image img {
+            transform: scale(1.05);
+        }
+
+        .event-card-content {
+            padding: 1.5rem;
+        }
+
+        .event-date {
+            display: inline-block;
+            background: #BF0A30;
+            color: var(--snow-white);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .event-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .event-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Lodging & Dining Section */
+        .stay-section {
+            background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%);
+        }
+
+        .stay-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .stay-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--snow-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(13, 27, 42, 0.1);
+        }
+
+        .stay-card-image {
+            min-height: 300px;
+            background: linear-gradient(135deg, var(--pine-medium) 0%, var(--bark-brown) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            overflow: hidden;
+        }
+
+        .stay-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .stay-card:hover .stay-card-image img {
+            transform: scale(1.05);
+        }
+
+        .stay-card-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .stay-card h3 {
+            font-size: 1.8rem;
+            color: var(--pine-deep);
+            margin-bottom: 1rem;
+        }
+
+        .stay-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .stay-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stay-feature {
+            font-size: 0.8rem;
+            padding: 0.4rem 0.8rem;
+            background: var(--sky-pale);
+            color: var(--pine-medium);
+            border-radius: 20px;
+        }
+
+        /* Plan Your Trip Section */
+        .plan-section {
+            background: var(--cloud-white);
+        }
+
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .plan-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--snow-white);
+            border-radius: 12px;
+            border: 1px solid rgba(74, 124, 98, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .plan-card:hover {
+            border-color: var(--pine-light);
+            box-shadow: 0 10px 30px rgba(13, 27, 42, 0.1);
+        }
+
+        .plan-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--pine-light) 0%, var(--pine-medium) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .plan-card h3 {
+            font-size: 1.4rem;
+            color: var(--pine-deep);
+            margin-bottom: 0.75rem;
+        }
+
+        .plan-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+            padding: 5rem 2rem;
+        }
+
+        .newsletter-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-container h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-container p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: #BF0A30;
+            color: var(--snow-white);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #a31621;
+        }
+
+        /* AI Assistant Section */
+        .ai-assistant-section {
+            background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 100%);
+            color: var(--snow-white);
+            padding: 5rem 2rem;
+        }
+
+        .ai-assistant-section .section-header h2 {
+            color: var(--snow-white);
+        }
+
+        .ai-assistant-section .section-label {
+            background: rgba(21, 101, 192, 0.2);
+            color: #64B5F6;
+        }
+
+        .ai-assistant-section .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .ai-embed-container {
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 400px;
+            background: var(--snow-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .ai-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+        }
+
+        .ai-placeholder-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .ai-placeholder p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-placeholder-note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            opacity: 0.7;
+        }
+
+        /* Do Cloudcroft Right Section */
+        .stewardship-section {
+            background: #BF0A30;
+            color: var(--snow-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stewardship-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(21, 101, 192, 0.2) 0%, transparent 70%);
+        }
+
+        .stewardship-content {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .stewardship-text h2 {
+            font-size: 2.5rem;
+            color: var(--snow-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .stewardship-text p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .stewardship-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .stewardship-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .stewardship-list li::before {
+            content: '✓';
+            color: #64B5F6;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: var(--snow-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Alegreya', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #64B5F6;
+            color: #0D1B2A;
+        }
+
+        .footer-column h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: #64B5F6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-partners {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-partners span {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* Local News Section */
+        .local-news-section {
+            background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%);
+            padding: 5rem 2rem;
+        }
+
+        .local-news-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .local-news-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .local-news-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--pine-deep);
+            margin-bottom: 0.75rem;
+        }
+
+        .local-news-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .local-news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .news-card {
+            background: var(--snow-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(13, 27, 42, 0.12);
+        }
+
+        .news-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .news-card-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--pine-light) 0%, var(--pine-medium) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .news-card h3 {
+            font-size: 1.4rem;
+            color: var(--pine-deep);
+            margin: 0;
+        }
+
+        .news-card-tagline {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .news-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .news-card-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .news-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .news-btn-primary {
+            background: var(--pine-deep);
+            color: var(--snow-white);
+        }
+
+        .news-btn-primary:hover {
+            background: var(--pine-medium);
+        }
+
+        .news-btn-subscribe {
+            background: #BF0A30;
+            color: var(--snow-white);
+        }
+
+        .news-btn-subscribe:hover {
+            background: #a31621;
+        }
+
+        .news-btn-social {
+            background: rgba(74, 124, 98, 0.1);
+            color: var(--pine-medium);
+            padding: 0.6rem;
+            min-width: 36px;
+            justify-content: center;
+        }
+
+        .news-btn-social:hover {
+            background: var(--pine-light);
+            color: var(--snow-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 3;
+            }
+
+            .seasons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stay-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .plan-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stewardship-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .weather-badge {
+                display: none;
+            }
+
+            .seasons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .season-card {
+                height: 300px;
+            }
+
+            .stay-card {
+                grid-template-columns: 1fr;
+            }
+
+            .stay-card-image {
+                min-height: 200px;
+            }
+
+            .plan-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .local-news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .explore-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .quick-links-container {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="#seasons">Seasons</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#stay">Stay & Dine</a></li>
+                    <li><a href="#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <div class="weather-badge">
+                <span>☀️</span>
+                <span class="weather-temp">54°F</span>
+                <span>Clear</span>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-trees"></div>
+        <div class="hero-content">
+            <div class="hero-elevation">
+                <span>Elevation</span>
+                <span class="elevation-number">8,676 ft</span>
+                <span>•</span>
+                <span>Lincoln National Forest</span>
+            </div>
+            <h1>Cloudcroft</h1>
+            <p class="hero-subtitle">New Mexico's Hidden Mountain Sanctuary</p>
+            <p class="hero-description">
+                Escape to the Sacramento Mountains where cool pine forests meet blue sky.  A village wrapped in clouds, surrounded by the Lincoln National Forest,  and alive with adventure.
+            </p>
+            <div class="hero-ctas">
+                <a href="#explore" class="btn btn-primary">Start Exploring</a>
+                <a href="#plan" class="btn btn-secondary">Plan Your Visit</a>
+            </div>
+        </div>
+        <a href="#quick-links" class="hero-scroll">
+            <span>Scroll to discover</span>
+            <span>↓</span>
+        </a>
+    </section>
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for entrance animations
+        document.querySelectorAll('.explore-card, .season-card, .event-card, .plan-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

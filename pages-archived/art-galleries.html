@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Art Galleries & Studios | Discover Cloudcroft</title>
+    <meta name="description" content="Discover art galleries and studios in Cloudcroft, New Mexico. Explore local artists, workshops, and a vibrant creative community in the Sacramento Mountains.">
+    <meta property="og:title" content="Art Galleries & Studios | Discover Cloudcroft">
+    <meta property="og:description" content="Discover art galleries and studios in Cloudcroft, New Mexico. Explore local artists, workshops, and a vibrant creative community in the Sacramento Mountains.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/art-galleries.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Art Galleries & Studios | Discover Cloudcroft">
+    <meta name="twitter:description" content="Discover art galleries and studios in Cloudcroft, New Mexico. Explore local artists, workshops, and a vibrant creative community in the Sacramento Mountains.">
+    <link rel="canonical" href="https://discovercloudcroft.com/art-galleries.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pine-deep: #1565C0; --pine-medium: #1E88E5; --pine-light: #64B5F6; --sky-pale: #E3F2FD; --cloud-white: #FAFCFE; --snow-white: #ffffff; --text-dark: #1A1A1A; --text-light: #6B6B6B; --art-purple: #6A1B9A; --art-pink: #AD1457; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        .hero { height: 60vh; min-height: 450px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--art-purple) 0%, var(--art-pink) 50%, #C2185B 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(106, 27, 154, 0.5) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #64B5F6; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 650px; margin: 0 auto; line-height: 1.8; animation: fadeInUp 0.8s ease 0.8s both; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--art-purple); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(106, 27, 154, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        .galleries-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .gallery-card { background: var(--snow-white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(106, 27, 154, 0.08); transition: all 0.4s ease; }
+        .gallery-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(106, 27, 154, 0.15); }
+        .gallery-image { height: 180px; background: linear-gradient(135deg, var(--art-purple) 0%, var(--art-pink) 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .gallery-content { padding: 1.5rem; }
+        .gallery-content h3 { font-size: 1.5rem; color: var(--art-purple); margin-bottom: 0.5rem; }
+        .gallery-content p { color: var(--text-light); margin-bottom: 1rem; line-height: 1.6; }
+        .gallery-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .gallery-tag { font-size: 0.8rem; padding: 0.3rem 0.7rem; background: rgba(106, 27, 154, 0.1); color: var(--art-purple); border-radius: 15px; }
+        .gallery-link { color: var(--art-purple); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .gallery-link:hover { text-decoration: underline; }
+
+        .workshops-section { background: var(--art-purple); color: white; }
+        .workshop-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .workshop-text h2 { color: white; font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .workshop-text p { color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
+        .workshop-features { list-style: none; }
+        .workshop-features li { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; color: rgba(255,255,255,0.9); }
+        .workshop-features li::before { content: '✓'; color: #64B5F6; font-weight: bold; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
+        .btn-gold { background: #64B5F6; color: #0D47A1; }
+        .btn-gold:hover { background: #90CAF9; transform: translateY(-2px); }
+
+        .community-section { background: var(--snow-white); }
+        .community-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .community-card { background: var(--cloud-white); border-radius: 12px; padding: 2rem; text-align: center; border: 1px solid rgba(106, 27, 154, 0.15); transition: all 0.3s ease; }
+        .community-card:hover { border-color: var(--art-purple); box-shadow: 0 10px 30px rgba(106, 27, 154, 0.1); }
+        .community-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .community-card h3 { font-size: 1.3rem; color: var(--art-purple); margin-bottom: 0.5rem; }
+        .community-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .btn-outline { background: transparent; color: var(--art-purple); border: 2px solid var(--art-purple); padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block; transition: all 0.3s ease; }
+        .btn-outline:hover { background: var(--art-purple); color: white; }
+
+        .cta-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: rgba(255,255,255,0.85); margin-bottom: 2rem; font-size: 1.1rem; }
+
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+            .workshop-content { grid-template-columns: 1fr; }
+            .community-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .community-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav><ul class="nav-links"><li><a href="index.html#explore">Explore</a></li><li><a href="index.html#seasons">Seasons</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#stay">Stay & Dine</a></li><li><a href="index.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Art Galleries & Studios</h1>
+            <p class="hero-subtitle">Mountain Inspiration, Creative Expression</p>
+            <p class="hero-description">Discover Cloudcroft's thriving arts scene. From local galleries showcasing Southwest artists to hands-on workshops where you can create your own masterpiece, art is alive in the Sacramento Mountains.</p>
+        </div>
+    </section>
+
+    <section class="galleries-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Local Galleries</span>
+                <h2>Galleries & Gift Shops</h2>
+                <p class="section-description">Explore unique galleries featuring local and regional artists, handcrafted jewelry, pottery, paintings, and eclectic mountain-inspired art.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-image">🎨</div>
+                    <div class="gallery-content">
+                        <h3>Off the Beaten Path</h3>
+                        <p>Founded in 1996, this beloved gallery and gift shop showcases a wide range of artists and artistic styles from across the country. One of the most talked-about galleries in the Cloudcroft area.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Fine Art</span>
+                            <span class="gallery-tag">Gifts</span>
+                            <span class="gallery-tag">Local Artists</span>
+                        </div>
+                        <a href="https://www.offthebeatenpathstuff.com/" target="_blank" class="gallery-link">Visit Website →</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">🖼️</div>
+                    <div class="gallery-content">
+                        <h3>Cloudcroft Gallery</h3>
+                        <p>A premier destination for fine art in the Sacramento Mountains, featuring paintings, sculptures, and mixed media works from talented regional artists.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Paintings</span>
+                            <span class="gallery-tag">Sculptures</span>
+                            <span class="gallery-tag">Mixed Media</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">🐻</div>
+                    <div class="gallery-content">
+                        <h3>Bear Track Gallery</h3>
+                        <p>Featuring Southwest and wildlife art, handcrafted jewelry, and unique mountain-themed gifts. A favorite stop for visitors exploring Burro Avenue.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Wildlife Art</span>
+                            <span class="gallery-tag">Southwest</span>
+                            <span class="gallery-tag">Jewelry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">🎭</div>
+                    <div class="gallery-content">
+                        <h3>Creative Designs Framing & Gallery</h3>
+                        <p>Custom framing services alongside a curated collection of art. Perfect for finding that special piece or framing your own mountain memories.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Custom Framing</span>
+                            <span class="gallery-tag">Art Gallery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">💃</div>
+                    <div class="gallery-content">
+                        <h3>Dancing Dog Gallery</h3>
+                        <p>Eclectic art and gifts with a playful spirit. Discover unique finds, from local pottery to whimsical sculptures and handmade treasures.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Eclectic</span>
+                            <span class="gallery-tag">Pottery</span>
+                            <span class="gallery-tag">Handmade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-image">🏠</div>
+                    <div class="gallery-content">
+                        <h3>The Tunnel Stop</h3>
+                        <p>Located along the scenic byway, offering art, antiques, and collectibles in a charming mountain setting.</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Antiques</span>
+                            <span class="gallery-tag">Collectibles</span>
+                            <span class="gallery-tag">Art</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="workshops-section">
+        <div class="section-container">
+            <div class="workshop-content">
+                <div class="workshop-text">
+                    <h2>Art Workshops & Classes</h2>
+                    <p>Cloudcroft Art Workshops offers world-class instruction in a stunning mountain setting. Whether you're a beginner or experienced artist, find workshops to inspire and develop your creative skills.</p>
+                    <ul class="workshop-features">
+                        <li>Painting workshops in various mediums</li>
+                        <li>Drawing and sketching classes</li>
+                        <li>Mixed media and experimental techniques</li>
+                        <li>Plein air painting in the mountains</li>
+                        <li>Guest instructors from across the country</li>
+                    </ul>
+                    <a href="https://cloudcroftart.com/" target="_blank" class="btn btn-gold">View Workshop Schedule</a>
+                </div>
+                <div class="workshop-image" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%); border-radius: 12px; height: 400px; display: flex; align-items: center; justify-content: center; font-size: 6rem;">
+                    🎨
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="community-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Art Community</span>
+                <h2>Get Involved</h2>
+                <p class="section-description">Join Cloudcroft's vibrant arts community through local organizations, events, and creative initiatives.</p>
+            </div>
+
+            <div class="community-grid">
+                <div class="community-card">
+                    <div class="community-icon">🎭</div>
+                    <h3>Cloudcroft Art Society</h3>
+                    <p>A 501(c)(3) nonprofit supporting art programs in local schools and spearheading public art projects, including the painted dumpster murals around town.</p>
+                    <a href="#" class="btn-outline">Learn More</a>
+                </div>
+
+                <div class="community-card">
+                    <div class="community-icon">📚</div>
+                    <h3>Cloudcroft Library</h3>
+                    <p>The village library hosts art exhibitions, creative programs, and community events throughout the year. A gathering place for local artists and art lovers.</p>
+                    <a href="https://www.cloudcroftvillage.com/library/" target="_blank" class="btn-outline">Visit Library</a>
+                </div>
+
+                <div class="community-card">
+                    <div class="community-icon">🗺️</div>
+                    <h3>NM Artist Directory</h3>
+                    <p>Explore the broader New Mexico art scene. The directory connects you with artist studios, galleries, and events throughout the Land of Enchantment.</p>
+                    <a href="https://www.newmexicoartistdirectory.com/" target="_blank" class="btn-outline">Explore Directory</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Discover Your Creative Side</h2>
+            <p>Explore galleries, take a workshop, or simply soak in the artistic atmosphere of Cloudcroft's mountain arts scene.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://cloudcroftart.com/" target="_blank" class="btn" style="background: var(--art-purple); color: white;">Browse Workshops</a>
+                <a href="index.html#stay" class="btn" style="background: #0D47A1; color: white;">Plan Your Stay</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors seeking mountain refuge since 1899.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a><a href="#">▶</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="index.html#explore">In the Village</a></li><li><a href="hiking-trails.html">Hiking Trails</a></li><li><a href="biking.html">Biking</a></li><li><a href="#">Art Galleries</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="grand-cloudcroft-hotel.html">Where to Stay</a></li><li><a href="index.html#stay">Where to Eat</a></li><li><a href="instant-karma.html">Shopping</a></li><li><a href="index.html#events">Events</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="index.html#plan">Getting Here</a></li><li><a href="index.html#plan">Weather</a></li><li><a href="index.html#plan">Visitor Guide</a></li><li><a href="hiking-trails.html">Trail Maps</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Chamber of Commerce</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.gallery-card, .community-card').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Vacation Rentals & Cabins | Discover Cloudcroft</title>
+    <meta name="description" content="Browse vacation rentals and cabin stays in Cloudcroft, NM. Find cozy mountain cabins, family retreats, and romantic getaways in the Sacramento Mountains.">
+    <meta property="og:title" content="Vacation Rentals & Cabins | Discover Cloudcroft">
+    <meta property="og:description" content="Browse vacation rentals and cabin stays in Cloudcroft, NM. Find cozy mountain cabins, family retreats, and romantic getaways in the Sacramento Mountains.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/vacation-rentals.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vacation Rentals & Cabins | Discover Cloudcroft">
+    <meta name="twitter:description" content="Browse vacation rentals and cabin stays in Cloudcroft, NM. Find cozy mountain cabins, family retreats, and romantic getaways in the Sacramento Mountains.">
+    <link rel="canonical" href="https://discovercloudcroft.com/vacation-rentals.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pine-deep: #1565C0; --pine-medium: #1E88E5; --pine-light: #64B5F6; --sky-pale: #E3F2FD; --cloud-white: #FAFCFE; --snow-white: #ffffff; --text-dark: #1A1A1A; --text-light: #6B6B6B; --cabin-brown: #5D4037; --cabin-warm: #795548; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        .hero { height: 65vh; min-height: 450px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #3E2723 0%, var(--cabin-brown) 50%, var(--cabin-warm) 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(93, 64, 55, 0.6) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #64B5F6; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 650px; margin: 0 auto 2rem; line-height: 1.8; animation: fadeInUp 0.8s ease 0.8s both; }
+        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease 1s both; }
+
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
+        .btn-primary { background: #BF0A30; color: var(--snow-white); }
+        .btn-primary:hover { background: #a31621; transform: translateY(-2px); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 2px solid rgba(255, 255, 255, 0.6); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.25); border-color: #ffffff; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        .stats-bar { background: var(--pine-light); padding: 1.5rem 0; }
+        .stats-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: 700; color: var(--cabin-brown); }
+        .stat-label { font-size: 0.9rem; color: var(--text-dark); }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--cabin-brown); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(93, 64, 55, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        .platforms-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .platform-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .platform-card { background: var(--snow-white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(93, 64, 55, 0.1); transition: all 0.4s ease; }
+        .platform-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(93, 64, 55, 0.15); }
+        .platform-header { padding: 2rem; background: linear-gradient(135deg, var(--cabin-brown) 0%, var(--cabin-warm) 100%); color: white; }
+        .platform-logo { font-size: 3rem; margin-bottom: 1rem; }
+        .platform-header h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .platform-header p { opacity: 0.9; }
+        .platform-content { padding: 2rem; }
+        .platform-stats { display: flex; gap: 2rem; margin-bottom: 1.5rem; }
+        .platform-stat { text-align: center; }
+        .platform-stat-number { font-size: 1.5rem; font-weight: 700; color: var(--cabin-brown); }
+        .platform-stat-label { font-size: 0.85rem; color: var(--text-light); }
+        .platform-features { list-style: none; margin-bottom: 1.5rem; }
+        .platform-features li { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0; color: var(--text-dark); }
+        .platform-features li::before { content: '✓'; color: var(--cabin-brown); font-weight: bold; }
+        .btn-platform { display: block; text-align: center; background: var(--cabin-brown); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+        .btn-platform:hover { background: var(--cabin-warm); }
+
+        .types-section { background: var(--snow-white); }
+        .types-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .type-card { background: var(--cloud-white); border-radius: 12px; padding: 2rem; text-align: center; border: 1px solid rgba(93, 64, 55, 0.1); transition: all 0.3s ease; }
+        .type-card:hover { border-color: var(--cabin-brown); box-shadow: 0 10px 30px rgba(93, 64, 55, 0.1); }
+        .type-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .type-card h3 { font-size: 1.3rem; color: var(--cabin-brown); margin-bottom: 0.5rem; }
+        .type-card p { color: var(--text-light); font-size: 0.95rem; }
+
+        .tips-section { background: var(--cabin-brown); color: white; }
+        .tips-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .tip-card { text-align: center; padding: 1.5rem; }
+        .tip-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .tip-card h3 { font-size: 1.2rem; color: #64B5F6; margin-bottom: 0.5rem; }
+        .tip-card p { color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.6; }
+
+        .cta-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: #ffffff; margin-bottom: 2rem; font-size: 1.1rem; }
+
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+            .platform-grid { grid-template-columns: 1fr; }
+            .types-grid { grid-template-columns: repeat(2, 1fr); }
+            .tips-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .types-grid, .tips-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+            .stats-container { gap: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav><ul class="nav-links"><li><a href="index.html#explore">Explore</a></li><li><a href="index.html#seasons">Seasons</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#stay">Stay & Dine</a></li><li><a href="index.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Vacation Rentals & Cabins</h1>
+            <p class="hero-subtitle">Your Mountain Home Away From Home</p>
+            <p class="hero-description">From cozy log cabins with fireplaces to spacious mountain homes with stunning views, find the perfect short-term rental for your Cloudcroft escape.</p>
+            <div class="hero-ctas">
+                <a href="https://www.vrbo.com/vacation-rentals/cabins/usa/new-mexico/cloudcroft" target="_blank" class="btn btn-primary">Browse on VRBO</a>
+                <a href="https://www.airbnb.com/cloudcroft-nm/stays/cabins" target="_blank" class="btn btn-secondary">Browse on Airbnb</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Vacation Rentals</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">80+</div>
+                <div class="stat-label">Cabin Options</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">$60+</div>
+                <div class="stat-label">Starting Daily Rate</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">70+</div>
+                <div class="stat-label">Pet-Friendly</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="platforms-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Where to Book</span>
+                <h2>Find Your Perfect Rental</h2>
+                <p class="section-description">Browse vacation rentals on the most popular platforms. Compare prices, amenities, and reviews to find your ideal mountain getaway.</p>
+            </div>
+
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-logo">🏠</div>
+                        <h3>VRBO</h3>
+                        <p>Vacation Rentals by Owner</p>
+                    </div>
+                    <div class="platform-content">
+                        <div class="platform-stats">
+                            <div class="platform-stat">
+                                <div class="platform-stat-number">80+</div>
+                                <div class="platform-stat-label">Cabin Rentals</div>
+                            </div>
+                            <div class="platform-stat">
+                                <div class="platform-stat-number">4.8★</div>
+                                <div class="platform-stat-label">Avg Rating</div>
+                            </div>
+                        </div>
+                        <ul class="platform-features">
+                            <li>Entire home rentals</li>
+                            <li>Direct owner communication</li>
+                            <li>Many pet-friendly options</li>
+                            <li>Full kitchen amenities</li>
+                        </ul>
+                        <a href="https://www.vrbo.com/vacation-rentals/cabins/usa/new-mexico/cloudcroft" target="_blank" class="btn-platform">Browse VRBO Listings →</a>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-header" style="background: linear-gradient(135deg, #FF5A5F 0%, #FF385C 100%);">
+                        <div class="platform-logo">🏡</div>
+                        <h3>Airbnb</h3>
+                        <p>Unique Stays & Experiences</p>
+                    </div>
+                    <div class="platform-content">
+                        <div class="platform-stats">
+                            <div class="platform-stat">
+                                <div class="platform-stat-number">4.9★</div>
+                                <div class="platform-stat-label">Avg Rating</div>
+                            </div>
+                            <div class="platform-stat">
+                                <div class="platform-stat-number">$60+</div>
+                                <div class="platform-stat-label">Starting Price</div>
+                            </div>
+                        </div>
+                        <ul class="platform-features">
+                            <li>Verified reviews</li>
+                            <li>Instant book options</li>
+                            <li>Unique & quirky stays</li>
+                            <li>Host experiences available</li>
+                        </ul>
+                        <a href="https://www.airbnb.com/cloudcroft-nm/stays/cabins" target="_blank" class="btn-platform" style="background: #FF385C;">Browse Airbnb Listings →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="types-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Rental Types</span>
+                <h2>What You'll Find</h2>
+            </div>
+
+            <div class="types-grid">
+                <div class="type-card">
+                    <div class="type-icon">🏔️</div>
+                    <h3>Cozy Cabins</h3>
+                    <p>1-2 bedroom retreats with fireplaces, perfect for couples or small families.</p>
+                </div>
+                <div class="type-card">
+                    <div class="type-icon">🏠</div>
+                    <h3>Mountain Homes</h3>
+                    <p>Spacious 3+ bedroom homes for groups, with full kitchens and outdoor spaces.</p>
+                </div>
+                <div class="type-card">
+                    <div class="type-icon">🏛️</div>
+                    <h3>Historic Properties</h3>
+                    <p>Charming historic cabins with rustic character and modern updates.</p>
+                </div>
+                <div class="type-card">
+                    <div class="type-icon">🐕</div>
+                    <h3>Pet-Friendly</h3>
+                    <p>Over 70 rentals welcome four-legged family members.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips-section">
+        <div class="section-container">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <span class="section-label" style="background: rgba(100, 181, 246, 0.2); color: #64B5F6;">Booking Tips</span>
+                <h2 style="color: white;">Get the Best Stay</h2>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">📅</div>
+                    <h3>Book Early</h3>
+                    <p>Peak season (June-July, December) fills up fast. Reserve 2-3 months ahead for best selection.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💰</div>
+                    <h3>Off-Peak Deals</h3>
+                    <p>February, October, and November offer lower rates and fewer crowds.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🔥</div>
+                    <h3>Check Amenities</h3>
+                    <p>Look for fireplaces, heating, and hot tubs—mountain nights get cold!</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📶</div>
+                    <h3>WiFi & Cell</h3>
+                    <p>97% have WiFi, but cell service varies. Ask hosts about connectivity.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🍳</div>
+                    <h3>Full Kitchen</h3>
+                    <p>97% have kitchens. Stock up on groceries in Alamogordo before arrival.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🅿️</div>
+                    <h3>Parking</h3>
+                    <p>92% offer parking. Confirm driveway accessibility for larger vehicles.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🐕</div>
+                    <h3>Pet Policies</h3>
+                    <p>Many are pet-friendly, but check size limits and pet fees before booking.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⭐</div>
+                    <h3>Read Reviews</h3>
+                    <p>Recent reviews are gold. Check for cleanliness, accuracy, and host responsiveness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Book Your Mountain Escape?</h2>
+            <p>Find the perfect cabin or vacation home for your Cloudcroft adventure.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://www.vrbo.com/vacation-rentals/cabins/usa/new-mexico/cloudcroft" target="_blank" class="btn btn-primary">Browse VRBO</a>
+                <a href="https://www.airbnb.com/cloudcroft-nm/stays/cabins" target="_blank" class="btn" style="background: #FF385C; color: white;">Browse Airbnb</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors seeking mountain refuge since 1899.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a><a href="#">▶</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="index.html#explore">In the Village</a></li><li><a href="hiking-trails.html">Hiking Trails</a></li><li><a href="biking.html">Biking</a></li><li><a href="camping.html">Camping</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="grand-cloudcroft-hotel.html">Hotels</a></li><li><a href="#">Vacation Rentals</a></li><li><a href="index.html#stay">Where to Eat</a></li><li><a href="instant-karma.html">Shopping</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="index.html#plan">Getting Here</a></li><li><a href="groceries.html">Groceries</a></li><li><a href="emergency-services.html">Emergency Services</a></li><li><a href="hiking-trails.html">Trail Maps</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Chamber of Commerce</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.platform-card, .type-card, .tip-card').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

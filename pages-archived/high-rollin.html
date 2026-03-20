@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>High Rollin' Coffee | Discover Cloudcroft</title>
+    <meta name="description" content="Visit High Rollin' Coffee in Cloudcroft, NM. Enjoy specialty coffee, espresso drinks, and pastries in a cozy mountain cafe at 8,676 feet elevation.">
+    <meta property="og:title" content="High Rollin' Coffee | Discover Cloudcroft">
+    <meta property="og:description" content="Visit High Rollin' Coffee in Cloudcroft, NM. Enjoy specialty coffee, espresso drinks, and pastries in a cozy mountain cafe at 8,676 feet elevation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/high-rollin.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="High Rollin' Coffee | Discover Cloudcroft">
+    <meta name="twitter:description" content="Visit High Rollin' Coffee in Cloudcroft, NM. Enjoy specialty coffee, espresso drinks, and pastries in a cozy mountain cafe at 8,676 feet elevation.">
+    <link rel="canonical" href="https://discovercloudcroft.com/high-rollin.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pine-deep: #1565C0; --pine-medium: #1E88E5; --pine-light: #64B5F6; --sky-pale: #E3F2FD; --cloud-white: #FAFCFE; --snow-white: #ffffff; --text-dark: #1A1A1A; --text-light: #6B6B6B; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; overflow-x: hidden; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #4E342E !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        .hero { height: 70vh; min-height: 500px; position: relative; display: flex; align-items: center; justify-content: center; background: url('media/DC-Pix-High-Rollin-01006.png') center center / cover no-repeat; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(78, 52, 46, 0.7) 0%, rgba(62, 39, 35, 0.85) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px); padding: 0.6rem 1.2rem; border-radius: 30px; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.2s both; }
+        .hero-badge span { color: rgba(255, 255, 255, 0.9); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 5rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #64B5F6; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 600px; margin: 0 auto 2rem; line-height: 1.8; animation: fadeInUp 0.8s ease 0.8s both; }
+        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease 1s both; }
+
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; cursor: pointer; border: none; }
+        .btn-primary { background: #4E342E; color: var(--snow-white); }
+        .btn-primary:hover { background: #6F4E37; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 2px solid rgba(255, 255, 255, 0.6); backdrop-filter: blur(4px); }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        .contact-bar { background: #1565C0; padding: 1.5rem 0; }
+        .contact-bar-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .contact-item { display: flex; align-items: center; gap: 0.75rem; color: #ffffff; font-size: 0.95rem; font-weight: 500; }
+        .contact-item a { color: #ffffff; text-decoration: none; }
+        .contact-icon { width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--pine-light); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(21, 101, 192, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 600px; margin: 0 auto; }
+
+        .about-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-text h2 { font-size: 2.5rem; color: var(--pine-deep); margin-bottom: 1.5rem; }
+        .about-text .summary { color: var(--text-light); font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem; }
+        .about-features { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+        .about-feature { font-size: 0.9rem; padding: 0.5rem 1rem; background: var(--snow-white); color: var(--pine-medium); border-radius: 25px; border: 1px solid rgba(21, 101, 192, 0.3); }
+        .about-image { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(21, 101, 192, 0.15); height: 400px; }
+        .about-image img { width: 100%; height: 100%; object-fit: cover; }
+
+        .menu-section { background: var(--snow-white); }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .menu-card { background: var(--cloud-white); border-radius: 12px; padding: 2rem; border: 1px solid rgba(21, 101, 192, 0.2); transition: all 0.3s ease; }
+        .menu-card:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(21, 101, 192, 0.1); border-color: var(--pine-light); }
+        .menu-card-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #6F4E37 0%, #5D4037 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .menu-card h3 { font-size: 1.5rem; color: var(--pine-deep); margin-bottom: 0.75rem; }
+        .menu-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+        .menu-items { list-style: none; margin-top: 1rem; }
+        .menu-items li { padding: 0.5rem 0; border-bottom: 1px dashed rgba(21, 101, 192, 0.2); color: var(--text-dark); font-size: 0.95rem; }
+        .menu-items li:last-child { border-bottom: none; }
+
+        .gallery-section { background: var(--sky-pale); padding: 5rem 2rem; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .gallery-item { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(21, 101, 192, 0.1); aspect-ratio: 1; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
+        @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } .gallery-item.wide { grid-column: span 2; } }
+
+        .features-section { background: #6F4E37; color: var(--snow-white); position: relative; overflow: hidden; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; position: relative; }
+        .feature-card { text-align: center; padding: 2rem; }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-card h3 { font-size: 1.4rem; color: #64B5F6; margin-bottom: 0.75rem; }
+        .feature-card p { color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; line-height: 1.7; }
+
+        .contact-section { background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%); }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .contact-info h2 { font-size: 2.5rem; color: var(--pine-deep); margin-bottom: 1.5rem; }
+        .contact-details { margin-bottom: 2rem; }
+        .contact-detail-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(21, 101, 192, 0.2); }
+        .contact-detail-item:last-child { border-bottom: none; }
+        .contact-detail-icon { width: 50px; height: 50px; background: linear-gradient(135deg, #6F4E37 0%, #5D4037 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .contact-detail-content h4 { font-size: 1.1rem; color: var(--pine-deep); margin-bottom: 0.25rem; }
+        .contact-detail-content p { color: var(--text-light); font-size: 0.95rem; }
+        .contact-map { background: var(--snow-white); border-radius: 12px; height: 400px; overflow: hidden; border: 1px solid rgba(21, 101, 192, 0.2); }
+        .contact-map img { width: 100%; height: 100%; object-fit: cover; }
+        .map-placeholder { text-align: center; padding: 2rem; }
+        .map-placeholder-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .map-placeholder h3 { color: var(--pine-deep); margin-bottom: 0.5rem; }
+        .map-placeholder p { color: var(--text-light); margin-bottom: 1.5rem; }
+
+        .cta-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: rgba(255,255,255,0.85); margin-bottom: 2rem; font-size: 1.1rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } .footer-brand { grid-column: span 3; } .about-content, .contact-content { grid-template-columns: 1fr; } .features-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu-btn { display: block; } .hero { height: 60vh; } .features-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: repeat(2, 1fr); } .footer-brand { grid-column: span 2; } .cta-buttons { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav><ul class="nav-links"><li><a href="index.html#explore">Explore</a></li><li><a href="index.html#seasons">Seasons</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#stay">Stay & Dine</a></li><li><a href="index.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge"><span>Cloudcroft Coffee & Café</span></div>
+            <h1>High Rollin' Coffee</h1>
+            <p class="hero-subtitle">Organic, From-Scratch, Made with Love</p>
+            <p class="hero-description">A cozy café serving handcrafted coffee, fresh-baked goods, and wholesome vegetarian fare in the heart of Cloudcroft.</p>
+            <div class="hero-ctas">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#contact" class="btn btn-secondary">Visit Us</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-bar">
+        <div class="contact-bar-container">
+            <div class="contact-item"><div class="contact-icon">📍</div><span>201 James Canyon Hwy, Cloudcroft</span></div>
+            <div class="contact-item"><div class="contact-icon">🕐</div><span>Mon-Tue 8am-1pm, Fri-Sun 8am-3pm</span></div>
+            <div class="contact-item"><div class="contact-icon">🌿</div><span>Organic & Non-GMO</span></div>
+            <div class="contact-item"><div class="contact-icon">🥣</div><span>Made Fresh Daily</span></div>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Beth's Story</h2>
+                    <p class="summary">
+                        Owner Beth Offolter is a Cottonwood Canyon native who spent 13 years as a chef on private yachts,
+                        traveling the world before returning to New Mexico with her young son just before COVID. When she
+                        couldn't return to yacht work, she pivoted to her dream of opening a café. In just four months
+                        after signing the lease, High Rollin' Coffee opened its doors on August 11, 2023.
+                    </p>
+                    <p class="summary">
+                        Beth set out to create a space that feels warm, familiar, calming, and uplifting. Nearly 90% of
+                        everything served is made from scratch daily using organic, non-GMO ingredients. The café has
+                        become a beloved gathering spot, with 90% of customers being locals—all built through word of mouth.
+                    </p>
+                    <div class="about-features">
+                        <span class="about-feature">☕ Handcrafted Coffee</span>
+                        <span class="about-feature">🌿 Organic & Non-GMO</span>
+                        <span class="about-feature">🥗 Vegetarian Menu</span>
+                        <span class="about-feature">🍞 Fresh-Baked Daily</span>
+                        <span class="about-feature">🏠 House-Made Syrups</span>
+                        <span class="about-feature">❤️ Local Favorite</span>
+                    </div>
+                </div>
+                <div class="about-image"><img src="media/DC-Pix-High-Rollin-01002.png" alt="Beth serving customers at High Rollin' Coffee"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Our Menu</span>
+                <h2>Wholesome & Handcrafted</h2>
+                <p class="section-description">Nearly everything made from scratch daily with organic, non-GMO ingredients.</p>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-card-icon">☕</div>
+                    <h3>Coffee & Drinks</h3>
+                    <p>Handcrafted beverages with house-made syrups.</p>
+                    <ul class="menu-items"><li>Espresso Drinks</li><li>Pumpkin Spice</li><li>Wild Rose</li><li>Heart Warmer</li><li>Specialty Teas</li></ul>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-icon">🥣</div>
+                    <h3>Bowls & Brunch</h3>
+                    <p>Hearty, wholesome meals to start your day.</p>
+                    <ul class="menu-items"><li>Açaí Bowls</li><li>Grain Bowls (rotating weekly)</li><li>Seasonal Soups</li><li>Brunch Specials</li></ul>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-icon">🍞</div>
+                    <h3>Toast & Baked Goods</h3>
+                    <p>Fresh-baked daily with creative toppings.</p>
+                    <ul class="menu-items"><li>Signature Daily Toasts</li><li>Muffins</li><li>Scones</li><li>Cinnamon Rolls</li></ul>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-icon">🌱</div>
+                    <h3>Vegetarian & Vegan</h3>
+                    <p>Health-conscious options made with care.</p>
+                    <ul class="menu-items"><li>Vegan Baked Goods</li><li>Plant-Based Bowls</li><li>Fresh Veggie Options</li><li>Dairy-Free Drinks</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Inside the Café</span>
+                <h2>A Warm Welcome Awaits</h2>
+                <p class="section-description">Charming decor, cozy hammock chairs, and delicious handcrafted food.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="media/DC-Pix-High-Rollin-01001.png" alt="Açaí bowls and fresh-baked goods at High Rollin' Coffee" loading="lazy"></div>
+                <div class="gallery-item"><img src="media/DC-Pix-High-Rollin-01004.png" alt="Cozy hammock chair corner with plants" loading="lazy"></div>
+                <div class="gallery-item"><img src="media/DC-Pix-High-Rollin-01003.png" alt="High Rollin' Coffee menu board" loading="lazy"></div>
+                <div class="gallery-item"><img src="media/logo-high-rollin.png" alt="High Rollin' Coffee logo" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="section-container">
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon">🏠</div><h3>Made From Scratch</h3><p>90% of everything served is made in-house daily with high-quality, organic ingredients.</p></div>
+                <div class="feature-card"><div class="feature-icon">🌿</div><h3>Health & Wellness</h3><p>Vegetarian-focused menu emphasizing organic, non-GMO, wholesome ingredients.</p></div>
+                <div class="feature-card"><div class="feature-icon">☕</div><h3>Cozy Atmosphere</h3><p>A warm, calming space with charming decor and hammock chairs to relax in.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Visit High Rollin' Coffee</h2>
+                    <div class="contact-details">
+                        <div class="contact-detail-item"><div class="contact-detail-icon">📍</div><div class="contact-detail-content"><h4>Location</h4><p>201 James Canyon Highway<br>Cloudcroft, NM 88317</p></div></div>
+                        <div class="contact-detail-item"><div class="contact-detail-icon">🕐</div><div class="contact-detail-content"><h4>Hours</h4><p>Monday - Tuesday: 8am - 1pm<br>Friday - Sunday: 8am - 3pm<br>Closed Wednesday & Thursday</p></div></div>
+                        <div class="contact-detail-item"><div class="contact-detail-icon">📱</div><div class="contact-detail-content"><h4>Follow Us</h4><p>Facebook: High Rollin' Coffee</p></div></div>
+                    </div>
+                    <a href="https://www.facebook.com/p/High-Rollin-Coffee-61550359681157/" target="_blank" class="btn btn-primary">Follow on Facebook</a>
+                </div>
+                <div class="contact-map"><img src="media/DC-Pix-High-Rollin-01005.png" alt="Inside High Rollin' Coffee - cozy café interior" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Start Your Morning Right</h2>
+            <p>Stop by for handcrafted coffee, fresh-baked treats, and a warm welcome from Beth.</p>
+            <div class="cta-buttons">
+                <a href="https://www.facebook.com/p/High-Rollin-Coffee-61550359681157/" target="_blank" class="btn btn-primary">Follow on Facebook</a>
+                <a href="index.html#stay" class="btn" style="background: #0D47A1; color: white;">Explore More Dining</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="index.html">In the Village</a></li><li><a href="#">Hiking Trails</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="#">Where to Stay</a></li><li><a href="index.html#stay">Where to Eat</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="#">Getting Here</a></li><li><a href="#">Weather</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="#">Contact Us</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat.</p><div><a href="#">Privacy</a> · <a href="#">Terms</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth' }); } }); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.menu-card, .feature-card, .contact-detail-item').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Contact Us | Discover Cloudcroft</title>
+    <meta name="description" content="Get in touch with Discover Cloudcroft. Find visitor information, contact details, and resources for planning your trip to Cloudcroft, New Mexico.">
+    <meta property="og:title" content="Contact Us | Discover Cloudcroft">
+    <meta property="og:description" content="Get in touch with Discover Cloudcroft. Find visitor information, contact details, and resources for planning your trip to Cloudcroft, New Mexico.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/contact.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | Discover Cloudcroft">
+    <meta name="twitter:description" content="Get in touch with Discover Cloudcroft. Find visitor information, contact details, and resources for planning your trip to Cloudcroft, New Mexico.">
+    <link rel="canonical" href="https://discovercloudcroft.com/contact.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #FCD116;
+            --sunset-warm: #FCD116;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #5a4a3a;
+            --snow-white: #ffffff;
+            --text-dark: #2a3a32;
+            --text-light: #4a5a52;
+            --mountain-shadow: #0D47A1;
+            --error-red: #c53030;
+            --success-green: #1E88E5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            min-height: 350px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--mountain-shadow) 0%, var(--pine-deep) 50%, var(--pine-medium) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 30% 70%, rgba(212, 168, 75, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, rgba(100, 181, 246, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 168, 75, 0.25);
+            color: var(--sunset-warm);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(212, 168, 75, 0.4);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--snow-white);
+            margin-bottom: 1rem;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 5rem 2rem;
+            background: var(--sky-pale);
+        }
+
+        .content-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        /* Contact Form Section */
+        .form-section {
+            background: var(--snow-white);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(21, 101, 192, 0.08);
+        }
+
+        .form-section h2 {
+            font-size: 1.8rem;
+            color: var(--mountain-shadow);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-intro {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .form-group label .required {
+            color: var(--error-red);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 0.9rem 1rem;
+            border: 2px solid rgba(21, 101, 192, 0.15);
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            background: var(--snow-white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--pine-medium);
+            box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--pine-deep), var(--pine-medium));
+            color: var(--snow-white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Info Section */
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--snow-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.06);
+        }
+
+        .info-card h3 {
+            font-size: 1.4rem;
+            color: var(--mountain-shadow);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--pine-light), var(--pine-medium));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .info-card a {
+            color: var(--pine-deep);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .info-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Methods */
+        .contact-methods {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .contact-methods li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(21, 101, 192, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-methods li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-methods .method-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(21, 101, 192, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .contact-methods .method-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-methods .method-value {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* FAQ Quick Links */
+        .faq-links {
+            list-style: none;
+        }
+
+        .faq-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--sky-pale);
+            border-radius: 8px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-links a:hover {
+            background: var(--sky-blue);
+            transform: translateX(5px);
+        }
+
+        .faq-links a::before {
+            content: '→';
+            color: var(--pine-medium);
+            font-weight: bold;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            background: var(--pine-deep);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--pine-medium);
+            transform: translateY(-3px);
+        }
+
+        /* Additional Resources Section */
+        .resources-section {
+            background: var(--cloud-white);
+            padding: 5rem 2rem;
+        }
+
+        .resources-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .resources-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .resources-header h2 {
+            font-size: 2rem;
+            color: var(--mountain-shadow);
+            margin-bottom: 0.5rem;
+        }
+
+        .resources-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            background: var(--sky-pale);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .resource-card:hover {
+            border-color: var(--pine-medium);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.1);
+        }
+
+        .resource-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--pine-light), var(--pine-medium));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .resource-card h4 {
+            font-size: 1.2rem;
+            color: var(--mountain-shadow);
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .resource-link {
+            display: inline-block;
+            color: var(--pine-deep);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .resource-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: #b8c9b8;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Alegreya', serif;
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-section a {
+            color: #b8c9b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #64B5F6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .content-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 40vh;
+                min-height: 300px;
+            }
+
+            .main-content {
+                padding: 3rem 1.5rem;
+            }
+
+            .form-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .resources-section {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        /* Form success/error states */
+        .form-message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+
+        .form-message.success {
+            background: rgba(30, 136, 229, 0.1);
+            border: 1px solid var(--success-green);
+            color: var(--success-green);
+            display: block;
+        }
+
+        .form-message.error {
+            background: rgba(197, 48, 48, 0.1);
+            border: 1px solid var(--error-red);
+            color: var(--error-red);
+            display: block;
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#plan" class="nav-cta">Plan Your Visit</a></li>
+            </ul>
+            <button class="mobile-menu-btn">&#9776;</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Get In Touch</span>
+            <h1>Contact Us</h1>
+            <p class="hero-subtitle">Questions, suggestions, or just want to share your Cloudcroft experience? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="content-container">
+            <!-- Contact Form -->
+            <div class="form-section fade-in">
+                <h2>Send Us a Message</h2>
+                <p class="form-intro">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="">Select a topic...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="visitor">Visitor Information</option>
+                            <option value="business">Business Listing Request</option>
+                            <option value="event">Event Submission</option>
+                            <option value="feedback">Website Feedback</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section fade-in">
+                <!-- Quick Info Card -->
+                <div class="info-card">
+                    <h3><span class="info-icon">&#128205;</span> Cloudcroft Info</h3>
+                    <p>Planning a visit? Here's what you need to know about reaching our mountain village.</p>
+                    <ul class="contact-methods">
+                        <li>
+                            <span class="method-icon">&#127968;</span>
+                            <div>
+                                <span class="method-label">Location</span>
+                                <span class="method-value">Cloudcroft, NM 88317</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="method-icon">&#9968;</span>
+                            <div>
+                                <span class="method-label">Elevation</span>
+                                <span class="method-value">8,663 feet</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="method-icon">&#128663;</span>
+                            <div>
+                                <span class="method-label">From El Paso</span>
+                                <span class="method-value">~90 minutes via US-54 & NM-82</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="method-icon">&#128663;</span>
+                            <div>
+                                <span class="method-label">From Alamogordo</span>
+                                <span class="method-value">~30 minutes via NM-82</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links Card -->
+                <div class="info-card">
+                    <h3><span class="info-icon">&#128279;</span> Helpful Resources</h3>
+                    <p>Find quick answers to common questions:</p>
+                    <ul class="faq-links">
+                        <li><a href="lodging.html">Where to Stay</a></li>
+                        <li><a href="dining.html">Where to Eat</a></li>
+                        <li><a href="activities.html">Things to Do</a></li>
+                        <li><a href="events.html">Upcoming Events</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community Card -->
+                <div class="info-card">
+                    <h3><span class="info-icon">&#129309;</span> Community Resources</h3>
+                    <p>Connect with local organizations:</p>
+                    <ul class="contact-methods">
+                        <li>
+                            <span class="method-icon">&#127970;</span>
+                            <div>
+                                <span class="method-label">Chamber of Commerce</span>
+                                <span class="method-value"><a href="https://www.coolcloudcroft.com" target="_blank" rel="noopener">coolcloudcroft.com</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="method-icon">&#127795;</span>
+                            <div>
+                                <span class="method-label">Lincoln National Forest</span>
+                                <span class="method-value"><a href="https://www.fs.usda.gov/lincoln" target="_blank" rel="noopener">fs.usda.gov/lincoln</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="method-icon">&#128301;</span>
+                            <div>
+                                <span class="method-label">Sunspot Observatory</span>
+                                <span class="method-value"><a href="https://sunspot.nmsu.edu" target="_blank" rel="noopener">sunspot.nmsu.edu</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Resources -->
+    <section class="resources-section">
+        <div class="resources-container fade-in">
+            <div class="resources-header">
+                <h2>More Ways to Connect</h2>
+                <p>Explore additional resources and ways to engage with our community</p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">&#127959;</div>
+                    <h4>Local Businesses</h4>
+                    <p>Own a business in Cloudcroft? We'd love to feature you on our site.</p>
+                    <a href="#" class="resource-link" onclick="document.getElementById('subject').value='business'; document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'}); return false;">Submit Your Business →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">&#127881;</div>
+                    <h4>Events</h4>
+                    <p>Hosting an event? Let us help spread the word to visitors and locals.</p>
+                    <a href="#" class="resource-link" onclick="document.getElementById('subject').value='event'; document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'}); return false;">Submit an Event →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">&#128247;</div>
+                    <h4>Share Your Photos</h4>
+                    <p>Captured something beautiful? We'd love to see your Cloudcroft moments.</p>
+                    <a href="#" class="resource-link" onclick="document.getElementById('subject').value='other'; document.getElementById('message').value='I would like to share my Cloudcroft photos...'; document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'}); return false;">Share Photos →</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">&#128221;</div>
+                    <h4>Feedback</h4>
+                    <p>Have ideas to improve our site? Your feedback helps us serve you better.</p>
+                    <a href="#" class="resource-link" onclick="document.getElementById('subject').value='feedback'; document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'}); return false;">Give Feedback →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Discover Cloudcroft</h3>
+                <p>Your guide to New Mexico's premier mountain retreat, created with love for this special community at 8,663 feet.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <a href="lodging.html">Lodging</a>
+                <a href="dining.html">Dining</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="history.html">History</a>
+            </div>
+            <div class="footer-section">
+                <h3>Plan Your Trip</h3>
+                <a href="hiking-trails.html">Hiking Trails</a>
+                <a href="dark-skies.html">Dark Skies</a>
+                <a href="nearby-destinations.html">Nearby Destinations</a>
+                <a href="real-estate.html">Buy a Cabin</a>
+            </div>
+            <div class="footer-section">
+                <h3>About</h3>
+                <a href="about.html">Who We Are</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Discover Cloudcroft. Made with love for New Mexico's mountain paradise.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+
+        // Form handling (placeholder - would connect to backend in production)
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // In a real implementation, this would send to a backend
+                // For now, show a friendly message
+                alert('Thank you for your message! In a live implementation, this would be sent to our team. For now, please reach out to the Cloudcroft Chamber of Commerce at coolcloudcroft.com for assistance.');
+
+                // Reset form
+                contactForm.reset();
+            });
+        }
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Terms & Conditions | Discover Cloudcroft</title>
+    <meta name="description" content="Read the terms and conditions for using Discover Cloudcroft. Understand our website policies, disclaimers, and usage guidelines for discovercloudcroft.com.">
+    <meta property="og:title" content="Terms & Conditions | Discover Cloudcroft">
+    <meta property="og:description" content="Read the terms and conditions for using Discover Cloudcroft. Understand our website policies, disclaimers, and usage guidelines for discovercloudcroft.com.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/terms.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terms & Conditions | Discover Cloudcroft">
+    <meta name="twitter:description" content="Read the terms and conditions for using Discover Cloudcroft. Understand our website policies, disclaimers, and usage guidelines for discovercloudcroft.com.">
+    <link rel="canonical" href="https://discovercloudcroft.com/terms.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #BF0A30;
+            --sunset-warm: #a31621;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #8B4513;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 40vh;
+            min-height: 300px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 50%, rgba(21, 101, 192, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #64B5F6;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* Main Content */
+        .content-section {
+            padding: 4rem 2rem;
+        }
+
+        .section-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .legal-content {
+            background: var(--snow-white);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08);
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: var(--sky-pale);
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+
+        .legal-content h2 {
+            font-size: 1.6rem;
+            color: var(--pine-deep);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(21, 101, 192, 0.2);
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .legal-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .legal-content ul {
+            color: var(--text-light);
+            margin: 1rem 0 1.5rem 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-content a {
+            color: var(--sunset-gold);
+            text-decoration: none;
+        }
+
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: var(--sky-pale);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--pine-deep);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            background: var(--sky-pale);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-left: 4px solid var(--pine-deep);
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+            color: var(--pine-deep);
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: var(--snow-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Alegreya', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #64B5F6;
+            color: #0D1B2A;
+        }
+
+        .footer-column h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: #64B5F6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p, .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--snow-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { height: 35vh; min-height: 250px; }
+            .legal-content { padding: 2rem; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">9,000 Feet Above Stress Level</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#seasons">Seasons</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#stay">Stay & Dine</a></li>
+                    <li><a href="index.html#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Terms & Conditions</h1>
+            <p class="hero-subtitle">Guidelines for using our website</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="legal-content">
+                <span class="last-updated">Last Updated: January 2026</span>
+
+                <h2>Agreement to Terms</h2>
+                <p>
+                    Welcome to Discover Cloudcroft. These Terms and Conditions constitute a legally binding agreement between you and Discover Cloudcroft regarding your access to and use of the discovercloudcroft.com website.
+                </p>
+                <div class="highlight-box">
+                    <p>
+                        <strong>By accessing or using our website, you agree to be bound by these Terms.</strong> If you disagree with any part of these terms, you may not access the website.
+                    </p>
+                </div>
+
+                <h2>Use of Website</h2>
+
+                <h3>Permitted Use</h3>
+                <p>You may use our website for lawful purposes only. Our website provides tourism information about Cloudcroft, New Mexico, including information about local attractions, businesses, events, and services.</p>
+
+                <h3>Prohibited Activities</h3>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Use the website in any way that violates applicable laws or regulations</li>
+                    <li>Attempt to gain unauthorized access to any portion of the website</li>
+                    <li>Use the website to transmit harmful code, viruses, or malware</li>
+                    <li>Interfere with or disrupt the website or servers</li>
+                    <li>Collect or harvest user information without consent</li>
+                    <li>Use automated systems to access the website without permission</li>
+                    <li>Impersonate another person or entity</li>
+                    <li>Use the website for commercial purposes without authorization</li>
+                </ul>
+
+                <h2>Intellectual Property</h2>
+
+                <h3>Our Content</h3>
+                <p>
+                    The website and its original content, features, and functionality are owned by Discover Cloudcroft and are protected by copyright, trademark, and other intellectual property laws. This includes text, graphics, logos, images, photographs, and software.
+                </p>
+
+                <h3>Limited License</h3>
+                <p>
+                    We grant you a limited, non-exclusive, non-transferable license to access and use the website for personal, non-commercial purposes. You may not reproduce, distribute, modify, create derivative works of, publicly display, or exploit any content without our express written permission.
+                </p>
+
+                <h3>User Submissions</h3>
+                <p>
+                    If you submit content to our website (such as reviews or photos), you grant us a non-exclusive, royalty-free, perpetual license to use, reproduce, modify, and display that content in connection with our website and promotional materials.
+                </p>
+
+                <h2>Third-Party Content and Links</h2>
+                <p>
+                    Our website contains information about local businesses, attractions, and services in the Cloudcroft area. This information is provided for convenience and does not constitute an endorsement.
+                </p>
+                <ul>
+                    <li>We are not responsible for the accuracy of third-party business information</li>
+                    <li>Business hours, prices, and availability may change without notice</li>
+                    <li>Links to external websites are provided for convenience only</li>
+                    <li>We do not control and are not responsible for third-party websites</li>
+                </ul>
+                <p>
+                    We encourage you to verify information directly with businesses before visiting.
+                </p>
+
+                <h2>Disclaimer of Warranties</h2>
+                <p>
+                    The website is provided on an "as is" and "as available" basis. Discover Cloudcroft makes no warranties, expressed or implied, regarding:
+                </p>
+                <ul>
+                    <li>The accuracy, completeness, or reliability of website content</li>
+                    <li>The availability or uninterrupted operation of the website</li>
+                    <li>The security of the website or freedom from viruses</li>
+                    <li>The suitability of information for any particular purpose</li>
+                </ul>
+
+                <h2>Limitation of Liability</h2>
+                <p>
+                    To the fullest extent permitted by law, Discover Cloudcroft shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from:
+                </p>
+                <ul>
+                    <li>Your use or inability to use the website</li>
+                    <li>Any errors or omissions in website content</li>
+                    <li>Unauthorized access to or alteration of your data</li>
+                    <li>Any third-party conduct or content on the website</li>
+                    <li>Any matter relating to the website</li>
+                </ul>
+
+                <h2>Outdoor Activities Disclaimer</h2>
+                <div class="highlight-box">
+                    <p>
+                        <strong>Important:</strong> Cloudcroft offers many outdoor recreational activities including hiking, biking, camping, and skiing. These activities involve inherent risks. Information provided on our website about trails, conditions, or activities is for general guidance only. Always exercise caution, check current conditions, and use appropriate safety equipment. You participate in outdoor activities at your own risk.
+                    </p>
+                </div>
+
+                <h2>Indemnification</h2>
+                <p>
+                    You agree to indemnify, defend, and hold harmless Discover Cloudcroft and its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of the website or violation of these Terms.
+                </p>
+
+                <h2>Changes to Terms</h2>
+                <p>
+                    We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to the website. Your continued use of the website after changes constitutes acceptance of the modified Terms.
+                </p>
+
+                <h2>Governing Law</h2>
+                <p>
+                    These Terms shall be governed by and construed in accordance with the laws of the State of New Mexico, without regard to its conflict of law provisions. Any disputes arising from these Terms shall be resolved in the courts of Otero County, New Mexico.
+                </p>
+
+                <h2>Severability</h2>
+                <p>
+                    If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.
+                </p>
+
+                <h2>Entire Agreement</h2>
+                <p>
+                    These Terms, together with our Privacy Policy, constitute the entire agreement between you and Discover Cloudcroft regarding the use of our website.
+                </p>
+
+                <div class="contact-box">
+                    <h3>Questions About These Terms?</h3>
+                    <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+                    <p>
+                        <strong>Discover Cloudcroft</strong><br>
+                        Cloudcroft, NM 88317<br>
+                        Email: <a href="mailto:info@discovercloudcroft.com">info@discovercloudcroft.com</a><br>
+                        Phone: <a href="tel:575-682-2733">575-682-2733</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Discover Cloudcroft</h3>
+                    <p>
+                        Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors
+                        seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">In the Village</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="history.html">Historic Sites</a></li>
+                        <li><a href="#">Golf Course</a></li>
+                        <li><a href="#">Ski Cloudcroft</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li><a href="#">Where to Stay</a></li>
+                        <li><a href="index.html#stay">Where to Eat</a></li>
+                        <li><a href="shopping.html">Shopping</a></li>
+                        <li><a href="index.html#events">Events Calendar</a></li>
+                        <li><a href="#">Webcams</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Plan</h4>
+                    <ul>
+                        <li><a href="#">Getting Here</a></li>
+                        <li><a href="#">Weather</a></li>
+                        <li><a href="#">Visitor Guide</a></li>
+                        <li><a href="#">Trail Maps</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Chamber of Commerce</a></li>
+                        <li><a href="#">Village of Cloudcroft</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cloudcroft Tourism Alliance. All rights reserved.</p>
+                <div>
+                    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="sitemap.html">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 100);
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

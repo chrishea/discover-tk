@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Camping Guide | Discover Cloudcroft</title>
+    <meta name="description" content="Plan your camping trip to Cloudcroft, NM. Find campgrounds, RV parks, and dispersed camping spots in Lincoln National Forest and the Sacramento Mountains.">
+    <meta property="og:title" content="Camping Guide | Discover Cloudcroft">
+    <meta property="og:description" content="Plan your camping trip to Cloudcroft, NM. Find campgrounds, RV parks, and dispersed camping spots in Lincoln National Forest and the Sacramento Mountains.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/camping.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Camping Guide | Discover Cloudcroft">
+    <meta name="twitter:description" content="Plan your camping trip to Cloudcroft, NM. Find campgrounds, RV parks, and dispersed camping spots in Lincoln National Forest and the Sacramento Mountains.">
+    <link rel="canonical" href="https://discovercloudcroft.com/camping.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pine-deep: #1565C0; --pine-medium: #1E88E5; --pine-light: #64B5F6; --sky-pale: #E3F2FD; --cloud-white: #FAFCFE; --snow-white: #ffffff; --text-dark: #1A1A1A; --text-light: #6B6B6B; --forest-green: #1565C0; --forest-dark: #0D47A1; --camp-brown: #5D4037; --camp-tan: #8D6E63; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        .hero { height: 70vh; min-height: 500px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-green) 50%, var(--camp-brown) 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(13, 71, 161, 0.6) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px); padding: 0.6rem 1.2rem; border-radius: 30px; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.2s both; }
+        .hero-badge span { color: rgba(255, 255, 255, 0.9); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #64B5F6; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 650px; margin: 0 auto 2rem; line-height: 1.8; animation: fadeInUp 0.8s ease 0.8s both; }
+        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease 1s both; }
+
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; cursor: pointer; border: none; }
+        .btn-primary { background: #8B0000; color: var(--snow-white); }
+        .btn-primary:hover { background: #a31621; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 2px solid rgba(255, 255, 255, 0.6); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.25); border-color: #ffffff; }
+        .btn-outline { background: transparent; color: var(--forest-green); border: 2px solid var(--forest-green); }
+        .btn-outline:hover { background: var(--forest-green); color: white; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        .quick-stats { background: #1565C0; padding: 1.5rem 0; }
+        .quick-stats-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .stat-item { display: flex; align-items: center; gap: 0.75rem; color: #ffffff; font-size: 0.95rem; font-weight: 500; }
+        .stat-icon { width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--forest-green); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(21, 101, 192, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        .campgrounds-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .camp-type-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--forest-green); }
+        .camp-type-icon { font-size: 2rem; }
+        .camp-type-header h3 { font-size: 1.8rem; color: var(--forest-dark); }
+        .campground-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+        .campground-card { background: var(--snow-white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(21, 101, 192, 0.08); transition: all 0.4s ease; }
+        .campground-card:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(21, 101, 192, 0.12); }
+        .campground-image { height: 140px; background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-green) 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; }
+        .camp-badge { position: absolute; top: 1rem; right: 1rem; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; }
+        .badge-reservable { background: #4CAF50; color: white; }
+        .badge-free { background: var(--pine-light); color: var(--text-dark); }
+        .badge-group { background: #2196F3; color: white; }
+        .campground-content { padding: 1.5rem; }
+        .campground-content h4 { font-size: 1.4rem; color: var(--forest-dark); margin-bottom: 0.5rem; }
+        .campground-content p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6; }
+        .camp-details { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .camp-detail { display: flex; align-items: center; gap: 0.3rem; font-size: 0.85rem; color: var(--text-dark); background: var(--sky-pale); padding: 0.3rem 0.6rem; border-radius: 12px; }
+        .campground-link { color: var(--forest-green); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .campground-link:hover { text-decoration: underline; }
+
+        .tips-section { background: var(--forest-green); color: white; }
+        .tips-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .tip-card { text-align: center; padding: 1.5rem; }
+        .tip-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .tip-card h3 { font-size: 1.2rem; color: #64B5F6; margin-bottom: 0.5rem; }
+        .tip-card p { color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.6; }
+
+        .resources-section { background: var(--snow-white); }
+        .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .resource-card { background: var(--cloud-white); border-radius: 12px; padding: 2rem; border: 1px solid rgba(21, 101, 192, 0.15); text-align: center; transition: all 0.3s ease; }
+        .resource-card:hover { border-color: var(--forest-green); box-shadow: 0 10px 30px rgba(21, 101, 192, 0.1); }
+        .resource-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .resource-card h3 { font-size: 1.3rem; color: var(--pine-deep); margin-bottom: 0.5rem; }
+        .resource-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.5rem; }
+
+        .cta-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: rgba(255,255,255,0.85); margin-bottom: 2rem; font-size: 1.1rem; }
+
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+            .tips-grid { grid-template-columns: repeat(2, 1fr); }
+            .resources-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .tips-grid, .resources-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+            .campground-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav><ul class="nav-links"><li><a href="index.html#explore">Explore</a></li><li><a href="index.html#seasons">Seasons</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#stay">Stay & Dine</a></li><li><a href="index.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge"><span>Lincoln National Forest</span></div>
+            <h1>Camping Guide</h1>
+            <p class="hero-subtitle">Sleep Under the Stars at 9,000 Feet</p>
+            <p class="hero-description">From developed campgrounds with amenities to free dispersed camping in the wilderness, the Sacramento Mountains offer unforgettable camping experiences surrounded by towering pines and starlit skies.</p>
+            <div class="hero-ctas">
+                <a href="https://www.recreation.gov/search?q=cloudcroft" target="_blank" class="btn btn-primary">Reserve a Campsite</a>
+                <a href="#dispersed" class="btn btn-secondary">Free Camping</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="quick-stats">
+        <div class="quick-stats-container">
+            <div class="stat-item"><div class="stat-icon">🏕️</div><span>10+ Campgrounds</span></div>
+            <div class="stat-item"><div class="stat-icon">⛰️</div><span>8,700-9,000 ft</span></div>
+            <div class="stat-item"><div class="stat-icon">🌲</div><span>Pine & Aspen Forest</span></div>
+            <div class="stat-item"><div class="stat-icon">🆓</div><span>Free Dispersed Options</span></div>
+        </div>
+    </div>
+
+    <section class="campgrounds-section" id="campgrounds">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Where to Camp</span>
+                <h2>Campgrounds Near Cloudcroft</h2>
+                <p class="section-description">The Sacramento Ranger District offers 10 developed campgrounds and 5 group sites, plus abundant dispersed camping opportunities.</p>
+            </div>
+
+            <!-- Individual Campgrounds -->
+            <div class="camp-type-header">
+                <span class="camp-type-icon">🏕️</span>
+                <h3>Family Campgrounds</h3>
+            </div>
+            <div class="campground-grid">
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-reservable">Reservable</span>⛺</div>
+                    <div class="campground-content">
+                        <h4>Pines Campground</h4>
+                        <p>Heavily forested campground with large pine trees providing plenty of shade. Located just NE of Cloudcroft village at 8,700 feet elevation.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">🏕️ 24 sites</span>
+                            <span class="camp-detail">🚐 RV up to 35 ft</span>
+                            <span class="camp-detail">💧 Drinking water</span>
+                            <span class="camp-detail">📅 14-day limit</span>
+                        </div>
+                        <a href="https://www.recreation.gov/camping/campgrounds/10303056" target="_blank" class="campground-link">Reserve on Recreation.gov →</a>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-reservable">Reservable</span>🦌</div>
+                    <div class="campground-content">
+                        <h4>Deerhead Campground</h4>
+                        <p>Heavily forested site with great views of White Sands salt flats. Access to Osha Trail, Little Apache Trail, and Old Cloudcroft Highway Trail.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">⛰️ 8,700 ft</span>
+                            <span class="camp-detail">🌲 Shaded sites</span>
+                            <span class="camp-detail">👀 White Sands views</span>
+                            <span class="camp-detail">🥾 Trail access</span>
+                        </div>
+                        <a href="https://www.recreation.gov/camping/campgrounds/10303036" target="_blank" class="campground-link">Reserve on Recreation.gov →</a>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-reservable">Reservable</span>🌲</div>
+                    <div class="campground-content">
+                        <h4>Apache Campground</h4>
+                        <p>Mixed conifer and aspen forest at 8,900 feet. Perfect escape from summer desert heat with cool mountain air and stunning fall colors.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">🏕️ 25 sites</span>
+                            <span class="camp-detail">⛰️ 8,900 ft</span>
+                            <span class="camp-detail">🍂 Aspen forest</span>
+                            <span class="camp-detail">❄️ Cool temps</span>
+                        </div>
+                        <a href="https://www.recreation.gov/search?q=apache%20cloudcroft" target="_blank" class="campground-link">Check Availability →</a>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-free">Free</span>🏔️</div>
+                    <div class="campground-content">
+                        <h4>James Canyon</h4>
+                        <p>One of three free developed campgrounds in the area. Generally open May through September, weather permitting.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">🆓 Free camping</span>
+                            <span class="camp-detail">📅 May-Sept</span>
+                            <span class="camp-detail">🚗 First-come</span>
+                        </div>
+                        <a href="https://www.fs.usda.gov/r03/lincoln/recreation/camping-cabins" target="_blank" class="campground-link">Forest Service Info →</a>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-free">Free</span>🏜️</div>
+                    <div class="campground-content">
+                        <h4>Upper Karr Canyon</h4>
+                        <p>Free campground open year-round. One of the few camping options available during winter months.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">🆓 Free camping</span>
+                            <span class="camp-detail">📅 Year-round</span>
+                            <span class="camp-detail">🚗 First-come</span>
+                        </div>
+                        <a href="https://www.fs.usda.gov/r03/lincoln/recreation/camping-cabins" target="_blank" class="campground-link">Forest Service Info →</a>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-free">Free</span>🌄</div>
+                    <div class="campground-content">
+                        <h4>Lower Karr Canyon</h4>
+                        <p>Free developed campground. Generally open from May through September depending on weather conditions.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">🆓 Free camping</span>
+                            <span class="camp-detail">📅 May-Sept</span>
+                            <span class="camp-detail">🚗 First-come</span>
+                        </div>
+                        <a href="https://www.fs.usda.gov/r03/lincoln/recreation/camping-cabins" target="_blank" class="campground-link">Forest Service Info →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group Campgrounds -->
+            <div class="camp-type-header">
+                <span class="camp-type-icon">👥</span>
+                <h3>Group Campgrounds</h3>
+            </div>
+            <div class="campground-grid">
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-group">Group</span>🏔️</div>
+                    <div class="campground-content">
+                        <h4>Slide Group Area</h4>
+                        <p>Just 2 miles from Cloudcroft village. Stunning views of Tularosa Basin from the rim of the Sacramento Mountains. Adjacent to Rim Trail.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">👥 Up to 90 people</span>
+                            <span class="camp-detail">⛰️ 9,000 ft</span>
+                            <span class="camp-detail">🌸 Wildflower meadow</span>
+                            <span class="camp-detail">🥾 Rim Trail access</span>
+                        </div>
+                        <a href="https://www.recreation.gov/camping/campgrounds/231890" target="_blank" class="campground-link">Reserve on Recreation.gov →</a>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-group">Group</span>🌲</div>
+                    <div class="campground-content">
+                        <h4>Upper Fir Group Area</h4>
+                        <p>Most popular group site in the Sacramento Mountains. Set far back from roads for true peace and quiet. One of few group sites with water.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">👥 Up to 120 people</span>
+                            <span class="camp-detail">💧 Water access</span>
+                            <span class="camp-detail">🔇 Secluded</span>
+                            <span class="camp-detail">🔗 Connects to Lower Fir</span>
+                        </div>
+                        <a href="https://www.recreation.gov/camping/campgrounds/231889" target="_blank" class="campground-link">Reserve on Recreation.gov →</a>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-group">Group</span>🌿</div>
+                    <div class="campground-content">
+                        <h4>Lower Fir Group Area</h4>
+                        <p>One mile from Cloudcroft village near the historic railroad trestle. Dramatic views of Tularosa Basin and lush mountain meadows.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">👥 Up to 70 people</span>
+                            <span class="camp-detail">⛰️ 9,000 ft</span>
+                            <span class="camp-detail">💧 Water access</span>
+                            <span class="camp-detail">🔗 Connects to Upper Fir</span>
+                        </div>
+                        <a href="https://www.recreation.gov/camping/campgrounds/232918" target="_blank" class="campground-link">Reserve on Recreation.gov →</a>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-group">Group</span>🐻</div>
+                    <div class="campground-content">
+                        <h4>Black Bear & Aspen Group</h4>
+                        <p>Two separate group campgrounds, each accommodating up to 70 people. Reservation only.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">👥 Up to 70 each</span>
+                            <span class="camp-detail">📅 Reservation only</span>
+                            <span class="camp-detail">🌲 Forested</span>
+                        </div>
+                        <a href="https://www.recreation.gov/search?q=cloudcroft%20group" target="_blank" class="campground-link">Check Availability →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dispersed Camping -->
+            <div class="camp-type-header" id="dispersed">
+                <span class="camp-type-icon">🌲</span>
+                <h3>Free Dispersed Camping</h3>
+            </div>
+            <div class="campground-grid">
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-free">Free</span>🛤️</div>
+                    <div class="campground-content">
+                        <h4>Forest Road 568</h4>
+                        <p>Multiple dispersed sites with established fire rings right off Highway 244. From Cloudcroft, take Hwy 82 east to Hwy 244, then half a mile past designated campgrounds.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">🆓 Free</span>
+                            <span class="camp-detail">🔥 Fire rings</span>
+                            <span class="camp-detail">🥾 Trail access</span>
+                            <span class="camp-detail">🚗 Dirt road</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-free">Free</span>💧</div>
+                    <div class="campground-content">
+                        <h4>Bluff Springs Dispersed</h4>
+                        <p>Creek-side camping in a forested valley approximately 10 miles south of Cloudcroft off Sunspot Highway. Near the scenic waterfall.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">🆓 Free</span>
+                            <span class="camp-detail">💧 Near creek</span>
+                            <span class="camp-detail">🌊 Waterfall nearby</span>
+                            <span class="camp-detail">📍 Sunspot Hwy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campground-card">
+                    <div class="campground-image"><span class="camp-badge badge-free">Free</span>🌲</div>
+                    <div class="campground-content">
+                        <h4>Lincoln National Forest</h4>
+                        <p>Dispersed camping is allowed throughout the forest unless posted otherwise. Look for existing fire rings and practice Leave No Trace principles.</p>
+                        <div class="camp-details">
+                            <span class="camp-detail">🆓 Free</span>
+                            <span class="camp-detail">📅 14-day limit</span>
+                            <span class="camp-detail">🗑️ Pack it out</span>
+                            <span class="camp-detail">🔥 Check fire rules</span>
+                        </div>
+                        <a href="https://www.fs.usda.gov/r03/lincoln/recreation/camping-cabins" target="_blank" class="campground-link">Forest Service Guidelines →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips-section">
+        <div class="section-container">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <span class="section-label" style="background: rgba(100, 181, 246, 0.2); color: #64B5F6;">Camping Tips</span>
+                <h2 style="color: white;">Camp Smart in the Mountains</h2>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🧊</div>
+                    <h3>Pack for Cold Nights</h3>
+                    <p>Even in summer, nighttime temps can drop to 40°F. Bring warm sleeping bags and layers.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🐻</div>
+                    <h3>Bear Aware</h3>
+                    <p>Store food in vehicles or bear-proof containers. Never keep food in your tent.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🔥</div>
+                    <h3>Fire Restrictions</h3>
+                    <p>Check current fire restrictions before your trip. Our forest is precious and dry conditions are common.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💧</div>
+                    <h3>Bring Water</h3>
+                    <p>Not all campgrounds have potable water. Bring your own or plan to treat stream water.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📱</div>
+                    <h3>No Cell Service</h3>
+                    <p>Coverage is spotty to none in most camping areas. Download maps and tell someone your plans.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🌩️</div>
+                    <h3>Afternoon Storms</h3>
+                    <p>Summer monsoons bring afternoon thunderstorms. Set up camp early and avoid exposed areas.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🗑️</div>
+                    <h3>Leave No Trace</h3>
+                    <p>Pack out all trash, respect wildlife, and leave sites better than you found them.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📞</div>
+                    <h3>Ranger Station</h3>
+                    <p>Contact Sacramento Ranger District at (575) 682-1518 for current conditions and info.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Resources</span>
+                <h2>Plan Your Camping Trip</h2>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📅</div>
+                    <h3>Recreation.gov</h3>
+                    <p>Reserve developed campsites and group areas online. Plan ahead for peak summer and fall weekends.</p>
+                    <a href="https://www.recreation.gov/search?q=cloudcroft" target="_blank" class="btn btn-outline">Make Reservations</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🌲</div>
+                    <h3>Lincoln National Forest</h3>
+                    <p>Official forest service info on campgrounds, fire restrictions, and dispersed camping rules.</p>
+                    <a href="https://www.fs.usda.gov/r03/lincoln/recreation/camping-cabins" target="_blank" class="btn btn-outline">Forest Info</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🏕️</div>
+                    <h3>The Dyrt</h3>
+                    <p>Find dispersed camping spots and read reviews from fellow campers in the Cloudcroft area.</p>
+                    <a href="https://thedyrt.com/camping/new-mexico/near/cloudcroft" target="_blank" class="btn btn-outline">Find Sites</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Camp Under the Stars?</h2>
+            <p>Reserve your campsite or find a dispersed spot in the Lincoln National Forest.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://www.recreation.gov/search?q=cloudcroft" target="_blank" class="btn btn-primary">Reserve a Site</a>
+                <a href="hiking-trails.html" class="btn" style="background: #0D47A1; color: white;">Explore Trails</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors seeking mountain refuge since 1899.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a><a href="#">▶</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="index.html#explore">In the Village</a></li><li><a href="hiking-trails.html">Hiking Trails</a></li><li><a href="biking.html">Biking</a></li><li><a href="#">Camping</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="grand-cloudcroft-hotel.html">Where to Stay</a></li><li><a href="index.html#stay">Where to Eat</a></li><li><a href="instant-karma.html">Shopping</a></li><li><a href="index.html#events">Events</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="index.html#plan">Getting Here</a></li><li><a href="index.html#plan">Weather</a></li><li><a href="index.html#plan">Visitor Guide</a></li><li><a href="hiking-trails.html">Trail Maps</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Chamber of Commerce</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth' }); } }); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.campground-card, .tip-card, .resource-card').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

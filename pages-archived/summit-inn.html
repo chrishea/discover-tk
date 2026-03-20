@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Summit Inn | Discover Cloudcroft</title>
+    <meta name="description" content="Stay at the Summit Inn in Cloudcroft, NM. Comfortable mountain lodging with modern amenities, nestled among the pines of the Sacramento Mountains.">
+    <meta property="og:title" content="Summit Inn | Discover Cloudcroft">
+    <meta property="og:description" content="Stay at the Summit Inn in Cloudcroft, NM. Comfortable mountain lodging with modern amenities, nestled among the pines of the Sacramento Mountains.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/summit-inn.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Summit Inn | Discover Cloudcroft">
+    <meta name="twitter:description" content="Stay at the Summit Inn in Cloudcroft, NM. Comfortable mountain lodging with modern amenities, nestled among the pines of the Sacramento Mountains.">
+    <link rel="canonical" href="https://discovercloudcroft.com/summit-inn.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #fff8dc;
+            --sunset-gold: #BF0A30;
+            --sunset-warm: #a31621;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #8B4513;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+            --lodge-green: #2d4a3e;
+            --lodge-accent: #4a7c62;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--lodge-green);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            background: #a31621 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--lodge-green) 0%, #1a3a2e 50%, #0f2419 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(45, 74, 62, 0.6) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-badge span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            color: #64B5F6;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 1s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--lodge-accent);
+            color: var(--snow-white);
+        }
+
+        .btn-primary:hover {
+            background: #5a9474;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(74, 124, 98, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffffff;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Quick Info Bar */
+        .quick-info {
+            background: #1565C0;
+            padding: 1.5rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .quick-info-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--lodge-accent);
+            margin-bottom: 1rem;
+            padding: 0.4rem 1rem;
+            background: rgba(21, 101, 192, 0.1);
+            border-radius: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--lodge-green);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-section {
+            background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--lodge-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            background: var(--snow-white);
+            color: var(--lodge-accent);
+            border-radius: 25px;
+            border: 1px solid rgba(74, 124, 98, 0.3);
+        }
+
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(13, 27, 42, 0.15);
+            background: linear-gradient(135deg, var(--lodge-green) 0%, var(--lodge-accent) 100%);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image-placeholder {
+            text-align: center;
+            color: white;
+        }
+
+        .about-image-placeholder .icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Accommodations Section */
+        .accommodations-section {
+            background: var(--snow-white);
+        }
+
+        .accommodations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .accommodation-card {
+            background: var(--cloud-white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(74, 124, 98, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .accommodation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(13, 27, 42, 0.1);
+            border-color: var(--lodge-accent);
+        }
+
+        .accommodation-image {
+            height: 180px;
+            background: linear-gradient(135deg, var(--lodge-green) 0%, var(--lodge-accent) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .accommodation-content {
+            padding: 1.5rem;
+        }
+
+        .accommodation-card h3 {
+            font-size: 1.5rem;
+            color: var(--lodge-green);
+            margin-bottom: 0.75rem;
+        }
+
+        .accommodation-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .accommodation-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .accommodation-features li {
+            padding: 0.4rem 0;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .accommodation-features li::before {
+            content: '✓';
+            color: var(--lodge-accent);
+            font-weight: bold;
+        }
+
+        .accommodation-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--lodge-green);
+        }
+
+        /* Amenities Section */
+        .amenities-section {
+            background: var(--lodge-green);
+            color: var(--snow-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .amenities-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(100, 181, 246, 0.1) 0%, transparent 70%);
+        }
+
+        .amenities-section .section-header h2 {
+            color: var(--snow-white);
+        }
+
+        .amenities-section .section-label {
+            background: rgba(255, 255, 255, 0.15);
+            color: #64B5F6;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .amenity-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .amenity-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .amenity-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .amenity-card h3 {
+            font-size: 1.3rem;
+            color: #64B5F6;
+            margin-bottom: 0.75rem;
+        }
+
+        .amenity-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Location Section */
+        .location-section {
+            background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%);
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .location-info h2 {
+            font-size: 2.5rem;
+            color: var(--lodge-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .location-details {
+            margin-bottom: 2rem;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(74, 124, 98, 0.2);
+        }
+
+        .location-item:last-child {
+            border-bottom: none;
+        }
+
+        .location-item-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--lodge-accent) 0%, var(--lodge-green) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .location-item-content h4 {
+            font-size: 1.1rem;
+            color: var(--lodge-green);
+            margin-bottom: 0.25rem;
+        }
+
+        .location-item-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .location-map {
+            background: var(--snow-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(13, 27, 42, 0.1);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(74, 124, 98, 0.2);
+        }
+
+        .map-placeholder {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .map-placeholder-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .map-placeholder h3 {
+            color: var(--lodge-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .map-placeholder p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Nearby Section */
+        .nearby-section {
+            background: var(--snow-white);
+        }
+
+        .nearby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .nearby-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--cloud-white);
+            border-radius: 12px;
+            border: 1px solid rgba(74, 124, 98, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .nearby-card:hover {
+            border-color: var(--lodge-accent);
+            box-shadow: 0 5px 20px rgba(13, 27, 42, 0.08);
+        }
+
+        .nearby-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--lodge-accent) 0%, var(--lodge-green) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .nearby-content h4 {
+            font-size: 1.1rem;
+            color: var(--lodge-green);
+            margin-bottom: 0.25rem;
+        }
+
+        .nearby-content p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+            padding: 5rem 2rem;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-container h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .cta-container p {
+            color: #ffffff;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: var(--snow-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Alegreya', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #64B5F6;
+            color: var(--lodge-green);
+        }
+
+        .footer-column h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: #64B5F6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--snow-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 3;
+            }
+
+            .about-content,
+            .location-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                height: 60vh;
+                min-height: 400px;
+            }
+
+            .quick-info-container {
+                gap: 1.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Summit Inn",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cloudcroft",
+        "addressRegion": "NM",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#seasons">Seasons</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#stay">Stay & Dine</a></li>
+                    <li><a href="index.html#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>Cloudcroft Lodging</span>
+            </div>
+            <h1>Summit Inn</h1>
+            <p class="hero-subtitle">Your Mountain Retreat in the Pines</p>
+            <p class="hero-description">
+                Cozy rooms and cottages with fireplaces, kitchenettes, and all the comforts of home—
+                just steps from Lincoln National Forest and Cloudcroft's charming village.
+            </p>
+            <div class="hero-ctas">
+                <a href="https://www.summitinnnm.com/" target="_blank" class="btn btn-primary">Book Now</a>
+                <a href="#location" class="btn btn-secondary">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <div class="quick-info">
+        <div class="quick-info-container">
+            <div class="quick-info-item">
+                <div class="quick-info-icon">📍</div>
+                <span>100 Chipmunk Ave</span>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">💰</div>
+                <span>From $134/night</span>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">🕐</div>
+                <span>Check-in: 4PM</span>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">🌲</div>
+                <span>Steps to National Forest</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>A Serene Mountain Escape</h2>
+                    <p>
+                        Summit Inn offers a peaceful retreat in the heart of Cloudcroft, just 0.1 miles from
+                        the village center and steps away from Lincoln National Forest. Whether you're seeking
+                        adventure on the trails or relaxation by the fireplace, Summit Inn provides the perfect
+                        home base for your mountain getaway.
+                    </p>
+                    <p>
+                        Each accommodation features a cozy stone fireplace, fully-equipped kitchenette, and
+                        all the comforts you need for a memorable stay. Wake up to continental breakfast,
+                        spend your days exploring the mountains, and wind down by the outdoor fire pit
+                        under the starry New Mexico sky.
+                    </p>
+                    <div class="about-features">
+                        <span class="about-feature">🔥 Stone Fireplaces</span>
+                        <span class="about-feature">🍳 Full Kitchenettes</span>
+                        <span class="about-feature">📶 Free WiFi</span>
+                        <span class="about-feature">🥐 Continental Breakfast</span>
+                        <span class="about-feature">🅿️ Free Parking</span>
+                        <span class="about-feature">🔥 Outdoor Fire Pit</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <div class="icon">🏨</div>
+                        <p>Summit Inn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodations Section -->
+    <section class="accommodations-section" id="rooms">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Accommodations</span>
+                <h2>Rooms & Cottages</h2>
+                <p class="section-description">
+                    Choose from comfortable hotel rooms or private cottages, each with unique charm and mountain character.
+                </p>
+            </div>
+
+            <div class="accommodations-grid">
+                <div class="accommodation-card">
+                    <div class="accommodation-image">🛏️</div>
+                    <div class="accommodation-content">
+                        <h3>Hotel Rooms</h3>
+                        <p>Simply furnished rooms with all the essentials for a comfortable mountain stay.</p>
+                        <ul class="accommodation-features">
+                            <li>Stone fireplace</li>
+                            <li>Kitchenette with stove & fridge</li>
+                            <li>Keurig coffee maker</li>
+                            <li>Cable TV</li>
+                            <li>Free WiFi</li>
+                            <li>Wall-to-wall carpeting</li>
+                        </ul>
+                        <span class="accommodation-price">From $134/night</span>
+                    </div>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="accommodation-image">🏡</div>
+                    <div class="accommodation-content">
+                        <h3>One-Bedroom Cottage</h3>
+                        <p>Private cottage with spacious living area, full kitchen, and cozy fireplace.</p>
+                        <ul class="accommodation-features">
+                            <li>Full kitchen with stove & oven</li>
+                            <li>Spacious living area</li>
+                            <li>Stone fireplace with firewood</li>
+                            <li>Sofa set & work desk</li>
+                            <li>Microwave, toaster & kettle</li>
+                            <li>Linens & cookware provided</li>
+                        </ul>
+                        <span class="accommodation-price">Contact for rates</span>
+                    </div>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="accommodation-image">🏘️</div>
+                    <div class="accommodation-content">
+                        <h3>Duplex Cottage</h3>
+                        <p>Ideal for families or groups, featuring multiple rooms and full amenities.</p>
+                        <ul class="accommodation-features">
+                            <li>Multiple TVs (up to 3)</li>
+                            <li>Full kitchen facilities</li>
+                            <li>Stone fireplace</li>
+                            <li>Separate living spaces</li>
+                            <li>Perfect for families</li>
+                            <li>All linens & firewood included</li>
+                        </ul>
+                        <span class="accommodation-price">Contact for rates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">What's Included</span>
+                <h2>Amenities & Services</h2>
+            </div>
+
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <div class="amenity-icon">🥐</div>
+                    <h3>Continental Breakfast</h3>
+                    <p>Start your day with oatmeal, pastries, fruit bars, yogurt, juices, and Keurig coffee—all complimentary.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🔥</div>
+                    <h3>Fire Pit</h3>
+                    <p>Gather around the outdoor fire pit in the evening for stories and stargazing under the mountain sky.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🌳</div>
+                    <h3>Beautiful Gardens</h3>
+                    <p>Relax in our serene garden setting surrounded by the natural beauty of the Sacramento Mountains.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🍖</div>
+                    <h3>BBQ & Picnic Area</h3>
+                    <p>Large picnic area with BBQ facilities perfect for outdoor entertaining and family gatherings.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🅿️</div>
+                    <h3>Free Parking</h3>
+                    <p>Complimentary self-parking on-site for all guests. No need to worry about finding a spot.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">📶</div>
+                    <h3>Free WiFi</h3>
+                    <p>Stay connected with complimentary high-speed WiFi available throughout the property.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Attractions Section -->
+    <section class="nearby-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Explore the Area</span>
+                <h2>Nearby Attractions</h2>
+                <p class="section-description">
+                    Summit Inn's central location puts you within easy reach of Cloudcroft's best attractions.
+                </p>
+            </div>
+
+            <div class="nearby-grid">
+                <div class="nearby-card">
+                    <div class="nearby-icon">🌲</div>
+                    <div class="nearby-content">
+                        <h4>Lincoln National Forest</h4>
+                        <p>Steps away • Over 1 million acres of trails</p>
+                    </div>
+                </div>
+                <div class="nearby-card">
+                    <div class="nearby-icon">🚂</div>
+                    <div class="nearby-content">
+                        <h4>Trestle Recreation Area</h4>
+                        <p>15-minute walk • Historic railroad trestle</p>
+                    </div>
+                </div>
+                <div class="nearby-card">
+                    <div class="nearby-icon">🏛️</div>
+                    <div class="nearby-content">
+                        <h4>Sacramento Mountains Museum</h4>
+                        <p>15-minute walk • Local history exhibits</p>
+                    </div>
+                </div>
+                <div class="nearby-card">
+                    <div class="nearby-icon">⛳</div>
+                    <div class="nearby-content">
+                        <h4>The Lodge Golf Course</h4>
+                        <p>18 holes • One of America's highest courses</p>
+                    </div>
+                </div>
+                <div class="nearby-card">
+                    <div class="nearby-icon">🔭</div>
+                    <div class="nearby-content">
+                        <h4>Sunspot Observatory</h4>
+                        <p>20 miles • Solar research facility</p>
+                    </div>
+                </div>
+                <div class="nearby-card">
+                    <div class="nearby-icon">🎰</div>
+                    <div class="nearby-content">
+                        <h4>Inn of the Mountain Gods</h4>
+                        <p>40 miles • Casino & resort</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" id="location">
+        <div class="section-container">
+            <div class="location-content">
+                <div class="location-info">
+                    <h2>Plan Your Stay</h2>
+                    <div class="location-details">
+                        <div class="location-item">
+                            <div class="location-item-icon">📍</div>
+                            <div class="location-item-content">
+                                <h4>Location</h4>
+                                <p>100 Chipmunk Ave<br>Cloudcroft, NM 88317</p>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-item-icon">🕐</div>
+                            <div class="location-item-content">
+                                <h4>Check-In / Check-Out</h4>
+                                <p>Check-in: 4:00 PM<br>Check-out: 11:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-item-icon">🐕</div>
+                            <div class="location-item-content">
+                                <h4>Pet Policy</h4>
+                                <p>Summit Inn does not allow pets.<br>Service animals welcome.</p>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-item-icon">🍽️</div>
+                            <div class="location-item-content">
+                                <h4>Dining Nearby</h4>
+                                <p>Restaurants and convenience stores<br>just one block away.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=100+Chipmunk+Ave+Cloudcroft+NM" target="_blank" class="btn btn-primary">Get Directions</a>
+                </div>
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <div class="map-placeholder-icon">🗺️</div>
+                        <h3>Find Us on Chipmunk Ave</h3>
+                        <p>0.1 miles from downtown Cloudcroft</p>
+                        <a href="https://maps.google.com/?q=100+Chipmunk+Ave+Cloudcroft+NM" target="_blank" class="btn btn-primary">Open in Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Book Your Mountain Getaway?</h2>
+            <p>Reserve your room or cottage at Summit Inn and experience the best of Cloudcroft hospitality.</p>
+            <div class="cta-buttons">
+                <a href="https://www.summitinnnm.com/" target="_blank" class="btn btn-primary">Book Direct</a>
+                <a href="index.html#stay" class="btn" style="background: #0D47A1; color: white;">Explore More Lodging</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Discover Cloudcroft</h3>
+                    <p>
+                        Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors
+                        seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">In the Village</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="biking.html">Biking</a></li>
+                        <li><a href="activities.html">Golf & Recreation</a></li>
+                        <li><a href="sunspot-observatory.html">Sunspot Observatory</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li><a href="grand-cloudcroft-hotel.html">Where to Stay</a></li>
+                        <li><a href="index.html#stay">Where to Eat</a></li>
+                        <li><a href="instant-karma.html">Shopping</a></li>
+                        <li><a href="index.html#events">Events Calendar</a></li>
+                        <li><a href="art-galleries.html">Art Galleries</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Plan</h4>
+                    <ul>
+                        <li><a href="index.html#plan">Getting Here</a></li>
+                        <li><a href="groceries.html">Groceries & Supplies</a></li>
+                        <li><a href="emergency-services.html">Emergency Services</a></li>
+                        <li><a href="hiking-trails.html">Trail Maps</a></li>
+                        <li><a href="index.html#plan">Visitor Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Chamber of Commerce</a></li>
+                        <li><a href="#">Village of Cloudcroft</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p>
+                <div>
+                    <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for entrance animations
+        document.querySelectorAll('.accommodation-card, .amenity-card, .nearby-card, .location-item').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

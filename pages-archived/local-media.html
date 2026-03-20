@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Local Media | Discover Cloudcroft</title>
+    <meta name="description" content="Stay informed with local media in Cloudcroft, NM. Find newspapers, radio stations, and community news sources covering the Sacramento Mountains region.">
+    <meta property="og:title" content="Local Media | Discover Cloudcroft">
+    <meta property="og:description" content="Stay informed with local media in Cloudcroft, NM. Find newspapers, radio stations, and community news sources covering the Sacramento Mountains region.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/local-media.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Local Media | Discover Cloudcroft">
+    <meta name="twitter:description" content="Stay informed with local media in Cloudcroft, NM. Find newspapers, radio stations, and community news sources covering the Sacramento Mountains region.">
+    <link rel="canonical" href="https://discovercloudcroft.com/local-media.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #BF0A30;
+            --sunset-warm: #D32F2F;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #8B4513;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: #1e3a5f; color: white; padding: 8px 16px; z-index: 10000; text-decoration: none; font-weight: 600; }
+        .skip-link:focus { top: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #c17f59 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .nav-cta:hover { background: #d4916a !important; }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #1e3a5f; z-index: 999; padding: 5rem 2rem 2rem; flex-direction: column; align-items: center; gap: 1rem; }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a { color: #ffffff; text-decoration: none; font-size: 1.2rem; font-weight: 500; padding: 1rem; width: 100%; text-align: center; border-radius: 4px; transition: background 0.3s ease; }
+        .mobile-menu a:hover { background: rgba(255, 255, 255, 0.1); }
+        .mobile-menu .nav-cta { background: #c17f59; margin-top: 1rem; }
+        .mobile-menu-close { position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; }
+
+        .hero { height: 50vh; min-height: 400px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 50%, #0D1B2A 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(13, 27, 42, 0.5) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #64B5F6; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 650px; margin: 0 auto; line-height: 1.8; animation: fadeInUp 0.8s ease 0.8s both; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        .quick-stats { background: #1565C0; padding: 1.5rem 0; }
+        .quick-stats-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .stat-item { display: flex; align-items: center; gap: 0.75rem; color: #ffffff; font-size: 0.95rem; font-weight: 500; }
+        .stat-icon { width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--pine-deep); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(21, 101, 192, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        .media-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .media-card { background: var(--snow-white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08); transition: all 0.4s ease; }
+        .media-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(13, 27, 42, 0.15); }
+        .media-card.featured { border: 2px solid var(--pine-deep); }
+        .media-card.featured .media-image { background: linear-gradient(135deg, #1565C0 0%, #1E88E5 100%); }
+        .media-image { height: 160px; background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; }
+        .media-badge { position: absolute; top: 1rem; right: 1rem; background: var(--pine-deep); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+        .media-content { padding: 1.5rem; }
+        .media-content h3 { font-size: 1.5rem; color: var(--sunset-gold); margin-bottom: 0.5rem; }
+        .media-content p { color: var(--text-light); margin-bottom: 1rem; line-height: 1.6; }
+        .media-type { font-size: 0.8rem; color: var(--pine-deep); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+        .media-details { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .media-detail { font-size: 0.85rem; padding: 0.3rem 0.7rem; background: rgba(21, 101, 192, 0.1); color: var(--pine-deep); border-radius: 15px; }
+        .media-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--sunset-gold); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.3s ease; }
+        .media-link:hover { color: var(--pine-deep); }
+
+        .regional-section { background: var(--snow-white); }
+        .regional-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .regional-card { background: var(--cloud-white); border-radius: 12px; padding: 1.5rem; border: 1px solid rgba(21, 101, 192, 0.15); transition: all 0.3s ease; }
+        .regional-card:hover { border-color: var(--pine-deep); box-shadow: 0 10px 30px rgba(13, 27, 42, 0.1); }
+        .regional-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .regional-card h3 { font-size: 1.3rem; color: var(--sunset-gold); margin-bottom: 0.5rem; }
+        .regional-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6; }
+        .regional-link { color: var(--pine-deep); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        .regional-link:hover { text-decoration: underline; }
+
+        .subscribe-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); color: white; }
+        .subscribe-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .subscribe-text h2 { color: white; font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .subscribe-text p { color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
+        .btn-dark { background: #0D1B2A; color: white; }
+        .btn-dark:hover { background: #0D1B2A; transform: translateY(-2px); }
+        .subscribe-embed { background: white; border-radius: 12px; padding: 2rem; text-align: center; }
+        .subscribe-embed h3 { color: var(--sunset-gold); font-size: 1.5rem; margin-bottom: 1rem; }
+        .subscribe-embed p { color: var(--text-light); margin-bottom: 1.5rem; }
+
+        .cta-section { background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: rgba(255,255,255,0.9); margin-bottom: 2rem; font-size: 1.1rem; }
+        .btn-turquoise { background: #1565C0; color: white; }
+        .btn-turquoise:hover { background: #1E88E5; transform: translateY(-2px); }
+
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; transition: all 0.3s ease; }
+        .footer-social a:hover { background: #5cc9bc; color: #152a42; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #5cc9bc; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; transition: color 0.3s ease; }
+        .footer-column a:hover { color: var(--snow-white); }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+            .subscribe-content { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+            .media-grid, .regional-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header id="header" role="banner">
+        <div class="nav-container">
+            <a href="back-door.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav aria-label="Main navigation"><ul class="nav-links" role="menubar"><li><a href="back-door.html#explore">Explore</a></li><li><a href="back-door.html#seasons">Seasons</a></li><li><a href="back-door.html#events">Events</a></li><li><a href="back-door.html#stay">Stay & Dine</a></li><li><a href="back-door.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <button class="mobile-menu-close" aria-label="Close menu">×</button>
+        <a href="back-door.html#explore">Explore</a>
+        <a href="back-door.html#seasons">Seasons</a>
+        <a href="back-door.html#events">Events</a>
+        <a href="back-door.html#stay">Stay & Dine</a>
+        <a href="back-door.html#plan">Plan Your Trip</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="dining.html">Dining</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="#" class="nav-cta">Request Guide</a>
+    </nav>
+
+    <main id="main-content">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Local Media</h1>
+            <p class="hero-subtitle">Stay Informed About the Sacramento Mountains</p>
+            <p class="hero-description">From community newspapers to online publications, discover the media outlets that keep Cloudcroft and the surrounding mountain communities connected.</p>
+        </div>
+    </section>
+
+    <div class="quick-stats">
+        <div class="quick-stats-container">
+            <div class="stat-item"><div class="stat-icon">📰</div><span>Local News</span></div>
+            <div class="stat-item"><div class="stat-icon">📻</div><span>Radio Stations</span></div>
+            <div class="stat-item"><div class="stat-icon">💻</div><span>Online Publications</span></div>
+            <div class="stat-item"><div class="stat-icon">📺</div><span>Regional Coverage</span></div>
+        </div>
+    </div>
+
+    <section class="media-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Local Publications</span>
+                <h2>Cloudcroft & Mountain News</h2>
+                <p class="section-description">Stay connected with what's happening in our mountain community through these local media sources.</p>
+            </div>
+
+            <div class="media-grid">
+                <div class="media-card featured">
+                    <div class="media-image">
+                        <span class="media-badge">Featured</span>
+                        📰
+                    </div>
+                    <div class="media-content">
+                        <span class="media-type">Online Newsletter</span>
+                        <h3>The Cloudcroft Reader</h3>
+                        <p>Your source for local news, events, and stories from the Sacramento Mountains. Covering community happenings, local business spotlights, and mountain life.</p>
+                        <div class="media-details">
+                            <span class="media-detail">Weekly Updates</span>
+                            <span class="media-detail">Free Subscription</span>
+                            <span class="media-detail">Email Delivery</span>
+                        </div>
+                        <a href="https://www.cloudcroftreader.com" target="_blank" class="media-link">Visit Website →</a>
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <div class="media-image">📻</div>
+                    <div class="media-content">
+                        <span class="media-type">Radio Station</span>
+                        <h3>KRUI 1490 AM</h3>
+                        <p>Local radio serving Ruidoso and the surrounding mountain communities with news, weather, and community programming.</p>
+                        <div class="media-details">
+                            <span class="media-detail">News & Talk</span>
+                            <span class="media-detail">Local Weather</span>
+                            <span class="media-detail">Community Events</span>
+                        </div>
+                        <a href="#" class="media-link">Listen Live →</a>
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <div class="media-image">📰</div>
+                    <div class="media-content">
+                        <span class="media-type">Weekly Newspaper</span>
+                        <h3>Ruidoso News</h3>
+                        <p>Regional newspaper covering Lincoln County including Cloudcroft, Ruidoso, and surrounding communities. Local news, sports, and events.</p>
+                        <div class="media-details">
+                            <span class="media-detail">Print & Online</span>
+                            <span class="media-detail">Lincoln County</span>
+                            <span class="media-detail">Est. 1946</span>
+                        </div>
+                        <a href="https://www.ruidosonews.com" target="_blank" class="media-link">Read Online →</a>
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <div class="media-image">📰</div>
+                    <div class="media-content">
+                        <span class="media-type">Weekly Newspaper</span>
+                        <h3>Alamogordo Daily News</h3>
+                        <p>Daily newspaper serving Otero County with comprehensive coverage of Alamogordo, Cloudcroft, and the Tularosa Basin.</p>
+                        <div class="media-details">
+                            <span class="media-detail">Daily Publication</span>
+                            <span class="media-detail">Otero County</span>
+                            <span class="media-detail">Print & Digital</span>
+                        </div>
+                        <a href="https://www.alamogordonews.com" target="_blank" class="media-link">Read Online →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe-section">
+        <div class="section-container">
+            <div class="subscribe-content">
+                <div class="subscribe-text">
+                    <h2>Subscribe to The Cloudcroft Reader</h2>
+                    <p>Get the latest mountain news, event announcements, and community stories delivered straight to your inbox. Stay connected with Cloudcroft no matter where you are.</p>
+                    <a href="https://www.cloudcroftreader.com" target="_blank" class="btn btn-dark">Subscribe Free</a>
+                </div>
+                <div class="subscribe-embed">
+                    <h3>What You'll Get</h3>
+                    <p>Weekly updates on local events, business news, community happenings, and insider tips for exploring the Sacramento Mountains.</p>
+                    <iframe src="https://www.cloudcroftreader.com/embed" width="100%" height="280" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="regional-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Regional Coverage</span>
+                <h2>Statewide & Regional Media</h2>
+                <p class="section-description">Major media outlets that cover Cloudcroft and Southern New Mexico.</p>
+            </div>
+
+            <div class="regional-grid">
+                <div class="regional-card">
+                    <div class="regional-icon">📺</div>
+                    <h3>KRQE News 13</h3>
+                    <p>Albuquerque-based CBS affiliate covering statewide news including Southern New Mexico and the Sacramento Mountains.</p>
+                    <a href="https://www.krqe.com" target="_blank" class="regional-link">Visit KRQE →</a>
+                </div>
+
+                <div class="regional-card">
+                    <div class="regional-icon">📺</div>
+                    <h3>KOAT Action 7 News</h3>
+                    <p>ABC affiliate providing New Mexico news coverage, weather, and breaking news for the state.</p>
+                    <a href="https://www.koat.com" target="_blank" class="regional-link">Visit KOAT →</a>
+                </div>
+
+                <div class="regional-card">
+                    <div class="regional-icon">📺</div>
+                    <h3>KOB 4 Eyewitness News</h3>
+                    <p>NBC affiliate with comprehensive New Mexico coverage and mountain weather forecasts.</p>
+                    <a href="https://www.kob.com" target="_blank" class="regional-link">Visit KOB →</a>
+                </div>
+
+                <div class="regional-card">
+                    <div class="regional-icon">📰</div>
+                    <h3>Albuquerque Journal</h3>
+                    <p>New Mexico's largest newspaper with statewide coverage including tourism and outdoor recreation.</p>
+                    <a href="https://www.abqjournal.com" target="_blank" class="regional-link">Visit ABQ Journal →</a>
+                </div>
+
+                <div class="regional-card">
+                    <div class="regional-icon">📰</div>
+                    <h3>Santa Fe New Mexican</h3>
+                    <p>Historic newspaper covering New Mexico news, culture, and outdoor adventures.</p>
+                    <a href="https://www.santafenewmexican.com" target="_blank" class="regional-link">Visit SF New Mexican →</a>
+                </div>
+
+                <div class="regional-card">
+                    <div class="regional-icon">📺</div>
+                    <h3>KVIA ABC-7 (El Paso)</h3>
+                    <p>El Paso-based station providing coverage of Southern New Mexico including Otero County.</p>
+                    <a href="https://www.kvia.com" target="_blank" class="regional-link">Visit KVIA →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Share Your Story</h2>
+            <p>Have news or an event to share with the Cloudcroft community? Local media outlets welcome community submissions and event announcements.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-turquoise">Contact Us</a>
+                <a href="back-door.html#events" class="btn" style="background: rgba(255,255,255,0.15); color: white; border: 2px solid rgba(255,255,255,0.6);">View Events</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a><a href="#">▶</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="back-door.html#explore">In the Village</a></li><li><a href="hiking-trails.html">Hiking Trails</a></li><li><a href="biking.html">Biking</a></li><li><a href="activities.html">Golf & Recreation</a></li><li><a href="sunspot-observatory.html">Sunspot Observatory</a></li><li><a href="camping.html">Camping</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="lodging.html">Where to Stay</a></li><li><a href="lodging.html#rentals">Vacation Rentals</a></li><li><a href="dining.html">Where to Eat</a></li><li><a href="attractions.html">Art Galleries</a></li><li><a href="attractions.html">Shopping</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="back-door.html#plan">Getting Here</a></li><li><a href="groceries.html">Groceries & Supplies</a></li><li><a href="emergency-services.html">Emergency Services</a></li><li><a href="hiking-trails.html">Trail Maps</a></li><li><a href="back-door.html#plan">Visitor Guide</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Partner With Us</a></li><li><a href="#">Chamber of Commerce</a></li><li><a href="#">Village of Cloudcroft</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p><div class="footer-partners"><span>Proud partner of</span><a href="#">New Mexico True</a></div><div><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; });
+        mobileMenuClose.addEventListener('click', () => { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; });
+        mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }); });
+
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.media-card, .regional-card').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

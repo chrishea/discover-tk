@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Sunspot Observatory & Apache Point | Discover Cloudcroft</title>
+    <meta name="description" content="Visit Sunspot Observatory and Apache Point near Cloudcroft, NM. Explore solar research, scenic byways, and world-class astronomy in the Sacramento Mountains.">
+    <meta property="og:title" content="Sunspot Observatory & Apache Point | Discover Cloudcroft">
+    <meta property="og:description" content="Visit Sunspot Observatory and Apache Point near Cloudcroft, NM. Explore solar research, scenic byways, and world-class astronomy in the Sacramento Mountains.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/sunspot-observatory.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sunspot Observatory & Apache Point | Discover Cloudcroft">
+    <meta name="twitter:description" content="Visit Sunspot Observatory and Apache Point near Cloudcroft, NM. Explore solar research, scenic byways, and world-class astronomy in the Sacramento Mountains.">
+    <link rel="canonical" href="https://discovercloudcroft.com/sunspot-observatory.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pine-deep: #1565C0; --pine-medium: #1E88E5; --pine-light: #64B5F6; --sky-pale: #E3F2FD; --cloud-white: #FAFCFE; --snow-white: #ffffff; --text-dark: #1A1A1A; --text-light: #6B6B6B; --space-dark: #0d1b2a; --space-medium: #1b3a4b; --space-accent: #f9c74f; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        .hero { height: 70vh; min-height: 500px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--space-dark) 0%, var(--space-medium) 50%, #274c77 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 40%, rgba(249, 199, 79, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.05) 0%, transparent 40%); }
+        .hero-stars { position: absolute; inset: 0; background-image: radial-gradient(2px 2px at 20px 30px, white, transparent), radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent), radial-gradient(1px 1px at 90px 40px, white, transparent), radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.6), transparent), radial-gradient(1px 1px at 160px 120px, white, transparent); background-size: 200px 200px; animation: twinkle 4s ease-in-out infinite; }
+        @keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); padding: 0.6rem 1.2rem; border-radius: 30px; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.2s both; }
+        .hero-badge span { color: rgba(255, 255, 255, 0.9); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: var(--space-accent); font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 650px; margin: 0 auto 2rem; line-height: 1.8; animation: fadeInUp 0.8s ease 0.8s both; }
+        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease 1s both; }
+
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; cursor: pointer; border: none; }
+        .btn-primary { background: var(--space-accent); color: var(--space-dark); }
+        .btn-primary:hover { background: #ffd166; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249, 199, 79, 0.4); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.1); color: #ffffff; border: 2px solid rgba(255, 255, 255, 0.4); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.2); border-color: #ffffff; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        .quick-stats { background: var(--space-dark); padding: 1.5rem 0; }
+        .quick-stats-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .stat-item { display: flex; align-items: center; gap: 0.75rem; color: rgba(255,255,255,0.9); font-size: 0.95rem; font-weight: 500; }
+        .stat-icon { width: 40px; height: 40px; background: rgba(249, 199, 79, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--space-medium); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(27, 58, 75, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        .observatories-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .observatory-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .observatory-card { background: var(--snow-white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(13, 27, 42, 0.1); transition: all 0.4s ease; }
+        .observatory-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(13, 27, 42, 0.15); }
+        .observatory-image { height: 200px; background: linear-gradient(135deg, var(--space-dark) 0%, var(--space-medium) 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .observatory-content { padding: 2rem; }
+        .observatory-content h3 { font-size: 1.6rem; color: var(--space-dark); margin-bottom: 0.5rem; }
+        .observatory-content p { color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.7; }
+        .observatory-details { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+        .detail-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; color: var(--text-dark); }
+        .detail-icon { font-size: 1.2rem; }
+
+        .info-section { background: var(--snow-white); }
+        .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .info-card { background: var(--cloud-white); border-radius: 12px; padding: 2rem; text-align: center; border: 1px solid rgba(13, 27, 42, 0.1); transition: all 0.3s ease; }
+        .info-card:hover { border-color: var(--space-medium); box-shadow: 0 10px 30px rgba(13, 27, 42, 0.1); }
+        .info-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .info-card h3 { font-size: 1.3rem; color: var(--space-dark); margin-bottom: 0.5rem; }
+        .info-card p { color: var(--text-light); font-size: 0.95rem; }
+
+        .tips-section { background: var(--space-medium); color: white; }
+        .tips-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .tip-card { text-align: center; padding: 1.5rem; }
+        .tip-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .tip-card h3 { font-size: 1.2rem; color: var(--space-accent); margin-bottom: 0.5rem; }
+        .tip-card p { color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.6; }
+
+        .cta-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: var(--space-dark); margin-bottom: 1rem; }
+        .cta-container p { color: #ffffff; margin-bottom: 2rem; font-size: 1.1rem; }
+
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        .alert-banner { background: #f44336; color: white; padding: 1rem 2rem; text-align: center; font-weight: 500; }
+        .alert-banner a { color: white; text-decoration: underline; }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+            .observatory-grid { grid-template-columns: 1fr; }
+            .tips-grid, .info-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .tips-grid, .info-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristAttraction",
+      "name": "Sunspot Solar Observatory",
+      "description": "Visit the Sunspot Solar Observatory near Cloudcroft, New Mexico for astronomy and solar science exhibits.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sunspot",
+        "addressRegion": "NM",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav><ul class="nav-links"><li><a href="index.html#explore">Explore</a></li><li><a href="index.html#seasons">Seasons</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#stay">Stay & Dine</a></li><li><a href="index.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <div class="alert-banner">
+        <strong>Notice:</strong> The Dunn Solar Telescope and Visitor Center are temporarily closed. <a href="https://sunspot.nmsu.edu/" target="_blank">Check current status →</a>
+    </div>
+
+    <section class="hero" style="margin-top: 50px;">
+        <div class="hero-stars"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><span>16 Miles from Cloudcroft</span></div>
+            <h1>Sunspot Observatory</h1>
+            <p class="hero-subtitle">Where Science Meets the Sky at 9,200 Feet</p>
+            <p class="hero-description">Journey along the Sunspot Scenic Byway to one of the world's premier solar research facilities. Explore the mysteries of our sun and gaze at distant galaxies from New Mexico's high mountain observatories.</p>
+            <div class="hero-ctas">
+                <a href="https://sunspot.nmsu.edu/visit/planvisit.html" target="_blank" class="btn btn-primary">Plan Your Visit</a>
+                <a href="biking.html" class="btn btn-secondary">Sunspot Scenic Byway</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="quick-stats">
+        <div class="quick-stats-container">
+            <div class="stat-item"><div class="stat-icon">🔭</div><span>2 Observatories</span></div>
+            <div class="stat-item"><div class="stat-icon">⛰️</div><span>9,200 ft Elevation</span></div>
+            <div class="stat-item"><div class="stat-icon">☀️</div><span>Solar Research Since 1947</span></div>
+            <div class="stat-item"><div class="stat-icon">🛣️</div><span>NM-6563 Scenic Byway</span></div>
+        </div>
+    </div>
+
+    <section class="observatories-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Explore the Observatories</span>
+                <h2>Two World-Class Facilities</h2>
+                <p class="section-description">The Sacramento Mountains host both solar and nighttime astronomy research, making this a unique destination for space enthusiasts.</p>
+            </div>
+
+            <div class="observatory-grid">
+                <div class="observatory-card">
+                    <div class="observatory-image">☀️</div>
+                    <div class="observatory-content">
+                        <h3>Sunspot Solar Observatory</h3>
+                        <p>Operated by New Mexico State University, the Sunspot Solar Observatory has studied our sun since 1947. The facility features the iconic Dunn Solar Telescope, one of the world's premier instruments for solar research. Step inside and see how scientists observe sunspots, solar flares, and the sun's atmosphere.</p>
+                        <div class="observatory-details">
+                            <div class="detail-item"><span class="detail-icon">🕐</span> Visitor Center: 9 AM - 5 PM (peak season)</div>
+                            <div class="detail-item"><span class="detail-icon">🎫</span> Tours: Mon, Tue, Thu, Fri 12-2 PM</div>
+                            <div class="detail-item"><span class="detail-icon">📅</span> Weekend Tours: 1st weekend of each month</div>
+                            <div class="detail-item"><span class="detail-icon">📞</span> Call ahead: (575) 437-6822</div>
+                        </div>
+                        <a href="https://sunspot.nmsu.edu/" target="_blank" class="btn btn-primary">Official Website</a>
+                    </div>
+                </div>
+
+                <div class="observatory-card">
+                    <div class="observatory-image">🌌</div>
+                    <div class="observatory-content">
+                        <h3>Apache Point Observatory</h3>
+                        <p>Home to the 3.5-meter ARC telescope and the Sloan Digital Sky Survey telescope, Apache Point conducts cutting-edge nighttime astronomy research. While regular public tours aren't offered, special public events throughout the year allow visitors to see the telescopes and participate in astronomy activities.</p>
+                        <div class="observatory-details">
+                            <div class="detail-item"><span class="detail-icon">🔭</span> 3.5-meter ARC Telescope</div>
+                            <div class="detail-item"><span class="detail-icon">🌟</span> Sloan Digital Sky Survey</div>
+                            <div class="detail-item"><span class="detail-icon">📍</span> View from parking area</div>
+                            <div class="detail-item"><span class="detail-icon">🎉</span> Special events: 2-5 PM when scheduled</div>
+                        </div>
+                        <a href="https://www.apo.nmsu.edu/" target="_blank" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">What to Expect</span>
+                <h2>Your Observatory Experience</h2>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🎧</div>
+                    <h3>Self-Guided Audio Tour</h3>
+                    <p>Download the VoiceMap app before you arrive for a walking audio tour. Explore at your own pace while learning about each point of interest.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🔬</div>
+                    <h3>Dunn Solar Telescope</h3>
+                    <p>Step inside one of the world's last actively used research solar telescopes. See the observing room and learn how scientists study the sun.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🏛️</div>
+                    <h3>Visitor Center & Museum</h3>
+                    <p>Interactive exhibits explain solar science, space weather, and the history of solar research in the Sacramento Mountains.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🛣️</div>
+                    <h3>Scenic Byway Drive</h3>
+                    <p>The 16-mile drive on NM-6563 features stunning overlooks, canyon vistas, and views stretching to White Sands far below.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🌅</div>
+                    <h3>Special Public Events</h3>
+                    <p>Join astronomy talks, hands-on activities, and telescope viewing during scheduled public events. Check the website for dates.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📸</div>
+                    <h3>Photography</h3>
+                    <p>Capture stunning images of the observatories, mountain vistas, and on clear nights, some of the darkest skies in the Southwest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips-section">
+        <div class="section-container">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <span class="section-label" style="background: rgba(249, 199, 79, 0.2); color: var(--space-accent);">Plan Ahead</span>
+                <h2 style="color: white;">Essential Visitor Tips</h2>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">📞</div>
+                    <h3>Call Ahead</h3>
+                    <p>Hours and tours can change. Call (575) 437-6822 to confirm current operating status before your visit.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⛽</div>
+                    <h3>Fill Up in Cloudcroft</h3>
+                    <p>There's no gas station at Sunspot. Make sure you have a full tank before driving the scenic byway.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🥪</div>
+                    <h3>Pack a Lunch</h3>
+                    <p>No restaurants at the observatory. Bring food and water. Water fountains available in the Visitor Center.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📱</div>
+                    <h3>Expect No Service</h3>
+                    <p>Cell coverage is spotty to nonexistent between Cloudcroft and Sunspot. Download maps and info beforehand.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🧥</div>
+                    <h3>Dress in Layers</h3>
+                    <p>At 9,200 feet, temperatures can be 20°F cooler than expected. Bring a jacket even on summer days.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💧</div>
+                    <h3>Stay Hydrated</h3>
+                    <p>High altitude increases dehydration. Pace yourself and drink plenty of water throughout your visit.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⏰</div>
+                    <h3>Allow 2-3 Hours</h3>
+                    <p>Give yourself time to explore the visitor center, take a tour, and enjoy the scenic overlooks along the way.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🚗</div>
+                    <h3>Watch for Wildlife</h3>
+                    <p>Deer and elk frequently cross the byway. Drive carefully, especially at dawn and dusk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Explore the Universe?</h2>
+            <p>Plan your visit to Sunspot Observatory and discover the wonders of solar science in the Sacramento Mountains.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://sunspot.nmsu.edu/visit/planvisit.html" target="_blank" class="btn" style="background: var(--space-dark); color: white;">Plan Your Visit</a>
+                <a href="index.html#stay" class="btn" style="background: white; color: var(--space-dark);">Find Lodging</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors seeking mountain refuge since 1899.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a><a href="#">▶</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="index.html#explore">In the Village</a></li><li><a href="hiking-trails.html">Hiking Trails</a></li><li><a href="biking.html">Biking</a></li><li><a href="#">Sunspot Observatory</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="grand-cloudcroft-hotel.html">Where to Stay</a></li><li><a href="index.html#stay">Where to Eat</a></li><li><a href="instant-karma.html">Shopping</a></li><li><a href="index.html#events">Events</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="index.html#plan">Getting Here</a></li><li><a href="index.html#plan">Weather</a></li><li><a href="index.html#plan">Visitor Guide</a></li><li><a href="hiking-trails.html">Trail Maps</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Chamber of Commerce</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth' }); } }); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.observatory-card, .info-card, .tip-card').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

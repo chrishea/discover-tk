@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Pickleball in Cloudcroft | Discover Cloudcroft</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Play pickleball at 9,000 feet in Cloudcroft, New Mexico. Free outdoor courts at Zenith Park, open 24/7. Join the Pickleball Addicts of Cloudcroft for open play, clinics, and tournaments.">
+    <meta name="keywords" content="Cloudcroft pickleball, Zenith Park courts, pickleball New Mexico, mountain pickleball, Pickleball Addicts of Cloudcroft, PAC">
+
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pickleball in Cloudcroft | Discover Cloudcroft">
+    <meta property="og:description" content="Play America's fastest growing sport at 9,000 feet. Free outdoor courts at Zenith Park, surrounded by pines in the Sacramento Mountains.">
+    <meta property="og:url" content="https://discovercloudcroft.com/pickleball.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pickleball in Cloudcroft | Discover Cloudcroft">
+    <meta name="twitter:description" content="Play pickleball at 9,000 feet in Cloudcroft, New Mexico. Free outdoor courts at Zenith Park, open 24/7. Join the Pickleball Addicts of Cloudcroft for open play, clinics, and tournaments.">
+    <link rel="canonical" href="https://discovercloudcroft.com/pickleball.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --cloud-white: #FAFCFE;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+            --zia-red: #BF0A30;
+            --zia-gold: #FCD116;
+            --pickle-green: #1E88E5;
+            --pickle-dark: #1565C0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Social Follow Bar */
+        .social-follow-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            background: var(--zia-red);
+            text-align: center;
+            padding: 0.5rem 1rem;
+        }
+
+        .social-follow-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-follow-bar a:hover {
+            opacity: 0.85;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 36px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        header.scrolled {
+            background: #091422;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: var(--pine-light);
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: var(--zia-red) !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #0D1B2A;
+            z-index: 999;
+            padding: 5rem 2rem 2rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--pickle-dark) 0%, var(--pickle-green) 50%, #64B5F6 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(21, 101, 192, 0.4) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-badge span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            color: var(--zia-gold);
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 1s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--zia-red);
+            color: var(--snow-white);
+        }
+
+        .btn-primary:hover {
+            background: #D4223F;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(191, 10, 48, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffffff;
+        }
+
+        .btn-green {
+            background: var(--pickle-dark);
+            color: var(--snow-white);
+        }
+
+        .btn-green:hover {
+            background: #0D47A1;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(21, 101, 192, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Quick Info Bar */
+        .quick-info {
+            background: var(--pine-deep);
+            padding: 1.5rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .quick-info-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--pine-deep);
+            margin-bottom: 1rem;
+            padding: 0.4rem 1rem;
+            background: rgba(21, 101, 192, 0.1);
+            border-radius: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--pine-deep);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-section {
+            background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--pine-deep);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            background: var(--snow-white);
+            color: var(--pine-deep);
+            border-radius: 25px;
+            border: 1px solid rgba(21, 101, 192, 0.2);
+        }
+
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(13, 27, 42, 0.15);
+            background: linear-gradient(135deg, var(--pickle-green) 0%, var(--pickle-dark) 100%);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image-placeholder {
+            text-align: center;
+            color: white;
+        }
+
+        .about-image-placeholder .icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Courts Section */
+        .courts-section {
+            background: var(--snow-white);
+        }
+
+        .court-card {
+            background: var(--cloud-white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(21, 101, 192, 0.15);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .court-header {
+            background: linear-gradient(135deg, var(--pine-deep) 0%, var(--pine-medium) 100%);
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .court-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .court-header p {
+            opacity: 0.9;
+        }
+
+        .court-details {
+            padding: 2rem;
+        }
+
+        .court-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .court-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .court-info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--pine-deep) 0%, var(--pine-medium) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .court-info-content h4 {
+            font-size: 1.1rem;
+            color: var(--pine-deep);
+            margin-bottom: 0.25rem;
+        }
+
+        .court-info-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .court-note {
+            background: rgba(21, 101, 192, 0.08);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--pine-deep);
+        }
+
+        .court-note p {
+            color: var(--pine-deep);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Community Section */
+        .community-section {
+            background: var(--pine-deep);
+            color: var(--snow-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .community-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(91, 164, 201, 0.1) 0%, transparent 70%);
+        }
+
+        .community-section .section-header h2 {
+            color: var(--snow-white);
+        }
+
+        .community-section .section-label {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--zia-gold);
+        }
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            position: relative;
+        }
+
+        .community-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .community-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .community-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .community-card h3 {
+            font-size: 1.3rem;
+            color: var(--zia-gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .community-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Why Play Section */
+        .why-section {
+            background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            background: var(--snow-white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(21, 101, 192, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            border-color: var(--pine-deep);
+            box-shadow: 0 10px 30px rgba(13, 27, 42, 0.08);
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--pine-deep) 0%, var(--pine-medium) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .why-card h3 {
+            font-size: 1.4rem;
+            color: var(--pine-deep);
+            margin-bottom: 0.75rem;
+        }
+
+        .why-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Schedule Section */
+        .schedule-section {
+            background: var(--snow-white);
+        }
+
+        .schedule-card {
+            background: var(--cloud-white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px solid rgba(21, 101, 192, 0.15);
+        }
+
+        .schedule-card h3 {
+            font-size: 1.8rem;
+            color: var(--pine-deep);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px dashed rgba(21, 101, 192, 0.2);
+        }
+
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-day {
+            font-weight: 600;
+            color: var(--pine-deep);
+            width: 120px;
+        }
+
+        .schedule-time {
+            color: var(--text-light);
+            flex: 1;
+        }
+
+        .schedule-note {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(21, 101, 192, 0.15);
+        }
+
+        .schedule-note p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--pine-deep) 0%, #0D1B2A 100%);
+            padding: 5rem 2rem;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-container h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .cta-container p {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: var(--snow-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Alegreya', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--pine-deep);
+            color: var(--snow-white);
+        }
+
+        .footer-column h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: var(--pine-light);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--snow-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 3;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .community-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .court-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .social-follow-bar {
+                padding: 0.4rem 0.75rem;
+            }
+
+            .social-follow-bar a {
+                font-size: 0.8rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                height: 60vh;
+                min-height: 400px;
+            }
+
+            .quick-info-container {
+                gap: 1.5rem;
+            }
+
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Follow Bar -->
+    <div class="social-follow-bar">
+        <a href="https://www.facebook.com/DiscoverCloudcroft" target="_blank" rel="noopener noreferrer">Follow us on Facebook and Instagram</a>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" role="menubar">
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#seasons">Seasons</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#stay">Stay & Dine</a></li>
+                    <li><a href="index.html#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <button class="mobile-menu-close" aria-label="Close menu">×</button>
+        <a href="index.html#explore">Explore</a>
+        <a href="index.html#seasons">Seasons</a>
+        <a href="index.html#events">Events</a>
+        <a href="index.html#stay">Stay & Dine</a>
+        <a href="index.html#plan">Plan Your Trip</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="dining.html">Dining</a>
+        <a href="activities.html">Activities</a>
+        <a href="#" class="nav-cta">Request Guide</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>Recreation</span>
+            </div>
+            <h1>Pickleball in Cloudcroft</h1>
+            <p class="hero-subtitle">Play America's Fastest Growing Sport at 9,000 Feet</p>
+            <p class="hero-description">
+                Join the Pickleball Addicts of Cloudcroft for outdoor play in cool mountain air,
+                surrounded by towering pines at Zenith Park — where every game comes with a view.
+            </p>
+            <div class="hero-ctas">
+                <a href="#courts" class="btn btn-primary">Find the Courts</a>
+                <a href="#community" class="btn btn-secondary">Join the Community</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <div class="quick-info">
+        <div class="quick-info-container">
+            <div class="quick-info-item">
+                <div class="quick-info-icon">📍</div>
+                <span>Zenith Park, Hwy 82</span>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">🎾</div>
+                <span>3 Outdoor Courts</span>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">💰</div>
+                <span>Free to Play</span>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">🕐</div>
+                <span>Open 24/7</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Pickleball in the Clouds</h2>
+                    <p>
+                        Pickleball has taken Cloudcroft by storm, becoming one of the village's most popular
+                        recreational activities. On any given Tuesday, Thursday, or Saturday morning, you'll
+                        find three dozen players on the courts at Zenith Park, batting yellow balls back and
+                        forth in the crisp mountain air.
+                    </p>
+                    <p>
+                        The cool summer climate makes Cloudcroft an ideal destination for outdoor pickleball
+                        when temperatures in the lowlands become unbearable. Whether you're a seasoned player
+                        or picking up a paddle for the first time, the welcoming pickleball community is ready
+                        to help you get in the game.
+                    </p>
+                    <div class="about-features">
+                        <span class="about-feature">🌲 Mountain Setting</span>
+                        <span class="about-feature">❄️ Cool Summer Play</span>
+                        <span class="about-feature">👥 Welcoming Community</span>
+                        <span class="about-feature">🎓 Clinics & Lessons</span>
+                        <span class="about-feature">🏆 Tournaments</span>
+                        <span class="about-feature">🆓 Free Courts</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <div class="icon">🏓</div>
+                        <p>Pickleball at Zenith Park</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courts Section -->
+    <section class="courts-section" id="courts">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Where to Play</span>
+                <h2>Zenith Park Tennis Courts</h2>
+                <p class="section-description">
+                    Cloudcroft's public pickleball courts are located at Zenith Park on Highway 82.
+                </p>
+            </div>
+
+            <div class="court-card">
+                <div class="court-header">
+                    <h3>Zenith Park</h3>
+                    <p>Highway 82, Cloudcroft, NM 88317</p>
+                </div>
+                <div class="court-details">
+                    <div class="court-info-grid">
+                        <div class="court-info-item">
+                            <div class="court-info-icon">🎾</div>
+                            <div class="court-info-content">
+                                <h4>Number of Courts</h4>
+                                <p>3 outdoor courts with permanent lines</p>
+                            </div>
+                        </div>
+                        <div class="court-info-item">
+                            <div class="court-info-icon">💰</div>
+                            <div class="court-info-content">
+                                <h4>Cost</h4>
+                                <p>Free to play — no reservations needed</p>
+                            </div>
+                        </div>
+                        <div class="court-info-item">
+                            <div class="court-info-icon">🕐</div>
+                            <div class="court-info-content">
+                                <h4>Hours</h4>
+                                <p>Open 24/7, seven days a week</p>
+                            </div>
+                        </div>
+                        <div class="court-info-item">
+                            <div class="court-info-icon">🎒</div>
+                            <div class="court-info-content">
+                                <h4>What to Bring</h4>
+                                <p>Bring your own net, paddles, and balls</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="court-note">
+                        <p><strong>Note:</strong> The courts have permanent pickleball lines, but you'll need to bring your own portable net. Local players often have extra equipment and are happy to share!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community-section" id="community">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Join the Fun</span>
+                <h2>Pickleball Addicts of Cloudcroft</h2>
+            </div>
+
+            <div class="community-grid">
+                <div class="community-card">
+                    <div class="community-icon">👥</div>
+                    <h3>Active Community</h3>
+                    <p>The PAC (Pickleball Addicts of Cloudcroft) brings together locals and visitors for regular play sessions throughout the week.</p>
+                </div>
+                <div class="community-card">
+                    <div class="community-icon">🎓</div>
+                    <h3>Clinics & Lessons</h3>
+                    <p>Public clinics and classes are offered for players of all skill levels. Beginners are always welcome!</p>
+                </div>
+                <div class="community-card">
+                    <div class="community-icon">🏆</div>
+                    <h3>Tournaments</h3>
+                    <p>The annual "Pickleball in the Clouds" tournament draws 70+ players for competitive fun in the mountains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">When to Play</span>
+                <h2>Open Play Schedule</h2>
+                <p class="section-description">
+                    Join local players for organized open play sessions at Zenith Park.
+                </p>
+            </div>
+
+            <div class="schedule-card">
+                <h3>Regular Play Times</h3>
+                <div class="schedule-item">
+                    <span class="schedule-day">Tuesday</span>
+                    <span class="schedule-time">Morning open play</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-day">Thursday</span>
+                    <span class="schedule-time">Morning open play</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-day">Saturday</span>
+                    <span class="schedule-time">Morning open play</span>
+                </div>
+                <div class="schedule-note">
+                    <p>Times may vary seasonally. Courts are open 24/7 for casual play outside of scheduled sessions. Connect with local players at the courts for the latest schedule and to get involved!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Play Section -->
+    <section class="why-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Why Cloudcroft</span>
+                <h2>The Perfect Place to Play</h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🌡️</div>
+                    <h3>Cool Mountain Air</h3>
+                    <p>While lowland courts sizzle in summer heat, Cloudcroft's 9,000-foot elevation keeps temperatures comfortable for outdoor play all season long.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🌲</div>
+                    <h3>Scenic Setting</h3>
+                    <p>Play surrounded by towering pines and fresh mountain air. Every game comes with views of the beautiful Sacramento Mountains.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🤝</div>
+                    <h3>Friendly Players</h3>
+                    <p>The pickleball community welcomes players of all levels. Whether you're a beginner or advanced, you'll find partners ready to play.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🏔️</div>
+                    <h3>Vacation & Play</h3>
+                    <p>Combine your mountain getaway with your favorite sport. Cloudcroft offers great lodging, dining, and hiking alongside great pickleball.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Play?</h2>
+            <p>Grab your paddle and head to Zenith Park for the best pickleball experience in the mountains. See you on the courts!</p>
+            <div class="cta-buttons">
+                <a href="https://maps.google.com/?q=Zenith+Park+Cloudcroft+NM" target="_blank" class="btn btn-primary">Get Directions</a>
+                <a href="activities.html" class="btn" style="background: #ffffff; color: var(--pine-deep);">More Activities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Discover Cloudcroft</h3>
+                    <p>
+                        Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors
+                        seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#explore">In the Village</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="biking.html">Biking</a></li>
+                        <li><a href="activities.html">Golf & Recreation</a></li>
+                        <li><a href="sunspot-observatory.html">Sunspot Observatory</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li><a href="lodging.html">Where to Stay</a></li>
+                        <li><a href="lodging.html#rentals">Vacation Rentals</a></li>
+                        <li><a href="dining.html">Where to Eat</a></li>
+                        <li><a href="attractions.html">Art Galleries</a></li>
+                        <li><a href="attractions.html">Shopping</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Plan</h4>
+                    <ul>
+                        <li><a href="index.html#plan">Getting Here</a></li>
+                        <li><a href="groceries.html">Groceries & Supplies</a></li>
+                        <li><a href="emergency-services.html">Emergency Services</a></li>
+                        <li><a href="hiking-trails.html">Trail Maps</a></li>
+                        <li><a href="index.html#plan">Visitor Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Chamber of Commerce</a></li>
+                        <li><a href="https://villageofcloudcroft.com" target="_blank">Village of Cloudcroft</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p>
+                <div>
+                    <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.community-card, .why-card, .court-info-item').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

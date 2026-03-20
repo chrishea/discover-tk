@@ -1,0 +1,94 @@
+{
+  "name": "Discover Cloudcroft — New Mexico's Mountain Escape",
+  "short_name": "Cloudcroft",
+  "description": "Your guide to Cloudcroft, New Mexico — a charming mountain village at 8,676 feet in the Sacramento Mountains. Discover trails, dining, lodging, and events.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0D1B2A",
+  "theme_color": "#0D1B2A",
+  "orientation": "any",
+  "categories": ["travel", "tourism", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dining",
+      "short_name": "Dining",
+      "url": "/dining.html",
+      "description": "Restaurants and dining in Cloudcroft"
+    },
+    {
+      "name": "Hiking Trails",
+      "short_name": "Hiking",
+      "url": "/hiking-trails.html",
+      "description": "Hiking trails near Cloudcroft"
+    },
+    {
+      "name": "Lodging",
+      "short_name": "Lodging",
+      "url": "/lodging.html",
+      "description": "Hotels, cabins, and vacation rentals"
+    },
+    {
+      "name": "Activities",
+      "short_name": "Activities",
+      "url": "/activities.html",
+      "description": "Things to do in Cloudcroft"
+    }
+  ]
+}

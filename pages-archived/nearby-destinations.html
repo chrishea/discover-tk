@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Nearby Destinations | Discover Cloudcroft</title>
+    <meta name="description" content="Explore destinations near Cloudcroft, NM. Day trips to White Sands, Ruidoso, Alamogordo, and more from your Sacramento Mountains base camp.">
+    <meta property="og:title" content="Nearby Destinations | Discover Cloudcroft">
+    <meta property="og:description" content="Explore destinations near Cloudcroft, NM. Day trips to White Sands, Ruidoso, Alamogordo, and more from your Sacramento Mountains base camp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/nearby-destinations.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nearby Destinations | Discover Cloudcroft">
+    <meta name="twitter:description" content="Explore destinations near Cloudcroft, NM. Day trips to White Sands, Ruidoso, Alamogordo, and more from your Sacramento Mountains base camp.">
+    <link rel="canonical" href="https://discovercloudcroft.com/nearby-destinations.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #BF0A30;
+            --sunset-warm: #a31621;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #8B4513;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+            --desert-tan: #c2956e;
+            --mountain-blue: #5c6bc0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(26, 35, 126, 0.5) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-badge span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            color: #64B5F6;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Quick Links */
+        .quick-links {
+            background: #1565C0;
+            padding: 1.5rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-links-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .quick-link:hover {
+            background: rgba(21, 101, 192, 0.15);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Destination Card - Full Width */
+        .destination-section {
+            padding: 5rem 2rem;
+        }
+
+        .destination-section:nth-child(odd) {
+            background: var(--snow-white);
+        }
+
+        .destination-section:nth-child(even) {
+            background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%);
+        }
+
+        .destination-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .destination-content.reverse {
+            direction: rtl;
+        }
+
+        .destination-content.reverse > * {
+            direction: ltr;
+        }
+
+        .destination-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .destination-tagline {
+            font-family: 'Alegreya', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .destination-text p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .destination-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .destination-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .destination-detail-icon {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .destination-detail-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .destination-detail-content p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        .destination-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(13, 27, 42, 0.15);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .destination-image-placeholder {
+            text-align: center;
+            color: white;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .destination-image-placeholder .icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            color: var(--snow-white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        /* White Sands Section */
+        .white-sands-section .destination-text h2 { color: #d4a574; }
+        .white-sands-section .destination-tagline { color: #c2956e; }
+        .white-sands-section .destination-detail-content h4 { color: #d4a574; }
+        .white-sands-section .destination-image { background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 50%, #d4a574 100%); }
+        .white-sands-section .btn-primary { background: #d4a574; }
+        .white-sands-section .btn-primary:hover { background: #c2956e; box-shadow: 0 10px 30px rgba(212, 165, 116, 0.4); }
+
+        /* High Rolls Section */
+        .high-rolls-section .destination-text h2 { color: #c62828; }
+        .high-rolls-section .destination-tagline { color: #d32f2f; }
+        .high-rolls-section .destination-detail-content h4 { color: #c62828; }
+        .high-rolls-section .destination-image { background: linear-gradient(135deg, #c62828 0%, #d32f2f 50%, #e57373 100%); }
+        .high-rolls-section .btn-primary { background: #c62828; }
+        .high-rolls-section .btn-primary:hover { background: #b71c1c; box-shadow: 0 10px 30px rgba(198, 40, 40, 0.4); }
+
+        /* La Luz Section */
+        .la-luz-section .destination-text h2 { color: #6d4c41; }
+        .la-luz-section .destination-tagline { color: #8d6e63; }
+        .la-luz-section .destination-detail-content h4 { color: #6d4c41; }
+        .la-luz-section .destination-image { background: linear-gradient(135deg, #6d4c41 0%, #8d6e63 50%, #a1887f 100%); }
+        .la-luz-section .btn-primary { background: #6d4c41; }
+        .la-luz-section .btn-primary:hover { background: #5d4037; box-shadow: 0 10px 30px rgba(109, 76, 65, 0.4); }
+
+        /* Timberon Section */
+        .timberon-section .destination-text h2 { color: #1565C0; }
+        .timberon-section .destination-tagline { color: #1E88E5; }
+        .timberon-section .destination-detail-content h4 { color: #1565C0; }
+        .timberon-section .destination-image { background: linear-gradient(135deg, #1565C0 0%, #1E88E5 50%, #64B5F6 100%); }
+        .timberon-section .btn-primary { background: #1565C0; }
+        .timberon-section .btn-primary:hover { background: #1b5e20; box-shadow: 0 10px 30px rgba(21, 101, 192, 0.4); }
+
+        /* Mayhill Section */
+        .mayhill-section .destination-text h2 { color: #0D1B2A; }
+        .mayhill-section .destination-tagline { color: #3949ab; }
+        .mayhill-section .destination-detail-content h4 { color: #0D1B2A; }
+        .mayhill-section .destination-image { background: linear-gradient(135deg, #0d1b3e 0%, #1a237e 50%, #3949ab 100%); }
+        .mayhill-section .btn-primary { background: #0D1B2A; }
+        .mayhill-section .btn-primary:hover { background: #0d1b54; box-shadow: 0 10px 30px rgba(26, 35, 126, 0.4); }
+
+        /* Highlights List */
+        .highlights-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .highlights-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .highlights-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+            padding: 5rem 2rem;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-container h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .cta-container p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: var(--snow-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Alegreya', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #64B5F6;
+            color: #0D1B2A;
+        }
+
+        .footer-column h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: #64B5F6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--snow-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 3;
+            }
+
+            .destination-content,
+            .destination-content.reverse {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+
+            .destination-image {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                height: 60vh;
+                min-height: 400px;
+            }
+
+            .quick-links-container {
+                gap: 1rem;
+            }
+
+            .destination-details {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#seasons">Seasons</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#stay">Stay & Dine</a></li>
+                    <li><a href="index.html#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>Day Trips & Exploration</span>
+            </div>
+            <h1>Nearby Destinations</h1>
+            <p class="hero-subtitle">Discover the Wonders Beyond Cloudcroft</p>
+            <p class="hero-description">
+                From the surreal white gypsum dunes to historic villages and dark sky communities,
+                the region surrounding Cloudcroft offers incredible day trip adventures.
+            </p>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <div class="quick-links">
+        <div class="quick-links-container">
+            <a href="#white-sands" class="quick-link">White Sands</a>
+            <a href="#high-rolls" class="quick-link">High Rolls</a>
+            <a href="#la-luz" class="quick-link">La Luz</a>
+            <a href="#timberon" class="quick-link">Timberon</a>
+            <a href="#mayhill" class="quick-link">Mayhill</a>
+        </div>
+    </div>
+
+    <!-- White Sands National Park -->
+    <section class="destination-section white-sands-section" id="white-sands">
+        <div class="destination-content">
+            <div class="destination-text">
+                <h2>White Sands National Park</h2>
+                <p class="destination-tagline">The World's Largest Gypsum Dunefield</p>
+                <p>
+                    Rising from the heart of the Tularosa Basin is one of the world's great natural wonders—
+                    the glistening white sands of New Mexico. Great wave-like dunes of gypsum sand have engulfed
+                    275 square miles of desert, creating an otherworldly landscape unlike anywhere else on Earth.
+                </p>
+                <p>
+                    Just an hour from Cloudcroft, White Sands offers surreal photo opportunities, sunset sledding
+                    down pristine dunes, and ranger-led programs including Full Moon Hikes and Lake Lucero Tours.
+                </p>
+                <div class="destination-details">
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">📍</span>
+                        <div class="destination-detail-content">
+                            <h4>Distance</h4>
+                            <p>~45 minutes from Cloudcroft</p>
+                        </div>
+                    </div>
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">💰</span>
+                        <div class="destination-detail-content">
+                            <h4>Entrance Fee</h4>
+                            <p>$25/vehicle, $15/person</p>
+                        </div>
+                    </div>
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">🕐</span>
+                        <div class="destination-detail-content">
+                            <h4>Hours</h4>
+                            <p>Opens 7AM daily, closing varies</p>
+                        </div>
+                    </div>
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">🛷</span>
+                        <div class="destination-detail-content">
+                            <h4>Must Do</h4>
+                            <p>Sled the dunes at sunset</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.nps.gov/whsa/" target="_blank" class="btn btn-primary">Plan Your Visit</a>
+            </div>
+            <div class="destination-image">
+                <div class="destination-image-placeholder">
+                    <div class="icon">🏜️</div>
+                    <p>White Sands National Park</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- High Rolls -->
+    <section class="destination-section high-rolls-section" id="high-rolls">
+        <div class="destination-content reverse">
+            <div class="destination-text">
+                <h2>High Rolls & Mountain Park</h2>
+                <p class="destination-tagline">Orchards, History & Route 66 Charm</p>
+                <p>
+                    Nestled in the Lincoln National Forest, High Rolls and Mountain Park are charming mountain
+                    communities with deep railroad roots. The area is famous for its apple and cherry orchards,
+                    celebrated each year with popular festivals that draw visitors from across the region.
+                </p>
+                <p>
+                    Don't miss The Old Apple Barn—a beloved Route 66-style roadside attraction that welcomes
+                    50,000+ visitors annually. The area also offers excellent hiking, including trails to
+                    Bridal Veil Falls and the historic Mexican Canyon Trestle.
+                </p>
+                <ul class="highlights-list">
+                    <li>The Old Apple Barn (featured on Ozzy & Jack's World Detour)</li>
+                    <li>Annual Cherry Festival & Apple Festival</li>
+                    <li>Bridal Veil Falls Trail</li>
+                    <li>Mexican Canyon Trestle historic site</li>
+                    <li>Tunnel Vista Trail with waterfall & swimming hole</li>
+                </ul>
+                <div class="destination-details">
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">📍</span>
+                        <div class="destination-detail-content">
+                            <h4>Distance</h4>
+                            <p>10 minutes from Cloudcroft</p>
+                        </div>
+                    </div>
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">🍎</span>
+                        <div class="destination-detail-content">
+                            <h4>Known For</h4>
+                            <p>Apple & cherry orchards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-image">
+                <div class="destination-image-placeholder">
+                    <div class="icon">🍎</div>
+                    <p>High Rolls Mountain Park</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- La Luz -->
+    <section class="destination-section la-luz-section" id="la-luz">
+        <div class="destination-content">
+            <div class="destination-text">
+                <h2>La Luz</h2>
+                <p class="destination-tagline">The Oldest Village in the Tularosa Basin</p>
+                <p>
+                    Founded in 1705, La Luz ("The Light" in Spanish) is a quiet historic village just 4 miles
+                    north of Alamogordo. This artistic enclave is home to painters, writers, and craftspeople
+                    who share a passion for creating art and living close to the land.
+                </p>
+                <p>
+                    The village plaza is surrounded by adobe homes and artist studios worth browsing. History
+                    buffs will enjoy exploring the La Luz Pottery Company ruins—where workers created distinctive
+                    glazed pottery from 1930 to 1955. Tours are offered by the Tularosa Basin Historical Society.
+                </p>
+                <ul class="highlights-list">
+                    <li>Historic adobe village plaza founded 1705</li>
+                    <li>La Luz Pottery Company ruins & tours</li>
+                    <li>Artist studios and galleries</li>
+                    <li>Gateway to Oliver Lee State Park</li>
+                    <li>Near Tularosa Basin Museum of History</li>
+                </ul>
+                <div class="destination-details">
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">📍</span>
+                        <div class="destination-detail-content">
+                            <h4>Distance</h4>
+                            <p>25 minutes from Cloudcroft</p>
+                        </div>
+                    </div>
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">🏺</span>
+                        <div class="destination-detail-content">
+                            <h4>Known For</h4>
+                            <p>Historic pottery & art community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-image">
+                <div class="destination-image-placeholder">
+                    <div class="icon">🏺</div>
+                    <p>La Luz Village</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timberon -->
+    <section class="destination-section timberon-section" id="timberon">
+        <div class="destination-content reverse">
+            <div class="destination-text">
+                <h2>Timberon</h2>
+                <p class="destination-tagline">Mountain Golf & Peaceful Retreat</p>
+                <p>
+                    Timberon is a peaceful retirement and resort community nestled at 7,150 feet in the
+                    Sacramento Mountains. Surrounded by Lincoln National Forest, this tranquil enclave
+                    offers a true escape from the bustle of everyday life.
+                </p>
+                <p>
+                    The community's 9-hole golf course offers 360-degree views of the Sacramento Mountain
+                    Range—a challenging and scenic round under tall pines and blue skies. Beyond golf,
+                    Timberon features a lodge, community pool, restaurant, fishing ponds, and even an airstrip.
+                </p>
+                <ul class="highlights-list">
+                    <li>9-hole mountain golf course with panoramic views</li>
+                    <li>Community pool, lodge & restaurant</li>
+                    <li>Fishing ponds & hiking trails</li>
+                    <li>14 miles to Sunspot Solar Observatory</li>
+                    <li>Private airstrip for fly-in visitors</li>
+                </ul>
+                <div class="destination-details">
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">📍</span>
+                        <div class="destination-detail-content">
+                            <h4>Distance</h4>
+                            <p>35 minutes from Cloudcroft</p>
+                        </div>
+                    </div>
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">⛰️</span>
+                        <div class="destination-detail-content">
+                            <h4>Elevation</h4>
+                            <p>7,150 feet</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://timberon.org/" target="_blank" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="destination-image">
+                <div class="destination-image-placeholder">
+                    <div class="icon">⛳</div>
+                    <p>Timberon Golf Course</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mayhill -->
+    <section class="destination-section mayhill-section" id="mayhill">
+        <div class="destination-content">
+            <div class="destination-text">
+                <h2>Mayhill</h2>
+                <p class="destination-tagline">Dark Skies & Astronomy Paradise</p>
+                <p>
+                    East of Cloudcroft on Highway 82, the small community of Mayhill has become a haven for
+                    astronomers and stargazers. At 7,200 feet elevation in the Sacramento Mountains, the area
+                    offers some of the darkest skies in the continental United States.
+                </p>
+                <p>
+                    The New Mexico Skies Astronomy Enclave near Mayhill is a private community specifically
+                    designed for astronomy enthusiasts. With HOA covenants restricting light pollution and
+                    multiple observatories nearby—including the Remote Astronomical Society Observatory—
+                    this is a world-class destination for serious stargazing.
+                </p>
+                <ul class="highlights-list">
+                    <li>New Mexico Skies astronomy community</li>
+                    <li>Remote Astronomical Society Observatory</li>
+                    <li>Exceptionally dark skies with minimal light pollution</li>
+                    <li>15 miles from Apache Point Observatory</li>
+                    <li>Low humidity for optimal viewing conditions</li>
+                </ul>
+                <div class="destination-details">
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">📍</span>
+                        <div class="destination-detail-content">
+                            <h4>Distance</h4>
+                            <p>20 minutes east on Hwy 82</p>
+                        </div>
+                    </div>
+                    <div class="destination-detail">
+                        <span class="destination-detail-icon">🌟</span>
+                        <div class="destination-detail-content">
+                            <h4>Known For</h4>
+                            <p>Dark sky astronomy community</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.nmsouthernskies.com/" target="_blank" class="btn btn-primary">Explore NM Skies</a>
+            </div>
+            <div class="destination-image">
+                <div class="destination-image-placeholder">
+                    <div class="icon">🔭</div>
+                    <p>Mayhill Dark Skies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Plan Your Day Trip Adventures</h2>
+            <p>Make Cloudcroft your home base and explore all the wonders of the Sacramento Mountains and beyond.</p>
+            <div class="cta-buttons">
+                <a href="index.html#stay" class="btn btn-primary" style="background: #0D1B2A;">Find Lodging</a>
+                <a href="index.html" class="btn" style="background: rgba(21, 101, 192, 0.2); color: #ffffff;">Back to Cloudcroft</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Discover Cloudcroft</h3>
+                    <p>
+                        Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors
+                        seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">In the Village</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="biking.html">Biking</a></li>
+                        <li><a href="activities.html">Golf & Recreation</a></li>
+                        <li><a href="sunspot-observatory.html">Sunspot Observatory</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li><a href="grand-cloudcroft-hotel.html">Where to Stay</a></li>
+                        <li><a href="index.html#stay">Where to Eat</a></li>
+                        <li><a href="instant-karma.html">Shopping</a></li>
+                        <li><a href="index.html#events">Events Calendar</a></li>
+                        <li><a href="art-galleries.html">Art Galleries</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Plan</h4>
+                    <ul>
+                        <li><a href="index.html#plan">Getting Here</a></li>
+                        <li><a href="groceries.html">Groceries & Supplies</a></li>
+                        <li><a href="emergency-services.html">Emergency Services</a></li>
+                        <li><a href="hiking-trails.html">Trail Maps</a></li>
+                        <li><a href="index.html#plan">Visitor Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Chamber of Commerce</a></li>
+                        <li><a href="#">Village of Cloudcroft</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p>
+                <div>
+                    <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.destination-content').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

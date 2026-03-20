@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Shopping | Discover Cloudcroft</title>
+    <meta name="description" content="Shop unique boutiques, galleries, and gift stores in Cloudcroft, NM. Discover handcrafted treasures, local art, and mountain-inspired finds.">
+    <meta property="og:title" content="Shopping | Discover Cloudcroft">
+    <meta property="og:description" content="Shop unique boutiques, galleries, and gift stores in Cloudcroft, NM. Discover handcrafted treasures, local art, and mountain-inspired finds.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/shopping.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shopping | Discover Cloudcroft">
+    <meta name="twitter:description" content="Shop unique boutiques, galleries, and gift stores in Cloudcroft, NM. Discover handcrafted treasures, local art, and mountain-inspired finds.">
+    <link rel="canonical" href="https://discovercloudcroft.com/shopping.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #FCD116;
+            --sunset-warm: #FCD116;
+            --cloud-white: #FAFCFE;
+            --shop-purple: #7b68a6;
+            --shop-light: #9d8ec4;
+            --snow-white: #ffffff;
+            --text-dark: #2a3a32;
+            --text-light: #4a5a52;
+            --forest-shadow: #0D47A1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            min-height: 450px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--forest-shadow) 0%, var(--pine-deep) 50%, var(--shop-purple) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 30% 70%, rgba(212, 168, 75, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, rgba(123, 104, 166, 0.25) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 168, 75, 0.25);
+            color: var(--sunset-warm);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(212, 168, 75, 0.4);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--snow-white);
+            margin-bottom: 1rem;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 5rem 2rem;
+        }
+
+        .content-section:nth-child(odd) {
+            background: var(--sky-pale);
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--cloud-white);
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--shop-purple);
+            color: var(--snow-white);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--forest-shadow);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-intro {
+            font-family: 'Alegreya', serif;
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-style: italic;
+            line-height: 1.8;
+            border-left: 3px solid var(--shop-purple);
+            padding-left: 1.5rem;
+        }
+
+        /* Shop Cards */
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .shop-card {
+            background: var(--snow-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(123, 104, 166, 0.1);
+        }
+
+        .content-section:nth-child(odd) .shop-card {
+            background: var(--cloud-white);
+        }
+
+        .shop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(21, 101, 192, 0.12);
+            border-color: var(--shop-purple);
+        }
+
+        .shop-header {
+            background: linear-gradient(135deg, var(--pine-deep), var(--shop-purple));
+            color: var(--snow-white);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .shop-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .shop-header-text h3 {
+            font-size: 1.25rem;
+            color: var(--snow-white);
+            margin-bottom: 0.15rem;
+        }
+
+        .shop-category {
+            font-size: 0.8rem;
+            opacity: 0.85;
+        }
+
+        .shop-content {
+            padding: 1.5rem;
+        }
+
+        .shop-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .shop-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(123, 104, 166, 0.15);
+        }
+
+        .shop-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .shop-detail-icon {
+            color: var(--shop-purple);
+            flex-shrink: 0;
+            width: 18px;
+        }
+
+        .shop-detail-text {
+            color: var(--text-dark);
+        }
+
+        .shop-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--shop-purple);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .shop-link:hover {
+            color: var(--pine-deep);
+            text-decoration: underline;
+        }
+
+        /* Burro Street Highlight */
+        .burro-highlight {
+            background: linear-gradient(135deg, var(--shop-purple), var(--shop-light));
+            color: var(--snow-white);
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .burro-highlight h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--snow-white);
+        }
+
+        .burro-highlight p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Category Pills */
+        .category-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .category-pill {
+            background: var(--snow-white);
+            color: var(--text-dark);
+            padding: 0.6rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid rgba(123, 104, 166, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .category-pill:hover,
+        .category-pill.active {
+            background: var(--shop-purple);
+            color: var(--snow-white);
+            border-color: var(--shop-purple);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--pine-deep) 0%, var(--forest-shadow) 100%);
+            color: var(--snow-white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: var(--snow-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.15rem;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--sunset-gold);
+            color: var(--forest-shadow);
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: var(--sunset-warm);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 168, 75, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: #b8c9b8;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Alegreya', serif;
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-section a {
+            color: #b8c9b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #64B5F6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+                min-height: 350px;
+            }
+
+            .content-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-intro {
+                font-size: 1.15rem;
+            }
+
+            .shop-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .burro-highlight {
+                padding: 2rem 1.5rem;
+            }
+
+            .category-nav {
+                gap: 0.5rem;
+            }
+
+            .category-pill {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#plan" class="nav-cta">Plan Your Visit</a></li>
+            </ul>
+            <button class="mobile-menu-btn">&#9776;</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Mountain Retail</span>
+            <h1>Shopping in Cloudcroft</h1>
+            <p class="hero-subtitle">From handcrafted jewelry to outdoor gear, discover unique finds along Burro Avenue's historic boardwalk</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Shop Local</span>
+            <h2 class="section-title">Burro Avenue & Beyond</h2>
+            <p class="section-intro">Cloudcroft's charming downtown offers an eclectic mix of gift shops, galleries, boutiques, and specialty stores - most within walking distance along the historic Burro Avenue boardwalk.</p>
+
+            <div class="burro-highlight">
+                <h3>The Burro Street Exchange</h3>
+                <p>At the heart of Cloudcroft shopping sits the Burro Street Exchange, a collection of retail shops, eateries, and specialty stores reflecting the "Old West" ambiance of the village. Stroll the wooden boardwalk and discover everything from fine jewelry and artwork to gourmet tea and handmade chocolates.</p>
+            </div>
+
+            <div class="category-nav">
+                <a href="#jewelry" class="category-pill">Jewelry</a>
+                <a href="#gifts" class="category-pill">Gifts & Souvenirs</a>
+                <a href="#art" class="category-pill">Art & Galleries</a>
+                <a href="#outdoor" class="category-pill">Outdoor Gear</a>
+                <a href="#specialty" class="category-pill">Specialty Shops</a>
+                <a href="#thrift" class="category-pill">Thrift & Antiques</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jewelry Section -->
+    <section id="jewelry" class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Jewelry</span>
+            <h2 class="section-title">Jewelry & Accessories</h2>
+            <p class="section-intro">Find stunning turquoise, handcrafted silver, and unique gemstone pieces from local artisans and Native American craftspeople.</p>
+
+            <div class="shop-grid">
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#128142;</div>
+                        <div class="shop-header-text">
+                            <h3>The Turquoise Shop</h3>
+                            <span class="shop-category">Native American & Southwest Jewelry</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>For more than 40 years, The Turquoise Shop has been a trusted destination for authentic turquoise jewelry and Native American art. They carry contemporary and classic pieces in silver, copper, and gold.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">507 Burro Ave</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128222;</span>
+                                <span class="shop-detail-text">(575) 682-3327</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128336;</span>
+                                <span class="shop-detail-text">Mon-Sat 10am-5pm</span>
+                            </div>
+                        </div>
+                        <a href="https://cloudcroftturquoise.com/" target="_blank" rel="noopener" class="shop-link">Visit Website &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#128141;</div>
+                        <div class="shop-header-text">
+                            <h3>RedWall Jewelry</h3>
+                            <span class="shop-category">Handmade Sterling Silver & Gold</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>A locally owned shop specializing in unique handmade pieces set in sterling silver and gold. Their nature collection is inspired by Cloudcroft's mountain setting, featuring gems, opals, turquoise, and diamonds.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">Burro Street Exchange (next to Western Bank)</span>
+                            </div>
+                        </div>
+                        <a href="https://redwalljewelry.com/" target="_blank" rel="noopener" class="shop-link">Visit Website &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gifts & Souvenirs Section -->
+    <section id="gifts" class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Gifts & Souvenirs</span>
+            <h2 class="section-title">Gifts & Souvenirs</h2>
+            <p class="section-intro">Take home a piece of the mountains with locally made crafts, Cloudcroft memorabilia, and unique gifts you won't find anywhere else.</p>
+
+            <div class="shop-grid">
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#127873;</div>
+                        <div class="shop-header-text">
+                            <h3>Burro Street Trading Post</h3>
+                            <span class="shop-category">Native American & Southwest</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>A long-standing favorite at The Burro Street Exchange for almost 20 years. Features Native American jewelry, rocks, beads, pottery, kachinas, geodes, gemstones, crystals, and Southwest home decor.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">Burro Street Exchange, 505 Burro Ave</span>
+                            </div>
+                        </div>
+                        <a href="https://burrostreettradingpost.com/" target="_blank" rel="noopener" class="shop-link">Visit Website &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#128248;</div>
+                        <div class="shop-header-text">
+                            <h3>Cloudcroft Souvenirs</h3>
+                            <span class="shop-category">Souvenirs & Custom Gifts</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>Specializing in original oil paintings, custom made and personalized wooden signs, picture frames, and decor. A great spot for unique, handcrafted Cloudcroft mementos.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">502A Burro Ave</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#128059;</div>
+                        <div class="shop-header-text">
+                            <h3>Bear Track</h3>
+                            <span class="shop-category">Gifts & Brighton Jewelry</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>Established in 1974, Bear Track offers unique local crafts, souvenirs, and handmade treasures. Also an authorized Brighton jewelry retailer with knowledgeable, friendly staff.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">308 Burro Ave</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128222;</span>
+                                <span class="shop-detail-text">(575) 682-3046</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128336;</span>
+                                <span class="shop-detail-text">Daily 10am-5pm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#127912;</div>
+                        <div class="shop-header-text">
+                            <h3>Into The Woods</h3>
+                            <span class="shop-category">Vintage & Eclectic Finds</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>A funky and eclectic place where everyone is welcome. Into the Woods is a mesh of old and new - vintage treasures, upcycled items, and original finds in a welcoming atmosphere.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">505 Burro Ave #102</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#127852;</div>
+                        <div class="shop-header-text">
+                            <h3>TreeRific Toys and Candy Shoppe</h3>
+                            <span class="shop-category">Toys & Candy</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>A delightful stop for kids of all ages, featuring toys, games, and an enticing selection of candies and sweets. Located on the Burro Street Exchange boardwalk.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">Burro Street Exchange</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art & Galleries Section -->
+    <section id="art" class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Art & Galleries</span>
+            <h2 class="section-title">Art Galleries</h2>
+            <p class="section-intro">Cloudcroft's mountain light and natural beauty have long attracted artists. Discover original works in galleries throughout the village.</p>
+
+            <div class="shop-grid">
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#127912;</div>
+                        <div class="shop-header-text">
+                            <h3>Off the Beaten Path</h3>
+                            <span class="shop-category">Art Gallery & Eclectic Gifts</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>Founded in 1996, this pink-and-turquoise gallery tucked behind Burro Avenue features eclectic art and handmade gifts - wind chimes, paintings, sculptures, ceramics, and metalwork from artists across the country.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">100 Glorieta Ave</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128222;</span>
+                                <span class="shop-detail-text">(575) 682-7284</span>
+                            </div>
+                        </div>
+                        <a href="https://www.offthebeatenpathstuff.com/" target="_blank" rel="noopener" class="shop-link">Visit Website &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#128444;</div>
+                        <div class="shop-header-text">
+                            <h3>Cloudcroft Gallery</h3>
+                            <span class="shop-category">Fine Art & Paintings</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>An artist-owned gallery featuring beautiful original paintings with a nice variety and selection at reasonable prices. The owner is known for being helpful, knowledgeable, and friendly.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">502A Burro Ave</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128222;</span>
+                                <span class="shop-detail-text">(575) 682-3659</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outdoor Gear Section -->
+    <section id="outdoor" class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Outdoor Gear</span>
+            <h2 class="section-title">Outdoor & Adventure</h2>
+            <p class="section-intro">Gear up for mountain adventures with quality outdoor equipment, clothing, and expert local advice.</p>
+
+            <div class="shop-grid">
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#127956;</div>
+                        <div class="shop-header-text">
+                            <h3>High Altitude Outfitters</h3>
+                            <span class="shop-category">Outdoor Gear & Women's Boutique</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>Cloudcroft's one-stop shop for outdoor enthusiasts. Carries footwear, outerwear, camping gear, winter wear, mountain bikes (sales, service & rentals), and a women's boutique. Features brands like Patagonia, Merrell, and Hoka.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">310 Burro Ave</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128222;</span>
+                                <span class="shop-detail-text">(575) 682-1229</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128336;</span>
+                                <span class="shop-detail-text">Mon-Thu 10am-5:30pm, Fri 10am-6pm, Sat 9am-6:30pm</span>
+                            </div>
+                        </div>
+                        <a href="https://www.highaltitudenm.com/" target="_blank" rel="noopener" class="shop-link">Visit Website &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialty Shops Section -->
+    <section id="specialty" class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Specialty Shops</span>
+            <h2 class="section-title">Specialty Shops</h2>
+            <p class="section-intro">From fine wines to artisan teas, discover specialty shops offering unique products and memorable experiences.</p>
+
+            <div class="shop-grid">
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#127863;</div>
+                        <div class="shop-header-text">
+                            <h3>Noisy Water Winery</h3>
+                            <span class="shop-category">Wine Tasting Room</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>Award-winning New Mexico wines from a family-owned winery. Over 30 wines to taste, plus gourmet cheeses, olive oils, and balsamic vinegars. Hosts special events including yoga and sip & paint nights.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">505 Burro Ave, Suite 105</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128222;</span>
+                                <span class="shop-detail-text">(575) 682-6610</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128336;</span>
+                                <span class="shop-detail-text">Mon-Thu 10am-6pm, Fri 10am-6:30pm, Sat 10am-7pm, Sun 10am-6pm</span>
+                            </div>
+                        </div>
+                        <a href="https://noisywaterwinery.com/" target="_blank" rel="noopener" class="shop-link">Visit Website &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#127861;</div>
+                        <div class="shop-header-text">
+                            <h3>Old Barrel Tea Company</h3>
+                            <span class="shop-category">Loose Leaf Tea & Honey</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>A female-run, family-owned tea company offering loose leaf teas, raw honey, gourmet herbs and spices, essential oils, and wellness products. They blend all their teas in-house.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">505 Burro Ave</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128222;</span>
+                                <span class="shop-detail-text">(575) 682-7474</span>
+                            </div>
+                        </div>
+                        <a href="https://oldbarreltea.com/" target="_blank" rel="noopener" class="shop-link">Visit Website &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#127856;</div>
+                        <div class="shop-header-text">
+                            <h3>Burro Street Bakery</h3>
+                            <span class="shop-category">Bakery & Coffee</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>Famous for their homemade pies, pastries, and enormous cinnamon rolls. Located in a historic old bank building with beautiful woodwork and tin ceilings. All pies are dairy-free. Dog-friendly!</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">505 Burro Ave, Suite 106</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128336;</span>
+                                <span class="shop-detail-text">Daily 7am-5pm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thrift & Antiques Section -->
+    <section id="thrift" class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Thrift & Antiques</span>
+            <h2 class="section-title">Thrift & Antiques</h2>
+            <p class="section-intro">Hunt for treasures among vintage finds, antiques, and gently used goods at Cloudcroft's thrift and consignment shops.</p>
+
+            <div class="shop-grid">
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#128092;</div>
+                        <div class="shop-header-text">
+                            <h3>King's Treasure Thrift Store</h3>
+                            <span class="shop-category">Thrift Store (Charity)</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>A well-organized thrift store offering clothing, home decor, jewelry, furniture, and kitchenware. Proceeds support Pregnancy Resources Plus in Alamogordo. In business for over 38 years.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">202 Burro Ave</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128222;</span>
+                                <span class="shop-detail-text">(575) 682-5524</span>
+                            </div>
+                        </div>
+                        <a href="https://www.kingstreasure.org/" target="_blank" rel="noopener" class="shop-link">Visit Website &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-header">
+                        <div class="shop-icon">&#127978;</div>
+                        <div class="shop-header-text">
+                            <h3>Mountain Comforts</h3>
+                            <span class="shop-category">Antiques & Handmade Crafts</span>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <p>A comfort for locals and visitors alike for over 16 years, featuring hand-made dolls, crafts, warm quilts, and spectacular antiques. Great place for locally handcrafted walking canes.</p>
+                        <div class="shop-details">
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128205;</span>
+                                <span class="shop-detail-text">306 Burro Ave</span>
+                            </div>
+                            <div class="shop-detail">
+                                <span class="shop-detail-icon">&#128222;</span>
+                                <span class="shop-detail-text">(575) 682-2040</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container">
+            <h2>Explore More of Cloudcroft</h2>
+            <p>After shopping, refuel at one of Cloudcroft's restaurants or grab a coffee at a local cafe. Then head out to explore the trails, take in the views, or simply relax in the mountain air.</p>
+            <a href="dining.html" class="cta-btn">Discover Dining Options</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Discover Cloudcroft</h3>
+                <p>Your guide to New Mexico's premier mountain retreat, where unique shops and local artisans await at 8,663 feet.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <a href="lodging.html">Lodging</a>
+                <a href="dining.html">Dining</a>
+                <a href="shopping.html">Shopping</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+            </div>
+            <div class="footer-section">
+                <h3>Plan Your Trip</h3>
+                <a href="hiking-trails.html">Hiking Trails</a>
+                <a href="dark-skies.html">Dark Skies</a>
+                <a href="nearby-destinations.html">Nearby Destinations</a>
+                <a href="real-estate.html">Buy a Cabin</a>
+            </div>
+            <div class="footer-section">
+                <h3>About</h3>
+                <a href="about.html">Who We Are</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Discover Cloudcroft. Made with love for New Mexico's mountain paradise.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+
+        // Smooth scroll for category navigation
+        document.querySelectorAll('.category-pill').forEach(pill => {
+            pill.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    const headerOffset = 100;
+                    const elementPosition = targetSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

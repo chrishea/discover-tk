@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>The Grand Cloudcroft Hotel | Discover Cloudcroft</title>
+    <meta name="description" content="Stay at The Grand Cloudcroft Hotel, a historic mountain lodge in Cloudcroft, NM. Experience elegant rooms, fine dining, and stunning Sacramento Mountain views.">
+    <meta property="og:title" content="The Grand Cloudcroft Hotel | Discover Cloudcroft">
+    <meta property="og:description" content="Stay at The Grand Cloudcroft Hotel, a historic mountain lodge in Cloudcroft, NM. Experience elegant rooms, fine dining, and stunning Sacramento Mountain views.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/grand-cloudcroft-hotel.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Grand Cloudcroft Hotel | Discover Cloudcroft">
+    <meta name="twitter:description" content="Stay at The Grand Cloudcroft Hotel, a historic mountain lodge in Cloudcroft, NM. Experience elegant rooms, fine dining, and stunning Sacramento Mountain views.">
+    <link rel="canonical" href="https://discovercloudcroft.com/grand-cloudcroft-hotel.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pine-deep: #1565C0; --pine-medium: #1E88E5; --pine-light: #64B5F6; --sky-pale: #E3F2FD; --cloud-white: #FAFCFE; --snow-white: #ffffff; --text-dark: #1A1A1A; --text-light: #6B6B6B; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; overflow-x: hidden; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        .hero { height: 70vh; min-height: 500px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0D47A1 0%, #1565C0 50%, #0D47A1 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(26, 71, 42, 0.7) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px); padding: 0.6rem 1.2rem; border-radius: 30px; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.2s both; }
+        .hero-badge span { color: rgba(255, 255, 255, 0.9); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #64B5F6; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 600px; margin: 0 auto 2rem; line-height: 1.8; animation: fadeInUp 0.8s ease 0.8s both; }
+        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease 1s both; }
+
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; cursor: pointer; border: none; }
+        .btn-primary { background: #BF0A30; color: var(--snow-white); }
+        .btn-primary:hover { background: #a31621; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 2px solid rgba(255, 255, 255, 0.6); backdrop-filter: blur(4px); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.25); border-color: #ffffff; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        .contact-bar { background: #1565C0; padding: 1.5rem 0; }
+        .contact-bar-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .contact-item { display: flex; align-items: center; gap: 0.75rem; color: #ffffff; font-size: 0.95rem; font-weight: 500; }
+        .contact-item a { color: #ffffff; text-decoration: none; }
+        .contact-item a:hover { color: #BF0A30; }
+        .contact-icon { width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--pine-light); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(21, 101, 192, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 600px; margin: 0 auto; }
+
+        .about-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-text h2 { font-size: 2.5rem; color: var(--pine-deep); margin-bottom: 1.5rem; }
+        .about-text .summary { color: var(--text-light); font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem; }
+        .about-features { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+        .about-feature { font-size: 0.9rem; padding: 0.5rem 1rem; background: var(--snow-white); color: var(--pine-medium); border-radius: 25px; border: 1px solid rgba(21, 101, 192, 0.3); }
+        .about-image { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(13, 27, 42, 0.15); background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%); height: 400px; display: flex; align-items: center; justify-content: center; font-size: 6rem; }
+
+        .rooms-section { background: var(--snow-white); }
+        .rooms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .room-card { background: var(--cloud-white); border-radius: 12px; padding: 2rem; border: 1px solid rgba(21, 101, 192, 0.2); transition: all 0.3s ease; }
+        .room-card:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(13, 27, 42, 0.1); border-color: var(--pine-light); }
+        .room-card-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .room-card h3 { font-size: 1.5rem; color: var(--pine-deep); margin-bottom: 0.75rem; }
+        .room-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+        .room-items { list-style: none; margin-top: 1rem; }
+        .room-items li { padding: 0.5rem 0; border-bottom: 1px dashed rgba(107, 92, 61, 0.2); color: var(--text-dark); font-size: 0.95rem; }
+        .room-items li:last-child { border-bottom: none; }
+
+        .amenities-section { background: #0D47A1; color: var(--snow-white); position: relative; overflow: hidden; }
+        .amenities-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(ellipse, rgba(100, 181, 246, 0.1) 0%, transparent 70%); }
+        .amenities-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
+        .amenity-card { text-align: center; padding: 2rem 1rem; }
+        .amenity-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .amenity-card h3 { font-size: 1.2rem; color: #64B5F6; margin-bottom: 0.5rem; }
+        .amenity-card p { color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; line-height: 1.6; }
+
+        .features-section { background: var(--sky-pale); }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .feature-card { text-align: center; padding: 2rem; background: var(--snow-white); border-radius: 12px; border: 1px solid rgba(21, 101, 192, 0.2); }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-card h3 { font-size: 1.4rem; color: var(--pine-deep); margin-bottom: 0.75rem; }
+        .feature-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+
+        .contact-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .contact-info h2 { font-size: 2.5rem; color: var(--pine-deep); margin-bottom: 1.5rem; }
+        .contact-details { margin-bottom: 2rem; }
+        .contact-detail-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(21, 101, 192, 0.2); }
+        .contact-detail-item:last-child { border-bottom: none; }
+        .contact-detail-icon { width: 50px; height: 50px; background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .contact-detail-content h4 { font-size: 1.1rem; color: var(--pine-deep); margin-bottom: 0.25rem; }
+        .contact-detail-content p { color: var(--text-light); font-size: 0.95rem; }
+        .contact-detail-content a { color: #0D47A1; text-decoration: none; }
+        .contact-detail-content a:hover { color: #1565C0; text-decoration: underline; }
+        .contact-map { background: var(--snow-white); border-radius: 12px; height: 400px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(21, 101, 192, 0.2); }
+        .map-placeholder { text-align: center; padding: 2rem; }
+        .map-placeholder-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .map-placeholder h3 { color: var(--pine-deep); margin-bottom: 0.5rem; }
+        .map-placeholder p { color: var(--text-light); margin-bottom: 1.5rem; }
+
+        .cta-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: #ffffff; margin-bottom: 2rem; font-size: 1.1rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-social a:hover { background: #64B5F6; color: #0D1B2A; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; }
+        .footer-column a:hover { color: var(--snow-white); }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } .footer-brand { grid-column: span 3; } .about-content, .contact-content { grid-template-columns: 1fr; } .amenities-grid { grid-template-columns: repeat(2, 1fr); } .features-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu-btn { display: block; } .hero { height: 60vh; } .amenities-grid, .features-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: repeat(2, 1fr); } .footer-brand { grid-column: span 2; } .cta-buttons { flex-direction: column; align-items: center; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "The Grand Cloudcroft Hotel",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cloudcroft",
+        "addressRegion": "NM",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav><ul class="nav-links"><li><a href="index.html#explore">Explore</a></li><li><a href="index.html#seasons">Seasons</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#stay">Stay & Dine</a></li><li><a href="index.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge"><span>Cloudcroft Lodging</span></div>
+            <h1>The Grand Cloudcroft Hotel</h1>
+            <p class="hero-subtitle">Modern Comfort Meets Mountain Majesty</p>
+            <p class="hero-description">Experience breathtaking mountain views and exceptional hospitality at Cloudcroft's newest full-service hotel, just 15 miles from White Sands National Park.</p>
+            <div class="hero-ctas">
+                <a href="https://www.grandcloudcroft.com" target="_blank" class="btn btn-primary">Book Your Stay</a>
+                <a href="#rooms" class="btn btn-secondary">View Rooms</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-bar">
+        <div class="contact-bar-container">
+            <div class="contact-item"><div class="contact-icon">📍</div><span>1207 James Canyon Hwy</span></div>
+            <div class="contact-item"><div class="contact-icon">🕐</div><span>24-Hour Front Desk</span></div>
+            <div class="contact-item"><div class="contact-icon">📞</div><a href="tel:5756012202">(575) 601-2202</a></div>
+            <div class="contact-item"><div class="contact-icon">🌐</div><a href="https://www.grandcloudcroft.com" target="_blank">grandcloudcroft.com</a></div>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Your Mountain Retreat Awaits</h2>
+                    <p class="summary">
+                        The Grand Cloudcroft Hotel offers a perfect blend of modern amenities and stunning Sacramento
+                        Mountain views. This locally designed, built, and managed hotel features 50 air-conditioned
+                        rooms with king-sized beds, complimentary breakfast, and thoughtful touches throughout. Located
+                        within walking distance of Cloudcroft's finest attractions and just 15 miles from White Sands
+                        National Park, it's the ideal base for your mountain adventure or peaceful getaway.
+                    </p>
+                    <div class="about-features">
+                        <span class="about-feature">🛏️ King Beds in Every Room</span>
+                        <span class="about-feature">🍳 Complimentary Breakfast</span>
+                        <span class="about-feature">📶 Free WiFi</span>
+                        <span class="about-feature">❄️ Air Conditioning</span>
+                        <span class="about-feature">🅿️ Free Parking</span>
+                        <span class="about-feature">🏔️ Mountain Views</span>
+                    </div>
+                </div>
+                <div class="about-image">🏨</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rooms-section" id="rooms">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Accommodations</span>
+                <h2>Our Rooms</h2>
+                <p class="section-description">50 beautifully appointed rooms designed for your comfort, each featuring king-sized beds and modern amenities.</p>
+            </div>
+
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <div class="room-card-icon">👑</div>
+                    <h3>King Room</h3>
+                    <p>Comfortable room featuring one king-sized bed and a cozy seating area.</p>
+                    <ul class="room-items"><li>One King Bed</li><li>Seating Area</li><li>43" HD Smart TV</li><li>Work Desk</li><li>Coffee Station</li></ul>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-card-icon">👥</div>
+                    <h3>Double King Room</h3>
+                    <p>Spacious room with two king-sized beds, perfect for families or groups. Sleeps 4.</p>
+                    <ul class="room-items"><li>Two King Beds</li><li>Sleeps 4 Guests</li><li>43" HD Smart TV</li><li>Mini Refrigerator</li><li>Connecting Room Available</li></ul>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-card-icon">♿</div>
+                    <h3>Accessible Room</h3>
+                    <p>Mobility accessible room with thoughtful features for all guests.</p>
+                    <ul class="room-items"><li>One King Bed</li><li>Accessible Shower</li><li>Mobility Features</li><li>Service Animals Welcome</li><li>All Standard Amenities</li></ul>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-card-icon">🏠</div>
+                    <h3>Room Amenities</h3>
+                    <p>Every room includes these thoughtful touches for your comfort.</p>
+                    <ul class="room-items"><li>Free High-Speed WiFi</li><li>Microwave</li><li>Mini Refrigerator</li><li>Coffee Station</li><li>Complimentary Bath Products</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities-section">
+        <div class="section-container">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <span class="section-label" style="background: rgba(100, 181, 246, 0.2); color: #64B5F6;">Hotel Amenities</span>
+                <h2 style="color: #ffffff;">Everything You Need</h2>
+            </div>
+            <div class="amenities-grid">
+                <div class="amenity-card"><div class="amenity-icon">🍳</div><h3>Complimentary Breakfast</h3><p>Start your day with our included breakfast featuring hot and cold options.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🕐</div><h3>24-Hour Front Desk</h3><p>Our friendly staff is available around the clock for your convenience.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🥤</div><h3>24-Hour Snack Area</h3><p>Cereals, fresh fruits, yogurt, and juice available anytime.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🅿️</div><h3>Free Parking</h3><p>Complimentary self-parking for all guests.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">📶</div><h3>Free WiFi</h3><p>Stay connected with high-speed internet throughout the hotel.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🛗</div><h3>Elevator Access</h3><p>Easy access to all floors for your convenience.</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🏊</div><h3>Pool & Hot Tub</h3><p>Indoor swimming pool and hot tub coming soon!</p></div>
+                <div class="amenity-card"><div class="amenity-icon">🎰</div><h3>Vending Machine</h3><p>Snacks and beverages available 24/7.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Why Choose Us</span>
+                <h2>The Grand Experience</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon">🏔️</div><h3>Breathtaking Views</h3><p>Wake up to stunning Sacramento Mountain vistas from your room.</p></div>
+                <div class="feature-card"><div class="feature-icon">📍</div><h3>Perfect Location</h3><p>Walking distance to village attractions, 15 miles from White Sands National Park.</p></div>
+                <div class="feature-card"><div class="feature-icon">❤️</div><h3>Locally Owned</h3><p>Designed, built, and managed by locals who love Cloudcroft.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Plan Your Stay</h2>
+                    <div class="contact-details">
+                        <div class="contact-detail-item"><div class="contact-detail-icon">📍</div><div class="contact-detail-content"><h4>Address</h4><p>1207 James Canyon Hwy<br>Cloudcroft, NM 88317</p></div></div>
+                        <div class="contact-detail-item"><div class="contact-detail-icon">📞</div><div class="contact-detail-content"><h4>Reservations</h4><p>Phone: <a href="tel:5756012202">(575) 601-2202</a><br>Available 24 hours</p></div></div>
+                        <div class="contact-detail-item"><div class="contact-detail-icon">🌐</div><div class="contact-detail-content"><h4>Website</h4><p><a href="https://www.grandcloudcroft.com" target="_blank">www.grandcloudcroft.com</a></p></div></div>
+                        <div class="contact-detail-item"><div class="contact-detail-icon">🐕</div><div class="contact-detail-content"><h4>Pet Policy</h4><p>Service animals welcome in accessible rooms.<br>Contact hotel for details.</p></div></div>
+                    </div>
+                    <a href="https://www.grandcloudcroft.com" target="_blank" class="btn btn-primary">Book Online</a>
+                </div>
+                <div class="contact-map"><div class="map-placeholder"><div class="map-placeholder-icon">🗺️</div><h3>Easy to Find</h3><p>Located on James Canyon Highway, just minutes from downtown Cloudcroft</p><a href="https://maps.google.com/maps?q=1207+James+Canyon+Hwy+Cloudcroft+NM" target="_blank" class="btn btn-primary">Get Directions</a></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready for Your Mountain Escape?</h2>
+            <p>Book your stay at The Grand Cloudcroft Hotel and experience the best of the Sacramento Mountains.</p>
+            <div class="cta-buttons">
+                <a href="https://www.grandcloudcroft.com" target="_blank" class="btn btn-primary">Book Now</a>
+                <a href="tel:5756012202" class="btn" style="background: #0D47A1; color: white;">Call (575) 601-2202</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors seeking mountain refuge since 1899.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a><a href="#">▶</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="index.html">In the Village</a></li><li><a href="#">Hiking Trails</a></li><li><a href="#">Historic Sites</a></li><li><a href="#">Golf Course</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="#">Where to Stay</a></li><li><a href="index.html#stay">Where to Eat</a></li><li><a href="#">Shopping</a></li><li><a href="index.html#events">Events</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="#">Getting Here</a></li><li><a href="#">Weather</a></li><li><a href="#">Visitor Guide</a></li><li><a href="#">Trail Maps</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Chamber of Commerce</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth' }); } }); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.room-card, .amenity-card, .feature-card, .contact-detail-item').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Recreation & Activities | Discover Cloudcroft</title>
+    <meta name="description" content="Explore outdoor recreation and activities in Cloudcroft, NM. Golf, disc golf, pickleball, hiking, biking, and more at 8,676 feet in the Sacramento Mountains.">
+    <meta property="og:title" content="Recreation & Activities | Discover Cloudcroft">
+    <meta property="og:description" content="Explore outdoor recreation and activities in Cloudcroft, NM. Golf, disc golf, pickleball, hiking, biking, and more at 8,676 feet in the Sacramento Mountains.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/activities.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recreation & Activities | Discover Cloudcroft">
+    <meta name="twitter:description" content="Explore outdoor recreation and activities in Cloudcroft, NM. Golf, disc golf, pickleball, hiking, biking, and more at 8,676 feet in the Sacramento Mountains.">
+    <link rel="canonical" href="https://discovercloudcroft.com/activities.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pine-deep: #1565C0; --pine-medium: #1E88E5; --pine-light: #64B5F6; --sky-pale: #E3F2FD; --cloud-white: #FAFCFE; --snow-white: #ffffff; --text-dark: #1A1A1A; --text-light: #6B6B6B; --forest-green: #1565C0; --forest-dark: #0D47A1; --sport-blue: #1565C0; --sport-green: #1E88E5; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        .hero { height: 65vh; min-height: 450px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0D47A1 0%, #1565C0 50%, #1E88E5 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(21, 101, 192, 0.6) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #64B5F6; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 650px; margin: 0 auto; line-height: 1.8; animation: fadeInUp 0.8s ease 0.8s both; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--sport-green); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(21, 101, 192, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        .activities-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .activity-card { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; background: var(--snow-white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(21, 101, 192, 0.08); margin-bottom: 3rem; }
+        .activity-card:nth-child(even) { direction: rtl; }
+        .activity-card:nth-child(even) > * { direction: ltr; }
+        .activity-image { height: 100%; min-height: 350px; display: flex; align-items: center; justify-content: center; font-size: 6rem; }
+        .activity-golf .activity-image { background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%); }
+        .activity-disc .activity-image { background: linear-gradient(135deg, #E65100 0%, #FF9800 100%); }
+        .activity-pickle .activity-image { background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%); }
+        .activity-content { padding: 3rem; }
+        .activity-content h3 { font-size: 2rem; color: var(--forest-dark); margin-bottom: 1rem; }
+        .activity-content p { color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.8; }
+        .activity-details { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+        .activity-detail { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; color: var(--text-dark); background: var(--sky-pale); padding: 0.5rem 1rem; border-radius: 20px; }
+        .activity-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; font-size: 0.9rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
+        .btn-primary { background: var(--sport-green); color: white; }
+        .btn-primary:hover { background: var(--forest-dark); transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 2px solid var(--sport-green); color: var(--sport-green); }
+        .btn-outline:hover { background: var(--sport-green); color: white; }
+
+        .more-activities { background: var(--snow-white); }
+        .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .more-card { background: var(--cloud-white); border-radius: 12px; padding: 2rem; text-align: center; border: 1px solid rgba(21, 101, 192, 0.1); transition: all 0.3s ease; }
+        .more-card:hover { border-color: var(--sport-green); box-shadow: 0 10px 30px rgba(21, 101, 192, 0.1); }
+        .more-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .more-card h3 { font-size: 1.3rem; color: var(--forest-dark); margin-bottom: 0.5rem; }
+        .more-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem; }
+        .more-link { color: var(--sport-green); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .more-link:hover { text-decoration: underline; }
+
+        .cta-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: rgba(255,255,255,0.85); margin-bottom: 2rem; font-size: 1.1rem; }
+
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+            .activity-card { grid-template-columns: 1fr; }
+            .activity-card:nth-child(even) { direction: ltr; }
+            .activity-image { min-height: 250px; }
+            .more-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .more-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav><ul class="nav-links"><li><a href="index.html#explore">Explore</a></li><li><a href="index.html#seasons">Seasons</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#stay">Stay & Dine</a></li><li><a href="index.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Recreation & Activities</h1>
+            <p class="hero-subtitle">Play at 9,000 Feet</p>
+            <p class="hero-description">From championship golf on one of America's highest courses to disc golf through the pines and pickleball in the mountain air, Cloudcroft offers recreation for every interest.</p>
+        </div>
+    </section>
+
+    <section class="activities-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Featured Activities</span>
+                <h2>Get Active in the Mountains</h2>
+            </div>
+
+            <!-- Golf -->
+            <div class="activity-card activity-golf">
+                <div class="activity-image">⛳</div>
+                <div class="activity-content">
+                    <h3>Golf at The Lodge</h3>
+                    <p>Play one of America's highest and oldest golf courses! The Lodge Resort's 18-hole championship course has welcomed golfers since 1899, offering stunning mountain views and a unique high-altitude challenge. At 9,000 feet, watch your drives fly farther in the thin mountain air.</p>
+                    <div class="activity-details">
+                        <span class="activity-detail">⛳ 18 Holes</span>
+                        <span class="activity-detail">⛰️ 9,000 ft Elevation</span>
+                        <span class="activity-detail">📅 Est. 1899</span>
+                        <span class="activity-detail">🏛️ Scottish Tradition</span>
+                    </div>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 1.5rem;">The course is governed by Scottish tradition and offers a blend of mountain charm with challenging play. Cart and club rentals available. Pro shop on site.</p>
+                    <div class="activity-links">
+                        <a href="https://www.golfnow.com/course-directory/us/nm/8942-cloudcroft" target="_blank" class="btn btn-primary">Book Tee Time</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disc Golf -->
+            <div class="activity-card activity-disc">
+                <div class="activity-image">🥏</div>
+                <div class="activity-content">
+                    <h3>Disc Golf</h3>
+                    <p>Cloudcroft Community Disc Golf Course is ranked in the top 10 courses in New Mexico! This free 18-hole course at 230 Mescalero Avenue offers a challenging round through beautiful pine forest. Dog-friendly and open to all skill levels.</p>
+                    <div class="activity-details">
+                        <span class="activity-detail">🥏 18 Holes</span>
+                        <span class="activity-detail">⭐ 4.6 Rating (506 reviews)</span>
+                        <span class="activity-detail">🆓 Free to Play</span>
+                        <span class="activity-detail">🐕 Dog Friendly</span>
+                    </div>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 1.5rem;">Rated "Hard" difficulty, the course covers about 2 miles and takes approximately 2 hours to complete. Bring your own discs—no rentals on site.</p>
+                    <div class="activity-links">
+                        <a href="https://udisc.com/courses/cloudcroft-community-dgc-xPud" target="_blank" class="btn btn-primary" style="background: #E65100;">View on UDisc</a>
+                        <a href="https://udisc.com/places/cloudcroft-nm" target="_blank" class="btn btn-outline" style="border-color: #E65100; color: #E65100;">More Courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pickleball -->
+            <div class="activity-card activity-pickle">
+                <div class="activity-image">🏓</div>
+                <div class="activity-content">
+                    <h3>Pickleball</h3>
+                    <p>America's fastest-growing sport has found a home in the Sacramento Mountains! Zenith Park Tennis Courts offers 3 dedicated pickleball courts for drop-in play. The Cloudcroft Resort also features pickleball opportunities for guests.</p>
+                    <div class="activity-details">
+                        <span class="activity-detail">🏓 3 Courts at Zenith Park</span>
+                        <span class="activity-detail">📍 Village Location</span>
+                        <span class="activity-detail">🎾 Resort Courts Available</span>
+                    </div>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 1.5rem;">Note: At 9,000 feet, allow time to acclimate before intense play. The thin air can affect your game and stamina. Bring your own paddles and balls.</p>
+                    <div class="activity-links">
+                        <a href="pickleball.html" class="btn btn-primary" style="background: var(--sport-blue);">Pickleball in Cloudcroft</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="more-activities">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">More to Do</span>
+                <h2>Explore More Activities</h2>
+            </div>
+
+            <div class="more-grid">
+                <div class="more-card">
+                    <div class="more-icon">🥾</div>
+                    <h3>Hiking</h3>
+                    <p>37+ trails through Lincoln National Forest, from easy nature walks to challenging backcountry treks.</p>
+                    <a href="hiking-trails.html" class="more-link">Explore Trails →</a>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon">🚵</div>
+                    <h3>Mountain Biking XL</h3>
+                    <p>World-class singletrack and gravel roads through the Sacramento Mountains.</p>
+                    <a href="biking.html" class="more-link">View Bike Trails →</a>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon">🏕️</div>
+                    <h3>Camping</h3>
+                    <p>Developed campgrounds and free dispersed camping in the national forest.</p>
+                    <a href="camping.html" class="more-link">Camping Guide →</a>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon">🔭</div>
+                    <h3>Stargazing</h3>
+                    <p>Dark skies and high altitude make Cloudcroft perfect for astronomy enthusiasts.</p>
+                    <a href="sunspot-observatory.html" class="more-link">Visit Sunspot →</a>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon">⛷️</div>
+                    <h3>Winter Sports</h3>
+                    <p>Ski Cloudcroft offers the southernmost skiing in the US, plus tubing and sledding.</p>
+                    <a href="index.html#seasons" class="more-link">Winter Activities →</a>
+                </div>
+                <div class="more-card">
+                    <div class="more-icon">🎨</div>
+                    <h3>Arts & Culture</h3>
+                    <p>Galleries, workshops, and creative classes in a mountain setting.</p>
+                    <a href="art-galleries.html" class="more-link">Art Scene →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Play?</h2>
+            <p>From golf to disc golf to pickleball, Cloudcroft offers recreation at elevation.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html#stay" class="btn btn-primary">Plan Your Stay</a>
+                <a href="hiking-trails.html" class="btn" style="background: #0D1B2A; color: white;">Explore Trails</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors seeking mountain refuge since 1899.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a><a href="#">▶</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="index.html#explore">In the Village</a></li><li><a href="hiking-trails.html">Hiking Trails</a></li><li><a href="biking.html">Biking</a></li><li><a href="#">Activities</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="grand-cloudcroft-hotel.html">Where to Stay</a></li><li><a href="index.html#stay">Where to Eat</a></li><li><a href="instant-karma.html">Shopping</a></li><li><a href="index.html#events">Events</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="index.html#plan">Getting Here</a></li><li><a href="groceries.html">Groceries</a></li><li><a href="emergency-services.html">Emergency Services</a></li><li><a href="hiking-trails.html">Trail Maps</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Chamber of Commerce</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p><div><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.activity-card, .more-card').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

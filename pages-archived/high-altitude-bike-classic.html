@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>High Altitude Bike Classic | Discover Cloudcroft</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="The High Altitude Bike Classic brings road cyclists and mountain bikers to Cloudcroft, NM each August for challenging rides through the Sacramento Mountains and Lincoln National Forest at 9,000 feet.">
+    <meta name="keywords" content="High Altitude Bike Classic, Cloudcroft, cycling, mountain biking, road cycling, Sacramento Mountains, bike race, August event, New Mexico cycling">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="High Altitude Bike Classic | Discover Cloudcroft">
+    <meta property="og:description" content="Challenging rides through the Sacramento Mountains at 9,000 feet. Road and mountain bike routes through Lincoln National Forest.">
+    <meta property="og:image" content="media/placeholder-event-bikeclassic.jpg">
+    <meta property="og:url" content="https://discovercloudcroft.com/high-altitude-bike-classic.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="High Altitude Bike Classic | Discover Cloudcroft">
+    <meta name="twitter:description" content="The High Altitude Bike Classic brings road cyclists and mountain bikers to Cloudcroft, NM each August for challenging rides through the Sacramento Mountains.">
+    <link rel="canonical" href="https://discovercloudcroft.com/high-altitude-bike-classic.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #BF0A30;
+            --sunset-warm: #a31621;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #BF0A30;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+            --zia-red: #BF0A30;
+            --zia-gold: #FCD116;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; overflow-x: hidden; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        /* Skip link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #1A1A1A; color: white; padding: 8px 16px; z-index: 10000; text-decoration: none; font-weight: 600; }
+        .skip-link:focus { top: 0; }
+
+        /* Header */
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        header.scrolled { background: #0A1420; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; letter-spacing: 0.02em; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.03em; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .nav-cta:hover { background: #D4223F !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('media/placeholder-event-bikeclassic.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(21, 101, 192, 0.6) 100%);
+        }
+
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-badge span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 5rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #64B5F6; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+
+        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.8s both; }
+
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; cursor: pointer; border: none; }
+        .btn-primary { background: #BF0A30; color: var(--snow-white); }
+        .btn-primary:hover { background: #D4223F; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(191, 10, 48, 0.4); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 2px solid rgba(255, 255, 255, 0.6); backdrop-filter: blur(4px); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.25); border-color: #ffffff; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Event Info Bar */
+        .contact-bar { background: #1565C0; padding: 1.5rem 0; }
+        .contact-bar-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .contact-item { display: flex; align-items: center; gap: 0.75rem; color: #ffffff; font-size: 0.95rem; font-weight: 500; }
+        .contact-item a { color: #ffffff; text-decoration: none; }
+        .contact-item a:hover { color: #64B5F6; }
+        .contact-icon { width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+
+        /* Sections */
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: #1565C0; margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(21, 101, 192, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 600px; margin: 0 auto; }
+
+        /* About Section */
+        .about-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-text h2 { font-size: 2.5rem; color: var(--pine-deep); margin-bottom: 1.5rem; }
+        .about-text .summary { color: var(--text-light); font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem; }
+        .about-features { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+        .about-feature { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.5rem 1rem; background: var(--snow-white); color: var(--pine-medium); border-radius: 25px; border: 1px solid rgba(100, 181, 246, 0.3); }
+        .about-image { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); min-height: 400px; display: flex; align-items: center; justify-content: center; }
+        .about-image-placeholder { text-align: center; color: white; padding: 2rem; }
+        .about-image-placeholder .icon { font-size: 5rem; margin-bottom: 1rem; }
+        .about-image img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Routes Section */
+        .routes-section { background: var(--snow-white); }
+        .routes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .route-card { background: var(--cloud-white); border-radius: 12px; padding: 2rem; border-left: 4px solid #64B5F6; transition: all 0.3s ease; }
+        .route-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+        .route-badge { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; display: inline-block; padding: 0.3rem 0.8rem; border-radius: 4px; }
+        .route-badge.road { background: rgba(191, 10, 48, 0.1); color: #BF0A30; }
+        .route-badge.mtb { background: rgba(21, 101, 192, 0.1); color: #1565C0; }
+        .route-badge.gran { background: rgba(100, 181, 246, 0.1); color: #64B5F6; }
+        .route-card h3 { font-size: 1.3rem; color: var(--pine-deep); margin-bottom: 0.5rem; }
+        .route-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+        .route-stats { display: flex; gap: 1.5rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.06); }
+        .route-stat { text-align: center; }
+        .route-stat-value { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--pine-deep); }
+        .route-stat-label { font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Highlights Section */
+        .highlights-section { background: #0D1B2A; color: var(--snow-white); position: relative; overflow: hidden; }
+        .highlights-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(ellipse, rgba(100, 181, 246, 0.12) 0%, transparent 70%); }
+        .highlights-section .section-label { background: rgba(100, 181, 246, 0.2); color: #64B5F6; }
+        .highlights-section .section-header h2 { color: #ffffff; }
+        .highlights-section .section-description { color: rgba(255, 255, 255, 0.8); }
+        .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; position: relative; }
+        .highlight-card { text-align: center; padding: 2rem; background: rgba(255, 255, 255, 0.08); border-radius: 12px; backdrop-filter: blur(4px); transition: all 0.3s ease; }
+        .highlight-card:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-4px); }
+        .highlight-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .highlight-card h3 { font-size: 1.4rem; color: #64B5F6; margin-bottom: 0.75rem; }
+        .highlight-card p { color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; line-height: 1.7; }
+
+        /* Visitor Info Section */
+        .visitor-section { background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%); }
+        .visitor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .visitor-card { background: var(--snow-white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; }
+        .visitor-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
+        .visitor-card-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #64B5F6 0%, #1565C0 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .visitor-card h3 { font-size: 1.3rem; color: var(--pine-deep); margin-bottom: 0.75rem; }
+        .visitor-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+
+        /* CTA Section */
+        .cta-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; font-size: 1.1rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        /* Footer */
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; transition: all 0.3s ease; }
+        .footer-social a:hover { background: #64B5F6; color: #111111; }
+        .footer-column h4 { font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; transition: color 0.3s ease; }
+        .footer-column a:hover { color: var(--snow-white); }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+        .footer-bottom a:hover { color: var(--snow-white); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+            .about-content { grid-template-columns: 1fr; }
+            .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { height: 60vh; min-height: 400px; }
+            .contact-bar-container { gap: 1.5rem; }
+            .highlights-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header id="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" role="menubar">
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#seasons">Seasons</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#stay">Stay & Dine</a></li>
+                    <li><a href="index.html#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🚴 August Event</span>
+            </div>
+            <h1>High Altitude Bike Classic</h1>
+            <p class="hero-subtitle">Ride the Sacramento Mountains at 9,000 Feet</p>
+            <div class="hero-ctas">
+                <a href="#routes" class="btn btn-primary">View Routes</a>
+                <a href="#info" class="btn btn-secondary">Plan Your Ride</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Info Bar -->
+    <div class="contact-bar">
+        <div class="contact-bar-container">
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <span>Cloudcroft, NM</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📅</div>
+                <span>August (Annually)</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🏔️</div>
+                <span>9,000 ft Elevation</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🚴</div>
+                <span>Road & Mountain Bike</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Pedal Through the Pines</h2>
+                    <p class="summary">
+                        Every August, cyclists from across the Southwest converge on Cloudcroft for the High Altitude Bike Classic, one of New Mexico's premier cycling events. With routes winding through Lincoln National Forest and along the crest of the Sacramento Mountains, riders tackle challenging climbs, breathtaking descents, and thin mountain air at over 9,000 feet. Whether you're a seasoned road cyclist chasing a personal best or a mountain biker craving singletrack through the pines, this ride delivers an unforgettable high-altitude experience.
+                    </p>
+                    <p class="summary">
+                        The event draws riders of all levels with multiple route options ranging from family-friendly loops to grueling century rides with thousands of feet of climbing. Post-ride festivities in the village make for a perfect summer weekend in the mountains.
+                    </p>
+                    <div class="about-features">
+                        <span class="about-feature">🚴 Road Routes</span>
+                        <span class="about-feature">🚵 Mountain Bike</span>
+                        <span class="about-feature">🏔️ 9,000 ft Elevation</span>
+                        <span class="about-feature">🌲 Lincoln National Forest</span>
+                        <span class="about-feature">🎉 Post-Ride Festival</span>
+                        <span class="about-feature">👨‍👩‍👧‍👦 All Skill Levels</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <div class="icon">🚴</div>
+                        <p>Cyclists climbing through the Sacramento Mountains</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section class="routes-section" id="routes">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Ride Routes</span>
+                <h2>Choose Your Challenge</h2>
+                <p class="section-description">
+                    From scenic cruises to epic mountain climbs, there's a route for every rider at the High Altitude Bike Classic.
+                </p>
+            </div>
+
+            <div class="routes-grid">
+                <div class="route-card">
+                    <span class="route-badge road">Road</span>
+                    <h3>Century Ride</h3>
+                    <p>The ultimate challenge. A 100-mile loop through the Sacramento Mountains with massive elevation changes and stunning vistas from Sunspot to Tularosa Basin.</p>
+                    <div class="route-stats">
+                        <div class="route-stat">
+                            <div class="route-stat-value">100 mi</div>
+                            <div class="route-stat-label">Distance</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">7,500 ft</div>
+                            <div class="route-stat-label">Elevation Gain</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">Expert</div>
+                            <div class="route-stat-label">Difficulty</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <span class="route-badge road">Road</span>
+                    <h3>Metric Century</h3>
+                    <p>A challenging 62-mile route along the Sunspot Highway and forest roads with panoramic views of White Sands and the Tularosa Basin below.</p>
+                    <div class="route-stats">
+                        <div class="route-stat">
+                            <div class="route-stat-value">62 mi</div>
+                            <div class="route-stat-label">Distance</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">4,800 ft</div>
+                            <div class="route-stat-label">Elevation Gain</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">Advanced</div>
+                            <div class="route-stat-label">Difficulty</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <span class="route-badge gran">Gran Fondo</span>
+                    <h3>Half Century</h3>
+                    <p>A scenic 50-mile ride perfect for strong recreational cyclists. Rolling terrain through pine forests with well-stocked aid stations.</p>
+                    <div class="route-stats">
+                        <div class="route-stat">
+                            <div class="route-stat-value">50 mi</div>
+                            <div class="route-stat-label">Distance</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">3,200 ft</div>
+                            <div class="route-stat-label">Elevation Gain</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">Intermediate</div>
+                            <div class="route-stat-label">Difficulty</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <span class="route-badge mtb">Mountain Bike</span>
+                    <h3>Singletrack Classic</h3>
+                    <p>Tackle the best mountain bike trails Lincoln National Forest has to offer. Flowy singletrack, technical descents, and forest canopy riding.</p>
+                    <div class="route-stats">
+                        <div class="route-stat">
+                            <div class="route-stat-value">25 mi</div>
+                            <div class="route-stat-label">Distance</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">2,800 ft</div>
+                            <div class="route-stat-label">Elevation Gain</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">Advanced</div>
+                            <div class="route-stat-label">Difficulty</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <span class="route-badge road">Road</span>
+                    <h3>Fun Ride</h3>
+                    <p>A relaxed 20-mile loop through the village and surrounding forest roads. Perfect for families and casual riders who want to soak in the scenery.</p>
+                    <div class="route-stats">
+                        <div class="route-stat">
+                            <div class="route-stat-value">20 mi</div>
+                            <div class="route-stat-label">Distance</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">1,200 ft</div>
+                            <div class="route-stat-label">Elevation Gain</div>
+                        </div>
+                        <div class="route-stat">
+                            <div class="route-stat-value">Beginner</div>
+                            <div class="route-stat-label">Difficulty</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Event Highlights</span>
+                <h2>More Than Just a Ride</h2>
+                <p class="section-description">
+                    The High Altitude Bike Classic is a full weekend of cycling culture in the mountains.
+                </p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">🏔️</div>
+                    <h3>High Altitude Challenge</h3>
+                    <p>Ride at 9,000 feet where thin air tests your fitness and cool mountain temperatures make for perfect cycling weather.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🌲</div>
+                    <h3>Lincoln National Forest</h3>
+                    <p>Routes wind through towering Ponderosa pines, past mountain meadows, and along ridgelines with views stretching to White Sands.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🍻</div>
+                    <h3>Post-Ride Festival</h3>
+                    <p>Celebrate your finish at the village with local craft beer from Cloudcroft Brewery, live music, and food from local restaurants.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🏆</div>
+                    <h3>Awards & Prizes</h3>
+                    <p>Category awards, raffle prizes, and finisher swag. Every rider gets a commemorative jersey and medal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visitor Info Section -->
+    <section class="visitor-section" id="info">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Rider Information</span>
+                <h2>Plan Your Ride Weekend</h2>
+                <p class="section-description">
+                    Everything you need to know to make the most of your High Altitude Bike Classic experience.
+                </p>
+            </div>
+
+            <div class="visitor-grid">
+                <div class="visitor-card">
+                    <div class="visitor-card-icon">📋</div>
+                    <h3>Registration</h3>
+                    <p>Online registration opens in May. Early bird pricing available through June. Day-of registration subject to availability.</p>
+                </div>
+                <div class="visitor-card">
+                    <div class="visitor-card-icon">🅿️</div>
+                    <h3>Packet Pickup</h3>
+                    <p>Packet pickup Saturday afternoon at the Lodge Pavilion. Includes bib number, timing chip, route map, and rider swag bag.</p>
+                </div>
+                <div class="visitor-card">
+                    <div class="visitor-card-icon">🏨</div>
+                    <h3>Where to Stay</h3>
+                    <p>Book early! Cloudcroft lodging fills up fast for the Classic. Cabins, the Lodge, and vacation rentals are all within riding distance of the start.</p>
+                </div>
+                <div class="visitor-card">
+                    <div class="visitor-card-icon">🔧</div>
+                    <h3>Mechanical Support</h3>
+                    <p>On-course mechanical support and SAG vehicles on all routes. Aid stations stocked with water, electrolytes, and nutrition every 15 miles.</p>
+                </div>
+                <div class="visitor-card">
+                    <div class="visitor-card-icon">🌡️</div>
+                    <h3>Altitude Tips</h3>
+                    <p>Arrive a day early to acclimate. Hydrate aggressively. Expect temperatures 15-20 degrees cooler than the desert below. Sunscreen is essential at altitude.</p>
+                </div>
+                <div class="visitor-card">
+                    <div class="visitor-card-icon">🍽️</div>
+                    <h3>Post-Ride Dining</h3>
+                    <p>Refuel at Cloudcroft's restaurants. Mad Jack's BBQ, Big Daddy' Diner, and Cloudcroft Brewery are rider favorites for recovery meals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Ride the Mountains?</h2>
+            <p>Join hundreds of cyclists for an unforgettable weekend of high-altitude riding through the Sacramento Mountains and Lincoln National Forest.</p>
+            <div class="cta-buttons">
+                <a href="index.html#events" class="btn btn-primary">View All Events</a>
+                <a href="lodging.html" class="btn" style="background: rgba(255,255,255,0.15); color: white; border: 2px solid rgba(255,255,255,0.6);">Book Lodging</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Discover Cloudcroft</h3>
+                    <p>
+                        Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors
+                        seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#explore">In the Village</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="biking.html">Biking</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li><a href="lodging.html">Where to Stay</a></li>
+                        <li><a href="dining.html">Where to Eat</a></li>
+                        <li><a href="shopping.html">Shopping</a></li>
+                        <li><a href="index.html#events">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Plan</h4>
+                    <ul>
+                        <li><a href="index.html#plan">Getting Here</a></li>
+                        <li><a href="groceries.html">Groceries</a></li>
+                        <li><a href="index.html#plan">Visitor Guide</a></li>
+                        <li><a href="hiking-trails.html">Trail Maps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Chamber of Commerce</a></li>
+                        <li><a href="#">Village of Cloudcroft</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p>
+                <div>
+                    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 100);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.route-card, .highlight-card, .visitor-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

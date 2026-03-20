@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Dark Skies & Astronomy | Discover Cloudcroft</title>
+    <meta name="description" content="Experience world-class stargazing in Cloudcroft, NM. Dark skies, astronomy events, and the nearby Sunspot Observatory make this a premier stargazing destination.">
+    <meta property="og:title" content="Dark Skies & Astronomy | Discover Cloudcroft">
+    <meta property="og:description" content="Experience world-class stargazing in Cloudcroft, NM. Dark skies, astronomy events, and the nearby Sunspot Observatory make this a premier stargazing destination.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/dark-skies.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dark Skies & Astronomy | Discover Cloudcroft">
+    <meta name="twitter:description" content="Experience world-class stargazing in Cloudcroft, NM. Dark skies, astronomy events, and the nearby Sunspot Observatory make this a premier stargazing destination.">
+    <link rel="canonical" href="https://discovercloudcroft.com/dark-skies.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --night-deep: #0a0a1a;
+            --night-medium: #141428;
+            --night-light: #1e1e3c;
+            --sky-pale: #f5f5ff;
+            --sky-blue: #e8e8f8;
+            --star-gold: #ffd700;
+            --star-white: #f0f8ff;
+            --nebula-purple: #6b5b95;
+            --nebula-blue: #4a69bd;
+            --cloud-white: #fdfcff;
+            --milky-way: #c4b8dc;
+            --snow-white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-light: #4a4a6a;
+            --cosmic-teal: #20b2aa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--night-deep) 0%, var(--night-medium) 40%, var(--night-light) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(107, 91, 149, 0.3) 0%, transparent 40%),
+                radial-gradient(ellipse at 70% 60%, rgba(74, 105, 189, 0.25) 0%, transparent 45%),
+                radial-gradient(ellipse at 50% 80%, rgba(196, 184, 220, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Star field animation */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, var(--star-white), transparent),
+                radial-gradient(2px 2px at 40px 70px, var(--star-gold), transparent),
+                radial-gradient(1px 1px at 90px 40px, var(--star-white), transparent),
+                radial-gradient(2px 2px at 130px 80px, var(--star-white), transparent),
+                radial-gradient(1px 1px at 160px 120px, var(--star-gold), transparent),
+                radial-gradient(2px 2px at 200px 50px, var(--star-white), transparent),
+                radial-gradient(1px 1px at 250px 160px, var(--star-white), transparent),
+                radial-gradient(2px 2px at 280px 90px, var(--star-gold), transparent),
+                radial-gradient(1px 1px at 320px 140px, var(--star-white), transparent),
+                radial-gradient(2px 2px at 350px 200px, var(--star-white), transparent),
+                radial-gradient(1px 1px at 400px 60px, var(--star-gold), transparent),
+                radial-gradient(2px 2px at 450px 180px, var(--star-white), transparent);
+            background-size: 500px 250px;
+            animation: twinkle 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.2);
+            color: var(--star-gold);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--snow-white);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(107, 91, 149, 0.5);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            color: var(--milky-way);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        /* Quick Info Bar */
+        .quick-info {
+            background: var(--night-deep);
+            padding: 1.5rem 2rem;
+        }
+
+        .quick-info-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--milky-way);
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 215, 0, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .info-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: var(--snow-white);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 5rem 2rem;
+        }
+
+        .content-section:nth-child(odd) {
+            background: var(--sky-pale);
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--cloud-white);
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--nebula-purple);
+            color: var(--snow-white);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--night-medium);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-intro {
+            font-family: 'Alegreya', serif;
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-style: italic;
+            line-height: 1.8;
+            border-left: 3px solid var(--nebula-purple);
+            padding-left: 1.5rem;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .content-grid p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+        }
+
+        /* Feature Cards */
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--snow-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(10, 10, 26, 0.08);
+            border: 1px solid rgba(107, 91, 149, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .content-section:nth-child(odd) .feature-card {
+            background: var(--cloud-white);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(10, 10, 26, 0.12);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--nebula-purple), var(--nebula-blue));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            color: var(--night-medium);
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .feature-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--nebula-purple);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: gap 0.3s ease;
+        }
+
+        .feature-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* Observatory Section */
+        .observatory-card {
+            background: var(--snow-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 25px rgba(10, 10, 26, 0.1);
+            margin: 2rem 0;
+        }
+
+        .content-section:nth-child(odd) .observatory-card {
+            background: var(--cloud-white);
+        }
+
+        .observatory-header {
+            background: linear-gradient(135deg, var(--night-deep), var(--night-medium));
+            color: var(--snow-white);
+            padding: 2rem;
+        }
+
+        .observatory-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--snow-white);
+        }
+
+        .observatory-tagline {
+            font-family: 'Alegreya', serif;
+            font-size: 1.1rem;
+            color: var(--milky-way);
+            font-style: italic;
+        }
+
+        .observatory-content {
+            padding: 2rem;
+        }
+
+        .observatory-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .observatory-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(107, 91, 149, 0.2);
+        }
+
+        .observatory-detail {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-value {
+            font-weight: 600;
+            color: var(--night-medium);
+        }
+
+        /* Scenic Byway Section */
+        .byway-section {
+            background: linear-gradient(135deg, var(--night-deep) 0%, var(--night-medium) 100%);
+            color: var(--snow-white);
+            padding: 5rem 2rem;
+        }
+
+        .byway-section .section-title {
+            color: var(--snow-white);
+        }
+
+        .byway-section .section-intro {
+            color: var(--milky-way);
+            border-left-color: var(--star-gold);
+        }
+
+        .planet-markers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+
+        .planet-marker {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .planet-marker:hover {
+            background: rgba(255, 215, 0, 0.15);
+            transform: scale(1.05);
+        }
+
+        .planet-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .planet-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--star-gold);
+        }
+
+        .planet-distance {
+            font-size: 0.75rem;
+            color: var(--milky-way);
+            margin-top: 0.25rem;
+        }
+
+        .byway-info {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .byway-info p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--milky-way);
+        }
+
+        /* Mayhill Community Section */
+        .community-highlight {
+            background: linear-gradient(135deg, var(--nebula-purple), var(--nebula-blue));
+            color: var(--snow-white);
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 2rem 0;
+        }
+
+        .community-highlight h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--snow-white);
+        }
+
+        .community-highlight p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .community-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .community-feature {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .community-feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .community-feature h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--snow-white);
+        }
+
+        .community-feature p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            opacity: 0.85;
+        }
+
+        /* Stargazing Tips */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tip-card {
+            background: var(--snow-white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--nebula-purple);
+        }
+
+        .content-section:nth-child(odd) .tip-card {
+            background: var(--cloud-white);
+        }
+
+        .tip-number {
+            display: inline-block;
+            background: var(--nebula-purple);
+            color: var(--snow-white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .tip-card h4 {
+            font-size: 1.2rem;
+            color: var(--night-medium);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--night-deep) 0%, var(--nebula-purple) 100%);
+            color: var(--snow-white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: var(--snow-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.15rem;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn-primary {
+            background: var(--star-gold);
+            color: var(--night-deep);
+        }
+
+        .cta-btn-primary:hover {
+            background: #ffdf4d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: var(--snow-white);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .cta-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--snow-white);
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: #b8c9b8;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Alegreya', serif;
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-section a {
+            color: #b8c9b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #64B5F6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+                min-height: 500px;
+            }
+
+            .quick-info-inner {
+                gap: 1.5rem;
+            }
+
+            .info-item {
+                flex-basis: calc(50% - 1rem);
+            }
+
+            .content-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-intro {
+                font-size: 1.15rem;
+            }
+
+            .observatory-header,
+            .observatory-content {
+                padding: 1.5rem;
+            }
+
+            .community-highlight {
+                padding: 2rem 1.5rem;
+            }
+
+            .planet-markers {
+                gap: 0.75rem;
+            }
+
+            .planet-marker {
+                padding: 0.75rem 1rem;
+            }
+
+            .byway-section {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">Every season tells a story</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#plan" class="nav-cta">Plan Your Visit</a></li>
+            </ul>
+            <button class="mobile-menu-btn">&#9776;</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Bortle Class 2 Skies</span>
+            <h1>Dark Skies & Astronomy</h1>
+            <p class="hero-subtitle">Where the Milky Way stretches from horizon to horizon and world-class observatories unlock the secrets of the universe</p>
+        </div>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <div class="quick-info">
+        <div class="quick-info-inner">
+            <div class="info-item">
+                <div class="info-icon">&#9733;</div>
+                <div class="info-text">
+                    <span class="info-label">Elevation</span>
+                    <span class="info-value">7,200 - 9,200 ft</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">&#9790;</div>
+                <div class="info-text">
+                    <span class="info-label">Clear Nights</span>
+                    <span class="info-value">300+ Per Year</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">&#128301;</div>
+                <div class="info-text">
+                    <span class="info-label">Observatories</span>
+                    <span class="info-value">3 World-Class</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">&#127776;</div>
+                <div class="info-text">
+                    <span class="info-label">Light Pollution</span>
+                    <span class="info-value">Minimal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">A Stargazer's Paradise</span>
+            <h2 class="section-title">Where Earth Meets the Cosmos</h2>
+            <p class="section-intro">The Sacramento Mountains offer some of the darkest, clearest skies in the continental United States - a fact that has attracted world-class observatories and a thriving community of amateur and professional astronomers.</p>
+
+            <div class="content-grid">
+                <p>On a clear night in the Cloudcroft area, step outside and look up. Within moments, your eyes will adjust and the universe will reveal itself in breathtaking detail. The Milky Way arcs overhead like a river of stars, so bright it casts shadows. Planets gleam with steady light. Meteors streak across the darkness. And if you know where to look, the faint glow of distant galaxies becomes visible to the naked eye.</p>
+
+                <p>This astronomical wonderland exists thanks to a perfect combination of factors: high elevation that puts observers above much of the atmosphere's distortion, dry desert air with exceptional transparency, and geographic isolation from major cities that keeps light pollution at bay. The result is skies that rate Bortle Class 2 - among the darkest accessible locations in North America.</p>
+            </div>
+
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="feature-icon">&#127747;</div>
+                    <h3>Exceptional Altitude</h3>
+                    <p>At 7,200 to 9,200 feet, the Sacramento Mountains place observers above most atmospheric pollution, dust, and water vapor that can obscure celestial views.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#127782;</div>
+                    <h3>Dry Desert Air</h3>
+                    <p>The high desert climate provides remarkably transparent skies with minimal moisture to scatter starlight, enabling crisp views of faint objects.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128507;</div>
+                    <h3>Remote Location</h3>
+                    <p>More than 100 miles from El Paso and isolated by mountain ranges, the area enjoys minimal light pollution from urban centers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sunspot Solar Observatory Section -->
+    <section class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">World-Class Research</span>
+            <h2 class="section-title">Sunspot Solar Observatory</h2>
+            <p class="section-intro">Perched at 9,200 feet on Sacramento Peak, this historic observatory has studied our nearest star since 1947, housing one of the largest solar telescopes in the world.</p>
+
+            <div class="observatory-card">
+                <div class="observatory-header">
+                    <h3>Richard B. Dunn Solar Telescope</h3>
+                    <p class="observatory-tagline">Unlocking the secrets of our Sun for over 75 years</p>
+                </div>
+                <div class="observatory-content">
+                    <p>The Sunspot Solar Observatory began as a U.S. Air Force project in the late 1940s, chosen for this remote Sacramento Mountain location because of its exceptional seeing conditions and clear skies. The facility was transferred to the National Science Foundation in 1976 and is now operated by New Mexico State University.</p>
+
+                    <p>The crown jewel is the Richard B. Dunn Solar Telescope, completed in 1969 and renamed in 1998 to honor the astronomer who championed its construction. This remarkable instrument extends 228 feet underground to minimize atmospheric turbulence, creating one of the most stable solar viewing platforms on Earth. Scientists here study sunspots, solar flares, and the magnetic fields that drive space weather affecting our planet.</p>
+
+                    <div class="observatory-details">
+                        <div class="observatory-detail">
+                            <span class="detail-label">Elevation</span>
+                            <span class="detail-value">9,200 feet</span>
+                        </div>
+                        <div class="observatory-detail">
+                            <span class="detail-label">Established</span>
+                            <span class="detail-value">1947</span>
+                        </div>
+                        <div class="observatory-detail">
+                            <span class="detail-label">Visitor Center</span>
+                            <span class="detail-value">Open Daily 9am-5pm</span>
+                        </div>
+                        <div class="observatory-detail">
+                            <span class="detail-label">Admission</span>
+                            <span class="detail-value">Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <p>Visitors to Sunspot can explore the interactive astronomy museum, walk nature trails with stunning overlooks of White Sands far below, and learn about ongoing solar research. The Visitor Center is open seven days a week during peak season, offering exhibits on solar science, space weather, and the history of this remarkable facility.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sunspot Scenic Byway Section -->
+    <section class="byway-section">
+        <div class="section-container fade-in">
+            <span class="section-badge" style="background: var(--star-gold); color: var(--night-deep);">Scenic Drive</span>
+            <h2 class="section-title">Highway 6563: The Sunspot Scenic Byway</h2>
+            <p class="section-intro">The only highway in America named for a wavelength of light, this 15-mile journey from Cloudcroft to Sunspot features a scale model of our entire solar system.</p>
+
+            <div class="planet-markers">
+                <div class="planet-marker">
+                    <div class="planet-icon">&#9898;</div>
+                    <div class="planet-name">Pluto</div>
+                    <div class="planet-distance">Start: Cloudcroft</div>
+                </div>
+                <div class="planet-marker">
+                    <div class="planet-icon">&#127759;</div>
+                    <div class="planet-name">Neptune</div>
+                    <div class="planet-distance">Mile 1.2</div>
+                </div>
+                <div class="planet-marker">
+                    <div class="planet-icon">&#127758;</div>
+                    <div class="planet-name">Uranus</div>
+                    <div class="planet-distance">Mile 2.4</div>
+                </div>
+                <div class="planet-marker">
+                    <div class="planet-icon">&#129680;</div>
+                    <div class="planet-name">Saturn</div>
+                    <div class="planet-distance">Mile 5.7</div>
+                </div>
+                <div class="planet-marker">
+                    <div class="planet-icon">&#127774;</div>
+                    <div class="planet-name">Jupiter</div>
+                    <div class="planet-distance">Mile 8.4</div>
+                </div>
+                <div class="planet-marker">
+                    <div class="planet-icon">&#128308;</div>
+                    <div class="planet-name">Mars</div>
+                    <div class="planet-distance">Mile 13.7</div>
+                </div>
+                <div class="planet-marker">
+                    <div class="planet-icon">&#127757;</div>
+                    <div class="planet-name">Earth</div>
+                    <div class="planet-distance">Mile 14.2</div>
+                </div>
+                <div class="planet-marker">
+                    <div class="planet-icon">&#9728;</div>
+                    <div class="planet-name">The Sun</div>
+                    <div class="planet-distance">End: Sunspot</div>
+                </div>
+            </div>
+
+            <div class="byway-info">
+                <p>New Mexico State Road 6563 takes its unusual number from the wavelength of hydrogen-alpha light (6563 angstroms) - the deep red glow that scientists use to observe active regions on the Sun. It's one of only three four-digit state highways in New Mexico, and its designation is a tribute to the solar research conducted at its terminus.</p>
+
+                <p>In 2011, the observatory installed markers along the highway creating a 1:250 million scale model of the solar system. Your journey begins with Pluto at the Cloudcroft Visitor Center and ends with the Sun at Sunspot Observatory. Each sign is precisely placed to represent the actual distances between planets - making the 15-mile drive an educational journey through our cosmic neighborhood.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apache Point Observatory Section -->
+    <section class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Deep Space Research</span>
+            <h2 class="section-title">Apache Point Observatory</h2>
+            <p class="section-intro">Just half a mile from Sunspot, a consortium of major universities operates one of the most productive astronomical research facilities in the world.</p>
+
+            <div class="observatory-card">
+                <div class="observatory-header">
+                    <h3>Sloan Digital Sky Survey</h3>
+                    <p class="observatory-tagline">Mapping the universe, one galaxy at a time</p>
+                </div>
+                <div class="observatory-content">
+                    <p>Apache Point Observatory, operated by the Astrophysical Research Consortium (ARC), hosts multiple research telescopes including the dedicated 2.5-meter Sloan Digital Sky Survey telescope. Since 2000, SDSS has created the most detailed three-dimensional maps of the universe ever made, cataloging hundreds of millions of stars and galaxies.</p>
+
+                    <p>The ARC 3.5-meter telescope, one of the largest in the world when completed in 1994, continues cutting-edge research for member institutions including Princeton, University of Washington, University of Chicago, and New Mexico State University. In July 2020, SDSS scientists released a comprehensive 3D map filling in 11 billion years of cosmic expansion history.</p>
+
+                    <div class="observatory-details">
+                        <div class="observatory-detail">
+                            <span class="detail-label">Main Telescope</span>
+                            <span class="detail-value">3.5-meter ARC</span>
+                        </div>
+                        <div class="observatory-detail">
+                            <span class="detail-label">SDSS Telescope</span>
+                            <span class="detail-value">2.5-meter</span>
+                        </div>
+                        <div class="observatory-detail">
+                            <span class="detail-label">Consortium</span>
+                            <span class="detail-value">11 Universities</span>
+                        </div>
+                        <div class="observatory-detail">
+                            <span class="detail-label">Public Access</span>
+                            <span class="detail-value">Research Only</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>While Apache Point is a research facility not open to general public tours, its presence underscores the exceptional quality of Sacramento Mountain skies. The same conditions that enable billion-dollar research telescopes to probe the depths of the universe are available to any visitor who simply looks up on a clear night.</p>
+        </div>
+    </section>
+
+    <!-- Mayhill Astronomy Community Section -->
+    <section class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Telescope Community</span>
+            <h2 class="section-title">The Mayhill Astronomy Enclave</h2>
+            <p class="section-intro">East of Cloudcroft along Highway 82, a unique community has emerged where the infrastructure exists specifically to support serious astronomical observation.</p>
+
+            <div class="community-highlight">
+                <h3>New Mexico Skies</h3>
+                <p>Sixteen miles from Cloudcroft toward Mayhill, New Mexico Skies operates one of the world's premier remote telescope hosting facilities. Founded by Mike and Lynn Rice, this private enclave sits at 7,300 feet in an "oasis" of private land surrounded by Lincoln National Forest - offering some of the finest observing conditions in North America.</p>
+
+                <p>The facility hosts over 50 robotic telescope systems that astronomers around the world can access remotely via the internet. Professional researchers, universities, and dedicated amateurs use these instruments for serious scientific work, from asteroid tracking to deep-sky imaging to educational projects.</p>
+
+                <div class="community-features">
+                    <div class="community-feature">
+                        <div class="community-feature-icon">&#128301;</div>
+                        <h4>50+ Telescopes</h4>
+                        <p>Remote-controlled observatories accessible worldwide</p>
+                    </div>
+                    <div class="community-feature">
+                        <div class="community-feature-icon">&#127776;</div>
+                        <h4>Bortle 1-2 Skies</h4>
+                        <p>Among the darkest accessible skies in America</p>
+                    </div>
+                    <div class="community-feature">
+                        <div class="community-feature-icon">&#127969;</div>
+                        <h4>Observatory Lots</h4>
+                        <p>Private properties designed for telescope installations</p>
+                    </div>
+                    <div class="community-feature">
+                        <div class="community-feature-icon">&#128218;</div>
+                        <h4>Education Access</h4>
+                        <p>Student programs through Tzec Maun Foundation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <p>What makes the Mayhill area unique is that it has evolved to serve astronomers' needs. The New Mexico Skies Astronomy Enclave offers private lots where owners can build homes with integrated observatory facilities. Properties like "OneStarryPlace" feature purpose-built domes and roll-off roof observatories on two-acre parcels surrounded by protected forest.</p>
+
+                <p>The Remote Astronomical Society (RAS) Observatory operates here as well, providing MPC code H06 for asteroid and comet observations. The Tzec Maun Foundation provides free telescope access to students and researchers through instruments hosted at this location. For those serious about astronomy, this stretch of Highway 82 offers infrastructure found almost nowhere else on Earth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stargazing Tips Section -->
+    <section class="content-section">
+        <div class="section-container fade-in">
+            <span class="section-badge">Visitor Guide</span>
+            <h2 class="section-title">Stargazing Tips</h2>
+            <p class="section-intro">Whether you're a first-time stargazer or an experienced observer, these tips will help you make the most of Cloudcroft's exceptional dark skies.</p>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-number">1</span>
+                    <h4>Dark Adapt Your Eyes</h4>
+                    <p>Allow at least 30 minutes away from bright lights for your eyes to fully adjust. Even a brief glimpse at a phone screen can reset your night vision.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-number">2</span>
+                    <h4>Use Red Light</h4>
+                    <p>If you need a flashlight, use one with a red filter. Red light doesn't affect your night-adapted vision the way white light does.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-number">3</span>
+                    <h4>Dress Warmly</h4>
+                    <p>Even in summer, mountain temperatures can drop into the 40s at night. Bring layers, as you'll be standing still for extended periods.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-number">4</span>
+                    <h4>Check the Moon Phase</h4>
+                    <p>The best dark-sky viewing happens during new moon. A full moon can wash out the Milky Way and fainter celestial objects.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-number">5</span>
+                    <h4">Bring Binoculars</h4>
+                    <p>Even basic 7x50 binoculars reveal craters on the Moon, Jupiter's moons, and countless stars invisible to the naked eye.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-number">6</span>
+                    <h4>Use a Star Chart App</h4>
+                    <p>Apps like Stellarium or SkySafari (set to night mode) help identify constellations, planets, and satellites passing overhead.</p>
+                </div>
+            </div>
+
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="feature-icon">&#127763;</div>
+                    <h3>Best Viewing Times</h3>
+                    <p>The darkest skies occur 2-3 hours after sunset and before dawn. Summer offers the Milky Way's bright core; winter brings Orion and brilliant winter stars.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128205;</div>
+                    <h3>Where to Observe</h3>
+                    <p>Any location away from streetlights works well. The Sunspot Scenic Byway pullouts offer excellent horizons and minimal light interference.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#127750;</div>
+                    <h3>What You'll See</h3>
+                    <p>On clear moonless nights: the Milky Way, up to 5 planets, the Andromeda Galaxy, star clusters, and frequent meteor sightings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container">
+            <h2>Experience the Universe</h2>
+            <p>From world-class observatories to simply stepping outside your cabin and looking up, the Cloudcroft area offers some of the finest stargazing in America. Plan your visit during new moon for the ultimate dark-sky experience.</p>
+            <div class="cta-buttons">
+                <a href="index.html#plan" class="cta-btn cta-btn-primary">Plan Your Visit</a>
+                <a href="https://sunspot.nmsu.edu/visit/planvisit.html" target="_blank" rel="noopener" class="cta-btn cta-btn-secondary">Visit Sunspot Observatory</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Discover Cloudcroft</h3>
+                <p>Your guide to New Mexico's premier mountain retreat, where dark skies reveal the wonders of the universe at 8,663 feet.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <a href="lodging.html">Lodging</a>
+                <a href="dining.html">Dining</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="history.html">History</a>
+            </div>
+            <div class="footer-section">
+                <h3>Plan Your Trip</h3>
+                <a href="hiking-trails.html">Hiking Trails</a>
+                <a href="nearby-destinations.html">Nearby Destinations</a>
+                <a href="dark-skies.html">Dark Skies</a>
+                <a href="sunspot-observatory.html">Sunspot Observatory</a>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="https://sunspot.nmsu.edu/" target="_blank" rel="noopener">Sunspot Solar Observatory</a>
+                <a href="https://nmskies.com/" target="_blank" rel="noopener">New Mexico Skies</a>
+                <a href="https://www.newmexico.org/darkskies/" target="_blank" rel="noopener">NM Dark Skies</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Discover Cloudcroft. Made with love for New Mexico's mountain paradise.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

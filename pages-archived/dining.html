@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Dining & Restaurants | Discover Cloudcroft</title>
+    <meta name="description" content="Explore restaurants and dining options in Cloudcroft, NM. From BBQ and breweries to cafes and fine dining, savor mountain cuisine at 8,676 feet.">
+    <meta property="og:title" content="Dining & Restaurants | Discover Cloudcroft">
+    <meta property="og:description" content="Explore restaurants and dining options in Cloudcroft, NM. From BBQ and breweries to cafes and fine dining, savor mountain cuisine at 8,676 feet.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/dining.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dining & Restaurants | Discover Cloudcroft">
+    <meta name="twitter:description" content="Explore restaurants and dining options in Cloudcroft, NM. From BBQ and breweries to cafes and fine dining, savor mountain cuisine at 8,676 feet.">
+    <link rel="canonical" href="https://discovercloudcroft.com/dining.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pine-deep: #2a9d8f; --pine-medium: #40b4a6; --pine-light: #5cc9bc; --sky-pale: #f5faf9; --cloud-white: #f8fafa; --snow-white: #ffffff; --text-dark: #1a2e3d; --text-light: #4a6572; --sunset-gold: #1e3a5f; --bark-brown: #c17f59; --dining-red: #c17f59; --dining-warm: #d4916a; }
+        :root { --pine-deep: #1565C0; --pine-medium: #1E88E5; --pine-light: #64B5F6; --sky-pale: #E3F2FD; --cloud-white: #FAFCFE; --snow-white: #ffffff; --text-dark: #1A1A1A; --text-light: #6B6B6B; --dining-red: #8B0000; --dining-warm: #a31621; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: #1e3a5f; color: white; padding: 8px 16px; z-index: 10000; text-decoration: none; font-weight: 600; }
+        .skip-link:focus { top: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); background: var(--cloud-white); line-height: 1.7; }
+        h1, h2 { font-family: 'Alegreya', serif; font-weight: 700; line-height: 1.2; }
+        h3, h4 { font-family: 'Alegreya', serif; font-weight: 600; line-height: 1.2; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #1e3a5f; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #5cc9bc; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #c17f59 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .nav-cta:hover { background: #d4916a !important; }
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #0D1B2A; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: #ffffff; }
+        .logo-tagline { font-size: 0.65rem; color: #64B5F6; text-transform: uppercase; letter-spacing: 0.25em; margin-top: -2px; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; }
+        .nav-links a { color: #ffffff; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border-radius: 4px; }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+        .nav-cta { background: #BF0A30 !important; color: var(--snow-white) !important; font-weight: 600 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #1e3a5f; z-index: 999; padding: 5rem 2rem 2rem; flex-direction: column; align-items: center; gap: 1rem; }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a { color: #ffffff; text-decoration: none; font-size: 1.2rem; font-weight: 500; padding: 1rem; width: 100%; text-align: center; border-radius: 4px; transition: background 0.3s ease; }
+        .mobile-menu a:hover { background: rgba(255, 255, 255, 0.1); }
+        .mobile-menu .nav-cta { background: #c17f59; margin-top: 1rem; }
+        .mobile-menu-close { position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; }
+
+        .hero { height: 60vh; min-height: 450px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #c17f59 0%, #d4916a 50%, #a86b48 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(193, 127, 89, 0.5) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #5cc9bc; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero { height: 60vh; min-height: 450px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #8B0000 0%, #a31621 50%, #0D1B2A 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(139, 0, 0, 0.5) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 900px; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4rem); color: #ffffff; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.4s both; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-family: 'Alegreya', serif; font-size: clamp(1.2rem, 3vw, 1.6rem); color: #64B5F6; font-weight: 500; font-style: italic; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+        .hero-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); max-width: 650px; margin: 0 auto; line-height: 1.8; animation: fadeInUp 0.8s ease 0.8s both; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        .quick-stats { background: #2a9d8f; padding: 1.5rem 0; }
+        .quick-stats { background: #1565C0; padding: 1.5rem 0; }
+        .quick-stats-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .stat-item { display: flex; align-items: center; gap: 0.75rem; color: #ffffff; font-size: 0.95rem; font-weight: 500; }
+        .stat-icon { width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--dining-red); margin-bottom: 1rem; padding: 0.4rem 1rem; background: rgba(193, 127, 89, 0.1); border-radius: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--pine-deep); margin-bottom: 1rem; }
+        .section-description { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        .dining-section { background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%); }
+        .dining-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .dining-card { background: var(--snow-white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(30, 58, 95, 0.08); transition: all 0.4s ease; }
+        .dining-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(30, 58, 95, 0.15); }
+        .dining-image { height: 180px; background: linear-gradient(135deg, #c17f59 0%, #d4916a 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .dining-card { background: var(--snow-white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(139, 0, 0, 0.08); transition: all 0.4s ease; }
+        .dining-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(139, 0, 0, 0.15); }
+        .dining-image { height: 220px; background: linear-gradient(135deg, #8B0000 0%, #a31621 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; overflow: hidden; position: relative; }
+        .dining-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .dining-card:hover .dining-image img { transform: scale(1.1); }
+        .dining-content { padding: 1.5rem; }
+        .dining-content h3 { font-size: 1.5rem; color: var(--sunset-gold); margin-bottom: 0.5rem; }
+        .dining-content p { color: var(--text-light); margin-bottom: 1rem; line-height: 1.6; }
+        .dining-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .dining-tag { font-size: 0.8rem; padding: 0.3rem 0.7rem; background: rgba(42, 157, 143, 0.1); color: var(--pine-deep); border-radius: 15px; }
+        .dining-link { color: var(--pine-deep); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .dining-link:hover { text-decoration: underline; }
+
+        .coffee-section { background: var(--snow-white); }
+        .coffee-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+
+        .cta-section { background: linear-gradient(135deg, #5cc9bc 0%, #2a9d8f 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: rgba(255,255,255,0.9); margin-bottom: 2rem; font-size: 1.1rem; }
+        .cta-section { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); padding: 5rem 2rem; }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-container h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1rem; }
+        .cta-container p { color: rgba(255,255,255,0.85); margin-bottom: 2rem; font-size: 1.1rem; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
+        .btn-primary { background: #1e3a5f; color: var(--snow-white); }
+        .btn-primary:hover { background: #2d4a6f; transform: translateY(-2px); }
+
+        footer { background: #152a42; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        footer { background: #0D1B2A; color: var(--snow-white); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Alegreya', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; transition: all 0.3s ease; }
+        .footer-social a:hover { background: #5cc9bc; color: #152a42; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #5cc9bc; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--snow-white); text-decoration: none; }
+        .footer-column h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #64B5F6; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; transition: color 0.3s ease; }
+        .footer-column a:hover { color: var(--snow-white); }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p, .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 0.9rem; text-decoration: none; }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+            .dining-grid, .coffee-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header id="header" role="banner">
+        <div class="nav-container">
+            <a href="back-door.html" class="logo"><span class="logo-main">Discover Cloudcroft</span><span class="logo-tagline">Every season tells a story</span></a>
+            <nav aria-label="Main navigation"><ul class="nav-links" role="menubar"><li><a href="back-door.html#explore">Explore</a></li><li><a href="back-door.html#seasons">Seasons</a></li><li><a href="back-door.html#events">Events</a></li><li><a href="back-door.html#stay">Stay & Dine</a></li><li><a href="back-door.html#plan">Plan Your Trip</a></li><li><a href="#" class="nav-cta">Request Guide</a></li></ul></nav>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <button class="mobile-menu-close" aria-label="Close menu">×</button>
+        <a href="back-door.html#explore">Explore</a>
+        <a href="back-door.html#seasons">Seasons</a>
+        <a href="back-door.html#events">Events</a>
+        <a href="back-door.html#stay">Stay & Dine</a>
+        <a href="back-door.html#plan">Plan Your Trip</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="dining.html">Dining</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="#" class="nav-cta">Request Guide</a>
+    </nav>
+
+    <main id="main-content">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dining & Restaurants</h1>
+            <p class="hero-subtitle">Mountain Flavors, Local Favorites</p>
+            <p class="hero-description">From classic American diners to craft breweries and authentic BBQ, Cloudcroft offers a delicious variety of dining experiences. Enjoy hearty mountain meals with stunning views.</p>
+        </div>
+    </section>
+
+    <div class="quick-stats">
+        <div class="quick-stats-container">
+            <div class="stat-item"><div class="stat-icon">🍽️</div><span>Local Restaurants</span></div>
+            <div class="stat-item"><div class="stat-icon">🍺</div><span>Craft Brewery</span></div>
+            <div class="stat-item"><div class="stat-icon">☕</div><span>Coffee & Cafes</span></div>
+            <div class="stat-item"><div class="stat-icon">🏔️</div><span>Mountain Views</span></div>
+        </div>
+    </div>
+
+    <section class="dining-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Restaurants</span>
+                <h2>Where to Eat in Cloudcroft</h2>
+                <p class="section-description">Discover the best local eateries, from hearty breakfast spots to evening hangouts with craft beer and live music.</p>
+            </div>
+
+            <div class="dining-grid">
+                <div class="dining-card">
+                    <div class="dining-image"><img src="media/placeholder-dine-big-daddys.jpg" alt="Big Daddy's Diner in Cloudcroft"></div>
+                    <div class="dining-content">
+                        <h3>Big Daddy's Diner</h3>
+                        <p>A beloved local diner serving classic American breakfast and comfort food. Famous for their generous portions and friendly mountain hospitality.</p>
+                        <div class="dining-tags">
+                            <span class="dining-tag">Breakfast</span>
+                            <span class="dining-tag">American</span>
+                            <span class="dining-tag">Family-Friendly</span>
+                        </div>
+                        <a href="big-daddys.html" class="dining-link">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="dining-card">
+                    <div class="dining-image"><img src="media/placeholder-dine-brother-n-law-bbq.jpg" alt="Brother-N-Law BBQ smoked meats" loading="lazy"></div>
+                    <div class="dining-content">
+                        <h3>Brother-N-Law BBQ</h3>
+                        <p>Authentic slow-smoked BBQ with all the classic fixings. Brisket, ribs, pulled pork, and homemade sides that keep locals coming back.</p>
+                        <div class="dining-tags">
+                            <span class="dining-tag">BBQ</span>
+                            <span class="dining-tag">Smoked Meats</span>
+                            <span class="dining-tag">Casual</span>
+                        </div>
+                        <a href="brother-n-law-bbq.html" class="dining-link">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="dining-card">
+                    <div class="dining-image"><img src="media/placeholder-dine-cloudcroft-brewery.jpg" alt="Cloudcroft Brewery craft beer and patio" loading="lazy"></div>
+                    <div class="dining-content">
+                        <h3>Cloudcroft Brewery</h3>
+                        <p>New Mexico's highest elevation brewery, crafting unique beers inspired by the Sacramento Mountains. Great food, live music, and mountain vibes.</p>
+                        <div class="dining-tags">
+                            <span class="dining-tag">Craft Beer</span>
+                            <span class="dining-tag">Pub Food</span>
+                            <span class="dining-tag">Live Music</span>
+                        </div>
+                        <a href="cloudcroft-brewery.html" class="dining-link">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="dining-card">
+                    <div class="dining-image"><img src="media/placeholder-dine-mad-jacks.jpg" alt="Mad Jack's Mountaintop BBQ outdoor patio" loading="lazy"></div>
+                    <div class="dining-content">
+                        <h3>Mad Jack's Mountaintop BBQ</h3>
+                        <p>Legendary BBQ with a mountain twist. Enjoy smoky favorites on the outdoor patio with panoramic views of the Sacramento Mountains.</p>
+                        <div class="dining-tags">
+                            <span class="dining-tag">BBQ</span>
+                            <span class="dining-tag">Outdoor Dining</span>
+                            <span class="dining-tag">Mountain Views</span>
+                        </div>
+                        <a href="mad-jacks-bbq.html" class="dining-link">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="dining-card">
+                    <div class="dining-image"><img src="media/placeholder-dine-western-bar.jpg" alt="Western Bar & Cafe in downtown Cloudcroft" loading="lazy"></div>
+                    <div class="dining-content">
+                        <h3>Western Bar & Cafe</h3>
+                        <p>Historic watering hole and eatery in the heart of Cloudcroft. Burgers, steaks, and cold drinks in a classic Western atmosphere.</p>
+                        <div class="dining-tags">
+                            <span class="dining-tag">Bar & Grill</span>
+                            <span class="dining-tag">Historic</span>
+                            <span class="dining-tag">Nightlife</span>
+                        </div>
+                        <a href="western-bar.html" class="dining-link">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="dining-card">
+                    <div class="dining-image"><img src="media/placeholder-dine-instant-karma.jpg" alt="Instant Karma cafe and gift shop" loading="lazy"></div>
+                    <div class="dining-content">
+                        <h3>Instant Karma</h3>
+                        <p>Eclectic cafe and gift shop offering light bites, specialty drinks, and unique mountain treasures. A local favorite for a relaxed afternoon.</p>
+                        <div class="dining-tags">
+                            <span class="dining-tag">Cafe</span>
+                            <span class="dining-tag">Gifts</span>
+                            <span class="dining-tag">Unique</span>
+                        </div>
+                        <a href="instant-karma.html" class="dining-link">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="coffee-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Coffee & More</span>
+                <h2>Coffee Shops & Cafes</h2>
+                <p class="section-description">Start your mountain morning with locally roasted coffee and fresh pastries.</p>
+            </div>
+
+            <div class="coffee-grid">
+                <div class="dining-card">
+                    <div class="dining-image"><img src="media/placeholder-dine-high-rollin.jpg" alt="High Rollin' Coffee espresso drinks" loading="lazy"></div>
+                    <div class="dining-content">
+                        <h3>High Rollin' Coffee</h3>
+                        <p>Premium coffee shop serving expertly crafted espresso drinks, pour-overs, and fresh pastries. The perfect fuel for your mountain adventures.</p>
+                        <div class="dining-tags">
+                            <span class="dining-tag">Coffee</span>
+                            <span class="dining-tag">Espresso</span>
+                            <span class="dining-tag">Pastries</span>
+                        </div>
+                        <a href="high-rollin.html" class="dining-link">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Hungry for More?</h2>
+            <p>Plan your Cloudcroft culinary adventure and discover the flavors of the Sacramento Mountains.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="groceries.html" class="btn btn-primary">Groceries & Markets</a>
+                <a href="lodging.html" class="btn" style="background: #0D47A1; color: white;">Find Lodging</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>Discover Cloudcroft</h3><p>Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.</p><div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">📷</a><a href="#">▶</a></div></div>
+                <div class="footer-column"><h4>Explore</h4><ul><li><a href="back-door.html#explore">In the Village</a></li><li><a href="hiking-trails.html">Hiking Trails</a></li><li><a href="biking.html">Biking</a></li><li><a href="activities.html">Golf & Recreation</a></li><li><a href="sunspot-observatory.html">Sunspot Observatory</a></li><li><a href="camping.html">Camping</a></li></ul></div>
+                <div class="footer-column"><h4>Visit</h4><ul><li><a href="lodging.html">Where to Stay</a></li><li><a href="lodging.html#rentals">Vacation Rentals</a></li><li><a href="dining.html">Where to Eat</a></li><li><a href="attractions.html">Art Galleries</a></li><li><a href="attractions.html">Shopping</a></li></ul></div>
+                <div class="footer-column"><h4>Plan</h4><ul><li><a href="back-door.html#plan">Getting Here</a></li><li><a href="groceries.html">Groceries & Supplies</a></li><li><a href="emergency-services.html">Emergency Services</a></li><li><a href="hiking-trails.html">Trail Maps</a></li><li><a href="back-door.html#plan">Visitor Guide</a></li></ul></div>
+                <div class="footer-column"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Partner With Us</a></li><li><a href="#">Chamber of Commerce</a></li><li><a href="#">Village of Cloudcroft</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 New Mexico's Mountain Retreat. All rights reserved.</p><div class="footer-partners"><span>Proud partner of</span><a href="#">New Mexico True</a></div><div><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; });
+        mobileMenuClose.addEventListener('click', () => { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; });
+        mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }); });
+
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.dining-card').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el); });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

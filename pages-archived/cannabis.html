@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0D1B2A">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <title>Cannabis in Cloudcroft | Discover Cloudcroft</title>
+    <meta name="description" content="Find licensed cannabis dispensaries in Cloudcroft, New Mexico. Learn about local regulations, dispensary locations, and visitor guidelines for legal cannabis.">
+    <meta property="og:title" content="Cannabis in Cloudcroft | Discover Cloudcroft">
+    <meta property="og:description" content="Find licensed cannabis dispensaries in Cloudcroft, New Mexico. Learn about local regulations, dispensary locations, and visitor guidelines for legal cannabis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discovercloudcroft.com/cannabis.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cannabis in Cloudcroft | Discover Cloudcroft">
+    <meta name="twitter:description" content="Find licensed cannabis dispensaries in Cloudcroft, New Mexico. Learn about local regulations, dispensary locations, and visitor guidelines for legal cannabis.">
+    <link rel="canonical" href="https://discovercloudcroft.com/cannabis.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-deep: #1565C0;
+            --pine-medium: #1E88E5;
+            --pine-light: #64B5F6;
+            --sky-pale: #E3F2FD;
+            --sky-blue: #BBDEFB;
+            --sunset-gold: #BF0A30;
+            --sunset-warm: #a31621;
+            --cloud-white: #FAFCFE;
+            --bark-brown: #8B4513;
+            --snow-white: #ffffff;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+            --green-accent: #1565C0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background: var(--cloud-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Alegreya', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3, h4 {
+            font-family: 'Alegreya', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0D1B2A;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: #64B5F6;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-cta {
+            background: #BF0A30 !important;
+            color: var(--snow-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            min-height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 50%, #1565C0 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 50%, rgba(30, 136, 229, 0.15) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-badge span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-family: 'Alegreya', serif;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #64B5F6;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* Info Bar */
+        .info-bar {
+            background: #1565C0;
+            padding: 1.5rem 0;
+        }
+
+        .info-bar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #1565C0;
+            margin-bottom: 1rem;
+            padding: 0.4rem 1rem;
+            background: rgba(21, 101, 192, 0.1);
+            border-radius: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--pine-deep);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: linear-gradient(180deg, var(--cloud-white) 0%, var(--sky-pale) 100%);
+        }
+
+        .intro-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 2.5rem;
+            color: var(--pine-deep);
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-image {
+            background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 100%);
+            border-radius: 12px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(13, 27, 42, 0.15);
+        }
+
+        .intro-image-placeholder {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .intro-image-placeholder .icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Dispensaries Section */
+        .dispensaries-section {
+            background: var(--snow-white);
+        }
+
+        .dispensary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .dispensary-card {
+            background: var(--sky-pale);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .dispensary-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(13, 27, 42, 0.15);
+        }
+
+        .dispensary-header {
+            background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 100%);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .dispensary-header h3 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .dispensary-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .dispensary-body {
+            padding: 2rem;
+        }
+
+        .dispensary-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .dispensary-detail:last-child {
+            margin-bottom: 0;
+        }
+
+        .dispensary-detail-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(21, 101, 192, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .dispensary-detail-content h4 {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+        }
+
+        .dispensary-detail-content p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .dispensary-detail-content a {
+            color: #1565C0;
+            text-decoration: none;
+        }
+
+        .dispensary-detail-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Rules Section */
+        .rules-section {
+            background: #1565C0;
+            color: var(--snow-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rules-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(100, 181, 246, 0.1) 0%, transparent 70%);
+        }
+
+        .rules-section .section-label {
+            background: rgba(255, 255, 255, 0.15);
+            color: #64B5F6;
+        }
+
+        .rules-section .section-header h2 {
+            color: #ffffff;
+        }
+
+        .rules-section .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .rule-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .rule-card.allowed {
+            border-left: 4px solid #64B5F6;
+        }
+
+        .rule-card.prohibited {
+            border-left: 4px solid #ff6b6b;
+        }
+
+        .rule-card h3 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .rule-card h3 .icon {
+            font-size: 1.5rem;
+        }
+
+        .rule-card ul {
+            list-style: none;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
+
+        .rule-card li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .rule-card.allowed li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #64B5F6;
+            font-weight: bold;
+        }
+
+        .rule-card.prohibited li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* Limits Section */
+        .limits-section {
+            background: linear-gradient(180deg, var(--sky-pale) 0%, var(--cloud-white) 100%);
+        }
+
+        .limits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .limit-card {
+            background: var(--snow-white);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08);
+            border-top: 4px solid #1565C0;
+        }
+
+        .limit-amount {
+            font-family: 'Alegreya', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1565C0;
+            margin-bottom: 0.5rem;
+        }
+
+        .limit-unit {
+            font-size: 1rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .limit-description {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Important Notice */
+        .notice-section {
+            background: var(--cloud-white);
+        }
+
+        .notice-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeeba 100%);
+            border-radius: 12px;
+            padding: 2.5rem;
+            border-left: 6px solid #ffc107;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .notice-box h2 {
+            font-size: 1.8rem;
+            color: #856404;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .notice-box ul {
+            color: #856404;
+            margin-left: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .notice-box li {
+            margin-bottom: 0.75rem;
+        }
+
+        .notice-box strong {
+            color: #664d03;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            background: var(--sky-pale);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .tip-card {
+            background: var(--snow-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(13, 27, 42, 0.12);
+        }
+
+        .tip-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0D1B2A 0%, #0D47A1 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tip-card h3 {
+            font-size: 1.3rem;
+            color: var(--pine-deep);
+            margin-bottom: 0.75rem;
+        }
+
+        .tip-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #0D1B2A;
+            color: var(--snow-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Alegreya', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #64B5F6;
+            color: #0D1B2A;
+        }
+
+        .footer-column h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: #64B5F6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--snow-white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p, .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--snow-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-brand { grid-column: span 3; }
+            .intro-content { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { height: 45vh; min-height: 350px; }
+            .info-bar-container { gap: 1.5rem; }
+            .dispensary-grid { grid-template-columns: 1fr; }
+            .rules-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Discover Cloudcroft</span>
+                <span class="logo-tagline">9,000 Feet Above Stress Level</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#seasons">Seasons</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#stay">Stay & Dine</a></li>
+                    <li><a href="index.html#plan">Plan Your Trip</a></li>
+                    <li><a href="#" class="nav-cta">Request Guide</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>Legal in New Mexico</span>
+            </div>
+            <h1>Cannabis in Cloudcroft</h1>
+            <p class="hero-subtitle">Recreational cannabis dispensaries at 9,000 feet</p>
+        </div>
+    </section>
+
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <div class="info-bar-container">
+            <div class="info-item">
+                <div class="info-icon">✓</div>
+                <span>Legal Since April 2022</span>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🎂</div>
+                <span>21+ Only</span>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🏠</div>
+                <span>Private Use Only</span>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🪪</div>
+                <span>Valid ID Required</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="section-container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2>Recreational Cannabis in the Sacramento Mountains</h2>
+                    <p>
+                        New Mexico legalized recreational cannabis for adults 21 and older in 2021, with retail sales beginning on April 1, 2022. Cloudcroft welcomed its first dispensaries that same spring, offering visitors and locals alike access to legal cannabis products high in the Sacramento Mountains.
+                    </p>
+                    <p>
+                        Today, Cloudcroft is home to three licensed dispensaries, each offering a curated selection of flower, edibles, concentrates, and more. Whether you're a first-time visitor or an experienced consumer, the friendly staff at our local shops are happy to help you find the right products for your mountain getaway.
+                    </p>
+                    <p>
+                        Please consume responsibly and follow all New Mexico cannabis laws during your visit.
+                    </p>
+                </div>
+                <div class="intro-image">
+                    <div class="intro-image-placeholder">
+                        <div class="icon">🌿</div>
+                        <p>Legal recreational cannabis in Cloudcroft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dispensaries Section -->
+    <section class="dispensaries-section" id="dispensaries">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Local Dispensaries</span>
+                <h2>Where to Shop</h2>
+                <p class="section-description">
+                    Cloudcroft has three licensed recreational dispensaries, each offering quality products and knowledgeable staff to help you find what you're looking for.
+                </p>
+            </div>
+
+            <div class="dispensary-grid">
+                <!-- High Cannabis -->
+                <div class="dispensary-card">
+                    <div class="dispensary-header">
+                        <h3>High Cannabis</h3>
+                        <p>Family-owned dispensary</p>
+                    </div>
+                    <div class="dispensary-body">
+                        <div class="dispensary-detail">
+                            <div class="dispensary-detail-icon">📍</div>
+                            <div class="dispensary-detail-content">
+                                <h4>Location</h4>
+                                <p>102 Little Mexican Ave<br>Cloudcroft, NM 88317</p>
+                            </div>
+                        </div>
+                        <div class="dispensary-detail">
+                            <div class="dispensary-detail-icon">ℹ️</div>
+                            <div class="dispensary-detail-content">
+                                <h4>About</h4>
+                                <p>A friendly, family-run business opened in April 2022. Known for quality products, local discounts, and regularly updated inventory.</p>
+                            </div>
+                        </div>
+                        <div class="dispensary-detail">
+                            <div class="dispensary-detail-icon">📞</div>
+                            <div class="dispensary-detail-content">
+                                <h4>Contact</h4>
+                                <p>Call ahead for hours and availability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laughing Leaf -->
+                <div class="dispensary-card">
+                    <div class="dispensary-header">
+                        <h3>Laughing Leaf Dispensary</h3>
+                        <p>On the boardwalk</p>
+                    </div>
+                    <div class="dispensary-body">
+                        <div class="dispensary-detail">
+                            <div class="dispensary-detail-icon">📍</div>
+                            <div class="dispensary-detail-content">
+                                <h4>Location</h4>
+                                <p>504 Burro Avenue<br>Cloudcroft, NM 88317</p>
+                            </div>
+                        </div>
+                        <div class="dispensary-detail">
+                            <div class="dispensary-detail-icon">ℹ️</div>
+                            <div class="dispensary-detail-content">
+                                <h4>About</h4>
+                                <p>Located on the boardwalk across from The Turquoise Shop. Opened July 2022. Also has a location in Tularosa with a certified cannabis nurse on staff.</p>
+                            </div>
+                        </div>
+                        <div class="dispensary-detail">
+                            <div class="dispensary-detail-icon">🌐</div>
+                            <div class="dispensary-detail-content">
+                                <h4>Website</h4>
+                                <p><a href="https://www.laughingleafdispensary.com" target="_blank">laughingleafdispensary.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backcountry Cannabis -->
+                <div class="dispensary-card">
+                    <div class="dispensary-header">
+                        <h3>Backcountry Cannabis Co.</h3>
+                        <p>Premium mountain cannabis</p>
+                    </div>
+                    <div class="dispensary-body">
+                        <div class="dispensary-detail">
+                            <div class="dispensary-detail-icon">📍</div>
+                            <div class="dispensary-detail-content">
+                                <h4>Location</h4>
+                                <p>109 James Canyon, Unit 8<br>Cloudcroft, NM 88317</p>
+                            </div>
+                        </div>
+                        <div class="dispensary-detail">
+                            <div class="dispensary-detail-icon">ℹ️</div>
+                            <div class="dispensary-detail-content">
+                                <h4>About</h4>
+                                <p>Curated selection of premium cannabis products chosen to harmonize with the tranquil mountain setting. Strong local following with tourist-friendly service.</p>
+                            </div>
+                        </div>
+                        <div class="dispensary-detail">
+                            <div class="dispensary-detail-icon">🌐</div>
+                            <div class="dispensary-detail-content">
+                                <h4>Website</h4>
+                                <p><a href="http://backcountrycannabisnm.com" target="_blank">backcountrycannabisnm.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase Limits Section -->
+    <section class="limits-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Know the Limits</span>
+                <h2>What You Can Purchase & Possess</h2>
+                <p class="section-description">
+                    New Mexico law sets specific limits on how much cannabis you can buy and possess. Here's what you need to know.
+                </p>
+            </div>
+
+            <div class="limits-grid">
+                <div class="limit-card">
+                    <div class="limit-amount">2 oz</div>
+                    <div class="limit-unit">Cannabis Flower</div>
+                    <p class="limit-description">Maximum amount of cannabis flower you can purchase and possess at one time.</p>
+                </div>
+                <div class="limit-card">
+                    <div class="limit-amount">16g</div>
+                    <div class="limit-unit">Concentrates</div>
+                    <p class="limit-description">Maximum amount of cannabis extract or concentrate products.</p>
+                </div>
+                <div class="limit-card">
+                    <div class="limit-amount">800mg</div>
+                    <div class="limit-unit">Edibles (THC)</div>
+                    <p class="limit-description">Maximum THC content in edible cannabis products per purchase.</p>
+                </div>
+                <div class="limit-card">
+                    <div class="limit-amount">6</div>
+                    <div class="limit-unit">Mature Plants</div>
+                    <p class="limit-description">Adults can cultivate up to 6 mature plants at home for personal use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section class="rules-section" id="rules">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Know the Law</span>
+                <h2>Where You Can & Cannot Consume</h2>
+                <p class="section-description">
+                    Understanding New Mexico's cannabis consumption laws will help you stay compliant and enjoy your visit responsibly.
+                </p>
+            </div>
+
+            <div class="rules-grid">
+                <div class="rule-card allowed">
+                    <h3><span class="icon">✓</span> Where You CAN Consume</h3>
+                    <ul>
+                        <li>Private residences where you have permission</li>
+                        <li>Vacation rentals that explicitly allow cannabis use</li>
+                        <li>Private property with the owner's consent</li>
+                        <li>Licensed cannabis consumption lounges (where available)</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card prohibited">
+                    <h3><span class="icon">✗</span> Where You CANNOT Consume</h3>
+                    <ul>
+                        <li>Any public place (sidewalks, parks, streets)</li>
+                        <li>In any motor vehicle (driver or passenger)</li>
+                        <li>Federal lands (Lincoln National Forest, etc.)</li>
+                        <li>Hotels/lodging unless explicitly permitted</li>
+                        <li>Near schools or childcare facilities</li>
+                        <li>Any property where landlord prohibits use</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card prohibited">
+                    <h3><span class="icon">✗</span> What's NOT Allowed</h3>
+                    <ul>
+                        <li>Driving under the influence of cannabis</li>
+                        <li>Providing cannabis to anyone under 21</li>
+                        <li>Taking cannabis across state lines</li>
+                        <li>Possessing more than 2 oz in public</li>
+                        <li>Consuming on federal property</li>
+                        <li>Reselling cannabis products</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Notice Section -->
+    <section class="notice-section">
+        <div class="section-container">
+            <div class="notice-box">
+                <h2>⚠️ Important Reminders</h2>
+                <ul>
+                    <li><strong>Federal Lands:</strong> The Lincoln National Forest and other federal lands around Cloudcroft still prohibit cannabis, even though it's legal in New Mexico. This includes all hiking trails and camping areas in the national forest.</li>
+                    <li><strong>Texas Visitors:</strong> Cannabis remains illegal in Texas. Do not transport any cannabis products across state lines—this is a federal offense.</li>
+                    <li><strong>Lodging:</strong> Always check with your hotel, cabin rental, or vacation property about their cannabis policy before consuming on the premises.</li>
+                    <li><strong>Altitude:</strong> At 9,000 feet elevation, cannabis effects may feel stronger. Start low and go slow, especially if you're new to cannabis or visiting from lower elevations.</li>
+                    <li><strong>Valid ID:</strong> You must be 21+ and present valid government-issued photo ID to purchase cannabis products.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Visitor Tips</span>
+                <h2>First Time at a Dispensary?</h2>
+                <p class="section-description">
+                    Many visitors to Cloudcroft are experiencing legal cannabis for the first time. Here's what to expect.
+                </p>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🪪</div>
+                    <h3>Bring Valid ID</h3>
+                    <p>You'll need a government-issued photo ID proving you're 21 or older. Driver's license, state ID, or passport all work.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💵</div>
+                    <h3>Cash is King</h3>
+                    <p>Many dispensaries are cash-only due to federal banking restrictions. ATMs are usually available on-site.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💬</div>
+                    <h3>Ask Questions</h3>
+                    <p>Budtenders are knowledgeable and happy to help. Don't be shy about asking for recommendations based on your experience level.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🌱</div>
+                    <h3>Start Low, Go Slow</h3>
+                    <p>Especially with edibles, start with a low dose (5-10mg) and wait at least 2 hours before consuming more.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🏔️</div>
+                    <h3>Mind the Altitude</h3>
+                    <p>At 9,000 feet, effects can be intensified. Stay hydrated and take it easy, especially on your first day.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🚗</div>
+                    <h3>Plan Ahead</h3>
+                    <p>Never drive under the influence. Plan your activities and have a safe place to enjoy your products responsibly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Discover Cloudcroft</h3>
+                    <p>
+                        Nestled in the Sacramento Mountains at 8,676 feet, Cloudcroft has been welcoming visitors
+                        seeking mountain refuge since 1899. Experience the most enchanting part of the Land of Enchantment.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">In the Village</a></li>
+                        <li><a href="hiking-trails.html">Hiking Trails</a></li>
+                        <li><a href="history.html">Historic Sites</a></li>
+                        <li><a href="#">Golf Course</a></li>
+                        <li><a href="#">Ski Cloudcroft</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li><a href="#">Where to Stay</a></li>
+                        <li><a href="index.html#stay">Where to Eat</a></li>
+                        <li><a href="shopping.html">Shopping</a></li>
+                        <li><a href="index.html#events">Events Calendar</a></li>
+                        <li><a href="#">Webcams</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Plan</h4>
+                    <ul>
+                        <li><a href="#">Getting Here</a></li>
+                        <li><a href="#">Weather</a></li>
+                        <li><a href="#">Visitor Guide</a></li>
+                        <li><a href="#">Trail Maps</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Chamber of Commerce</a></li>
+                        <li><a href="#">Village of Cloudcroft</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cloudcroft Tourism Alliance. All rights reserved.</p>
+                <div>
+                    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="sitemap.html">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 100);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.dispensary-card, .limit-card, .rule-card, .tip-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>
