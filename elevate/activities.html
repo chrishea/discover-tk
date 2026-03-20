@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities & Adventures in Cloudcroft, NM | ElevateCloudcroft.com</title>
+    <meta name="description" content="Discover hiking, mountain biking, stargazing, skiing, and more in Cloudcroft, New Mexico — adventure starts at 8,676 feet in the Sacramento Mountains.">
+    <meta name="keywords" content="Cloudcroft activities, hiking Cloudcroft, mountain biking, stargazing, dark skies, skiing, pickleball, disc golf, camping, Sacramento Mountains">
+    <link rel="canonical" href="https://elevatecloudcroft.com/activities.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Activities & Adventures in Cloudcroft, NM">
+    <meta property="og:description" content="Hike, bike, stargaze, and play — adventure starts at 8,676 feet in the Sacramento Mountains.">
+    <meta property="og:image" content="https://elevatecloudcroft.com/media/placeholder-activity-biking.jpg">
+    <meta property="og:url" content="https://elevatecloudcroft.com/activities.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ElevateCloudcroft.com">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Activities & Adventures in Cloudcroft, NM">
+    <meta name="twitter:description" content="Hike, bike, stargaze, and play — adventure starts at 8,676 feet.">
+    <meta name="twitter:image" content="https://elevatecloudcroft.com/media/placeholder-activity-biking.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Inter:wght@400;500&family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== RESET & ROOT ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --midnight: #0B1D3A;
+            --summit: #1A3A5C;
+            --alpine: #2E6B8A;
+            --golden-hour: #E8A838;
+            --ember: #D4553A;
+            --pine-shadow: #1E3A2F;
+            --cloud-drift: #F0F4F8;
+            --snow-cap: #FFFFFF;
+            --granite: #6B7B8D;
+            --twilight: #4A2D6B;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        ::selection { background: var(--golden-hour); color: var(--midnight); }
+
+        *:focus-visible { outline: 2px solid var(--golden-hour); outline-offset: 2px; }
+
+        @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--midnight);
+            background: var(--cloud-drift);
+            line-height: 1.6;
+            overflow-x: hidden;
+            animation: pageIn 0.5s ease;
+        }
+
+        /* ===== SKIP TO CONTENT ===== */
+        .skip-to-content {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 8px 8px;
+            font-weight: 700;
+            z-index: 10000;
+            text-decoration: none;
+            transition: top 0.3s;
+        }
+        .skip-to-content:focus { top: 0; }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+            background: transparent;
+        }
+        .site-header.scrolled {
+            background: var(--midnight);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            padding: 0.6rem 2rem;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: var(--snow-cap);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        .logo span { color: var(--golden-hour); }
+
+        .main-nav { display: flex; align-items: center; gap: 0.25rem; }
+        .main-nav a {
+            color: var(--snow-cap);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
+        }
+        .main-nav a:hover, .main-nav a:focus {
+            background: rgba(232, 168, 56, 0.15);
+            color: var(--golden-hour);
+        }
+        .main-nav a.active {
+            background: rgba(232, 168, 56, 0.2);
+            color: var(--golden-hour);
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--golden-hour);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+        }
+        .nav-phone svg { width: 16px; height: 16px; fill: var(--golden-hour); }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--snow-cap);
+            border-radius: 2px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 29, 58, 0.97);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .mobile-overlay.open { display: flex; }
+        .mobile-overlay a {
+            color: var(--snow-cap);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+        .mobile-overlay a:hover { color: var(--golden-hour); }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('../media/placeholder-activity-biking.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: kenBurns 20s ease-in-out infinite alternate;
+        }
+        @keyframes kenBurns {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.1) translate(-1%, -1%); }
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(30, 58, 47, 0.8) 0%, rgba(46, 107, 138, 0.6) 50%, rgba(11, 29, 58, 0.7) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--snow-cap);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .hero-content h1 span { color: var(--golden-hour); }
+        .hero-content p {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--midnight);
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+        .section-header h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--golden-hour);
+            display: block;
+            margin: 0.75rem auto 0;
+        }
+        .section-header p {
+            color: var(--granite);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== ACTIVITY CARDS GRID ===== */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .activity-card {
+            background: var(--snow-cap);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .activity-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .activity-card:nth-child(1).visible { transition-delay: 0s; }
+        .activity-card:nth-child(2).visible { transition-delay: 0.1s; }
+        .activity-card:nth-child(3).visible { transition-delay: 0.2s; }
+        .activity-card:nth-child(4).visible { transition-delay: 0.3s; }
+        .activity-card:nth-child(5).visible { transition-delay: 0.4s; }
+        .activity-card:nth-child(6).visible { transition-delay: 0.5s; }
+        .activity-card:nth-child(7).visible { transition-delay: 0.6s; }
+        .activity-card:nth-child(8).visible { transition-delay: 0.7s; }
+        .activity-card:nth-child(9).visible { transition-delay: 0.8s; }
+        .activity-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+        .card-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .activity-card:hover .card-image img { transform: scale(1.08); }
+        .card-emoji {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 44px;
+            height: 44px;
+            background: var(--snow-cap);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 2;
+        }
+        .card-body { padding: 1.5rem; }
+        .card-body h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--midnight);
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+        .card-body p {
+            color: var(--granite);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .meta-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            background: var(--cloud-drift);
+            color: var(--summit);
+        }
+        .card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--alpine);
+            text-decoration: none;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), gap 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-cta:hover {
+            color: var(--ember);
+            border-bottom-color: var(--ember);
+            gap: 0.7rem;
+        }
+
+        /* ===== SEASONALITY CALENDAR ===== */
+        .seasonality-section {
+            background: var(--midnight);
+            padding: 6rem 2rem;
+        }
+        .seasonality-section .section-header h2 { color: var(--snow-cap); }
+        .seasonality-section .section-header h2::after { background: var(--golden-hour); }
+        .seasonality-section .section-header p { color: rgba(255,255,255,0.6); }
+
+        .season-calendar {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        .season-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+        .season-table th,
+        .season-table td {
+            padding: 0.75rem 0.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        .season-table thead th {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: var(--golden-hour);
+            border-bottom: 2px solid rgba(232, 168, 56, 0.3);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .season-table tbody tr:nth-child(odd) { background: rgba(255,255,255,0.03); }
+        .season-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.07); }
+        .season-table tbody th {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            color: var(--snow-cap);
+            text-align: left;
+            padding-left: 1rem;
+            white-space: nowrap;
+            font-size: 0.85rem;
+        }
+        .season-cell {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            margin: 0 auto;
+            transition: transform 0.2s;
+        }
+        .season-cell:hover { transform: scale(1.3); }
+        .season-cell.active-green { background: rgba(46, 107, 138, 0.7); }
+        .season-cell.active-gold { background: rgba(232, 168, 56, 0.7); }
+        .season-cell.peak { background: var(--golden-hour); box-shadow: 0 0 8px rgba(232, 168, 56, 0.4); }
+        .season-cell.inactive { background: rgba(107, 123, 141, 0.2); }
+
+        .calendar-legend {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .legend-swatch {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+        }
+
+        /* ===== PLAN CTA ===== */
+        .plan-cta-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--alpine), var(--twilight));
+            position: relative;
+            overflow: hidden;
+        }
+        .plan-cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(232, 168, 56, 0.15) 0%, transparent 70%);
+            animation: gradientPulse 6s ease-in-out infinite alternate;
+        }
+        @keyframes gradientPulse {
+            0% { opacity: 0.5; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+        .plan-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        .plan-cta-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--snow-cap);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .plan-cta-content p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 1rem 2.5rem;
+            min-height: 44px;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: ctaPulse 3s ease-in-out infinite;
+        }
+        @keyframes ctaPulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4); }
+            50% { box-shadow: 0 4px 15px rgba(232, 168, 56, 0), 0 0 0 12px rgba(232, 168, 56, 0); }
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: #f0b448;
+            box-shadow: 0 6px 25px rgba(232, 168, 56, 0.6);
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--midnight);
+            padding: 4rem 2rem 2rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .footer-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+        .footer-col h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--snow-cap);
+            margin-bottom: 1.25rem;
+        }
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover { color: var(--golden-hour); }
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            transition: background 0.3s, color 0.3s;
+        }
+        .footer-social a:hover { background: var(--golden-hour); color: var(--midnight); }
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 900;
+        }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); }
+        .back-to-top:hover { transform: translateY(-2px); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .activities-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .main-nav, .nav-phone { display: none; }
+            .hamburger { display: flex; }
+            .activities-grid { grid-template-columns: 1fr; gap: 16px; }
+            .hero { height: 50vh; }
+            .section-container { padding: 3rem 1.25rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .seasonality-section { padding: 3rem 1rem; }
+        }
+        @media (max-width: 375px) {
+            .hero-content h1 { font-size: 2rem; }
+            .card-body { padding: 1rem; }
+            .card-cta { min-height: 44px; display: inline-flex; align-items: center; }
+        }
+
+        /* ===== REDUCED MOTION ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .hero-bg { animation: none; }
+            html { scroll-behavior: auto; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <a href="index.html" class="logo" aria-label="ElevateCloudcroft.com Home">ELEVATE <span>CLOUDCROFT</span></a>
+        <nav class="main-nav" role="menubar" aria-label="Main Navigation">
+            <a href="lodging.html" role="menuitem">Stay</a>
+            <a href="dining.html" role="menuitem">Eat</a>
+            <a href="activities.html" role="menuitem" class="active" aria-current="page">Explore</a>
+            <a href="hiking-trails.html" role="menuitem">Trails</a>
+            <a href="events.html" role="menuitem">Events</a>
+            <a href="seasonal.html" role="menuitem">Seasons</a>
+            <a href="plan.html" role="menuitem">Plan</a>
+            <a href="contact.html" role="menuitem">Contact</a>
+        </nav>
+        <a href="tel:+15754426932" class="nav-phone" aria-label="Call us at 575-442-6932">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.27c1.12.45 2.33.69 3.48.69.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.24 2.45.69 3.48.14.34.08.73-.27 1.11l-2.2 2.2z"/></svg>
+            <span>(575) 442-6932</span>
+        </a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="mobile-overlay" role="dialog" aria-label="Mobile Navigation">
+        <a href="lodging.html">Stay</a>
+        <a href="dining.html">Eat</a>
+        <a href="activities.html">Explore</a>
+        <a href="hiking-trails.html">Trails</a>
+        <a href="events.html">Events</a>
+        <a href="seasonal.html">Seasons</a>
+        <a href="plan.html">Plan</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+15754426932">(575) 442-6932</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Activities hero banner">
+        <div class="hero-bg" role="img" aria-label="Mountain biking in the Sacramento Mountains"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Find Your <span>Altitude</span></h1>
+            <p>Hike, bike, stargaze, and play &mdash; adventure starts at 8,676 feet.</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+
+        <!-- ACTIVITY CARDS -->
+        <section class="section-container" aria-label="Activities">
+            <div class="section-header">
+                <h2>Things to Do in Cloudcroft</h2>
+                <p>From peaceful meadow walks to adrenaline-pumping mountain biking, there is something for every adventurer.</p>
+            </div>
+
+            <div class="activities-grid">
+
+                <!-- Hiking -->
+                <article class="activity-card" data-animate>
+                    <div class="card-image">
+                        <img src="../media/Index-4.jpg" alt="Hiking trail through pine forest in the Sacramento Mountains" loading="lazy" width="400" height="200">
+                        <div class="card-emoji" aria-hidden="true">&#129406;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Hiking</h3>
+                        <p>15+ trails through Lincoln National Forest &mdash; from gentle meadow walks to challenging ridge climbs.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">All Levels</span>
+                            <span class="meta-tag">Year-round</span>
+                        </div>
+                        <a href="hiking-trails.html" class="card-cta">Explore Trails <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+                <!-- Mountain Biking -->
+                <article class="activity-card" data-animate>
+                    <div class="card-image">
+                        <img src="../media/placeholder-activity-biking.jpg" alt="Mountain biker on singletrack trail in Cloudcroft" loading="lazy" width="400" height="200">
+                        <div class="card-emoji" aria-hidden="true">&#128693;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Mountain Biking</h3>
+                        <p>World-class singletrack and the legendary High Altitude Bike Classic course.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">Moderate&ndash;Hard</span>
+                            <span class="meta-tag">Apr&ndash;Oct</span>
+                        </div>
+                        <a href="#todo-biking-details" class="card-cta">Plan Your Ride <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+                <!-- Stargazing -->
+                <article class="activity-card" data-animate>
+                    <div class="card-image">
+                        <img src="../media/Index-11.jpg" alt="Starry night sky over Cloudcroft, one of America's darkest skies" loading="lazy" width="400" height="200">
+                        <div class="card-emoji" aria-hidden="true">&#128301;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Stargazing &amp; Dark Skies</h3>
+                        <p>One of America's darkest skies &mdash; visit Sunspot Observatory or simply look up.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">Easy</span>
+                            <span class="meta-tag">Year-round</span>
+                        </div>
+                        <a href="#todo-darkskies-details" class="card-cta">Dark Sky Guide <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+                <!-- Pickleball -->
+                <article class="activity-card" data-animate>
+                    <div class="card-image">
+                        <img src="../media/Index-15.jpg" alt="Pickleball courts in Cloudcroft, New Mexico" loading="lazy" width="400" height="200">
+                        <div class="card-emoji" aria-hidden="true">&#127955;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Pickleball</h3>
+                        <p>Join the growing pickleball community at Cloudcroft's dedicated courts.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">All Levels</span>
+                            <span class="meta-tag">Apr&ndash;Oct</span>
+                        </div>
+                        <a href="#todo-pickleball-details" class="card-cta">Find Courts <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+                <!-- Golf -->
+                <article class="activity-card" data-animate>
+                    <div class="card-image">
+                        <img src="../media/placeholder-explore-golf.jpg" alt="The Lodge Golf Course, one of the highest courses in the nation" loading="lazy" width="400" height="200">
+                        <div class="card-emoji" aria-hidden="true">&#9971;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Golf</h3>
+                        <p>The Lodge Golf Course &mdash; one of the highest and oldest courses in the nation.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">All Levels</span>
+                            <span class="meta-tag">Apr&ndash;Oct</span>
+                        </div>
+                        <a href="#todo-golf-booking" class="card-cta">Book Tee Time <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+                <!-- Disc Golf -->
+                <article class="activity-card" data-animate>
+                    <div class="card-image">
+                        <img src="../media/disc-golf-1.jpg" alt="Disc golf course winding through pine trees in Cloudcroft" loading="lazy" width="400" height="200">
+                        <div class="card-emoji" aria-hidden="true">&#129359;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Disc Golf</h3>
+                        <p>Navigate wooded fairways on Cloudcroft's scenic disc golf course.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">All Levels</span>
+                            <span class="meta-tag">Apr&ndash;Oct</span>
+                        </div>
+                        <a href="#todo-discgolf-map" class="card-cta">Course Map <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+                <!-- Camping -->
+                <article class="activity-card" data-animate>
+                    <div class="card-image">
+                        <img src="../media/Index-8.jpg" alt="Campsite beneath towering pines in Lincoln National Forest" loading="lazy" width="400" height="200">
+                        <div class="card-emoji" aria-hidden="true">&#9978;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Camping</h3>
+                        <p>Sleep beneath ancient pines at 8,600+ feet in Lincoln National Forest campgrounds.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">Easy&ndash;Moderate</span>
+                            <span class="meta-tag">May&ndash;Sep</span>
+                        </div>
+                        <a href="#todo-camping-details" class="card-cta">Find Campsites <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+                <!-- Skiing -->
+                <article class="activity-card" data-animate>
+                    <div class="card-image">
+                        <img src="../media/placeholder-season-winter.jpg" alt="Snow-covered slopes at Ski Cloudcroft" loading="lazy" width="400" height="200">
+                        <div class="card-emoji" aria-hidden="true">&#9975;&#65039;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Skiing &amp; Snow Sports</h3>
+                        <p>Ski Cloudcroft for family-friendly slopes and tubing &mdash; closest skiing to El Paso and Las Cruces.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">All Levels</span>
+                            <span class="meta-tag">Dec&ndash;Mar</span>
+                        </div>
+                        <a href="#todo-ski-details" class="card-cta">Snow Report <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+                <!-- Art Galleries -->
+                <article class="activity-card" data-animate>
+                    <div class="card-image">
+                        <img src="../media/placeholder-explore-museum.jpg" alt="Art gallery and museum in Cloudcroft, New Mexico" loading="lazy" width="400" height="200">
+                        <div class="card-emoji" aria-hidden="true">&#127912;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Art Galleries &amp; Museums</h3>
+                        <p>Discover local artisans, galleries, and the Sacramento Mountains Museum.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">Year-round</span>
+                        </div>
+                        <a href="#todo-galleries" class="card-cta">Gallery Guide <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SEASONALITY CALENDAR -->
+        <section class="seasonality-section" aria-label="Activity seasonality calendar">
+            <div class="section-header">
+                <h2>When to Do What</h2>
+                <p>Plan your trip around the activities you love most.</p>
+            </div>
+            <div class="season-calendar" role="table" aria-label="Monthly activity availability">
+                <table class="season-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Activity</th>
+                            <th scope="col">Jan</th>
+                            <th scope="col">Feb</th>
+                            <th scope="col">Mar</th>
+                            <th scope="col">Apr</th>
+                            <th scope="col">May</th>
+                            <th scope="col">Jun</th>
+                            <th scope="col">Jul</th>
+                            <th scope="col">Aug</th>
+                            <th scope="col">Sep</th>
+                            <th scope="col">Oct</th>
+                            <th scope="col">Nov</th>
+                            <th scope="col">Dec</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Hiking</th>
+                            <td><div class="season-cell active-green"></div></td>
+                            <td><div class="season-cell active-green"></div></td>
+                            <td><div class="season-cell active-green"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-green"></div></td>
+                            <td><div class="season-cell active-green"></div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mountain Biking</th>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stargazing</th>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pickleball</th>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Golf</th>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Disc Golf</th>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Camping</th>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Skiing &amp; Snow</th>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell inactive"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Galleries &amp; Museums</th>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell peak"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                            <td><div class="season-cell active-gold"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="calendar-legend">
+                <div class="legend-item"><div class="legend-swatch" style="background: var(--golden-hour);"></div> Peak Season</div>
+                <div class="legend-item"><div class="legend-swatch" style="background: rgba(232, 168, 56, 0.7);"></div> Good Conditions</div>
+                <div class="legend-item"><div class="legend-swatch" style="background: rgba(46, 107, 138, 0.7);"></div> Available (Limited)</div>
+                <div class="legend-item"><div class="legend-swatch" style="background: rgba(107, 123, 141, 0.2);"></div> Off Season</div>
+            </div>
+        </section>
+
+        <!-- PLAN CTA -->
+        <section class="plan-cta-section" aria-label="Plan your adventure call to action">
+            <div class="plan-cta-content">
+                <h2>Ready to Build Your Itinerary?</h2>
+                <p>Let us help you plan the perfect mountain getaway.</p>
+                <a href="plan.html" class="cta-button">Start Planning <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Elevate Cloudcroft</h4>
+                <p>Discover the mountain village at 8,676 feet &mdash; where adventure meets altitude in the Sacramento Mountains of New Mexico.</p>
+                <div class="footer-social">
+                    <a href="#todo-facebook" aria-label="Facebook">FB</a>
+                    <a href="#todo-instagram" aria-label="Instagram">IG</a>
+                    <a href="#todo-twitter" aria-label="Twitter">X</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="lodging.html">Lodging</a>
+                <a href="dining.html">Dining</a>
+                <a href="hiking-trails.html">Trails</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="seasonal.html">Seasonal Guide</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="tel:+15754426932">(575) 442-6932</a>
+                <a href="mailto:info@elevatecloudcroft.com">info@elevatecloudcroft.com</a>
+                <a href="https://villageofcloudcroft.com" target="_blank" rel="noopener noreferrer">Village of Cloudcroft</a>
+                <a href="https://www.google.com/maps/place/Cloudcroft,+NM" target="_blank" rel="noopener noreferrer">Map &amp; Directions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Plan</h4>
+                <a href="plan.html">Plan Your Trip</a>
+                <a href="https://weather.com/weather/today/l/Cloudcroft+NM" target="_blank" rel="noopener noreferrer">Weather</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ElevateCloudcroft.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">&#8593;</button>
+
+    <script>
+        /* ===== HEADER SCROLL ===== */
+        (function() {
+            const header = document.querySelector('.site-header');
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        if (window.scrollY > 60) {
+                            header.classList.add('scrolled');
+                        } else {
+                            header.classList.remove('scrolled');
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        })();
+
+        /* ===== MOBILE MENU ===== */
+        (function() {
+            const hamburger = document.querySelector('.hamburger');
+            const overlay = document.querySelector('.mobile-overlay');
+            hamburger.addEventListener('click', function() {
+                const isOpen = hamburger.classList.toggle('open');
+                overlay.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+            overlay.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('open');
+                    overlay.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+        })();
+
+        /* ===== SCROLL-TRIGGERED ANIMATIONS ===== */
+        (function() {
+            const cards = document.querySelectorAll('.activity-card[data-animate]');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry, index) {
+                        if (entry.isIntersecting) {
+                            setTimeout(function() {
+                                entry.target.classList.add('visible');
+                            }, index * 80);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+                cards.forEach(function(card) { observer.observe(card); });
+            } else {
+                cards.forEach(function(card) { card.classList.add('visible'); });
+            }
+        })();
+
+        /* ===== BACK TO TOP ===== */
+        (function() {
+            const btn = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 600) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+</body>
+</html>

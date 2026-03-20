@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking Trails in Cloudcroft, NM | ElevateCloudcroft.com</title>
+    <meta name="description" content="Explore 15+ hiking trails through Lincoln National Forest near Cloudcroft, New Mexico. From easy family walks to challenging ridge climbs at 8,676 feet.">
+    <meta name="keywords" content="Cloudcroft hiking, hiking trails, Lincoln National Forest, Osha Trail, Rim Trail, Dog Canyon, Cloud Climbing Rail Trail, Sacramento Mountains hiking">
+    <link rel="canonical" href="https://elevatecloudcroft.com/hiking-trails.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hiking Trails in Cloudcroft, NM">
+    <meta property="og:description" content="15+ trails through Lincoln National Forest await — from gentle meadow walks to challenging ridge climbs.">
+    <meta property="og:image" content="https://elevatecloudcroft.com/media/Index-4.jpg">
+    <meta property="og:url" content="https://elevatecloudcroft.com/hiking-trails.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ElevateCloudcroft.com">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hiking Trails in Cloudcroft, NM">
+    <meta name="twitter:description" content="15+ trails through Lincoln National Forest await at 8,676 feet.">
+    <meta name="twitter:image" content="https://elevatecloudcroft.com/media/Index-4.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Inter:wght@400;500&family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== RESET & ROOT ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --midnight: #0B1D3A;
+            --summit: #1A3A5C;
+            --alpine: #2E6B8A;
+            --golden-hour: #E8A838;
+            --ember: #D4553A;
+            --pine-shadow: #1E3A2F;
+            --cloud-drift: #F0F4F8;
+            --snow-cap: #FFFFFF;
+            --granite: #6B7B8D;
+            --twilight: #4A2D6B;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        ::selection { background: var(--golden-hour); color: var(--midnight); }
+
+        *:focus-visible { outline: 2px solid var(--golden-hour); outline-offset: 2px; }
+
+        @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--midnight);
+            background: var(--cloud-drift);
+            line-height: 1.6;
+            overflow-x: hidden;
+            animation: pageIn 0.5s ease;
+        }
+
+        /* ===== SKIP TO CONTENT ===== */
+        .skip-to-content {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 8px 8px;
+            font-weight: 700;
+            z-index: 10000;
+            text-decoration: none;
+            transition: top 0.3s;
+        }
+        .skip-to-content:focus { top: 0; }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+            background: transparent;
+        }
+        .site-header.scrolled {
+            background: var(--midnight);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            padding: 0.6rem 2rem;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: var(--snow-cap);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        .logo span { color: var(--golden-hour); }
+
+        .main-nav { display: flex; align-items: center; gap: 0.25rem; }
+        .main-nav a {
+            color: var(--snow-cap);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
+        }
+        .main-nav a:hover, .main-nav a:focus {
+            background: rgba(232, 168, 56, 0.15);
+            color: var(--golden-hour);
+        }
+        .main-nav a.active {
+            background: rgba(232, 168, 56, 0.2);
+            color: var(--golden-hour);
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--golden-hour);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+        }
+        .nav-phone svg { width: 16px; height: 16px; fill: var(--golden-hour); }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--snow-cap);
+            border-radius: 2px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 29, 58, 0.97);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .mobile-overlay.open { display: flex; }
+        .mobile-overlay a {
+            color: var(--snow-cap);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+        .mobile-overlay a:hover { color: var(--golden-hour); }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('../media/Index-4.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: kenBurns 20s ease-in-out infinite alternate;
+        }
+        @keyframes kenBurns {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.1) translate(-1%, -1%); }
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(30, 58, 47, 0.85) 0%, rgba(30, 58, 47, 0.6) 50%, rgba(11, 29, 58, 0.7) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--snow-cap);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .hero-content h1 span { color: var(--golden-hour); }
+        .hero-content p {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--midnight);
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+        .section-header h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--golden-hour);
+            display: block;
+            margin: 0.75rem auto 0;
+        }
+        .section-header p {
+            color: var(--granite);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== FILTER BAR ===== */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+        }
+        .filter-btn {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.6rem 1.5rem;
+            min-height: 44px;
+            border: 2px solid var(--alpine);
+            background: transparent;
+            color: var(--alpine);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .filter-btn:hover {
+            background: rgba(46, 107, 138, 0.1);
+            transform: translateY(-1px);
+        }
+        .filter-btn.active {
+            background: var(--alpine);
+            color: var(--snow-cap);
+            box-shadow: 0 4px 12px rgba(46, 107, 138, 0.3);
+        }
+
+        /* ===== TRAIL CARDS (LIST STYLE) ===== */
+        .trails-list { display: flex; flex-direction: column; gap: 2rem; }
+
+        .trail-card {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            background: var(--snow-cap);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        .trail-card.visible {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .trail-card:nth-child(1).visible { transition-delay: 0s; }
+        .trail-card:nth-child(2).visible { transition-delay: 0.1s; }
+        .trail-card:nth-child(3).visible { transition-delay: 0.2s; }
+        .trail-card:nth-child(4).visible { transition-delay: 0.3s; }
+        .trail-card:nth-child(5).visible { transition-delay: 0.4s; }
+        .trail-card:nth-child(6).visible { transition-delay: 0.5s; }
+        .trail-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+        .trail-card.hidden-by-filter {
+            display: none;
+        }
+
+        .trail-image {
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+        }
+        .trail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .trail-card:hover .trail-image img { transform: scale(1.06); }
+
+        .difficulty-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: var(--snow-cap);
+        }
+        .badge-easy { background: #2E8B57; }
+        .badge-moderate { background: var(--golden-hour); color: var(--midnight); }
+        .badge-hard { background: var(--ember); }
+
+        .trail-details { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+        .trail-details h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--midnight);
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .trail-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .trail-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--summit);
+        }
+        .trail-stat .stat-label {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--granite);
+        }
+        .trail-stat .stat-icon {
+            font-size: 1rem;
+        }
+
+        .trail-details > p {
+            color: var(--granite);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .trail-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .highlight-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            background: var(--cloud-drift);
+            color: var(--summit);
+            border: 1px solid rgba(46, 107, 138, 0.15);
+        }
+
+        .trail-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .trail-cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.6rem 1.4rem;
+            min-height: 44px;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .trail-cta-primary:hover { background: #d4961f; transform: translateY(-1px); box-shadow: 0 6px 25px rgba(232, 168, 56, 0.6); }
+
+        .trail-cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.6rem 1.4rem;
+            min-height: 44px;
+            background: transparent;
+            color: var(--golden-hour);
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid var(--golden-hour);
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .trail-cta-secondary:hover { background: var(--golden-hour); color: var(--midnight); transform: translateY(-1px); }
+
+        /* ===== TRAIL TIPS ===== */
+        .tips-section {
+            background: var(--midnight);
+            padding: 6rem 2rem;
+        }
+        .tips-section .section-header h2 { color: var(--snow-cap); }
+        .tips-section .section-header h2::after { background: var(--golden-hour); }
+        .tips-section .section-header p { color: rgba(255,255,255,0.6); }
+
+        .tips-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .tip-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .tip-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1);
+        }
+        .tip-card:nth-child(1).visible { transition-delay: 0s; }
+        .tip-card:nth-child(2).visible { transition-delay: 0.1s; }
+        .tip-card:nth-child(3).visible { transition-delay: 0.2s; }
+        .tip-card:nth-child(4).visible { transition-delay: 0.3s; }
+        .tip-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.08);
+        }
+        .tip-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            animation: tipBounce 3s ease-in-out infinite;
+        }
+        @keyframes tipBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .tip-card:nth-child(2) .tip-icon { animation-delay: 0.5s; }
+        .tip-card:nth-child(3) .tip-icon { animation-delay: 1s; }
+        .tip-card:nth-child(4) .tip-icon { animation-delay: 1.5s; }
+
+        .tip-card p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== RESOURCES ===== */
+        .resources-section {
+            background: var(--snow-cap);
+            padding: 6rem 2rem;
+        }
+        .resources-section .section-header h2::after { background: var(--golden-hour); }
+        .resources-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--cloud-drift);
+            border-radius: 12px;
+            text-decoration: none;
+            border: 1px solid rgba(46, 107, 138, 0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+        .resource-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .resource-card h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--midnight);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .resource-card p {
+            font-size: 0.85rem;
+            color: var(--granite);
+        }
+
+        /* ===== ADVENTURE CTA ===== */
+        .adventure-cta-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--pine-shadow), var(--alpine));
+            position: relative;
+            overflow: hidden;
+        }
+        .adventure-cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 50%, rgba(232, 168, 56, 0.12) 0%, transparent 70%);
+            animation: gradientShift 8s ease-in-out infinite alternate;
+        }
+        @keyframes gradientShift {
+            0% { opacity: 0.5; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.3); }
+        }
+        .adventure-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        .adventure-cta-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--snow-cap);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .adventure-cta-content p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 1rem 2.5rem;
+            min-height: 44px;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: ctaPulse 3s ease-in-out infinite;
+        }
+        @keyframes ctaPulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4); }
+            50% { box-shadow: 0 4px 15px rgba(232, 168, 56, 0), 0 0 0 12px rgba(232, 168, 56, 0); }
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: #f0b448;
+            box-shadow: 0 6px 25px rgba(232, 168, 56, 0.6);
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--midnight);
+            padding: 4rem 2rem 2rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .footer-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+        .footer-col h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--snow-cap);
+            margin-bottom: 1.25rem;
+        }
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover { color: var(--golden-hour); }
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            transition: background 0.3s, color 0.3s;
+        }
+        .footer-social a:hover { background: var(--golden-hour); color: var(--midnight); }
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 900;
+        }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); }
+        .back-to-top:hover { transform: translateY(-2px); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .trail-card { grid-template-columns: 300px 1fr; }
+            .tips-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .resources-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .main-nav, .nav-phone { display: none; }
+            .hamburger { display: flex; }
+            .trail-card { grid-template-columns: 1fr; }
+            .trail-image { min-height: 220px; max-height: 250px; }
+            .hero { height: 50vh; }
+            .section-container { padding: 3rem 1.25rem; }
+            .tips-grid { grid-template-columns: 1fr; gap: 16px; }
+            .resources-grid { grid-template-columns: 1fr; gap: 16px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .tips-section { padding: 3rem 1.25rem; }
+            .filter-bar { gap: 0.5rem; }
+            .filter-btn { padding: 0.5rem 1rem; font-size: 0.8rem; }
+            .trails-list { gap: 16px; }
+        }
+        @media (max-width: 375px) {
+            .hero-content h1 { font-size: 2rem; }
+            .trail-details { padding: 1.25rem; }
+            .trail-stats { gap: 0.75rem; }
+            .trail-cta-primary, .trail-cta-secondary { min-height: 44px; }
+            .filter-btn { min-height: 44px; }
+        }
+
+        /* ===== REDUCED MOTION ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .hero-bg { animation: none; }
+            html { scroll-behavior: auto; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <a href="index.html" class="logo" aria-label="ElevateCloudcroft.com Home">ELEVATE <span>CLOUDCROFT</span></a>
+        <nav class="main-nav" role="menubar" aria-label="Main Navigation">
+            <a href="lodging.html" role="menuitem">Stay</a>
+            <a href="dining.html" role="menuitem">Eat</a>
+            <a href="activities.html" role="menuitem">Explore</a>
+            <a href="hiking-trails.html" role="menuitem" class="active" aria-current="page">Trails</a>
+            <a href="events.html" role="menuitem">Events</a>
+            <a href="seasonal.html" role="menuitem">Seasons</a>
+            <a href="plan.html" role="menuitem">Plan</a>
+            <a href="contact.html" role="menuitem">Contact</a>
+        </nav>
+        <a href="tel:+15754426932" class="nav-phone" aria-label="Call us at 575-442-6932">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.27c1.12.45 2.33.69 3.48.69.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.24 2.45.69 3.48.14.34.08.73-.27 1.11l-2.2 2.2z"/></svg>
+            <span>(575) 442-6932</span>
+        </a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="mobile-overlay" role="dialog" aria-label="Mobile Navigation">
+        <a href="lodging.html">Stay</a>
+        <a href="dining.html">Eat</a>
+        <a href="activities.html">Explore</a>
+        <a href="hiking-trails.html">Trails</a>
+        <a href="events.html">Events</a>
+        <a href="seasonal.html">Seasons</a>
+        <a href="plan.html">Plan</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+15754426932">(575) 442-6932</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hiking trails hero banner">
+        <div class="hero-bg" role="img" aria-label="Hiking trail through Lincoln National Forest"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Hit the <span>Trail</span></h1>
+            <p>15+ trails through Lincoln National Forest await.</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+
+        <!-- TRAILS SECTION -->
+        <section class="section-container" aria-label="Hiking trails">
+            <div class="section-header">
+                <h2>Cloudcroft Hiking Trails</h2>
+                <p>From gentle forest loops to dramatic canyon descents, find the trail that matches your ambition.</p>
+            </div>
+
+            <!-- FILTER -->
+            <div class="filter-bar" role="group" aria-label="Filter trails by difficulty">
+                <button class="filter-btn active" data-filter="all">All Trails</button>
+                <button class="filter-btn" data-filter="easy">Easy</button>
+                <button class="filter-btn" data-filter="moderate">Moderate</button>
+                <button class="filter-btn" data-filter="hard">Hard</button>
+            </div>
+
+            <!-- TRAIL CARDS -->
+            <div class="trails-list">
+
+                <!-- Osha Trail -->
+                <article class="trail-card" data-difficulty="easy" data-animate>
+                    <div class="trail-image">
+                        <img src="../media/Index-6.jpg" alt="Osha Trail winding through mixed conifer forest near Cloudcroft" loading="lazy" width="380" height="280">
+                        <span class="difficulty-badge badge-easy">Easy</span>
+                    </div>
+                    <div class="trail-details">
+                        <h3>Osha Trail</h3>
+                        <div class="trail-stats">
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#128207;</span> 2.2 mi</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9650;</span> 200 ft gain</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9201;</span> ~1 hr</span>
+                        </div>
+                        <p>A gentle loop through mixed conifer forest &mdash; perfect for families and a quiet afternoon walk.</p>
+                        <div class="trail-highlights">
+                            <span class="highlight-tag">Wildflowers</span>
+                            <span class="highlight-tag">Bird watching</span>
+                            <span class="highlight-tag">Family-friendly</span>
+                        </div>
+                        <div class="trail-ctas">
+                            <a href="https://www.google.com/maps/search/Osha+Trail+Cloudcroft+NM" class="trail-cta-primary" target="_blank" rel="noopener noreferrer">Get Directions <span aria-hidden="true">&rarr;</span></a>
+                            <a href="#todo-osha-alltrails" class="trail-cta-secondary">Trail Details</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Rim Trail -->
+                <article class="trail-card" data-difficulty="moderate" data-animate>
+                    <div class="trail-image">
+                        <img src="../media/Index-8.jpg" alt="Rim Trail with canyon-edge views along the Sacramento Mountains" loading="lazy" width="380" height="280">
+                        <span class="difficulty-badge badge-moderate">Moderate</span>
+                    </div>
+                    <div class="trail-details">
+                        <h3>Rim Trail</h3>
+                        <div class="trail-stats">
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#128207;</span> 4.5 mi</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9650;</span> 600 ft gain</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9201;</span> ~2.5 hr</span>
+                        </div>
+                        <p>Stunning canyon-edge views along the Sacramento Mountain rim with diverse terrain.</p>
+                        <div class="trail-highlights">
+                            <span class="highlight-tag">Canyon views</span>
+                            <span class="highlight-tag">Photography</span>
+                            <span class="highlight-tag">Diverse terrain</span>
+                        </div>
+                        <div class="trail-ctas">
+                            <a href="https://www.google.com/maps/search/Rim+Trail+Cloudcroft+NM" class="trail-cta-primary" target="_blank" rel="noopener noreferrer">Get Directions <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Cloud-Climbing Rail Trail -->
+                <article class="trail-card" data-difficulty="easy" data-animate>
+                    <div class="trail-image">
+                        <img src="../media/Index-20.jpg" alt="Cloud-Climbing Rail Trail passing through historic railroad tunnels and trestles" loading="lazy" width="380" height="280">
+                        <span class="difficulty-badge badge-easy">Easy</span>
+                    </div>
+                    <div class="trail-details">
+                        <h3>Cloud-Climbing Rail Trail</h3>
+                        <div class="trail-stats">
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#128207;</span> 3.6 mi one-way</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9650;</span> 300 ft gain</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9201;</span> ~2 hr</span>
+                        </div>
+                        <p>Follow the historic railroad bed through tunnels and trestles &mdash; a unique piece of mountain history.</p>
+                        <div class="trail-highlights">
+                            <span class="highlight-tag">Historic trestles</span>
+                            <span class="highlight-tag">Tunnels</span>
+                            <span class="highlight-tag">Railroad history</span>
+                            <span class="highlight-tag">Mexican Canyon Trestle</span>
+                        </div>
+                        <div class="trail-ctas">
+                            <a href="https://www.google.com/maps/search/Cloud+Climbing+Rail+Trail+Cloudcroft+NM" class="trail-cta-primary" target="_blank" rel="noopener noreferrer">Get Directions <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dog Canyon Trail -->
+                <article class="trail-card" data-difficulty="hard" data-animate>
+                    <div class="trail-image">
+                        <img src="../media/Index-14.jpg" alt="Dog Canyon Trail with dramatic descent from mountains to Tularosa Basin" loading="lazy" width="380" height="280">
+                        <span class="difficulty-badge badge-hard">Hard</span>
+                    </div>
+                    <div class="trail-details">
+                        <h3>Dog Canyon Trail</h3>
+                        <div class="trail-stats">
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#128207;</span> 6.4 mi</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9650;</span> 3,100 ft gain</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9201;</span> ~5 hr</span>
+                        </div>
+                        <p>A challenging descent (or ascent) connecting the mountains to the Tularosa Basin &mdash; dramatic elevation change.</p>
+                        <div class="trail-highlights">
+                            <span class="highlight-tag">Dramatic views</span>
+                            <span class="highlight-tag">Challenging terrain</span>
+                            <span class="highlight-tag">Desert-to-forest transition</span>
+                        </div>
+                        <div class="trail-ctas">
+                            <a href="https://www.google.com/maps/search/Dog+Canyon+Trail+NM" class="trail-cta-primary" target="_blank" rel="noopener noreferrer">Get Directions <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Slide Group Loop -->
+                <article class="trail-card" data-difficulty="easy" data-animate>
+                    <div class="trail-image">
+                        <img src="../media/Index-16.jpg" alt="Slide Group Loop nature walk near Slide Campground" loading="lazy" width="380" height="280">
+                        <span class="difficulty-badge badge-easy">Easy</span>
+                    </div>
+                    <div class="trail-details">
+                        <h3>Slide Group Loop</h3>
+                        <div class="trail-stats">
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#128207;</span> 1.5 mi</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9650;</span> 100 ft gain</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9201;</span> ~45 min</span>
+                        </div>
+                        <p>Short and sweet nature walk near Slide Campground &mdash; great for kids and quick outings.</p>
+                        <div class="trail-highlights">
+                            <span class="highlight-tag">Family-friendly</span>
+                            <span class="highlight-tag">Picnic areas</span>
+                            <span class="highlight-tag">Accessible</span>
+                        </div>
+                        <div class="trail-ctas">
+                            <a href="https://www.google.com/maps/search/Slide+Campground+Cloudcroft+NM" class="trail-cta-primary" target="_blank" rel="noopener noreferrer">Get Directions <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Mexican Canyon Trestle Trail -->
+                <article class="trail-card" data-difficulty="moderate" data-animate>
+                    <div class="trail-image">
+                        <img src="../media/Index-23.jpg" alt="Mexican Canyon Trestle, an iconic railroad trestle in the Sacramento Mountains" loading="lazy" width="380" height="280">
+                        <span class="difficulty-badge badge-moderate">Moderate</span>
+                    </div>
+                    <div class="trail-details">
+                        <h3>Mexican Canyon Trestle Trail</h3>
+                        <div class="trail-stats">
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#128207;</span> 2.0 mi</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9650;</span> 400 ft gain</span>
+                            <span class="trail-stat"><span class="stat-icon" aria-hidden="true">&#9201;</span> ~1.5 hr</span>
+                        </div>
+                        <p>Hike to the iconic railroad trestle &mdash; one of the most photographed spots in the Sacramento Mountains.</p>
+                        <div class="trail-highlights">
+                            <span class="highlight-tag">Historic trestle</span>
+                            <span class="highlight-tag">Photography</span>
+                            <span class="highlight-tag">Mountain views</span>
+                        </div>
+                        <div class="trail-ctas">
+                            <a href="https://www.google.com/maps/search/Mexican+Canyon+Trestle+Cloudcroft+NM" class="trail-cta-primary" target="_blank" rel="noopener noreferrer">Get Directions <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- TRAIL TIPS -->
+        <section class="tips-section" aria-label="Trail safety tips">
+            <div class="section-header">
+                <h2>Trail Tips</h2>
+                <p>Stay safe and make the most of your high-altitude hike.</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card" data-animate-tip>
+                    <span class="tip-icon" aria-hidden="true">&#129524;</span>
+                    <p>Wear sunscreen &mdash; UV is stronger at altitude.</p>
+                </div>
+                <div class="tip-card" data-animate-tip>
+                    <span class="tip-icon" aria-hidden="true">&#128167;</span>
+                    <p>Carry extra water &mdash; you dehydrate faster above 8,000 ft.</p>
+                </div>
+                <div class="tip-card" data-animate-tip>
+                    <span class="tip-icon" aria-hidden="true">&#128059;</span>
+                    <p>Store food properly &mdash; bears are active in the forest.</p>
+                </div>
+                <div class="tip-card" data-animate-tip>
+                    <span class="tip-icon" aria-hidden="true">&#9928;&#65039;</span>
+                    <p>Start early &mdash; afternoon thunderstorms are common in summer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESOURCES -->
+        <section class="resources-section" aria-label="Trail resources">
+            <div class="section-header">
+                <h2>Resources</h2>
+                <p>Everything you need to prepare for the trails.</p>
+            </div>
+            <div class="resources-grid">
+                <a href="#todo-trail-maps-pdf" class="resource-card">
+                    <!-- NEEDS: PDF of trail maps -->
+                    <span class="resource-icon" aria-hidden="true">&#128506;</span>
+                    <h4>Download Trail Maps</h4>
+                    <p>Printable maps for offline navigation.</p>
+                </a>
+                <a href="https://www.fs.usda.gov/lincoln" class="resource-card" target="_blank" rel="noopener noreferrer">
+                    <span class="resource-icon" aria-hidden="true">&#127794;</span>
+                    <h4>Lincoln National Forest</h4>
+                    <p>Official forest service info and alerts.</p>
+                </a>
+                <a href="https://lnt.org" class="resource-card" target="_blank" rel="noopener noreferrer">
+                    <span class="resource-icon" aria-hidden="true">&#127807;</span>
+                    <h4>Leave No Trace</h4>
+                    <p>Seven principles for responsible recreation.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- ADVENTURE CTA -->
+        <section class="adventure-cta-section" aria-label="More adventures call to action">
+            <div class="adventure-cta-content">
+                <h2>Need More Adventure?</h2>
+                <p>Hiking is just the beginning &mdash; explore biking, stargazing, skiing, and more.</p>
+                <a href="activities.html" class="cta-button">All Activities <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Elevate Cloudcroft</h4>
+                <p>Discover the mountain village at 8,676 feet &mdash; where adventure meets altitude in the Sacramento Mountains of New Mexico.</p>
+                <div class="footer-social">
+                    <a href="#todo-facebook" aria-label="Facebook">FB</a>
+                    <a href="#todo-instagram" aria-label="Instagram">IG</a>
+                    <a href="#todo-twitter" aria-label="Twitter">X</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="lodging.html">Lodging</a>
+                <a href="dining.html">Dining</a>
+                <a href="hiking-trails.html">Trails</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="seasonal.html">Seasonal Guide</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="tel:+15754426932">(575) 442-6932</a>
+                <a href="mailto:info@elevatecloudcroft.com">info@elevatecloudcroft.com</a>
+                <a href="https://villageofcloudcroft.com" target="_blank" rel="noopener noreferrer">Village of Cloudcroft</a>
+                <a href="https://www.google.com/maps/place/Cloudcroft,+NM" target="_blank" rel="noopener noreferrer">Map &amp; Directions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Plan</h4>
+                <a href="plan.html">Plan Your Trip</a>
+                <a href="https://weather.com/weather/today/l/Cloudcroft+NM" target="_blank" rel="noopener noreferrer">Weather</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ElevateCloudcroft.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">&#8593;</button>
+
+    <script>
+        /* ===== HEADER SCROLL ===== */
+        (function() {
+            const header = document.querySelector('.site-header');
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        if (window.scrollY > 60) {
+                            header.classList.add('scrolled');
+                        } else {
+                            header.classList.remove('scrolled');
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        })();
+
+        /* ===== MOBILE MENU ===== */
+        (function() {
+            const hamburger = document.querySelector('.hamburger');
+            const overlay = document.querySelector('.mobile-overlay');
+            hamburger.addEventListener('click', function() {
+                const isOpen = hamburger.classList.toggle('open');
+                overlay.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+            overlay.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('open');
+                    overlay.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+        })();
+
+        /* ===== DIFFICULTY FILTER ===== */
+        (function() {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.trail-card');
+
+            buttons.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+
+                    buttons.forEach(function(b) { b.classList.remove('active'); });
+                    this.classList.add('active');
+
+                    cards.forEach(function(card) {
+                        const difficulty = card.getAttribute('data-difficulty');
+                        if (filter === 'all' || difficulty === filter) {
+                            card.classList.remove('hidden-by-filter');
+                        } else {
+                            card.classList.add('hidden-by-filter');
+                        }
+                    });
+                });
+            });
+        })();
+
+        /* ===== SCROLL-TRIGGERED ANIMATIONS (TRAIL CARDS) ===== */
+        (function() {
+            const cards = document.querySelectorAll('.trail-card[data-animate]');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+                cards.forEach(function(card) { observer.observe(card); });
+            } else {
+                cards.forEach(function(card) { card.classList.add('visible'); });
+            }
+        })();
+
+        /* ===== SCROLL-TRIGGERED ANIMATIONS (TIP CARDS) ===== */
+        (function() {
+            const tips = document.querySelectorAll('.tip-card[data-animate-tip]');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry, index) {
+                        if (entry.isIntersecting) {
+                            setTimeout(function() {
+                                entry.target.classList.add('visible');
+                            }, index * 120);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2 });
+                tips.forEach(function(tip) { observer.observe(tip); });
+            } else {
+                tips.forEach(function(tip) { tip.classList.add('visible'); });
+            }
+        })();
+
+        /* ===== BACK TO TOP ===== */
+        (function() {
+            const btn = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 600) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+</body>
+</html>

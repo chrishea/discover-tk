@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elevate Cloudcroft — Your Mountain Escape at 8,676 Feet | Cloudcroft, NM</title>
+  <meta name="description" content="Discover Cloudcroft, New Mexico — a mountain village at 8,676 feet in the Sacramento Mountains. Plan your escape with lodging, dining, trails, events, and seasonal adventures.">
+  <meta name="keywords" content="Cloudcroft NM, mountain getaway, Sacramento Mountains, hiking, lodging, dining, events, New Mexico tourism">
+  <link rel="canonical" href="https://elevatecloudcroft.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Elevate Cloudcroft — Your Mountain Escape at 8,676 Feet">
+  <meta property="og:description" content="Discover Cloudcroft, New Mexico — a mountain village at 8,676 feet. Lodging, dining, trails, events, and seasonal adventures await.">
+  <meta property="og:image" content="https://elevatecloudcroft.com/media/placeholder-hero-main.jpg">
+  <meta property="og:url" content="https://elevatecloudcroft.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Elevate Cloudcroft">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elevate Cloudcroft — Your Mountain Escape at 8,676 Feet">
+  <meta name="twitter:description" content="Discover Cloudcroft, New Mexico — a mountain village at 8,676 feet in the Sacramento Mountains.">
+  <meta name="twitter:image" content="https://elevatecloudcroft.com/media/placeholder-hero-main.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Inter:wght@400;500&family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== RESET & CUSTOM PROPERTIES ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --midnight: #0B1D3A;
+      --summit: #1A3A5C;
+      --alpine: #2E6B8A;
+      --golden-hour: #E8A838;
+      --ember: #D4553A;
+      --pine-shadow: #1E3A2F;
+      --cloud-drift: #F0F4F8;
+      --snow-cap: #FFFFFF;
+      --granite: #6B7B8D;
+      --twilight: #4A2D6B;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::selection {
+      background: var(--golden-hour);
+      color: var(--midnight);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--midnight);
+      background: var(--snow-cap);
+      line-height: 1.6;
+      overflow-x: hidden;
+      animation: pageLoad 0.5s cubic-bezier(0, 0, 0.2, 1) both;
+    }
+
+    @keyframes pageLoad {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--golden-hour);
+      outline-offset: 2px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ===== SKIP TO CONTENT ===== */
+    .skip-to-content {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--golden-hour);
+      color: var(--midnight);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0 0 8px 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      z-index: 10000;
+      transition: top 0.3s ease;
+    }
+
+    .skip-to-content:focus {
+      top: 0;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+      background: transparent;
+    }
+
+    .site-header.scrolled {
+      background: rgba(11, 29, 58, 0.97);
+      padding: 0.6rem 2rem;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--snow-cap);
+      font-size: 1.5rem;
+      letter-spacing: 0.15em;
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+    }
+
+    .logo-elevate {
+      font-weight: 700;
+    }
+
+    .logo-cloudcroft {
+      font-weight: 500;
+      opacity: 0.75;
+      font-size: 0.85em;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .main-nav a {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--snow-cap);
+      opacity: 0.85;
+      transition: opacity 0.3s ease, color 0.3s ease;
+      letter-spacing: 0.03em;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      opacity: 1;
+      color: var(--golden-hour);
+    }
+
+    .phone-link {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--golden-hour);
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+    }
+
+    .phone-link:hover {
+      opacity: 1;
+    }
+
+    .phone-link svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--golden-hour);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+      z-index: 1100;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--snow-cap);
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile nav overlay */
+    .mobile-nav-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100vh;
+      background: rgba(11, 29, 58, 0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 1050;
+      flex-direction: column;
+      padding: 5rem 2rem 2rem;
+      gap: 1.5rem;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .mobile-nav-overlay.open {
+      display: flex;
+      transform: translateX(0);
+    }
+
+    .mobile-nav-overlay a {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: var(--snow-cap);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: color 0.3s ease;
+    }
+
+    .mobile-nav-overlay a:hover {
+      color: var(--golden-hour);
+    }
+
+    .mobile-nav-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1040;
+    }
+
+    .mobile-nav-backdrop.open {
+      display: block;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../media/placeholder-hero-main.jpg') center center / cover no-repeat;
+      animation: kenBurnsHero 22s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+
+    @keyframes kenBurnsHero {
+      0% { transform: scale(1.0); }
+      100% { transform: scale(1.05); }
+    }
+
+    .hero-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+        rgba(11, 29, 58, 0.7) 0%,
+        rgba(26, 58, 92, 0.5) 33%,
+        rgba(74, 45, 107, 0.6) 66%,
+        rgba(11, 29, 58, 0.7) 100%
+      );
+      background-size: 300% 300%;
+      animation: heroGradientShift 30s ease infinite;
+    }
+
+    @keyframes heroGradientShift {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 100% 0%; }
+      50% { background-position: 100% 100%; }
+      75% { background-position: 0% 100%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 2rem;
+      max-width: 800px;
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--snow-cap);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid var(--golden-hour);
+      width: 0;
+      animation: typeIn 2s steps(22, end) 0.5s forwards, blinkCaret 0.7s step-end infinite;
+    }
+
+    @keyframes typeIn {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blinkCaret {
+      50% { border-color: transparent; }
+    }
+
+    .hero-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      color: rgba(240, 244, 248, 0.9);
+      letter-spacing: 0.05em;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeInUp 1s cubic-bezier(0, 0, 0.2, 1) 1.5s forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1.25rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeInUp 1s cubic-bezier(0, 0, 0.2, 1) 2s forwards;
+    }
+
+    .btn-primary {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.25rem;
+      background: var(--golden-hour);
+      color: var(--midnight);
+      border: 2px solid var(--golden-hour);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+      animation: pulseBtn 3s ease-in-out infinite;
+      min-height: 44px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(232, 168, 56, 0.6);
+    }
+
+    @keyframes pulseBtn {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(232, 168, 56, 0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(232, 168, 56, 0); }
+    }
+
+    .btn-outline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.25rem;
+      background: transparent;
+      color: var(--snow-cap);
+      border: 2px solid var(--golden-hour);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: pulseOutline 3s ease-in-out 1.5s infinite;
+      min-height: 44px;
+    }
+
+    .btn-outline:hover {
+      background: var(--golden-hour);
+      color: var(--midnight);
+      transform: translateY(-2px);
+    }
+
+    @keyframes pulseOutline {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3); }
+      50% { box-shadow: 0 0 0 12px rgba(255, 255, 255, 0); }
+    }
+
+    .elevation-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      padding: 0.5rem 1.25rem;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      color: var(--snow-cap);
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      opacity: 0;
+      animation: fadeInUp 1s ease 2.5s forwards, subtlePulse 4s ease-in-out 3.5s infinite;
+    }
+
+    @keyframes subtlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    /* ===== QUICK-ACTION BAR ===== */
+    .quick-action-bar {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: rgba(11, 29, 58, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 0.6rem 1rem;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .quick-action-bar.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .quick-actions-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      gap: 0.5rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .quick-actions-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .quick-action-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 10px;
+      transition: background 0.3s ease, transform 0.2s ease;
+      text-align: center;
+    }
+
+    .quick-action-btn:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    .quick-action-btn .qa-icon {
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    .quick-action-btn .qa-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 0.7rem;
+      color: var(--cloud-drift);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ===== SECTION UTILITIES ===== */
+    .section-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: var(--midnight);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--golden-hour);
+      border-radius: 2px;
+      margin: 0.75rem auto 0;
+    }
+
+    .section-header p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--granite);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Scroll fade-in */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slide-in-bottom {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .slide-in-bottom.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== REELS / MOTION GALLERY ===== */
+    .reels-section {
+      padding: 6rem 0;
+      background: var(--cloud-drift);
+      overflow: hidden;
+    }
+
+    .reels-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 1rem 0;
+    }
+
+    .reels-track {
+      display: flex;
+      gap: 1.5rem;
+      animation: scrollReels 40s linear infinite;
+      width: max-content;
+    }
+
+    .reels-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollReels {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .reel-card {
+      position: relative;
+      flex-shrink: 0;
+      width: 320px;
+      height: 420px;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .reel-card:hover {
+      transform: scale(1.03) translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .reel-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 6s ease;
+    }
+
+    .reel-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .reel-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem 1.5rem 1.5rem;
+      background: linear-gradient(transparent 0%, rgba(11, 29, 58, 0.4) 50%, rgba(11, 29, 58, 0.85) 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .reel-card-title {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--snow-cap);
+    }
+
+    .reel-play-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      flex-shrink: 0;
+    }
+
+    .reel-play-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--snow-cap);
+      margin-left: 2px;
+    }
+
+    .reel-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .reel-nav-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--alpine);
+      background: var(--snow-cap);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .reel-nav-btn:hover {
+      background: var(--alpine);
+      border-color: var(--alpine);
+      transform: scale(1.08);
+    }
+
+    .reel-nav-btn:hover svg {
+      fill: var(--snow-cap);
+    }
+
+    .reel-nav-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--alpine);
+      transition: fill 0.3s ease;
+    }
+
+    /* ===== SEASONAL SPOTLIGHT ===== */
+    .seasonal-section {
+      padding: 6rem 0;
+      background: var(--snow-cap);
+    }
+
+    .seasonal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .season-card {
+      position: relative;
+      border-radius: 12px;
+      padding: 2.5rem 1.5rem;
+      min-height: 360px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .season-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .season-card-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-size: 200% 200%;
+      animation-duration: 8s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+    }
+
+    .season-spring .season-card-bg {
+      background: linear-gradient(135deg, #2D8B4E, #5BB87A, #A8E06B, #2D8B4E);
+      animation-name: springGradient;
+    }
+
+    @keyframes springGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .season-summer .season-card-bg {
+      background: linear-gradient(135deg, #E8A838, #F0C75E, #E88B38, #E8A838);
+      animation-name: summerGradient;
+    }
+
+    @keyframes summerGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .season-fall .season-card-bg {
+      background: linear-gradient(135deg, #D4553A, #E88B38, #BF3A1D, #D4553A);
+      animation-name: fallGradient;
+    }
+
+    @keyframes fallGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .season-winter .season-card-bg {
+      background: linear-gradient(135deg, #2E6B8A, #A8D0E6, #F0F4F8, #2E6B8A);
+      animation-name: winterGradient;
+    }
+
+    @keyframes winterGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .season-card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .season-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .season-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--snow-cap);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .season-card .season-activities {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+    }
+
+    .season-card:hover .season-activities {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    .season-activities ul {
+      margin-bottom: 1rem;
+    }
+
+    .season-activities li {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.9);
+      padding: 0.2rem 0;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+
+    .season-activities li::before {
+      content: "\2022 ";
+      color: var(--golden-hour);
+      margin-right: 0.35rem;
+    }
+
+    .season-cta {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--snow-cap);
+      transition: color 0.3s ease;
+    }
+
+    .season-cta:hover {
+      color: var(--golden-hour);
+    }
+
+    /* ===== WHY CLOUDCROFT / STATS ===== */
+    .stats-section {
+      position: relative;
+      padding: 6rem 0;
+      background: var(--midnight);
+      overflow: hidden;
+    }
+
+    .stats-parallax-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 50% 10%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 15% 85%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 45% 50%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 15%, rgba(255,255,255,0.45) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 60% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.5) 0%, transparent 100%);
+      will-change: transform;
+    }
+
+    .stats-section .section-header h2 {
+      color: var(--snow-cap);
+    }
+
+    .stats-section .section-header p {
+      color: var(--granite);
+    }
+
+    .stats-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 2rem 1rem;
+    }
+
+    .stat-number {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      color: var(--golden-hour);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--cloud-drift);
+      opacity: 0.8;
+    }
+
+    /* ===== DINING + LODGING SPLIT ===== */
+    .split-section {
+      padding: 6rem 0;
+      background: var(--cloud-drift);
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .split-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 480px;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .split-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .split-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 6s ease;
+    }
+
+    .split-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .split-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 3rem 2rem 2rem;
+      background: linear-gradient(transparent 0%, rgba(11, 29, 58, 0.45) 40%, rgba(11, 29, 58, 0.9) 100%);
+    }
+
+    .split-card-overlay h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      color: var(--snow-cap);
+      margin-bottom: 0.5rem;
+    }
+
+    .split-card-overlay p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: rgba(240, 244, 248, 0.85);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+      max-width: 400px;
+    }
+
+    .split-card-cta {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--golden-hour);
+      transition: color 0.3s ease;
+    }
+
+    .split-card-cta:hover {
+      color: var(--snow-cap);
+    }
+
+    /* ===== UPCOMING EVENTS ===== */
+    .events-section {
+      padding: 6rem 0;
+      background: var(--snow-cap);
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .event-card {
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--snow-cap);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .event-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .event-card-img {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .event-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .event-card:hover .event-card-img img {
+      transform: scale(1.06);
+    }
+
+    .event-date-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--ember);
+      color: var(--snow-cap);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .event-card-body {
+      padding: 1.5rem;
+    }
+
+    .event-card-body h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--midnight);
+      margin-bottom: 0.5rem;
+    }
+
+    .event-card-body p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--granite);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .event-card-cta {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--alpine);
+      transition: color 0.3s ease;
+    }
+
+    .event-card-cta:hover {
+      color: var(--golden-hour);
+    }
+
+    /* ===== NEWSLETTER CTA ===== */
+    .newsletter-section {
+      position: relative;
+      padding: 6rem 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--golden-hour), var(--ember), var(--golden-hour));
+      background-size: 300% 300%;
+      animation: newsletterGradient 12s ease infinite;
+    }
+
+    @keyframes newsletterGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating cloud decorations */
+    .newsletter-cloud {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      pointer-events: none;
+    }
+
+    .newsletter-cloud-1 {
+      width: 200px;
+      height: 80px;
+      top: 15%;
+      left: -40px;
+      border-radius: 100px;
+      animation: floatCloud 15s ease-in-out infinite;
+    }
+
+    .newsletter-cloud-2 {
+      width: 160px;
+      height: 60px;
+      top: 60%;
+      right: -30px;
+      border-radius: 80px;
+      animation: floatCloud 18s ease-in-out 3s infinite reverse;
+    }
+
+    .newsletter-cloud-3 {
+      width: 120px;
+      height: 50px;
+      bottom: 10%;
+      left: 30%;
+      border-radius: 60px;
+      animation: floatCloud 20s ease-in-out 6s infinite;
+    }
+
+    @keyframes floatCloud {
+      0%, 100% { transform: translateX(0) translateY(0); }
+      25% { transform: translateX(30px) translateY(-15px); }
+      50% { transform: translateX(60px) translateY(5px); }
+      75% { transform: translateX(20px) translateY(-10px); }
+    }
+
+    .newsletter-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .newsletter-content h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: var(--snow-cap);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .newsletter-content p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: rgba(255,255,255,0.9);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      padding: 0.9rem 1.25rem;
+      border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: var(--snow-cap);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .newsletter-form input[type="email"]::placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .newsletter-form input[type="email"]:focus {
+      border-color: var(--snow-cap);
+      background: rgba(255,255,255,0.25);
+    }
+
+    .newsletter-form button {
+      padding: 0.9rem 1.75rem;
+      border-radius: 50px;
+      border: none;
+      background: var(--midnight);
+      color: var(--snow-cap);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(11, 29, 58, 0.4);
+    }
+
+    .newsletter-note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: var(--midnight);
+      padding-top: 4px;
+      position: relative;
+    }
+
+    .footer-gradient-border {
+      height: 4px;
+      background: linear-gradient(90deg, var(--alpine), var(--golden-hour), var(--ember), var(--alpine));
+      background-size: 300% 100%;
+      animation: footerBorderMorph 6s ease infinite;
+    }
+
+    @keyframes footerBorderMorph {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .footer-brand p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--granite);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      background: var(--alpine);
+      border-color: var(--alpine);
+      transform: translateY(-2px);
+    }
+
+    .social-icons a svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--cloud-drift);
+    }
+
+    .footer-col h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--snow-cap);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-col ul li a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--granite);
+      transition: color 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--golden-hour);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--granite);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-bottom-links a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--granite);
+      transition: color 0.3s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--golden-hour);
+    }
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--golden-hour);
+      color: var(--midnight);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease;
+      z-index: 800;
+      box-shadow: 0 4px 15px rgba(232, 168, 56, 0.3);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      box-shadow: 0 8px 25px rgba(232, 168, 56, 0.5);
+      transform: translateY(-3px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .seasonal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .events-grid .event-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 500px;
+        justify-self: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+
+      .phone-link {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-headline {
+        white-space: normal;
+        border-right: none;
+        width: auto;
+        animation: fadeInUp 1s ease 0.5s forwards;
+        opacity: 0;
+      }
+
+      .split-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .split-card {
+        height: 360px;
+      }
+
+      .seasonal-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .events-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .events-grid .event-card:last-child {
+        max-width: none;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form button {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .reel-card {
+        width: 260px;
+        height: 340px;
+      }
+
+      .quick-actions-inner {
+        gap: 0.25rem;
+      }
+
+      .quick-action-btn {
+        padding: 0.3rem 0.4rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .seasonal-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .split-grid {
+        gap: 16px;
+      }
+
+      .events-grid {
+        gap: 16px;
+      }
+
+      .section-container {
+        padding: 0 1rem;
+      }
+
+      .site-header {
+        padding: 1rem;
+      }
+
+      .site-header.scrolled {
+        padding: 0.6rem 1rem;
+      }
+
+      .reel-card {
+        width: 220px;
+        height: 300px;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        min-height: 44px;
+        padding: 0.75rem 1.5rem;
+      }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .hero-bg {
+        animation: none;
+        transform: none;
+      }
+
+      .hero-gradient-overlay {
+        animation: none;
+      }
+
+      .hero-headline {
+        width: auto;
+        border-right: none;
+        opacity: 1;
+      }
+
+      .hero-subtitle,
+      .hero-ctas,
+      .elevation-badge {
+        opacity: 1;
+        transform: none;
+      }
+
+      .reels-track {
+        animation: none;
+      }
+
+      .fade-in-section,
+      .slide-in-bottom {
+        opacity: 1;
+        transform: none;
+      }
+
+      .season-card-bg {
+        animation: none;
+      }
+
+      .stats-parallax-bg {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to Content -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Elevate Cloudcroft Home">
+        <span class="logo-elevate">ELEVATE</span>
+        <span class="logo-cloudcroft">CLOUDCROFT</span>
+      </a>
+      <nav class="main-nav" role="menubar" aria-label="Main navigation">
+        <a href="lodging.html" role="menuitem">Stay</a>
+        <a href="dining.html" role="menuitem">Eat</a>
+        <a href="activities.html" role="menuitem">Explore</a>
+        <a href="hiking-trails.html" role="menuitem">Trails</a>
+        <a href="events.html" role="menuitem">Events</a>
+        <a href="seasonal.html" role="menuitem">Seasons</a>
+        <a href="plan.html" role="menuitem">Plan</a>
+        <a href="contact.html" role="menuitem">Contact</a>
+      </nav>
+      <a href="tel:+15754426932" class="phone-link" aria-label="Call us at 575-442-6932">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.66 1 1 0 01-.25 1.01l-2.22 2.12z"/></svg>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav-overlay" aria-label="Mobile navigation">
+    <a href="lodging.html">Stay</a>
+    <a href="dining.html">Eat</a>
+    <a href="activities.html">Explore</a>
+    <a href="hiking-trails.html">Trails</a>
+    <a href="events.html">Events</a>
+    <a href="seasonal.html">Seasons</a>
+    <a href="plan.html">Plan</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:+15754426932">Call: 575-442-6932</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Hero banner">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-gradient-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 class="hero-headline">Elevate Your Escape.</h1>
+      <p class="hero-subtitle">Cloudcroft, NM &mdash; 8,676 ft above ordinary.</p>
+      <div class="hero-ctas">
+        <a href="plan.html" class="btn-primary">Plan Your Trip</a>
+        <a href="activities.html" class="btn-outline">Explore Activities</a>
+      </div>
+      <div class="elevation-badge" aria-label="Elevation: 8,676 feet">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 22h20L12 2z"/></svg>
+        8,676 FT ELEVATION
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUICK-ACTION BAR ===== -->
+  <div class="quick-action-bar" role="navigation" aria-label="Quick actions">
+    <div class="quick-actions-inner">
+      <a href="lodging.html" class="quick-action-btn">
+        <span class="qa-icon" aria-hidden="true">&#127976;</span>
+        <span class="qa-label">Stay</span>
+      </a>
+      <a href="dining.html" class="quick-action-btn">
+        <span class="qa-icon" aria-hidden="true">&#127869;</span>
+        <span class="qa-label">Eat</span>
+      </a>
+      <a href="hiking-trails.html" class="quick-action-btn">
+        <span class="qa-icon" aria-hidden="true">&#129406;</span>
+        <span class="qa-label">Hike</span>
+      </a>
+      <a href="activities.html" class="quick-action-btn">
+        <span class="qa-icon" aria-hidden="true">&#128301;</span>
+        <span class="qa-label">Explore</span>
+      </a>
+      <a href="events.html" class="quick-action-btn">
+        <span class="qa-icon" aria-hidden="true">&#127881;</span>
+        <span class="qa-label">Events</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- ===== REELS / MOTION GALLERY ===== -->
+    <section class="reels-section" aria-label="Moments in the Mountains gallery">
+      <div class="section-container">
+        <div class="section-header fade-in-section">
+          <h2>Moments in the Mountains</h2>
+          <p>From golden sunrises to star-filled skies, every moment in Cloudcroft is unforgettable.</p>
+        </div>
+      </div>
+      <div class="reels-wrapper">
+        <div class="reels-track">
+          <!-- First set -->
+          <a href="hiking-trails.html" class="reel-card" aria-label="Sunrise Hike">
+            <img src="../media/Index-4.jpg" alt="Sunrise hike through Cloudcroft mountain trails" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Sunrise Hike</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="activities.html" class="reel-card" aria-label="Downtown Stroll">
+            <img src="../media/placeholder-explore-burro-avenue.jpg" alt="Burro Avenue in downtown Cloudcroft" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Downtown Stroll</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="dining.html" class="reel-card" aria-label="Brewery Visit">
+            <img src="../media/placeholder-explore-brewery.jpg" alt="Local craft brewery in Cloudcroft" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Brewery Visit</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="activities.html" class="reel-card" aria-label="Stargazing">
+            <img src="../media/Index-11.jpg" alt="Stargazing in Cloudcroft dark skies" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Stargazing</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="seasonal.html#winter" class="reel-card" aria-label="Winter Magic">
+            <img src="../media/placeholder-season-winter.jpg" alt="Winter snow in the Sacramento Mountains" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Winter Magic</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="seasonal.html#fall" class="reel-card" aria-label="Fall Colors">
+            <img src="../media/placeholder-season-fall.jpg" alt="Autumn foliage in Cloudcroft" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Fall Colors</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <!-- Duplicate set for seamless infinite scroll -->
+          <a href="hiking-trails.html" class="reel-card" aria-label="Sunrise Hike">
+            <img src="../media/Index-4.jpg" alt="Sunrise hike through Cloudcroft mountain trails" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Sunrise Hike</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="activities.html" class="reel-card" aria-label="Downtown Stroll">
+            <img src="../media/placeholder-explore-burro-avenue.jpg" alt="Burro Avenue in downtown Cloudcroft" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Downtown Stroll</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="dining.html" class="reel-card" aria-label="Brewery Visit">
+            <img src="../media/placeholder-explore-brewery.jpg" alt="Local craft brewery in Cloudcroft" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Brewery Visit</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="activities.html" class="reel-card" aria-label="Stargazing">
+            <img src="../media/Index-11.jpg" alt="Stargazing in Cloudcroft dark skies" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Stargazing</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="seasonal.html#winter" class="reel-card" aria-label="Winter Magic">
+            <img src="../media/placeholder-season-winter.jpg" alt="Winter snow in the Sacramento Mountains" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Winter Magic</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+          <a href="seasonal.html#fall" class="reel-card" aria-label="Fall Colors">
+            <img src="../media/placeholder-season-fall.jpg" alt="Autumn foliage in Cloudcroft" loading="lazy">
+            <div class="reel-card-overlay">
+              <span class="reel-card-title">Fall Colors</span>
+              <span class="reel-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="reel-nav">
+        <button class="reel-nav-btn reel-prev" aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <button class="reel-nav-btn reel-next" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SEASONAL SPOTLIGHT ===== -->
+    <section class="seasonal-section" aria-label="Seasonal guide">
+      <div class="section-container">
+        <div class="section-header fade-in-section">
+          <h2>Every Season Tells a Story</h2>
+          <p>Four distinct seasons, each with its own character and adventures.</p>
+        </div>
+        <div class="seasonal-grid">
+          <a href="seasonal.html#spring" class="season-card season-spring fade-in-section" aria-label="Spring in Cloudcroft">
+            <div class="season-card-bg" aria-hidden="true"></div>
+            <div class="season-card-content">
+              <span class="season-emoji" aria-hidden="true">&#127800;</span>
+              <h3>Spring</h3>
+              <div class="season-activities">
+                <ul>
+                  <li>Wildflower hikes</li>
+                  <li>Bird watching</li>
+                  <li>Mountain biking</li>
+                  <li>Scenic drives</li>
+                </ul>
+                <span class="season-cta">Explore Season &rarr;</span>
+              </div>
+            </div>
+          </a>
+          <a href="seasonal.html#summer" class="season-card season-summer fade-in-section" aria-label="Summer in Cloudcroft">
+            <div class="season-card-bg" aria-hidden="true"></div>
+            <div class="season-card-content">
+              <span class="season-emoji" aria-hidden="true">&#9728;&#65039;</span>
+              <h3>Summer</h3>
+              <div class="season-activities">
+                <ul>
+                  <li>Trail running</li>
+                  <li>Outdoor festivals</li>
+                  <li>Stargazing nights</li>
+                  <li>Cool mountain air</li>
+                </ul>
+                <span class="season-cta">Explore Season &rarr;</span>
+              </div>
+            </div>
+          </a>
+          <a href="seasonal.html#fall" class="season-card season-fall fade-in-section" aria-label="Fall in Cloudcroft">
+            <div class="season-card-bg" aria-hidden="true"></div>
+            <div class="season-card-content">
+              <span class="season-emoji" aria-hidden="true">&#127809;</span>
+              <h3>Fall</h3>
+              <div class="season-activities">
+                <ul>
+                  <li>Foliage drives</li>
+                  <li>Harvest festivals</li>
+                  <li>Cozy cabin stays</li>
+                </ul>
+                <span class="season-cta">Explore Season &rarr;</span>
+              </div>
+            </div>
+          </a>
+          <a href="seasonal.html#winter" class="season-card season-winter fade-in-section" aria-label="Winter in Cloudcroft">
+            <div class="season-card-bg" aria-hidden="true"></div>
+            <div class="season-card-content">
+              <span class="season-emoji" aria-hidden="true">&#10052;&#65039;</span>
+              <h3>Winter</h3>
+              <div class="season-activities">
+                <ul>
+                  <li>Snow play</li>
+                  <li>Ice skating</li>
+                  <li>Holiday events</li>
+                  <li>Fireside dining</li>
+                </ul>
+                <span class="season-cta">Explore Season &rarr;</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS SECTION ===== -->
+    <section class="stats-section" aria-label="Cloudcroft by the numbers">
+      <div class="stats-parallax-bg" aria-hidden="true"></div>
+      <div class="section-container">
+        <div class="section-header fade-in-section" style="position:relative;z-index:1;">
+          <h2>Why Cloudcroft?</h2>
+          <p>A mountain escape unlike anything else in the Southwest.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item fade-in-section">
+            <div class="stat-number" data-target="8676">0</div>
+            <div class="stat-label">Feet Elevation</div>
+          </div>
+          <div class="stat-item fade-in-section">
+            <div class="stat-number" data-target="200" data-suffix="+">0</div>
+            <div class="stat-label">Days of Sunshine</div>
+          </div>
+          <div class="stat-item fade-in-section">
+            <div class="stat-number" data-target="15" data-suffix="+">0</div>
+            <div class="stat-label">Hiking Trails</div>
+          </div>
+          <div class="stat-item fade-in-section">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Distinct Seasons</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DINING + LODGING SPLIT ===== -->
+    <section class="split-section" aria-label="Dining and lodging">
+      <div class="section-container">
+        <div class="section-header fade-in-section">
+          <h2>Eat Well. Sleep Soundly.</h2>
+          <p>From mountain comfort food to cozy cabins under the stars.</p>
+        </div>
+        <div class="split-grid">
+          <a href="dining.html" class="split-card fade-in-section" aria-label="Explore dining options">
+            <img src="../media/placeholder-stay-dining.jpg" alt="Dining in Cloudcroft with local flavors and mountain views" loading="lazy">
+            <div class="split-card-overlay">
+              <h3>Where to Eat</h3>
+              <p>Savor locally-inspired cuisine from craft breweries to family-owned restaurants, all at 8,676 feet.</p>
+              <span class="split-card-cta">Explore Dining &rarr;</span>
+            </div>
+          </a>
+          <a href="lodging.html" class="split-card fade-in-section" aria-label="Find lodging options">
+            <img src="../media/placeholder-stay-lodging.jpg" alt="Cozy lodging and cabins in Cloudcroft" loading="lazy">
+            <div class="split-card-overlay">
+              <h3>Where to Stay</h3>
+              <p>From historic lodges to secluded mountain cabins, find the perfect place to rest and recharge.</p>
+              <span class="split-card-cta">Find Lodging &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== UPCOMING EVENTS ===== -->
+    <section class="events-section" aria-label="Upcoming events">
+      <div class="section-container">
+        <div class="section-header fade-in-section">
+          <h2>What's Happening</h2>
+          <p>Mark your calendar for Cloudcroft's signature mountain events.</p>
+        </div>
+        <div class="events-grid">
+          <a href="events.html#bike-classic" class="event-card slide-in-bottom" aria-label="High Altitude Bike Classic, June 2026">
+            <div class="event-card-img">
+              <img src="../media/placeholder-event-bikeclassic.jpg" alt="Cyclists at the High Altitude Bike Classic in Cloudcroft" loading="lazy">
+              <span class="event-date-badge">June 2026</span>
+            </div>
+            <div class="event-card-body">
+              <h3>High Altitude Bike Classic</h3>
+              <p>Challenge yourself on mountain roads at nearly 9,000 feet in this annual cycling event.</p>
+              <span class="event-card-cta">Learn More &rarr;</span>
+            </div>
+          </a>
+          <a href="events.html#july-4th" class="event-card slide-in-bottom" aria-label="July 4th Celebration, July 2026">
+            <div class="event-card-img">
+              <img src="../media/placeholder-event-july4th.jpg" alt="Fourth of July fireworks celebration in Cloudcroft" loading="lazy">
+              <span class="event-date-badge">July 2026</span>
+            </div>
+            <div class="event-card-body">
+              <h3>July 4th Celebration</h3>
+              <p>Fireworks, parades, and small-town mountain charm make this a celebration you won't forget.</p>
+              <span class="event-card-cta">Learn More &rarr;</span>
+            </div>
+          </a>
+          <a href="events.html#lumberjack-day" class="event-card slide-in-bottom" aria-label="Lumberjack Day, September 2026">
+            <div class="event-card-img">
+              <img src="../media/placeholder-event-lumberjack.jpg" alt="Lumberjack Day festivities in Cloudcroft" loading="lazy">
+              <span class="event-date-badge">September 2026</span>
+            </div>
+            <div class="event-card-body">
+              <h3>Lumberjack Day</h3>
+              <p>Celebrate Cloudcroft's timber heritage with contests, food, live music, and family fun.</p>
+              <span class="event-card-cta">Learn More &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER CTA ===== -->
+    <section class="newsletter-section" aria-label="Newsletter signup">
+      <div class="newsletter-cloud newsletter-cloud-1" aria-hidden="true"></div>
+      <div class="newsletter-cloud newsletter-cloud-2" aria-hidden="true"></div>
+      <div class="newsletter-cloud newsletter-cloud-3" aria-hidden="true"></div>
+      <div class="newsletter-content fade-in-section">
+        <h2>Stay in the Loop</h2>
+        <p>Get seasonal guides, event alerts, and insider tips for your next mountain escape.</p>
+        <!-- Note: This form needs real integration. Currently uses mailto as a placeholder. -->
+        <form class="newsletter-form" action="mailto:info@elevatecloudcroft.com" method="post" enctype="text/plain">
+          <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-note">No spam. Unsubscribe anytime. Form integration needed for production.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-gradient-border" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-elevate">ELEVATE</span>
+            <span class="logo-cloudcroft">CLOUDCROFT</span>
+          </div>
+          <p>Your mountain escape at 8,676 feet in the Sacramento Mountains of southern New Mexico.</p>
+          <div class="social-icons">
+            <!-- TODO: Replace with real social media URLs -->
+            <a href="#todo-facebook" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#todo-instagram" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#todo-twitter" aria-label="Twitter / X">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="lodging.html">Stay</a></li>
+            <li><a href="dining.html">Eat</a></li>
+            <li><a href="hiking-trails.html">Trails</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="seasonal.html">Seasons</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect -->
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+15754426932">575-442-6932</a></li>
+            <li><a href="mailto:info@elevatecloudcroft.com">info@elevatecloudcroft.com</a></li>
+            <li><a href="https://villageofcloudcroft.com" target="_blank" rel="noopener noreferrer">Chamber of Commerce</a></li>
+            <li><a href="https://www.google.com/maps/place/Cloudcroft,+NM" target="_blank" rel="noopener noreferrer">Directions</a></li>
+          </ul>
+        </div>
+
+        <!-- Plan -->
+        <div class="footer-col">
+          <h4>Plan</h4>
+          <ul>
+            <li><a href="plan.html">Getting Here</a></li>
+            <li><a href="https://weather.com/weather/today/l/Cloudcroft+NM" target="_blank" rel="noopener noreferrer">Weather</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ElevateCloudcroft.com. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ===== HEADER: Transparent → Solid on Scroll =====
+      var header = document.querySelector('.site-header');
+      var quickBar = document.querySelector('.quick-action-bar');
+      var hero = document.querySelector('.hero');
+      var backToTop = document.querySelector('.back-to-top');
+
+      function onScroll() {
+        var scrollY = window.scrollY || window.pageYOffset;
+
+        // Header solid state
+        if (scrollY > 80) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+
+        // Quick-action bar visibility (appears after hero)
+        var heroBottom = hero.offsetTop + hero.offsetHeight;
+        if (scrollY > heroBottom - 60) {
+          quickBar.classList.add('visible');
+        } else {
+          quickBar.classList.remove('visible');
+        }
+
+        // Back to top button
+        if (scrollY > 500) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // ===== BACK TO TOP =====
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // ===== MOBILE MENU =====
+      var hamburger = document.querySelector('.hamburger');
+      var mobileNav = document.querySelector('.mobile-nav-overlay');
+      var mobileBackdrop = document.querySelector('.mobile-nav-backdrop');
+
+      function toggleMobileMenu() {
+        var isOpen = mobileNav.classList.contains('open');
+        if (isOpen) {
+          mobileNav.classList.remove('open');
+          mobileBackdrop.classList.remove('open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        } else {
+          mobileNav.classList.add('open');
+          mobileBackdrop.classList.add('open');
+          hamburger.classList.add('active');
+          hamburger.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      hamburger.addEventListener('click', toggleMobileMenu);
+      mobileBackdrop.addEventListener('click', toggleMobileMenu);
+
+      // Close mobile menu on link click
+      var mobileLinks = mobileNav.querySelectorAll('a');
+      mobileLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (mobileNav.classList.contains('open')) {
+            toggleMobileMenu();
+          }
+        });
+      });
+
+      // ===== INTERSECTION OBSERVER: Fade-in & Slide-in =====
+      var fadeElements = document.querySelectorAll('.fade-in-section, .slide-in-bottom');
+
+      if ('IntersectionObserver' in window) {
+        var fadeObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              fadeObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.15,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(function(el) {
+          fadeObserver.observe(el);
+        });
+      } else {
+        // Fallback: show everything
+        fadeElements.forEach(function(el) {
+          el.classList.add('is-visible');
+        });
+      }
+
+      // ===== PARALLAX: Stars background in stats section =====
+      var parallaxBg = document.querySelector('.stats-parallax-bg');
+      var statsSection = document.querySelector('.stats-section');
+
+      function updateParallax() {
+        if (!statsSection || !parallaxBg) return;
+        var rect = statsSection.getBoundingClientRect();
+        var windowH = window.innerHeight;
+        if (rect.top < windowH && rect.bottom > 0) {
+          var progress = (windowH - rect.top) / (windowH + rect.height);
+          var offset = (progress - 0.5) * 60;
+          parallaxBg.style.transform = 'translateY(' + offset + 'px)';
+        }
+      }
+
+      window.addEventListener('scroll', updateParallax, { passive: true });
+      updateParallax();
+
+      // ===== COUNTER ANIMATION =====
+      var statNumbers = document.querySelectorAll('.stat-number[data-target]');
+      var countersStarted = false;
+
+      function animateCounters() {
+        if (countersStarted) return;
+        countersStarted = true;
+
+        statNumbers.forEach(function(el) {
+          var target = parseInt(el.getAttribute('data-target'), 10);
+          var suffix = el.getAttribute('data-suffix') || '';
+          var duration = 2000;
+          var startTime = null;
+
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var elapsed = timestamp - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+
+            // Ease out cubic
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = Math.floor(eased * target);
+
+            el.textContent = current.toLocaleString() + suffix;
+
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              el.textContent = target.toLocaleString() + suffix;
+            }
+          }
+
+          requestAnimationFrame(step);
+        });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var counterObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              animateCounters();
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+
+        if (statsSection) {
+          counterObserver.observe(statsSection);
+        }
+      } else {
+        animateCounters();
+      }
+
+      // ===== REELS CAROUSEL NAV BUTTONS =====
+      var reelsTrack = document.querySelector('.reels-track');
+      var prevBtn = document.querySelector('.reel-prev');
+      var nextBtn = document.querySelector('.reel-next');
+
+      if (reelsTrack && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function() {
+          var cardWidth = 320 + 24; // card width + gap
+          reelsTrack.style.animation = 'none';
+          reelsTrack.style.transform = 'translateX(' + cardWidth + 'px)';
+          reelsTrack.style.transition = 'transform 0.5s ease';
+          setTimeout(function() {
+            reelsTrack.style.transition = 'none';
+            reelsTrack.style.transform = 'translateX(0)';
+            setTimeout(function() {
+              reelsTrack.style.animation = '';
+            }, 50);
+          }, 500);
+        });
+
+        nextBtn.addEventListener('click', function() {
+          var cardWidth = 320 + 24;
+          reelsTrack.style.animation = 'none';
+          reelsTrack.style.transform = 'translateX(-' + cardWidth + 'px)';
+          reelsTrack.style.transition = 'transform 0.5s ease';
+          setTimeout(function() {
+            reelsTrack.style.transition = 'none';
+            reelsTrack.style.transform = 'translateX(0)';
+            setTimeout(function() {
+              reelsTrack.style.animation = '';
+            }, 50);
+          }, 500);
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>

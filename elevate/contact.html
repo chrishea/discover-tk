@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ElevateCloudcroft.com — Reach Out, Ask Questions, Say Hello</title>
+    <meta name="description" content="Get in touch with ElevateCloudcroft.com. Contact the Cloudcroft Chamber of Commerce, find emergency services, get directions, and plan your mountain visit.">
+    <meta name="keywords" content="contact Cloudcroft, Cloudcroft phone number, Cloudcroft directions, Cloudcroft emergency services, Cloudcroft Chamber of Commerce">
+    <link rel="canonical" href="https://elevatecloudcroft.com/elevate/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact ElevateCloudcroft.com">
+    <meta property="og:description" content="Questions, tips, or just want to say hello — we'd love to hear from you. Contact us about visiting Cloudcroft, NM.">
+    <meta property="og:url" content="https://elevatecloudcroft.com/elevate/contact.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact ElevateCloudcroft.com">
+    <meta name="twitter:description" content="Get in touch about visiting Cloudcroft, New Mexico.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@700&family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::selection { background: var(--golden-hour); color: var(--midnight); }
+
+        *:focus-visible { outline: 2px solid var(--golden-hour); outline-offset: 2px; }
+
+        @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+
+        :root {
+            --midnight: #0B1D3A;
+            --summit: #1A3A5C;
+            --alpine: #2E6B8A;
+            --golden-hour: #E8A838;
+            --ember: #D4553A;
+            --pine-shadow: #1E3A2F;
+            --cloud-drift: #F0F4F8;
+            --snow-cap: #FFFFFF;
+            --granite: #6B7B8D;
+            --twilight: #4A2D6B;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--midnight);
+            background: var(--snow-cap);
+            line-height: 1.6;
+            overflow-x: hidden;
+            animation: pageIn 0.5s ease;
+        }
+
+        /* Skip to content */
+        .skip-to-content {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 8px 8px;
+            z-index: 10000;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            transition: top 0.3s;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* Header */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+            background: transparent;
+        }
+
+        .site-header.scrolled {
+            background: rgba(11, 29, 58, 0.97);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            padding: 0.6rem 2rem;
+        }
+
+        .header-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--snow-cap);
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header-logo span {
+            color: var(--golden-hour);
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .header-nav a {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--cloud-drift);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .header-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--golden-hour);
+            transition: width 0.3s ease;
+        }
+
+        .header-nav a:hover {
+            color: var(--golden-hour);
+        }
+
+        .header-nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-phone {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--golden-hour);
+            text-decoration: none;
+            border: 1px solid var(--golden-hour);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .header-phone:hover {
+            background: var(--golden-hour);
+            color: var(--midnight);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: var(--snow-cap);
+            transition: transform 0.3s, opacity 0.3s;
+            display: block;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(11, 29, 58, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+            opacity: 1;
+        }
+
+        .mobile-menu a {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--cloud-drift);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--golden-hour);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 40vh;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--midnight);
+        }
+
+        .hero-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--alpine), var(--summit), var(--midnight));
+            background-size: 300% 300%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--snow-cap);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.2s forwards;
+        }
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: rgba(240, 244, 248, 0.85);
+            letter-spacing: 0.05em;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.5s forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Contact Layout */
+        .contact-section {
+            padding: 6rem 2rem;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        /* Form */
+        .form-column {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .form-column.visible {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1);
+        }
+
+        .section-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--alpine);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--midnight);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .section-title-centered {
+            text-align: center;
+            padding-bottom: 1.25rem;
+        }
+
+        .section-title-centered::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--golden-hour);
+            margin: 0.75rem auto 0;
+            border-radius: 2px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group label {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--midnight);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            padding: 0.85rem 1rem;
+            border: 2px solid var(--cloud-drift);
+            border-radius: 8px;
+            background: var(--snow-cap);
+            color: var(--midnight);
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--golden-hour);
+            box-shadow: 0 0 0 3px rgba(232, 168, 56, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7B8D' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+        }
+
+        .btn-submit {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+            animation: pulse 2.5s ease-in-out infinite;
+            margin-top: 0.5rem;
+            min-height: 44px;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4), 0 0 0 12px rgba(232, 168, 56, 0);
+            }
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(232, 168, 56, 0.6);
+            animation: none;
+        }
+
+        /* Info Cards */
+        .info-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            opacity: 0;
+            transform: translateX(30px);
+        }
+
+        .info-column.visible {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1);
+        }
+
+        .contact-card {
+            background: var(--cloud-drift);
+            border-radius: 12px;
+            padding: 1.75rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        @keyframes iconBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .contact-card .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-card:hover .card-icon {
+            animation: iconBounce 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--midnight);
+            margin-bottom: 0.6rem;
+        }
+
+        .contact-card p {
+            font-size: 0.92rem;
+            color: var(--granite);
+            line-height: 1.7;
+        }
+
+        .contact-card a {
+            color: var(--alpine);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: var(--golden-hour);
+        }
+
+        .contact-card .card-detail {
+            display: block;
+            margin-top: 0.3rem;
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 6rem 2rem;
+            background: var(--cloud-drift);
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .map-placeholder {
+            background: linear-gradient(135deg, var(--summit), var(--alpine), var(--midnight));
+            border: none;
+            border-radius: 12px;
+            padding: 5rem 2rem;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.08;
+            background-image:
+                radial-gradient(circle at 30% 40%, rgba(255,255,255,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255,255,255,0.2) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .map-pin-icon {
+            display: block;
+            margin: 0 auto 1.25rem;
+            font-size: 3rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
+        .map-placeholder p {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--cloud-drift);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .map-placeholder .map-coords {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: rgba(240,244,248,0.5);
+            margin-bottom: 1.5rem;
+            display: block;
+            position: relative;
+        }
+
+        .map-placeholder a {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            min-height: 44px;
+        }
+
+        .map-placeholder a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(232, 168, 56, 0.6);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--midnight);
+            padding: 4rem 2rem 2rem;
+            position: relative;
+        }
+
+        .site-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--golden-hour), var(--ember), var(--alpine), var(--twilight), var(--golden-hour));
+            background-size: 300% 100%;
+            animation: gradientBorder 6s linear infinite;
+        }
+
+        @keyframes gradientBorder {
+            0% { background-position: 0% 0; }
+            100% { background-position: 300% 0; }
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--snow-cap);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 0.9rem;
+            color: var(--granite);
+            line-height: 2;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--golden-hour);
+        }
+
+        .footer-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--snow-cap);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-brand span {
+            color: var(--golden-hour);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid var(--granite);
+            align-items: center;
+            justify-content: center;
+            color: var(--granite);
+            font-size: 0.8rem;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--golden-hour);
+            color: var(--golden-hour);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(107, 123, 141, 0.2);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--granite);
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 500;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(232, 168, 56, 0.4);
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .header-nav {
+                display: none;
+            }
+            .header-phone {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 3.5rem 1.5rem;
+            }
+            .map-section {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner" aria-label="Site header">
+        <a href="../index.html" class="header-logo">ELEVATE <span>CLOUDCROFT</span></a>
+        <nav class="header-nav" role="menubar" aria-label="Main navigation">
+            <a href="lodging.html" role="menuitem">Stay</a>
+            <a href="dining.html" role="menuitem">Eat</a>
+            <a href="activities.html" role="menuitem">Explore</a>
+            <a href="hiking-trails.html" role="menuitem">Trails</a>
+            <a href="events.html" role="menuitem">Events</a>
+            <a href="seasonal.html" role="menuitem">Seasons</a>
+            <a href="plan.html" role="menuitem">Plan</a>
+            <a href="contact.html" role="menuitem" aria-current="page">Contact</a>
+        </nav>
+        <a href="tel:+15754426932" class="header-phone" aria-label="Call us at 575-442-6932">(575) 442-6932</a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <a href="lodging.html">Stay</a>
+        <a href="dining.html">Eat</a>
+        <a href="activities.html">Explore</a>
+        <a href="hiking-trails.html">Trails</a>
+        <a href="events.html">Events</a>
+        <a href="seasonal.html">Seasons</a>
+        <a href="plan.html">Plan</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+15754426932">(575) 442-6932</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Page hero">
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Get in Touch</h1>
+            <p class="hero-subtitle">Questions, tips, or just want to say hello &mdash; we'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="contact-section" aria-label="Contact information and form">
+            <div class="contact-container">
+                <!-- Left Column — Form -->
+                <div class="form-column">
+                    <span class="section-label">Send a Message</span>
+                    <h2 class="section-title">We'd Love to Hear From You</h2>
+                    <!-- NEEDS: Real form backend (Formspree, Netlify Forms, etc.) -->
+                    <form class="contact-form" action="mailto:info@elevatecloudcroft.com" method="POST" enctype="text/plain" aria-label="Contact form">
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="name" required placeholder="Your full name" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" required placeholder="you@email.com" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Trip Planning">Trip Planning</option>
+                                <option value="Event Info">Event Info</option>
+                                <option value="Business Listing">Business Listing</option>
+                                <option value="Press/Media">Press/Media</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" required placeholder="How can we help?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Right Column — Info Cards -->
+                <div class="info-column">
+                    <div class="contact-card">
+                        <span class="card-icon" aria-hidden="true">&#128222;</span>
+                        <h3>Call Us</h3>
+                        <p>Cloudcroft Chamber of Commerce</p>
+                        <p><a href="tel:+15754426932">(575) 442-6932</a></p>
+                        <p class="card-detail">Mon&ndash;Fri, 9am&ndash;5pm MT</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <span class="card-icon" aria-hidden="true">&#128231;</span>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:info@elevatecloudcroft.com">info@elevatecloudcroft.com</a></p>
+                        <p class="card-detail">We respond within 24 hours</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <span class="card-icon" aria-hidden="true">&#128205;</span>
+                        <h3>Visit Us</h3>
+                        <p>Cloudcroft, New Mexico 88317</p>
+                        <p>Sacramento Mountains, Lincoln National Forest</p>
+                        <p><a href="https://www.google.com/maps/place/Cloudcroft,+NM" target="_blank" rel="noopener noreferrer">Get Directions</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <span class="card-icon" aria-hidden="true">&#128680;</span>
+                        <h3>Emergency Services</h3>
+                        <p>Otero County Sheriff: <a href="tel:+15754372210">(575) 437-2210</a></p>
+                        <p>Fire/EMS: <strong>911</strong></p>
+                        <p>Cloudcroft Fire Dept: <a href="tel:+15756822322">(575) 682-2322</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <span class="card-icon" aria-hidden="true">&#127780;</span>
+                        <h3>Weather</h3>
+                        <p>Check current conditions before you visit</p>
+                        <p><a href="https://weather.com/weather/today/l/Cloudcroft+NM" target="_blank" rel="noopener noreferrer">Cloudcroft Weather</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section" aria-label="Map">
+            <div class="map-container">
+                <span class="section-label" style="display:block; text-align:center;">Find Us</span>
+                <h2 class="section-title section-title-centered">Cloudcroft, New Mexico</h2>
+                <!-- NEEDS: Google Maps embed with API key -->
+                <div class="map-placeholder">
+                    <span class="map-pin-icon" aria-hidden="true">&#128205;</span>
+                    <p>Cloudcroft, NM 88317</p>
+                    <span class="map-coords">32.9576&deg; N, 105.7425&deg; W &middot; Elev. 8,676 ft</span>
+                    <a href="https://www.google.com/maps/place/Cloudcroft,+NM" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <span class="footer-brand">ELEVATE <span>CLOUDCROFT</span></span>
+                <p>Your guide to Cloudcroft, New Mexico &mdash; 8,676 feet of mountain magic.</p>
+                <div class="footer-social">
+                    <a href="#todo-facebook" aria-label="Facebook">FB</a>
+                    <a href="#todo-instagram" aria-label="Instagram">IG</a>
+                    <a href="#todo-twitter" aria-label="Twitter">X</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="lodging.html">Lodging</a>
+                <a href="dining.html">Dining</a>
+                <a href="hiking-trails.html">Hiking Trails</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="seasonal.html">Seasons</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="tel:+15754426932">(575) 442-6932</a>
+                <a href="mailto:info@elevatecloudcroft.com">info@elevatecloudcroft.com</a>
+                <a href="https://villageofcloudcroft.com" target="_blank" rel="noopener noreferrer">Village of Cloudcroft</a>
+                <a href="https://www.google.com/maps/place/Cloudcroft,+NM" target="_blank" rel="noopener noreferrer">Cloudcroft, NM 88317</a>
+            </div>
+            <div class="footer-col">
+                <h4>Plan</h4>
+                <a href="plan.html">Plan Your Trip</a>
+                <a href="https://weather.com/weather/today/l/Cloudcroft+NM" target="_blank" rel="noopener noreferrer">Weather</a>
+                <a href="about.html">About Cloudcroft</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ElevateCloudcroft.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+    <script>
+        (function() {
+            // Header scroll
+            var header = document.querySelector('.site-header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 60) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }, { passive: true });
+
+            // Hamburger toggle
+            var hamburger = document.querySelector('.hamburger');
+            var mobileMenu = document.querySelector('.mobile-menu');
+            hamburger.addEventListener('click', function() {
+                var isOpen = mobileMenu.classList.toggle('open');
+                hamburger.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('open');
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Intersection Observer for fade-in
+            var observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            var fadeObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.form-column, .info-column, .contact-card').forEach(function(el) {
+                fadeObserver.observe(el);
+            });
+
+            // Back to top
+            var backToTop = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            }, { passive: true });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+</body>
+</html>

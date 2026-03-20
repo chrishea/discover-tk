@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasons of Cloudcroft | Elevate Cloudcroft</title>
+    <meta name="description" content="Experience Cloudcroft in every season — spring wildflowers, cool summer escapes, golden fall foliage, and snowy winter wonderland at 8,676 feet.">
+    <meta name="keywords" content="Cloudcroft seasons, Cloudcroft spring, Cloudcroft summer, Cloudcroft fall, Cloudcroft winter, Sacramento Mountains weather">
+    <link rel="canonical" href="https://elevatecloudcroft.com/elevate/seasonal.html">
+    <meta property="og:title" content="Seasons of Cloudcroft | Elevate Cloudcroft">
+    <meta property="og:description" content="Four seasons, endless adventure. Experience Cloudcroft year-round at 8,676 feet.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elevatecloudcroft.com/elevate/seasonal.html">
+    <meta property="og:image" content="../media/Index-1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Seasons of Cloudcroft | Elevate Cloudcroft">
+    <meta name="twitter:description" content="Four seasons, endless adventure. Experience Cloudcroft year-round at 8,676 feet.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Inter:wght@400;500&family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --midnight: #0B1D3A;
+            --summit: #1A3A5C;
+            --alpine: #2E6B8A;
+            --golden-hour: #E8A838;
+            --ember: #D4553A;
+            --pine-shadow: #1E3A2F;
+            --cloud-drift: #F0F4F8;
+            --snow-cap: #FFFFFF;
+            --granite: #6B7B8D;
+            --twilight: #4A2D6B;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        ::selection { background: var(--golden-hour); color: var(--midnight); }
+
+        *:focus-visible { outline: 2px solid var(--golden-hour); outline-offset: 2px; }
+
+        @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--midnight);
+            line-height: 1.6;
+            overflow-x: hidden;
+            animation: pageIn 0.5s ease;
+            transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            z-index: 10000;
+            font-weight: 500;
+        }
+        .skip-link:focus { top: 1rem; }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+            background: transparent;
+        }
+        header.scrolled {
+            background: var(--midnight);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            padding: 0.6rem 2rem;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--snow-cap);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .logo span { color: var(--golden-hour); }
+
+        nav { display: flex; align-items: center; gap: 0.25rem; }
+        nav a {
+            color: var(--snow-cap);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover, nav a:focus { background: rgba(255,255,255,0.12); color: var(--golden-hour); }
+
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--golden-hour);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+        }
+        .phone-link svg { width: 18px; height: 18px; fill: var(--golden-hour); }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--snow-cap);
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--midnight);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            color: var(--snow-cap);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .mobile-menu a:hover { color: var(--golden-hour); }
+
+        @media (max-width: 1024px) {
+            nav { display: none; }
+            .phone-link { display: none; }
+            .hamburger { display: flex; }
+        }
+
+        /* ===== SEASON SECTIONS ===== */
+        .season {
+            position: relative;
+            height: 100vh;
+            scroll-snap-align: start;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .season-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            animation: kenBurns 22s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+        @keyframes kenBurns {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.08) translate(-1%, -0.5%); }
+        }
+
+        .season-gradient {
+            position: absolute;
+            inset: 0;
+            opacity: 0.7;
+            background-size: 300% 300%;
+            animation: gradientShift 12s ease infinite;
+        }
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .season-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.35);
+        }
+
+        .season-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1000px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1) 0.2s, transform 0.6s cubic-bezier(0, 0, 0.2, 1) 0.2s;
+        }
+        .season.active .season-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Temperature badge */
+        .temp-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 5;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--snow-cap);
+            background: rgba(0,0,0,0.35);
+            backdrop-filter: blur(8px);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.15);
+            opacity: 0;
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1) 0.4s;
+        }
+        .season.active .temp-badge {
+            opacity: 1;
+        }
+
+        .season-temp {
+            display: inline-block;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--snow-cap);
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(6px);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .season-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--snow-cap);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .season-content > p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.6;
+            letter-spacing: 0.05em;
+        }
+
+        /* Activities grid */
+        .activities-grid {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .activity-card {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            text-decoration: none;
+            color: var(--snow-cap);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-width: 160px;
+            min-height: 44px;
+        }
+        .activity-card:hover {
+            background: rgba(255,255,255,0.22);
+            transform: translateY(-4px);
+            border-color: var(--golden-hour);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .season-cta {
+            display: inline-block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            text-decoration: none;
+            padding: 0.9rem 2.5rem;
+            border-radius: 8px;
+            min-height: 44px;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(232,168,56,0.4);
+            animation: pulseGlow 2.5s ease-in-out infinite;
+        }
+        .season-cta:hover { background: #d4961f; transform: translateY(-3px); box-shadow: 0 6px 25px rgba(232,168,56,0.6); animation: none; }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(232,168,56,0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(232,168,56,0); }
+        }
+
+        /* ===== FLOATING ELEMENTS ===== */
+        .floating-elements {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        /* Spring petals */
+        .petal {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50% 0 50% 0;
+            opacity: 0;
+        }
+        @keyframes petalDrift {
+            0% { transform: translate(0, -20px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.45; }
+            90% { opacity: 0.3; }
+            100% { transform: translate(80px, 100vh) rotate(360deg); opacity: 0; }
+        }
+        .petal:nth-child(1) { left: 10%; background: #F8BBD0; animation: petalDrift 8s linear infinite; animation-delay: 0s; }
+        .petal:nth-child(2) { left: 25%; background: #F48FB1; animation: petalDrift 10s linear infinite; animation-delay: 2s; width: 10px; height: 10px; }
+        .petal:nth-child(3) { left: 40%; background: #CE93D8; animation: petalDrift 7s linear infinite; animation-delay: 4s; }
+        .petal:nth-child(4) { left: 60%; background: #F8BBD0; animation: petalDrift 9s linear infinite; animation-delay: 1s; width: 14px; height: 14px; }
+        .petal:nth-child(5) { left: 75%; background: #F48FB1; animation: petalDrift 11s linear infinite; animation-delay: 3s; width: 8px; height: 8px; }
+        .petal:nth-child(6) { left: 90%; background: #CE93D8; animation: petalDrift 8.5s linear infinite; animation-delay: 5s; }
+
+        /* Summer sun rays */
+        .sun-ray {
+            position: absolute;
+            top: -50px;
+            width: 3px;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(255,215,0,0.6), transparent);
+            opacity: 0;
+            transform-origin: top center;
+        }
+        @keyframes rayPulse {
+            0%, 100% { opacity: 0; transform: scaleY(0.5); }
+            50% { opacity: 0.3; transform: scaleY(1.2); }
+        }
+        .sun-ray:nth-child(1) { left: 15%; animation: rayPulse 4s ease-in-out infinite; animation-delay: 0s; height: 120px; }
+        .sun-ray:nth-child(2) { left: 30%; animation: rayPulse 5s ease-in-out infinite; animation-delay: 1s; transform: rotate(5deg); }
+        .sun-ray:nth-child(3) { left: 45%; animation: rayPulse 3.5s ease-in-out infinite; animation-delay: 0.5s; height: 140px; }
+        .sun-ray:nth-child(4) { left: 60%; animation: rayPulse 4.5s ease-in-out infinite; animation-delay: 2s; }
+        .sun-ray:nth-child(5) { left: 75%; animation: rayPulse 5.5s ease-in-out infinite; animation-delay: 1.5s; transform: rotate(-3deg); height: 110px; }
+        .sun-ray:nth-child(6) { left: 88%; animation: rayPulse 4s ease-in-out infinite; animation-delay: 3s; }
+
+        /* Fall leaves */
+        .leaf {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            opacity: 0;
+        }
+        @keyframes leafFall {
+            0% { transform: translate(0, -20px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            50% { transform: translate(-40px, 50vh) rotate(180deg); }
+            90% { opacity: 0.35; }
+            100% { transform: translate(30px, 100vh) rotate(360deg); opacity: 0; }
+        }
+        .leaf:nth-child(1) { left: 8%; background: #E65100; border-radius: 50% 0 50% 0; animation: leafFall 7s linear infinite; animation-delay: 0s; }
+        .leaf:nth-child(2) { left: 20%; background: #FF8F00; border-radius: 0 50% 0 50%; animation: leafFall 9s linear infinite; animation-delay: 1.5s; width: 12px; height: 12px; }
+        .leaf:nth-child(3) { left: 35%; background: #BF360C; border-radius: 50% 0 50% 0; animation: leafFall 6s linear infinite; animation-delay: 3s; width: 16px; height: 16px; }
+        .leaf:nth-child(4) { left: 52%; background: #E65100; border-radius: 0 50% 0 50%; animation: leafFall 8s linear infinite; animation-delay: 0.5s; }
+        .leaf:nth-child(5) { left: 70%; background: #FF8F00; border-radius: 50% 0 50% 0; animation: leafFall 10s linear infinite; animation-delay: 2s; width: 10px; height: 10px; }
+        .leaf:nth-child(6) { left: 85%; background: #BF360C; border-radius: 0 50% 0 50%; animation: leafFall 7.5s linear infinite; animation-delay: 4s; width: 13px; height: 13px; }
+
+        /* Winter snowflakes */
+        .snowflake {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--snow-cap);
+            opacity: 0;
+        }
+        @keyframes snowFall {
+            0% { transform: translate(0, -10px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.4; }
+            100% { transform: translate(30px, 100vh) rotate(360deg); opacity: 0; }
+        }
+        .snowflake:nth-child(1) { left: 5%; width: 4px; height: 4px; animation: snowFall 6s linear infinite; animation-delay: 0s; }
+        .snowflake:nth-child(2) { left: 12%; width: 6px; height: 6px; animation: snowFall 8s linear infinite; animation-delay: 1s; }
+        .snowflake:nth-child(3) { left: 22%; width: 3px; height: 3px; animation: snowFall 5s linear infinite; animation-delay: 3s; }
+        .snowflake:nth-child(4) { left: 33%; width: 5px; height: 5px; animation: snowFall 7s linear infinite; animation-delay: 0.5s; }
+        .snowflake:nth-child(5) { left: 42%; width: 4px; height: 4px; animation: snowFall 9s linear infinite; animation-delay: 2s; }
+        .snowflake:nth-child(6) { left: 55%; width: 7px; height: 7px; animation: snowFall 6.5s linear infinite; animation-delay: 4s; }
+        .snowflake:nth-child(7) { left: 64%; width: 3px; height: 3px; animation: snowFall 8.5s linear infinite; animation-delay: 1.5s; }
+        .snowflake:nth-child(8) { left: 73%; width: 5px; height: 5px; animation: snowFall 7.5s linear infinite; animation-delay: 3.5s; }
+        .snowflake:nth-child(9) { left: 82%; width: 4px; height: 4px; animation: snowFall 5.5s linear infinite; animation-delay: 0.8s; }
+        .snowflake:nth-child(10) { left: 91%; width: 6px; height: 6px; animation: snowFall 10s linear infinite; animation-delay: 2.5s; }
+        .snowflake:nth-child(11) { left: 48%; width: 3px; height: 3px; animation: snowFall 7s linear infinite; animation-delay: 5s; }
+        .snowflake:nth-child(12) { left: 17%; width: 5px; height: 5px; animation: snowFall 6s linear infinite; animation-delay: 6s; }
+
+        /* ===== SEASON-SPECIFIC GRADIENTS ===== */
+        #spring .season-gradient {
+            background: linear-gradient(135deg, #4CAF50, #81C784, #C8E6C9);
+        }
+        #spring .season-bg { background-image: url('../media/Index-6.jpg'); }
+
+        #summer .season-gradient {
+            background: linear-gradient(135deg, #FFC107, #FFD54F, #FFF8E1);
+        }
+        #summer .season-bg { background-image: url('../media/Index-1.jpg'); }
+
+        #fall .season-gradient {
+            background: linear-gradient(135deg, #E65100, #FF8F00, #FFE0B2);
+        }
+        #fall .season-bg { background-image: url('../media/placeholder-season-fall.jpg'); }
+
+        #winter .season-gradient {
+            background: linear-gradient(135deg, #1565C0, #64B5F6, #E3F2FD);
+        }
+        #winter .season-bg { background-image: url('../media/placeholder-season-winter.jpg'); }
+
+        /* ===== NAV DOTS ===== */
+        .season-nav {
+            position: fixed;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            align-items: center;
+        }
+        .season-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.6);
+            background: transparent;
+            cursor: pointer;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0;
+        }
+        .season-dot-wrap {
+            position: relative;
+            min-height: 44px;
+            min-width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .season-dot:hover {
+            border-color: var(--golden-hour);
+            transform: scale(1.2);
+        }
+        .season-dot.active {
+            background: var(--golden-hour);
+            border-color: var(--golden-hour);
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(232,168,56,0.5);
+        }
+        .season-dot-label {
+            position: absolute;
+            right: 28px;
+            background: var(--midnight);
+            color: var(--snow-cap);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .season-dot-wrap:hover .season-dot-label { opacity: 1; }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--midnight);
+            color: var(--snow-cap);
+            padding: 4rem 2rem 2rem;
+            scroll-snap-align: end;
+        }
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .footer-col h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--golden-hour);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+            transition: color 0.3s ease;
+        }
+        .footer-col a:hover { color: var(--golden-hour); }
+        .footer-col p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--golden-hour);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+            z-index: 100;
+        }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); }
+        .back-to-top:hover { background: #d4961f; }
+        .back-to-top svg { width: 22px; height: 22px; fill: var(--midnight); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .activities-grid { gap: 16px; }
+            .activity-card { min-width: 130px; padding: 1rem; font-size: 0.85rem; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .season-nav { right: 0.75rem; }
+            .season-dot { width: 12px; height: 12px; }
+            .season-dot-label { display: none; }
+            .temp-badge { top: 1rem; right: 1rem; font-size: 0.75rem; }
+        }
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .activity-card { min-width: 110px; }
+        }
+
+        /* ===== REDUCED MOTION ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .season-bg { animation: none; }
+            .season-gradient { animation: none; }
+            html { scroll-behavior: auto; scroll-snap-type: none; }
+            .season { scroll-snap-align: none; }
+            .season-content { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+        <a href="../index.html" class="logo" aria-label="Elevate Cloudcroft Home">ELEVATE <span>CLOUDCROFT</span></a>
+        <nav role="menubar" aria-label="Main navigation">
+            <a href="lodging.html" role="menuitem">Stay</a>
+            <a href="dining.html" role="menuitem">Eat</a>
+            <a href="activities.html" role="menuitem">Explore</a>
+            <a href="hiking-trails.html" role="menuitem">Trails</a>
+            <a href="events.html" role="menuitem">Events</a>
+            <a href="seasonal.html" role="menuitem" aria-current="page">Seasons</a>
+            <a href="plan.html" role="menuitem">Plan</a>
+            <a href="contact.html" role="menuitem">Contact</a>
+        </nav>
+        <a href="tel:+15754426932" class="phone-link" aria-label="Call us at (575) 442-6932">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.55.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.25 1.02l-2.2 2.22z"/></svg>
+            <span>(575) 442-6932</span>
+        </a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <a href="lodging.html">Stay</a>
+        <a href="dining.html">Eat</a>
+        <a href="activities.html">Explore</a>
+        <a href="hiking-trails.html">Trails</a>
+        <a href="events.html">Events</a>
+        <a href="seasonal.html">Seasons</a>
+        <a href="plan.html">Plan</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+15754426932">(575) 442-6932</a>
+    </div>
+
+    <!-- Season Nav Dots -->
+    <div class="season-nav" aria-label="Season navigation">
+        <div class="season-dot-wrap">
+            <button class="season-dot active" data-target="spring" aria-label="Go to Spring"></button>
+            <span class="season-dot-label">Spring</span>
+        </div>
+        <div class="season-dot-wrap">
+            <button class="season-dot" data-target="summer" aria-label="Go to Summer"></button>
+            <span class="season-dot-label">Summer</span>
+        </div>
+        <div class="season-dot-wrap">
+            <button class="season-dot" data-target="fall" aria-label="Go to Fall"></button>
+            <span class="season-dot-label">Fall</span>
+        </div>
+        <div class="season-dot-wrap">
+            <button class="season-dot" data-target="winter" aria-label="Go to Winter"></button>
+            <span class="season-dot-label">Winter</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- SPRING -->
+        <section class="season active" id="spring" aria-label="Spring in Cloudcroft">
+            <div class="season-bg" aria-hidden="true"></div>
+            <div class="season-gradient" aria-hidden="true"></div>
+            <div class="season-overlay" aria-hidden="true"></div>
+            <div class="temp-badge" aria-label="Spring temperatures: 55 to 70 degrees Fahrenheit">55&ndash;70&deg;F</div>
+            <div class="floating-elements" aria-hidden="true">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+            </div>
+            <div class="season-content">
+                <span class="season-temp">Highs 55&ndash;70&deg;F</span>
+                <h2>Spring Awakening</h2>
+                <p>Wildflowers blanket the meadows as the forest comes alive. Perfect for gentle hikes, birding, and breathing in fresh mountain air.</p>
+                <div class="activities-grid">
+                    <a href="hiking-trails.html" class="activity-card">Wildflower Hiking</a>
+                    <a href="activities.html" class="activity-card">Birding &amp; Wildlife</a>
+                    <a href="events.html#mayfair" class="activity-card">Mayfair Festival</a>
+                </div>
+                <a href="plan.html" class="season-cta">Plan a Spring Trip &rarr;</a>
+            </div>
+        </section>
+
+        <!-- SUMMER -->
+        <section class="season" id="summer" aria-label="Summer in Cloudcroft">
+            <div class="season-bg" aria-hidden="true"></div>
+            <div class="season-gradient" aria-hidden="true"></div>
+            <div class="season-overlay" aria-hidden="true"></div>
+            <div class="temp-badge" aria-label="Summer temperatures: 70 to 82 degrees Fahrenheit">70&ndash;82&deg;F</div>
+            <div class="floating-elements" aria-hidden="true">
+                <div class="sun-ray"></div>
+                <div class="sun-ray"></div>
+                <div class="sun-ray"></div>
+                <div class="sun-ray"></div>
+                <div class="sun-ray"></div>
+                <div class="sun-ray"></div>
+            </div>
+            <div class="season-content">
+                <span class="season-temp">Highs 70&ndash;82&deg;F</span>
+                <h2>Summer at the Summit</h2>
+                <p>While the desert sizzles below, Cloudcroft stays cool at 8,676 feet. Peak season for hiking, biking, festivals, and stargazing.</p>
+                <div class="activities-grid">
+                    <a href="activities.html" class="activity-card">Mountain Biking</a>
+                    <a href="hiking-trails.html" class="activity-card">Hiking All Trails</a>
+                    <a href="events.html#bike-classic" class="activity-card">Bike Classic</a>
+                    <a href="events.html#farmers-market" class="activity-card">Farmers Market</a>
+                </div>
+                <a href="plan.html" class="season-cta">Plan a Summer Trip &rarr;</a>
+            </div>
+        </section>
+
+        <!-- FALL -->
+        <section class="season" id="fall" aria-label="Fall in Cloudcroft">
+            <div class="season-bg" aria-hidden="true"></div>
+            <div class="season-gradient" aria-hidden="true"></div>
+            <div class="season-overlay" aria-hidden="true"></div>
+            <div class="temp-badge" aria-label="Fall temperatures: 55 to 68 degrees Fahrenheit">55&ndash;68&deg;F</div>
+            <div class="floating-elements" aria-hidden="true">
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+            </div>
+            <div class="season-content">
+                <span class="season-temp">Highs 55&ndash;68&deg;F</span>
+                <h2>Fall into Color</h2>
+                <p>Golden aspens and crimson oaks paint the Sacramento Mountains. Cooler air, harvest festivals, and stunning photography around every bend.</p>
+                <div class="activities-grid">
+                    <a href="activities.html" class="activity-card">Foliage Drives</a>
+                    <a href="events.html#lumberjack-day" class="activity-card">Lumberjack Day</a>
+                    <a href="events.html#oktoberfest" class="activity-card">Oktoberfest</a>
+                </div>
+                <a href="plan.html" class="season-cta">Plan a Fall Trip &rarr;</a>
+            </div>
+        </section>
+
+        <!-- WINTER -->
+        <section class="season" id="winter" aria-label="Winter in Cloudcroft">
+            <div class="season-bg" aria-hidden="true"></div>
+            <div class="season-gradient" aria-hidden="true"></div>
+            <div class="season-overlay" aria-hidden="true"></div>
+            <div class="temp-badge" aria-label="Winter temperatures: 38 to 50 degrees Fahrenheit">38&ndash;50&deg;F</div>
+            <div class="floating-elements" aria-hidden="true">
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+            </div>
+            <div class="season-content">
+                <span class="season-temp">Highs 38&ndash;50&deg;F</span>
+                <h2>Winter Wonderland</h2>
+                <p>Real mountain snow transforms Cloudcroft into a winter paradise. Ski, snowshoe, warm up by the fire, and celebrate the holidays.</p>
+                <div class="activities-grid">
+                    <a href="activities.html" class="activity-card">Skiing &amp; Snowboarding</a>
+                    <a href="events.html#christmas" class="activity-card">Christmas in Cloudcroft</a>
+                    <a href="lodging.html" class="activity-card">Cozy Lodging</a>
+                </div>
+                <a href="plan.html" class="season-cta">Plan a Winter Trip &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="lodging.html">Lodging</a>
+                <a href="dining.html">Dining</a>
+                <a href="hiking-trails.html">Hiking Trails</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="seasonal.html">Seasons</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="tel:+15754426932">(575) 442-6932</a>
+                <a href="mailto:info@elevatecloudcroft.com">info@elevatecloudcroft.com</a>
+                <a href="https://villageofcloudcroft.com" target="_blank" rel="noopener noreferrer">Village of Cloudcroft</a>
+                <a href="https://www.google.com/maps/place/Cloudcroft,+NM" target="_blank" rel="noopener noreferrer">Cloudcroft, NM 88317</a>
+            </div>
+            <div class="footer-col">
+                <h4>Plan</h4>
+                <a href="plan.html">Plan Your Trip</a>
+                <a href="https://weather.com/weather/today/l/Cloudcroft+NM" target="_blank" rel="noopener noreferrer">Weather</a>
+                <a href="about.html">About Cloudcroft</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <p>Cloudcroft, New Mexico &mdash; a mountain village at 8,676 feet in the Sacramento Mountains. Cool pines, clear skies, and endless adventure.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 ElevateCloudcroft.com. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <script>
+        // Header scroll effect
+        const header = document.querySelector('header');
+        const backToTop = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Season navigation with Intersection Observer
+        const seasons = document.querySelectorAll('.season');
+        const dots = document.querySelectorAll('.season-dot');
+
+        // Season background colors for body transition
+        const seasonBgColors = {
+            spring: '#1a2e1a',
+            summer: '#2a2a1a',
+            fall: '#2a1a0a',
+            winter: '#0a1a2e'
+        };
+
+        const seasonObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Activate the visible season
+                    entry.target.classList.add('active');
+
+                    // Update dots
+                    const id = entry.target.id;
+                    dots.forEach(dot => {
+                        if (dot.dataset.target === id) {
+                            dot.classList.add('active');
+                        } else {
+                            dot.classList.remove('active');
+                        }
+                    });
+
+                    // Subtle body background color transition
+                    if (seasonBgColors[id]) {
+                        document.body.style.backgroundColor = seasonBgColors[id];
+                    }
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        seasons.forEach(season => seasonObserver.observe(season));
+
+        // Dot click navigation
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const target = document.getElementById(dot.dataset.target);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

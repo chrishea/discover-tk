@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodging in Cloudcroft, NM — Hotels, Cabins & Camping | ElevateCloudcroft</title>
+    <meta name="description" content="Find the perfect place to stay in Cloudcroft, New Mexico. Historic hotels, cozy cabins, vacation rentals, and campgrounds at 8,676 feet.">
+    <meta property="og:title" content="Lodging in Cloudcroft, NM | ElevateCloudcroft">
+    <meta property="og:description" content="Historic hotels, cozy cabins, and mountain retreats — rest at the top in Cloudcroft, NM.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elevatecloudcroft.com/lodging.html">
+    <meta property="og:image" content="https://elevatecloudcroft.com/media/placeholder-stay-lodging.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lodging in Cloudcroft, NM | ElevateCloudcroft">
+    <meta name="twitter:description" content="Historic hotels, cozy cabins, and mountain retreats — rest at the top in Cloudcroft, NM.">
+    <link rel="canonical" href="https://elevatecloudcroft.com/lodging.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@700&family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --midnight: #0B1D3A;
+            --summit: #1A3A5C;
+            --alpine: #2E6B8A;
+            --golden-hour: #E8A838;
+            --ember: #D4553A;
+            --pine-shadow: #1E3A2F;
+            --cloud-drift: #F0F4F8;
+            --snow-cap: #FFFFFF;
+            --granite: #6B7B8D;
+            --twilight: #4A2D6B;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: var(--golden-hour);
+            color: var(--midnight);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--midnight);
+            background: var(--cloud-drift);
+            line-height: 1.6;
+            overflow-x: hidden;
+            animation: pageLoad 0.5s cubic-bezier(0, 0, 0.2, 1) both;
+        }
+
+        @keyframes pageLoad {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--golden-hour);
+            outline-offset: 2px;
+        }
+
+        /* ========== SKIP TO CONTENT ========== */
+        .skip-to-content {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--golden-hour);
+            color: var(--midnight);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 8px 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            z-index: 10000;
+            transition: top 0.3s;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+            background: transparent;
+        }
+
+        .site-header.scrolled {
+            background: rgba(11, 29, 58, 0.97);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            padding: 0.6rem 2rem;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: baseline;
+            gap: 0.3rem;
+            text-decoration: none;
+        }
+
+        .header-logo .logo-elevate {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--golden-hour);
+            letter-spacing: 0.15em;
+        }
+
+        .header-logo .logo-cloudcroft {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: var(--snow-cap);
+            letter-spacing: 0.05em;
+            opacity: 0.85;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .header-nav a {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--snow-cap);
+            text-decoration: none;
+            opacity: 0.85;
+            transition: opacity 0.3s, color 0.3s;
+            letter-spacing: 0.03em;
+        }
+
+        .header-nav a:hover,
+        .header-nav a:focus {
+            opacity: 1;
+            color: var(--golden-hour);
+        }
+
+        .header-nav a.active {
+            color: var(--golden-hour);
+            opacity: 1;
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--snow-cap);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            opacity: 0.85;
+            transition: opacity 0.3s, color 0.3s;
+        }
+
+        .header-phone:hover {
+            opacity: 1;
+            color: var(--golden-hour);
+        }
+
+        .header-phone svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1100;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--snow-cap);
+            border-radius: 2px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            background: rgba(11, 29, 58, 0.97);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1050;
+            padding: 5rem 2rem 2rem;
+            transform: translateX(100%);
+            transition: transform 0.4s ease;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        .mobile-menu a {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: var(--snow-cap);
+            text-decoration: none;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a:focus {
+            color: var(--golden-hour);
+        }
+
+        .mobile-menu a.active {
+            color: var(--golden-hour);
+        }
+
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1040;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .mobile-overlay.open {
+            opacity: 1;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('../media/placeholder-stay-lodging.jpg') center/cover no-repeat;
+            animation: kenBurns 22s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        @keyframes kenBurns {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                rgba(46, 107, 138, 0.6) 0%,
+                rgba(26, 58, 92, 0.65) 40%,
+                rgba(11, 29, 58, 0.75) 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--snow-cap);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.05em;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ========== LODGING GRID ========== */
+        .lodging-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .lodging-section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--midnight);
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .lodging-section-title::after {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 3px;
+            background: var(--golden-hour);
+            border-radius: 2px;
+            margin: 0.75rem auto 0;
+        }
+
+        .lodging-section-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            color: var(--granite);
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+
+        .lodging-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .lodging-card {
+            background: var(--snow-cap);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .lodging-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1);
+        }
+
+        .lodging-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .lodging-card-image {
+            position: relative;
+            height: 260px;
+            overflow: hidden;
+        }
+
+        .lodging-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .lodging-card:hover .lodging-card-image img {
+            transform: scale(1.05);
+        }
+
+        .lodging-card-type {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(11, 29, 58, 0.85);
+            color: var(--golden-hour);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 8px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .lodging-card-rating {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: var(--golden-hour);
+            font-size: 0.95rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.1em;
+        }
+
+        .lodging-card-body {
+            padding: 1.75rem;
+        }
+
+        .lodging-card-body h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--midnight);
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+
+        .lodging-card-body > p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--granite);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .lodging-amenities {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .amenity-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 0.8rem;
+            padding: 0.35rem 0.75rem;
+            background: var(--cloud-drift);
+            color: var(--summit);
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .amenity-tag .amenity-icon {
+            font-size: 0.9rem;
+        }
+
+        .lodging-card-ctas {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.65rem 1.3rem;
+            background: var(--alpine);
+            color: var(--snow-cap);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 44px;
+        }
+
+        .btn-primary:hover {
+            background: var(--summit);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(26, 58, 92, 0.3);
+        }
+
+        .btn-book {
+            background: var(--golden-hour);
+            color: var(--midnight);
+            box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+        }
+
+        .btn-book:hover {
+            background: #d49630;
+            color: var(--midnight);
+            box-shadow: 0 6px 25px rgba(232, 168, 56, 0.6);
+        }
+
+        .btn-secondary {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.65rem 1.3rem;
+            background: transparent;
+            color: var(--alpine);
+            border: 2px solid var(--golden-hour);
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 44px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--golden-hour);
+            color: var(--midnight);
+            transform: translateY(-1px);
+        }
+
+        /* ========== COMPARISON TABLE ========== */
+        .comparison-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+        }
+
+        .comparison-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--midnight);
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .comparison-title::after {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 3px;
+            background: var(--golden-hour);
+            border-radius: 2px;
+            margin: 0.75rem auto 0;
+        }
+
+        .comparison-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--granite);
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .comparison-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--snow-cap);
+            min-width: 700px;
+        }
+
+        .comparison-table thead th {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--snow-cap);
+            background: var(--midnight);
+            padding: 1rem 1.25rem;
+            text-align: center;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .comparison-table thead th:first-child {
+            text-align: left;
+            border-radius: 12px 0 0 0;
+        }
+
+        .comparison-table thead th:last-child {
+            border-radius: 0 12px 0 0;
+        }
+
+        .comparison-table tbody td {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            padding: 1rem 1.25rem;
+            text-align: center;
+            border-bottom: 1px solid var(--cloud-drift);
+            color: var(--granite);
+        }
+
+        .comparison-table tbody td:first-child {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            color: var(--midnight);
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: rgba(46, 107, 138, 0.04);
+        }
+
+        .check {
+            color: var(--alpine);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .dash {
+            color: var(--granite);
+            opacity: 0.4;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--summit) 50%, var(--midnight) 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--snow-cap);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 1rem 2.5rem;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+            animation: pulse 3s ease-in-out infinite;
+            min-height: 44px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 6px 25px rgba(232, 168, 56, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(232, 168, 56, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(232, 168, 56, 0);
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--midnight);
+            color: var(--snow-cap);
+            position: relative;
+        }
+
+        .footer-gradient-border {
+            height: 4px;
+            background: linear-gradient(90deg, var(--golden-hour), var(--ember), var(--alpine), var(--twilight), var(--golden-hour));
+            background-size: 300% 100%;
+            animation: footerGradient 6s linear infinite;
+        }
+
+        @keyframes footerGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 300% 50%;
+            }
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-brand .footer-logo {
+            display: flex;
+            align-items: baseline;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+            text-decoration: none;
+        }
+
+        .footer-brand .logo-elevate {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--golden-hour);
+            letter-spacing: 0.15em;
+        }
+
+        .footer-brand .logo-cloudcroft {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: var(--snow-cap);
+            letter-spacing: 0.05em;
+            opacity: 0.85;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--snow-cap);
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .footer-social a:hover {
+            background: var(--golden-hour);
+            color: var(--midnight);
+            transform: translateY(-2px);
+        }
+
+        .footer-column h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--golden-hour);
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-column a {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover,
+        .footer-column a:focus {
+            color: var(--golden-hour);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ========== BACK TO TOP ========== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--alpine);
+            color: var(--snow-cap);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(46, 107, 138, 0.4);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s, transform 0.3s;
+            z-index: 900;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            background: var(--summit);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .lodging-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header-nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero {
+                height: 50vh;
+            }
+
+            .lodging-card-image {
+                height: 200px;
+            }
+
+            .lodging-grid {
+                gap: 16px;
+            }
+
+            .comparison-section {
+                padding: 0 1rem 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .lodging-card-body {
+                padding: 1.25rem;
+            }
+
+            .lodging-grid {
+                gap: 16px;
+            }
+
+            .lodging-card-ctas {
+                flex-direction: column;
+            }
+
+            .lodging-card-ctas a {
+                text-align: center;
+                justify-content: center;
+                min-height: 44px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                min-height: 44px;
+            }
+        }
+
+        /* ========== REDUCED MOTION ========== */
+        @media (prefers-reduced-motion: reduce) {
+            .hero-bg {
+                animation: none;
+            }
+
+            .hero-overlay {
+                animation: none;
+            }
+
+            .cta-button {
+                animation: none;
+            }
+
+            .footer-gradient-border {
+                animation: none;
+            }
+
+            .lodging-card {
+                opacity: 1;
+                transform: none;
+                transition: box-shadow 0.3s;
+            }
+
+            .lodging-card:hover {
+                transform: none;
+            }
+
+            * {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" role="banner" aria-label="Site header">
+        <a href="index.html" class="header-logo" aria-label="ElevateCloudcroft Home">
+            <span class="logo-elevate">ELEVATE</span>
+            <span class="logo-cloudcroft">CLOUDCROFT</span>
+        </a>
+        <nav class="header-nav" role="menubar" aria-label="Main navigation">
+            <a href="lodging.html" role="menuitem" class="active">Stay</a>
+            <a href="dining.html" role="menuitem">Eat</a>
+            <a href="activities.html" role="menuitem">Explore</a>
+            <a href="hiking-trails.html" role="menuitem">Trails</a>
+            <a href="events.html" role="menuitem">Events</a>
+            <a href="seasonal.html" role="menuitem">Seasons</a>
+            <a href="plan.html" role="menuitem">Plan</a>
+            <a href="contact.html" role="menuitem">Contact</a>
+            <a href="tel:+15754426932" class="header-phone" aria-label="Call us at 575-442-6932">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.01l-2.2 2.21z"/></svg>
+            </a>
+        </nav>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" aria-hidden="true"></div>
+    <nav class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+        <a href="lodging.html" class="active">Stay</a>
+        <a href="dining.html">Eat</a>
+        <a href="activities.html">Explore</a>
+        <a href="hiking-trails.html">Trails</a>
+        <a href="events.html">Events</a>
+        <a href="seasonal.html">Seasons</a>
+        <a href="plan.html">Plan</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+15754426932">Call: 575-442-6932</a>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" aria-label="Lodging hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+            <h1>Rest at the Top</h1>
+            <p>Historic hotels, cozy cabins, and mountain retreats.</p>
+        </div>
+    </section>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="main-content">
+
+        <!-- Lodging Grid -->
+        <section class="lodging-section" aria-label="Lodging options in Cloudcroft">
+            <h2 class="lodging-section-title">Where to Stay</h2>
+            <p class="lodging-section-subtitle">From historic elegance to rustic retreats — find your mountain home.</p>
+
+            <div class="lodging-grid">
+
+                <!-- The Grand Cloudcroft Hotel -->
+                <article class="lodging-card">
+                    <div class="lodging-card-image">
+                        <img src="../media/lodge-1.jpg" alt="The Grand Cloudcroft Hotel — historic mountain hotel with fine dining" loading="lazy" width="800" height="500">
+                        <span class="lodging-card-type">Historic Hotel</span>
+                        <span class="lodging-card-rating" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <div class="lodging-card-body">
+                        <h3>The Grand Cloudcroft Hotel</h3>
+                        <p>Step into history at this beautifully restored mountain hotel with fine dining and breathtaking views.</p>
+                        <div class="lodging-amenities" aria-label="Amenities">
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> WiFi</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Restaurant</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Bar</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Mountain Views</span>
+                        </div>
+                        <div class="lodging-card-ctas">
+                            <a href="#todo-grand-booking" class="btn-primary btn-book">Book Now</a>
+                            <a href="#todo-grand-details" class="btn-primary">View Details</a>
+                            <a href="https://www.google.com/maps/search/Grand+Cloudcroft+Hotel+NM" class="btn-secondary" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Summit Inn -->
+                <article class="lodging-card">
+                    <div class="lodging-card-image">
+                        <img src="../media/Index-22.jpg" alt="Summit Inn — comfortable mountain lodge in Cloudcroft" loading="lazy" width="800" height="500">
+                        <span class="lodging-card-type">Mountain Lodge</span>
+                        <span class="lodging-card-rating" aria-label="3 out of 5 stars">&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <div class="lodging-card-body">
+                        <h3>Summit Inn</h3>
+                        <p>Comfortable rooms and genuine mountain hospitality in the heart of Cloudcroft.</p>
+                        <div class="lodging-amenities" aria-label="Amenities">
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> WiFi</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Parking</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Pet-Friendly</span>
+                        </div>
+                        <div class="lodging-card-ctas">
+                            <a href="#todo-summit-booking" class="btn-primary btn-book">Book Now</a>
+                            <a href="https://www.google.com/maps/search/Summit+Inn+Cloudcroft+NM" class="btn-secondary" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Cabins at Cloudcroft -->
+                <article class="lodging-card">
+                    <div class="lodging-card-image">
+                        <img src="../media/Index-7.jpg" alt="Cabins at Cloudcroft — private cabins nestled in the pines" loading="lazy" width="800" height="500">
+                        <span class="lodging-card-type">Cabin Rentals</span>
+                        <span class="lodging-card-rating" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <div class="lodging-card-body">
+                        <h3>Cabins at Cloudcroft</h3>
+                        <p>Private cabins nestled in the pines &mdash; your own mountain hideaway with full kitchens and fireplaces.</p>
+                        <div class="lodging-amenities" aria-label="Amenities">
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Kitchen</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Fireplace</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Parking</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Pet-Friendly</span>
+                        </div>
+                        <div class="lodging-card-ctas">
+                            <a href="#todo-cabins-booking" class="btn-primary btn-book">Check Availability</a>
+                            <a href="https://www.google.com/maps/search/Cabins+at+Cloudcroft+NM" class="btn-secondary" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vacation Rentals -->
+                <article class="lodging-card">
+                    <div class="lodging-card-image">
+                        <img src="../media/Index-17.jpg" alt="Vacation Rentals — fully furnished mountain homes for families and groups" loading="lazy" width="800" height="500">
+                        <span class="lodging-card-type">Homes &amp; Condos</span>
+                        <span class="lodging-card-rating" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <div class="lodging-card-body">
+                        <h3>Vacation Rentals</h3>
+                        <p>Fully furnished mountain homes for families and groups &mdash; space to spread out and settle in.</p>
+                        <div class="lodging-amenities" aria-label="Amenities">
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Kitchen</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> WiFi</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Laundry</span>
+                            <span class="amenity-tag"><span class="amenity-icon" aria-hidden="true">&#8226;</span> Parking</span>
+                        </div>
+                        <div class="lodging-card-ctas">
+                            <a href="#todo-rentals-listing" class="btn-primary btn-book">Browse Rentals</a>
+                            <a href="#todo-rentals-info" class="btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Camping & RV -->
+                <article class="lodging-card">
+                    <div class="lodging-card-image">
+                        <img src="../media/Index-4.jpg" alt="Camping and RV sites near Cloudcroft in Lincoln National Forest" loading="lazy" width="800" height="500">
+                        <span class="lodging-card-type">Campgrounds</span>
+                    </div>
+                    <div class="lodging-card-body">
+                        <h3>Camping &amp; RV</h3>
+                        <p>Sleep under the stars at 8,676 feet &mdash; multiple campgrounds in Lincoln National Forest with stunning settings.</p>
+                        <div class="lodging-card-ctas">
+                            <a href="#todo-camping-details" class="btn-primary">View Campgrounds</a>
+                            <a href="https://www.google.com/maps/search/camping+near+Cloudcroft+NM" class="btn-secondary" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Quick Comparison Table -->
+        <section class="comparison-section" aria-label="Amenity comparison table">
+            <h2 class="comparison-title">Quick Comparison</h2>
+            <p class="comparison-subtitle">Amenities at a glance across Cloudcroft lodging options.</p>
+            <div class="comparison-wrapper">
+                <table class="comparison-table" role="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">WiFi</th>
+                            <th scope="col">Restaurant</th>
+                            <th scope="col">Kitchen</th>
+                            <th scope="col">Pet-Friendly</th>
+                            <th scope="col">Parking</th>
+                            <th scope="col">Fireplace</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Grand Cloudcroft Hotel</td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Summit Inn</td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cabins at Cloudcroft</td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Vacation Rentals</td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Camping &amp; RV</td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="check" aria-label="Yes">&#10003;</span></td>
+                            <td><span class="dash" aria-label="No">&mdash;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Can't Decide CTA -->
+        <section class="cta-section" aria-label="Contact us for lodging help">
+            <h2>Can't Decide?</h2>
+            <p>Our team can help you find the perfect stay. Get in touch.</p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+        <div class="footer-gradient-border" aria-hidden="true"></div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo" aria-label="ElevateCloudcroft Home">
+                    <span class="logo-elevate">ELEVATE</span>
+                    <span class="logo-cloudcroft">CLOUDCROFT</span>
+                </a>
+                <p>Cloudcroft, New Mexico — a mountain village at 8,676 feet in the Sacramento Mountains. Discover what awaits at the top.</p>
+                <div class="footer-social" aria-label="Social media">
+                    <a href="#todo-facebook" aria-label="Facebook">FB</a>
+                    <a href="#todo-instagram" aria-label="Instagram">IG</a>
+                    <a href="#todo-twitter" aria-label="Twitter">X</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="lodging.html">Lodging</a></li>
+                    <li><a href="dining.html">Dining</a></li>
+                    <li><a href="hiking-trails.html">Trails</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="seasonal.html">Seasonal Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="tel:+15754426932">575-442-6932</a></li>
+                    <li><a href="mailto:info@elevatecloudcroft.com">info@elevatecloudcroft.com</a></li>
+                    <li><a href="https://villageofcloudcroft.com" target="_blank" rel="noopener noreferrer">Village of Cloudcroft</a></li>
+                    <li><a href="https://www.google.com/maps/place/Cloudcroft,+NM" target="_blank" rel="noopener noreferrer">Map &amp; Directions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Plan</h4>
+                <ul>
+                    <li><a href="plan.html">Plan Your Visit</a></li>
+                    <li><a href="https://weather.com/weather/today/l/Cloudcroft+NM" target="_blank" rel="noopener noreferrer">Weather</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 ElevateCloudcroft.com
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== HEADER SCROLL =====
+            var header = document.querySelector('.site-header');
+            function handleHeaderScroll() {
+                if (window.pageYOffset > 60) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+
+            // ===== MOBILE MENU =====
+            var hamburger = document.querySelector('.hamburger');
+            var mobileMenu = document.querySelector('.mobile-menu');
+            var mobileOverlay = document.querySelector('.mobile-overlay');
+
+            function toggleMobileMenu() {
+                var isOpen = hamburger.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+                mobileOverlay.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                mobileOverlay.setAttribute('aria-hidden', !isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            }
+
+            hamburger.addEventListener('click', toggleMobileMenu);
+            mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (mobileMenu.classList.contains('open')) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+
+            // ===== INTERSECTION OBSERVER (ENTRANCE ANIMATIONS) =====
+            var lodgingCards = document.querySelectorAll('.lodging-card');
+            var observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var siblings = entry.target.parentElement.children;
+                        var index = Array.prototype.indexOf.call(siblings, entry.target);
+                        setTimeout(function() {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            lodgingCards.forEach(function(card) {
+                observer.observe(card);
+            });
+
+            // ===== BACK TO TOP =====
+            var backToTop = document.querySelector('.back-to-top');
+
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 400) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            }, { passive: true });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+        })();
+    </script>
+</body>
+</html>

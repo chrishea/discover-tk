@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Cloudcroft | ElevateCloudcroft.com — History, Community & Mountain Culture</title>
+    <meta name="description" content="Discover the story of Cloudcroft, New Mexico — a mountain village at 8,676 feet founded in 1899. Learn about the history, community, and natural beauty of the Sacramento Mountains.">
+    <meta name="keywords" content="Cloudcroft history, Cloudcroft New Mexico, Sacramento Mountains, Lincoln National Forest, mountain village, dark sky community">
+    <link rel="canonical" href="https://elevatecloudcroft.com/elevate/about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Cloudcroft — The Story of a Mountain Village">
+    <meta property="og:description" content="Founded in 1899, Cloudcroft sits at 8,676 feet in the Sacramento Mountains. Discover the history, community, and culture of this beloved mountain escape.">
+    <meta property="og:image" content="https://elevatecloudcroft.com/media/opener-1.jpg">
+    <meta property="og:url" content="https://elevatecloudcroft.com/elevate/about.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Cloudcroft — The Story of a Mountain Village">
+    <meta name="twitter:description" content="Founded in 1899, Cloudcroft sits at 8,676 feet in the Sacramento Mountains.">
+    <meta name="twitter:image" content="https://elevatecloudcroft.com/media/opener-1.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@700&family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::selection { background: var(--golden-hour); color: var(--midnight); }
+
+        *:focus-visible { outline: 2px solid var(--golden-hour); outline-offset: 2px; }
+
+        @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+
+        :root {
+            --midnight: #0B1D3A;
+            --summit: #1A3A5C;
+            --alpine: #2E6B8A;
+            --golden-hour: #E8A838;
+            --ember: #D4553A;
+            --pine-shadow: #1E3A2F;
+            --cloud-drift: #F0F4F8;
+            --snow-cap: #FFFFFF;
+            --granite: #6B7B8D;
+            --twilight: #4A2D6B;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--midnight);
+            background: var(--snow-cap);
+            line-height: 1.6;
+            overflow-x: hidden;
+            animation: pageIn 0.5s ease;
+        }
+
+        /* Skip to content */
+        .skip-to-content {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 8px 8px;
+            z-index: 10000;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            transition: top 0.3s;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* Header */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+            background: transparent;
+        }
+
+        .site-header.scrolled {
+            background: rgba(11, 29, 58, 0.97);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            padding: 0.6rem 2rem;
+        }
+
+        .header-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--snow-cap);
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header-logo span {
+            color: var(--golden-hour);
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .header-nav a {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--cloud-drift);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .header-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--golden-hour);
+            transition: width 0.3s ease;
+        }
+
+        .header-nav a:hover {
+            color: var(--golden-hour);
+        }
+
+        .header-nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-phone {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--golden-hour);
+            text-decoration: none;
+            border: 1px solid var(--golden-hour);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .header-phone:hover {
+            background: var(--golden-hour);
+            color: var(--midnight);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: var(--snow-cap);
+            transition: transform 0.3s, opacity 0.3s;
+            display: block;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(11, 29, 58, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+            opacity: 1;
+        }
+
+        .mobile-menu a {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--cloud-drift);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--golden-hour);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('../media/opener-1.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: kenBurns 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes kenBurns {
+            0% {
+                transform: scale(1) translate(0, 0);
+            }
+            100% {
+                transform: scale(1.1) translate(-1%, -1%);
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 29, 58, 0.75), rgba(74, 45, 107, 0.65));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--snow-cap);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: wordReveal 0.6s ease forwards;
+        }
+
+        .hero-title .word:nth-child(1) { animation-delay: 0.2s; }
+        .hero-title .word:nth-child(2) { animation-delay: 0.4s; }
+        .hero-title .word:nth-child(3) { animation-delay: 0.6s; }
+        .hero-title .word:nth-child(4) { animation-delay: 0.8s; }
+        .hero-title .word:nth-child(5) { animation-delay: 1.0s; }
+
+        @keyframes wordReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: clamp(1rem, 2.5vw, 1.35rem);
+            color: rgba(240, 244, 248, 0.9);
+            letter-spacing: 0.05em;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 1.2s forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                transform: translateY(15px);
+            }
+        }
+
+        /* Sections */
+        .section {
+            padding: 6rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--alpine);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--midnight);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            position: relative;
+        }
+
+        .section-title-centered {
+            text-align: center;
+            padding-bottom: 1.25rem;
+        }
+
+        .section-title-centered::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--golden-hour);
+            margin: 0.75rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* History Section */
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .history-text p {
+            font-size: 1.05rem;
+            color: var(--granite);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .history-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(11, 29, 58, 0.15);
+            position: relative;
+        }
+
+        .history-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .history-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Info Cards */
+        .village-section {
+            background: var(--cloud-drift);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: var(--snow-cap);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .info-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .info-card:nth-child(2).visible { transition-delay: 0.1s; }
+        .info-card:nth-child(3).visible { transition-delay: 0.2s; }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .info-card .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .info-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--midnight);
+            margin-bottom: 0.75rem;
+        }
+
+        .info-card p {
+            font-size: 0.95rem;
+            color: var(--granite);
+            line-height: 1.7;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--midnight);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.06;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(232,168,56,0.3) 40px, rgba(232,168,56,0.3) 41px),
+                repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(232,168,56,0.3) 40px, rgba(232,168,56,0.3) 41px);
+            pointer-events: none;
+        }
+
+        .stats-bar::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 80 Q50 60 100 80 Q150 100 200 80' fill='none' stroke='%23E8A838' stroke-width='1'/%3E%3Cpath d='M0 120 Q50 100 100 120 Q150 140 200 120' fill='none' stroke='%23E8A838' stroke-width='1'/%3E%3Cpath d='M0 160 Q50 140 100 160 Q150 180 200 160' fill='none' stroke='%23E8A838' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            pointer-events: none;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .stat-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1);
+        }
+
+        .stat-item:nth-child(2).visible { transition-delay: 0.1s; }
+        .stat-item:nth-child(3).visible { transition-delay: 0.2s; }
+        .stat-item:nth-child(4).visible { transition-delay: 0.3s; }
+
+        .stat-number {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--golden-hour);
+            display: block;
+        }
+
+        .stat-label {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--cloud-drift);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.5rem;
+        }
+
+        /* Community Section */
+        .community-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .community-text p {
+            font-size: 1.05rem;
+            color: var(--granite);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .community-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(11, 29, 58, 0.15);
+        }
+
+        .community-image img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .community-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--golden-hour);
+            color: var(--midnight);
+            box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+            min-height: 44px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(232, 168, 56, 0.6);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: transparent;
+            color: var(--golden-hour);
+            border: 2px solid var(--golden-hour);
+            min-height: 44px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--golden-hour);
+            color: var(--midnight);
+            transform: translateY(-2px);
+        }
+
+        /* Highlighted stat in text */
+        .highlight-stat {
+            display: inline-block;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            color: var(--golden-hour);
+            background: rgba(232, 168, 56, 0.1);
+            padding: 0.1em 0.4em;
+            border-radius: 4px;
+        }
+
+        /* History image parallax */
+        .history-image img {
+            will-change: transform;
+        }
+
+        /* Fade in utility */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0, 0, 0.2, 1), transform 0.6s cubic-bezier(0, 0, 0.2, 1);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--midnight);
+            padding: 4rem 2rem 2rem;
+            position: relative;
+        }
+
+        .site-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--golden-hour), var(--ember), var(--alpine), var(--twilight), var(--golden-hour));
+            background-size: 300% 100%;
+            animation: gradientBorder 6s linear infinite;
+        }
+
+        @keyframes gradientBorder {
+            0% { background-position: 0% 0; }
+            100% { background-position: 300% 0; }
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--snow-cap);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 0.9rem;
+            color: var(--granite);
+            line-height: 2;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--golden-hour);
+        }
+
+        .footer-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--snow-cap);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-brand span {
+            color: var(--golden-hour);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid var(--granite);
+            align-items: center;
+            justify-content: center;
+            color: var(--granite);
+            font-size: 0.8rem;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--golden-hour);
+            color: var(--golden-hour);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(107, 123, 141, 0.2);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--granite);
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--golden-hour);
+            color: var(--midnight);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 500;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(232, 168, 56, 0.4);
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .header-nav {
+                display: none;
+            }
+            .header-phone {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .history-grid,
+            .community-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 3.5rem 1.5rem;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+            .cta-group {
+                flex-direction: column;
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner" aria-label="Site header">
+        <a href="../index.html" class="header-logo">ELEVATE <span>CLOUDCROFT</span></a>
+        <nav class="header-nav" role="menubar" aria-label="Main navigation">
+            <a href="lodging.html" role="menuitem">Stay</a>
+            <a href="dining.html" role="menuitem">Eat</a>
+            <a href="activities.html" role="menuitem">Explore</a>
+            <a href="hiking-trails.html" role="menuitem">Trails</a>
+            <a href="events.html" role="menuitem">Events</a>
+            <a href="seasonal.html" role="menuitem">Seasons</a>
+            <a href="plan.html" role="menuitem">Plan</a>
+            <a href="contact.html" role="menuitem">Contact</a>
+        </nav>
+        <a href="tel:+15754426932" class="header-phone" aria-label="Call us at 575-442-6932">(575) 442-6932</a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <a href="lodging.html">Stay</a>
+        <a href="dining.html">Eat</a>
+        <a href="activities.html">Explore</a>
+        <a href="hiking-trails.html">Trails</a>
+        <a href="events.html">Events</a>
+        <a href="seasonal.html">Seasons</a>
+        <a href="plan.html">Plan</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+15754426932">(575) 442-6932</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Page hero">
+        <div class="hero-bg" role="img" aria-label="Scenic view of Cloudcroft, New Mexico"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="word">The </span>
+                <span class="word">Story </span>
+                <span class="word">of </span>
+                <span class="word">Cloud</span><span class="word">croft</span>
+            </h1>
+            <p class="hero-subtitle">A mountain village 8,676 feet closer to the sky.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- History Section -->
+        <section class="section" aria-label="History of Cloudcroft">
+            <div class="section-container">
+                <div class="history-grid">
+                    <div class="history-text fade-in">
+                        <span class="section-label">Our History</span>
+                        <h2 class="section-title">Where It All Began</h2>
+                        <p>Founded in 1899 as a retreat from the desert heat, Cloudcroft began as a railroad stop in the Sacramento Mountains. The Alamogordo &amp; Sacramento Mountain Railway brought visitors up from the Tularosa Basin to enjoy cool mountain air, towering pines, and breathtaking views. The village quickly became a beloved escape &mdash; and it still is today.</p>
+                        <p>At 8,676 feet, Cloudcroft sits in the heart of the Lincoln National Forest. With four distinct seasons, dark skies, and a vibrant small-town community, it offers a rare combination of natural beauty and authentic mountain culture.</p>
+                    </div>
+                    <div class="history-image fade-in">
+                        <img src="../media/Index-24.jpg" alt="Historic view of Cloudcroft and the Sacramento Mountains" loading="lazy" width="600" height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Village Today Section -->
+        <section class="section village-section" aria-label="The Village Today">
+            <div class="section-container">
+                <div style="text-align: center;">
+                    <span class="section-label">The Village Today</span>
+                    <h2 class="section-title section-title-centered">More Than a Mountain Town</h2>
+                </div>
+                <div class="cards-grid">
+                    <div class="info-card">
+                        <span class="card-icon" aria-hidden="true">&#127956;</span>
+                        <h3>Mountain Living</h3>
+                        <p>A tight-knit community of artists, business owners, and nature lovers who chose altitude over everything.</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="card-icon" aria-hidden="true">&#127794;</span>
+                        <h3>Lincoln National Forest</h3>
+                        <p>Over 1.1 million acres of forest surrounding the village &mdash; hiking, camping, and wildlife at your doorstep.</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="card-icon" aria-hidden="true">&#127775;</span>
+                        <h3>Dark Sky Community</h3>
+                        <p>One of the darkest skies in the U.S. &mdash; the Milky Way isn't just visible, it's vivid.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="stats-bar" aria-label="Cloudcroft statistics">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1899" data-type="year">0</span>
+                    <span class="stat-label">Founded</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8676" data-suffix=" ft">0</span>
+                    <span class="stat-label">Elevation</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1.1" data-suffix="M+" data-type="decimal">0</span>
+                    <span class="stat-label">Forest Acres</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100" data-suffix="K+">0</span>
+                    <span class="stat-label">Annual Visitors</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section class="section" aria-label="Community">
+            <div class="section-container">
+                <div class="community-grid">
+                    <div class="community-image fade-in">
+                        <img src="../media/placeholder-explore-burro-avenue.jpg" alt="Burro Avenue in downtown Cloudcroft" loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="community-text fade-in">
+                        <span class="section-label">Community</span>
+                        <h2 class="section-title">A Place People Call Home</h2>
+                        <p>Cloudcroft is home to about <span class="highlight-stat">750 year-round residents</span>, but the village swells with visitors who come for the trails, the food, the festivals, and the feeling of being somewhere truly special.</p>
+                        <div class="cta-group">
+                            <a href="https://villageofcloudcroft.com" class="btn-primary" target="_blank" rel="noopener noreferrer">Visit the Village of Cloudcroft</a>
+                            <a href="tel:+15754426932" class="btn-secondary">Chamber of Commerce</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <span class="footer-brand">ELEVATE <span>CLOUDCROFT</span></span>
+                <p>Your guide to Cloudcroft, New Mexico &mdash; 8,676 feet of mountain magic.</p>
+                <div class="footer-social">
+                    <a href="#todo-facebook" aria-label="Facebook">FB</a>
+                    <a href="#todo-instagram" aria-label="Instagram">IG</a>
+                    <a href="#todo-twitter" aria-label="Twitter">X</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="lodging.html">Lodging</a>
+                <a href="dining.html">Dining</a>
+                <a href="hiking-trails.html">Hiking Trails</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="seasonal.html">Seasons</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="tel:+15754426932">(575) 442-6932</a>
+                <a href="mailto:info@elevatecloudcroft.com">info@elevatecloudcroft.com</a>
+                <a href="https://villageofcloudcroft.com" target="_blank" rel="noopener noreferrer">Village of Cloudcroft</a>
+                <a href="https://www.google.com/maps/place/Cloudcroft,+NM" target="_blank" rel="noopener noreferrer">Cloudcroft, NM 88317</a>
+            </div>
+            <div class="footer-col">
+                <h4>Plan</h4>
+                <a href="plan.html">Plan Your Trip</a>
+                <a href="https://weather.com/weather/today/l/Cloudcroft+NM" target="_blank" rel="noopener noreferrer">Weather</a>
+                <a href="about.html">About Cloudcroft</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ElevateCloudcroft.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+    <script>
+        (function() {
+            // Header scroll
+            const header = document.querySelector('.site-header');
+            let lastScroll = 0;
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 60) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                lastScroll = window.scrollY;
+            }, { passive: true });
+
+            // Hamburger toggle
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            hamburger.addEventListener('click', function() {
+                const isOpen = mobileMenu.classList.toggle('open');
+                hamburger.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+
+            // Close mobile menu on link click
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('open');
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Intersection Observer for fade-in elements
+            var observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            var fadeObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in, .info-card, .stat-item').forEach(function(el) {
+                fadeObserver.observe(el);
+            });
+
+            // Animated counters
+            var countersAnimated = false;
+            var statsObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting && !countersAnimated) {
+                        countersAnimated = true;
+                        animateCounters();
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            var statsBar = document.querySelector('.stats-bar');
+            if (statsBar) statsObserver.observe(statsBar);
+
+            function animateCounters() {
+                document.querySelectorAll('.stat-number').forEach(function(counter) {
+                    var target = parseFloat(counter.getAttribute('data-target'));
+                    var suffix = counter.getAttribute('data-suffix') || '';
+                    var type = counter.getAttribute('data-type') || 'integer';
+                    var duration = 2000;
+                    var start = performance.now();
+
+                    function update(now) {
+                        var elapsed = now - start;
+                        var progress = Math.min(elapsed / duration, 1);
+                        var eased = 1 - Math.pow(1 - progress, 3);
+
+                        if (type === 'year') {
+                            counter.textContent = Math.floor(eased * target);
+                        } else if (type === 'decimal') {
+                            counter.textContent = (eased * target).toFixed(1) + suffix;
+                        } else {
+                            counter.textContent = Math.floor(eased * target).toLocaleString() + suffix;
+                        }
+
+                        if (progress < 1) {
+                            requestAnimationFrame(update);
+                        }
+                    }
+                    requestAnimationFrame(update);
+                });
+            }
+
+            // Parallax for history image
+            var historyImg = document.querySelector('.history-image img');
+            if (historyImg) {
+                window.addEventListener('scroll', function() {
+                    var rect = historyImg.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        var offset = (rect.top / window.innerHeight - 0.5) * 20;
+                        historyImg.style.transform = 'translateY(' + offset + 'px)';
+                    }
+                }, { passive: true });
+            }
+
+            // Back to top button
+            var backToTop = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            }, { passive: true });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+</body>
+</html>
